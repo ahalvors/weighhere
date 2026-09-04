@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=809ec8b9-2765-4562-94b1-be3052beb9e4
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=809ec8b9-2765-4562-94b1-be3052beb9e4">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>San Diego County public scales — Poway, Oceanside, San Marcos, Otay Mesa | WeighHere</title>
+<meta name="description" content="Allstate Poway and Oceanside, Eckert’s San Marcos, Pilot Otay Mesa CAT Scale, EDCO La Mesa, Miramar Landfill, and San Onofre CHP enforcement. CDFA San Diego grid not loaded.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-inner">
+    <a class="brand" href="/">WeighHere<span>Public scales for U-Hauls, RVs, horse trailers, and PPM loads</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="/">LA County</a></li><li><a href="/orange-county/">Orange County</a></li><li><a href="/inland-empire/">Inland Empire</a></li><li><a href="/san-diego/" aria-current="page">San Diego County</a></li><li><a href="/phoenix/">Phoenix metro</a></li><li><a href="/central-valley/">Central Valley</a></li><li><a href="/how-to-weigh-an-rv/">Weigh an RV</a></li><li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li><li><a href="/horse-trailer/">Horse trailer</a></li><li><a href="/dump-trailer/">Dump trailer</a></li><li><a href="/cat-2000-lb-minimum/">2,000 lb minimum</a></li><li><a href="/public-scale-vs-weigh-station/">Scale vs weigh station</a></li><li><a href='/about'>About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="stripe"><div class="wrap">Call ahead. Hours, fees, and walk-up rules change. WeighHere is not CDFA, CAT, or CHP.</div></div>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">San Diego County · listings checked 3 Sep 2026</p>
+    <h1>Public scales in San Diego County</h1>
+    <p class="lede">Three dedicated public houses publish walk-up weighmaster tickets (Allstate Poway and Oceanside, Eckert’s San Marcos). Pilot Otay Mesa lists a CAT Scale on Pilot’s own location page. EDCO La Mesa, Truck Net Otay, and Miramar Landfill are call-first. San Onofre on I-5 is CHP enforcement — not a ticket window. CDFA’s San Diego grid (c=37) did not load on this compile.</p>
+    <p class="meta-line">8 verified listings · 3 dedicated houses · 1 CAT stop · 3 call-first · 1 enforcement do-not-go · CDFA county grid not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  
+<div class="filters" data-filters>
+  <button type="button" data-filter="all" aria-pressed="true">All listed</button>
+  <button type="button" data-filter="uhaul">U-Haul / moving truck</button>
+  <button type="button" data-filter="rv">RV / fifth-wheel</button>
+  <button type="button" data-filter="horse">Horse trailer</button>
+  <button type="button" data-filter="ppm">PPM / DITY</button>
+  <button type="button" data-filter="car">Car / light trailer (under 2,000 lb)</button>
+  <button type="button" data-filter="dump">Dump / boat trailer</button>
+</div>
+<p class="notice-small">Filters hide cards, not industrial rows. CAT will not weigh under 2,000 lb — use a dedicated house for cars and empty utility trailers.</p>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="dedicated">Dedicated public scales</h2>
+  <p class="section-note">Operator pages describe Weighmaster certificates for DMV and military PPM/DITY. Allstate’s shared public-scales page lists a $25 certified-weight fee; Eckert’s public-scale page lists $10 empty+heavy on the same ticket. Livestock policy is still unknown. Call ahead — hours move.</p>
+  <div class="cards">
+<article class="card" data-rig="uhaul rv horse dump boat car ppm" data-type="dedicated_public" id="allstate-logistics-poway">
+  <div class="badges"><span class="badge badge-ok">Dedicated public</span><span class="badge badge-ok">Walk-up more likely</span><span class="badge">Not a DOT station</span></div>
+  <h3>Allstate Logistics public scale (Poway)</h3>
+  <p class="addr">12356 McIvers Ct, Poway, CA 92064 · <a href="https://maps.google.com/?q=12356+McIvers+Ct,+Poway,+CA+92064">Map</a></p>
+  
+  <dl>
+    <dt>Certified ticket</dt><dd>Likely (licensed weighmaster list / CAT)</dd>
+    <dt>Livestock</dt><dd>Unknown — we do not invent livestock policy.</dd>
+    <dt>24-hour</dt><dd>Unknown</dd>
+    <dt>Hours / access</dt><dd>Operator site (amove.com public-scales page): Monday–Friday 7:30 a.m.–5:00 p.m. Weekend hours not stated on that page.</dd>
+  </dl>
+  <p>Operator (amove.com) describes a Weighmaster-certified in-ground 70&#x27; public scale in Poway for personal vehicles and commercial trucks, including DMV registration and military DITY/PPM. Same operator page lists certified-weight price $25 (cash, card, Apple Pay). Phone was not published on the San Diego / public-scales pages we checked. Not a DOT station.</p>
+  <p class="src">Source: <a href="https://amove.com/resource-center/public-scales/san-diego/">Allstate Logistics — San Diego / public scales pages</a> · <a href="https://amove.com/resource-center/public-scales/">Operator page</a> · Last checked 2026-08-31</p>
+</article>
+
+
+<article class="card" data-rig="uhaul rv horse dump boat car ppm" data-type="dedicated_public" id="allstate-logistics-oceanside">
+  <div class="badges"><span class="badge badge-ok">Dedicated public</span><span class="badge badge-ok">Walk-up more likely</span><span class="badge">Not a DOT station</span></div>
+  <h3>Allstate Logistics public scale (Oceanside)</h3>
+  <p class="addr">4670 North Ave, Oceanside, CA 92056 · <a href="https://maps.google.com/?q=4670+North+Ave,+Oceanside,+CA+92056">Map</a></p>
+  
+  <dl>
+    <dt>Certified ticket</dt><dd>Likely (licensed weighmaster list / CAT)</dd>
+    <dt>Livestock</dt><dd>Unknown — we do not invent livestock policy.</dd>
+    <dt>24-hour</dt><dd>Unknown</dd>
+    <dt>Hours / access</dt><dd>Operator site (amove.com public-scales page): Monday–Friday 7:30 a.m.–4:30 p.m. Weekend hours not stated on that page.</dd>
+  </dl>
+  <p>Operator (amove.com) describes a Weighmaster-certified in-ground 70&#x27; public scale in Oceanside for personal vehicles and commercial trucks, including DMV and military DITY/PPM use. Certified-weight price $25 on the shared public-scales page. Phone not published on the Oceanside / public-scales pages we checked. Not a DOT station.</p>
+  <p class="src">Source: <a href="https://amove.com/resource-center/public-scales/oceanside/">Allstate Logistics — Oceanside / public scales pages</a> · <a href="https://amove.com/resource-center/public-scales/">Operator page</a> · Last checked 2026-08-31</p>
+</article>
+
+
+<article class="card" data-rig="uhaul rv horse dump boat car ppm" data-type="dedicated_public" id="eckerts-public-scale-san-marcos">
+  <div class="badges"><span class="badge badge-ok">Dedicated public</span><span class="badge badge-ok">Walk-up more likely</span><span class="badge">Not a DOT station</span></div>
+  <h3>Eckert&#x27;s Moving &amp; Storage public scale (San Marcos)</h3>
+  <p class="addr">Bent St (off San Marcos Blvd; scale entrance across from Fry&#x27;s parking lot), San Marcos, CA 92078 · <a href="https://maps.google.com/?q=Bent+St+(off+San+Marcos+Blvd;+scale+entrance+across+from+Fry&#x27;s+parking+lot),+San+Marcos,+CA+92078">Map</a></p>
+  <p class="phone"><a href="tel:+18882747230">(888) 274-7230</a></p>
+  <dl>
+    <dt>Certified ticket</dt><dd>Likely (licensed weighmaster list / CAT)</dd>
+    <dt>Livestock</dt><dd>Unknown — we do not invent livestock policy.</dd>
+    <dt>24-hour</dt><dd>No</dd>
+    <dt>Hours / access</dt><dd>Operator public-scale page: Monday–Friday 7:00 a.m.–5:00 p.m.; Saturday 7:00 a.m.–12:00 p.m.; closed Sundays and holidays.</dd>
+  </dl>
+  <p>Operator page: 70&#x27; public scale, 100,000 lb capacity; California weighmaster certificate; mentions DMV commercial-vehicle weights and military household-goods / PPM use. Published fee on that page: $10 empty+heavy on the same ticket; axle weights $10; re-weigh after axle move free. Street number is not printed on the public-scale page — directions put the entrance on Bent St off San Marcos Blvd (Hwy 78 between I-5 and I-15). Not a DOT station.</p>
+  <p class="src">Source: <a href="https://eckertsmoving.com/services/public-scale/">Eckert&#x27;s Moving &amp; Storage — Public Scale</a> · <a href="https://eckertsmoving.com/services/public-scale/">Operator page</a> · Last checked 2026-08-31</p>
+</article>
+</div>
+  </div>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Pilot</h2>
+  <p class="section-note">We list only San Diego County CAT stops verified on the operator’s own location page. Pilot #343 Otay Mesa (Piper Ranch Rd) lists CAT Scale as an amenity. Love’s URLs marketed as San Diego / Otay / Alpine / Pala / San Marcos did not resolve to San Diego County stores on this compile, so no Love’s CAT is listed. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop.</p>
+  <div class="cards two">
+<article class="card" data-rig="uhaul rv horse dump boat car ppm" data-type="cat" id="pilot-otay-mesa-343">
+  <div class="badges"><span class="badge badge-cat">CAT Scale</span><span class="badge badge-ok">Walk-up more likely</span><span class="badge">Not a DOT station</span></div>
+  <h3>Pilot Travel Center #343 — CAT Scale (Otay Mesa)</h3>
+  <p class="addr">1497 Piper Ranch Rd, San Diego, CA 92154 · <a href="https://maps.google.com/?q=1497+Piper+Ranch+Rd,+San+Diego,+CA+92154">Map</a></p>
+  <p class="phone"><a href="tel:+16196619558">(619) 661-9558</a></p>
+  <dl>
+    <dt>Certified ticket</dt><dd>Likely (licensed weighmaster list / CAT)</dd>
+    <dt>Livestock</dt><dd>Unknown — we do not invent livestock policy.</dd>
+    <dt>24-hour</dt><dd>Travel center listed 24h; confirm scale staffing</dd>
+    <dt>Hours / access</dt><dd>Pilot’s location page lists the travel center open 24 hours and lists CAT Scale as an amenity. That is not the same as a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.</dd>
+  </dl>
+  <p>Pilot Flying J’s own Otay Mesa / San Diego location page (CA-905 &amp; CA-125) lists CAT Scale among amenities. CAT 2,000 lb floor; no corner weights; in California go inside for a printed Weighmaster Certificate if you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.</p>
+  <p class="src">Source: <a href="https://locations.pilotflyingj.com/us/ca/san-diego/1497-piper-ranch-rd">Pilot Flying J location page — San Diego / Piper Ranch Rd</a> · <a href="https://locations.pilotflyingj.com/us/ca/san-diego/1497-piper-ranch-rd">Operator page</a> · Last checked 2026-08-31</p>
+</article>
+</div>
+  </div>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="call-first">Call first — transfer, industrial, landfill</h2>
+  <p class="section-note">EDCO La Mesa advertises a public scale for Weighmaster Certificates on its own facility page, but it is still a transfer/disposal site. Truck Net Otay publishes a certified scale without walk-up hours. Miramar Landfill scales weigh dump traffic for city fees — not a published ticket shop.</p>
+  <table class="compact">
+    <caption>San Diego County — call first / walk-up ticket not fully verified</caption>
+    <thead><tr><th>Place</th><th>Phone</th><th>Type</th><th>Walk-up</th></tr></thead>
+    <tbody><tr data-rig="dump" id="edco-station-la-mesa">
+  <td><strong>EDCO Station La Mesa</strong><br>8184 Commercial St, La Mesa </td>
+  <td>(619) 287-7555</td>
+  <td>recycling</td>
+  <td>Call first</td>
+</tr>
+<tr data-rig="dump" id="miramar-landfill">
+  <td><strong>Miramar Landfill (City of San Diego)</strong><br>5180 Convoy St, San Diego 92111</td>
+  <td>(858) 694-7000</td>
+  <td>landfill</td>
+  <td>Call first</td>
+</tr>
+<tr data-rig="dump" id="truck-net-otay">
+  <td><strong>Truck Net LLC scale</strong><br>8490 Avenida De La Fuente, San Diego 92154</td>
+  <td>(619) 661-1888</td>
+  <td>industrial</td>
+  <td>Call first</td>
+</tr></tbody>
+  </table>
+  </div>
+
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>San Onofre on I-5 (near Oceanside) is a pair of CHP commercial vehicle enforcement facilities on the Caltrans CVEF list. It is not a public scale. You will not buy a certified ticket for a move, an RV, or a horse trailer here.</p>
+    
+<article class="card" data-rig="" data-type="enforcement" id="chp-san-onofre-i5">
+  <div class="badges"><span class="badge badge-warn">Enforcement — do not go</span><span class="badge badge-warn">Do not go for a ticket</span><span class="badge badge-warn">CHP enforcement — not a ticket window</span></div>
+  <h3>I-5 San Onofre commercial vehicle enforcement facilities (weigh stations)</h3>
+  <p class="addr">I-5 northbound and southbound near San Onofre / Oceanside, Oceanside, CA · <a href="https://maps.google.com/?q=I-5+northbound+and+southbound+near+San+Onofre+/+Oceanside,+Oceanside,+CA+">Map</a></p>
+  
+  <dl>
+    <dt>Certified ticket</dt><dd>No — not a ticket scale</dd>
+    <dt>Livestock</dt><dd>Unknown — we do not invent livestock policy.</dd>
+    <dt>24-hour</dt><dd>Unknown</dd>
+    <dt>Hours / access</dt><dd>Hours not verified — call.</dd>
+  </dl>
+  <p>Caltrans Commercial Vehicle Enforcement Facilities list: San Onofre NB and SB on I-5 in San Diego County (near Oceanside). These are CHP enforcement facilities, not public scale houses. You cannot buy a certified ticket for a U-Haul, RV, or PPM here. Do not drive here for a weight ticket.</p>
+  <p class="src">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities) / CVEF location list</a> · <a href="https://dot.ca.gov/-/media/dot-media/programs/traffic-operations/documents/trucks/locations-a11y.pdf">Operator page</a> · Last checked 2026-08-31</p>
+</article>
+
+    <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities)</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>CDFA San Diego (c=37) public-scale grid: WAF-blocked on curl this compile; no browser extract. Phones for Allstate Poway/Oceanside (not on the operator scale pages we fetched). Exact street number for Eckert’s Bent St entrance. Love’s / TA / other Pilot CAT stops inside the county on their own amenity lists. Whether Miramar or Otay Landfill will sell a civilian weighmaster ticket. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://amove.com/resource-center/public-scales/">Allstate Logistics public scales</a> · <a href="https://eckertsmoving.com/services/public-scale/">Eckert’s public scale</a> · <a href="https://locations.pilotflyingj.com/us/ca/san-diego/1497-piper-ranch-rd">Pilot #343 Otay Mesa</a> · <a href="https://poway.edcodisposal.com/public-facilities/edco-station-la-mesa/">EDCO La Mesa</a> · <a href="https://www.trucknetllc.com/service/scale-3">Truck Net</a> · <a href="https://www.sandiego.gov/environmental-services/miramar">Miramar Landfill</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans CVEF</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/los-angeles/">Los Angeles County public scales</a></li>
+      <li><a href="/orange-county/">Orange County public scales</a></li>
+      <li><a href="/inland-empire/">Inland Empire public scales</a></li>
+      <li><a href="/phoenix/">Phoenix metro public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+<script>window.WEIGHHERE_POINTS = [{"name": "Pilot Travel Center #343 \u2014 CAT Scale (Otay Mesa)", "city": "San Diego", "type": "cat", "lat": 32.5683738, "lng": -116.9527654}];</script>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="/">LA County</a></li>
+        <li><a href="/orange-county/">Orange County</a></li>
+        <li><a href="/inland-empire/">Inland Empire</a></li>
+        <li><a href="/san-diego/">San Diego County</a></li>
+        <li><a href="/phoenix/">Phoenix metro</a></li>
+        <li><a href="/central-valley/">Central Valley</a></li>
+        <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
+        <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
+        <li><a href="/horse-trailer/">Horse trailer</a></li>
+        <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
+        <li><a href="/cat-2000-lb-minimum/">CAT 2,000 lb minimum</a></li>
+        <li><a href="/public-scale-vs-weigh-station/">Public scale vs weigh station</a></li>
+        <li><a href='/about'>About &amp; sources</a></li>
+      </ul>
+    </nav>
+    <p>Independent directory compiled 3 Sep 2026 from public CDFA county tables, CAT Scale public pages, operator sites, county/facility pages, ScaleRegistry, Caltrans, ADOT, and Arizona Department of Agriculture weighmaster licensing pages. Missing hours, fees, or livestock policy are left blank on purpose. CDFA’s own disclaimer: the Division makes no claims, promises, or guarantees about the absolute accuracy, completeness, or adequacy of the information on its public-scales list.</p>
+    <p>This site does not give legal advice about overweight citations, who must stop at an open CHP scale, or PPM claim reimbursement. Confirm with the scale, your Transportation Office, or CHP Commercial Vehicle Section as needed.</p>
+    <p>&copy; 2026 WeighHere · <a href='/about'>How we compile listings</a></p>
+  </div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="809ec8b9-2765-4562-94b1-be3052beb9e4" data-app-host="app.netlify.com"></script>
