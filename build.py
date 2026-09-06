@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-03
-CHECKED_HUMAN = "3 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-05
+CHECKED_HUMAN = "5 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -19,6 +19,8 @@ NAV = [
     ("/san-diego/", "San Diego County", "sd"),
     ("/phoenix/", "Phoenix metro", "phx"),
     ("/central-valley/", "Central Valley", "cv"),
+    ("/sacramento/", "Sacramento approaches", "sac"),
+    ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/how-to-weigh-an-rv/", "Weigh an RV", "rv"),
     ("/ppm-dity-southern-california/", "PPM / DITY", "ppm"),
     ("/horse-trailer/", "Horse trailer", "horse"),
@@ -109,6 +111,8 @@ def footer(rel="."):
         <li><a href="/san-diego/">San Diego County</a></li>
         <li><a href="/phoenix/">Phoenix metro</a></li>
         <li><a href="/central-valley/">Central Valley</a></li>
+        <li><a href="/sacramento/">Sacramento approaches</a></li>
+        <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
@@ -663,6 +667,141 @@ def cv_body():
 """ + map_script(cv)
 
 
+def sacramento_body():
+    sac = [s for s in STATIONS if s["county"] in ("yolo", "colusa", "san-joaquin")]
+    dedicated = [s for s in sac if s["display_group"] == "dedicated"]
+    cat = [s for s in sac if s["display_group"] == "cat"]
+    call = [s for s in sac if s["display_group"] == "call_first"]
+    cards_d = "\n".join(card(s) for s in dedicated) if dedicated else ""
+    cards_c = "\n".join(card(s) for s in cat)
+    rows = "\n".join(compact_row(s) for s in sorted(call, key=lambda x: (x["city"], x["name"]))) if call else ""
+    n = len(sac)
+    n_yolo = sum(1 for s in sac if s["county"] == "yolo")
+    n_colusa = sum(1 for s in sac if s["county"] == "colusa")
+    n_sj = sum(1 for s in sac if s["county"] == "san-joaquin")
+    call_block = ""
+    if call:
+        call_block = f"""
+  <div data-filter-section>
+  <h2 class="section-h" id="call-first">Call first</h2>
+  <p class="section-note">Industrial / landfill / plant rows only when an official page mentions public weighing.</p>
+  <table class="compact">
+    <caption>Sacramento approaches — call first</caption>
+    <thead><tr><th>Place</th><th>Phone</th><th>Type</th><th>Walk-up</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+  </div>
+"""
+    dedicated_block = ""
+    if dedicated:
+        dedicated_block = f"""
+  <div data-filter-section>
+  <h2 class="section-h" id="dedicated">Dedicated public scales</h2>
+  <p class="section-note">Operator pages that publish walk-up weighmaster tickets for civilians.</p>
+  <div class="cards two">{cards_d}</div>
+  </div>
+"""
+    else:
+        dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on I-5 Sacramento corridor</h2>
+    <p>ScaleRegistry lists no Sacramento / West Sacramento / Stockton dedicated walk-up house on its public-weighing page (checked 5 Sep 2026). CDFA Sacramento / Yolo / Colusa / San Joaquin grids still WAF-blocked on this compile host. We are not inventing a walk-up house from industrial scale vendors or third-party trucker directories. For now, the Sacramento approaches page lists CAT Scales only.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Sacramento approaches · Yolo · Colusa · San Joaquin · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on the I-5 Sacramento corridor</h1>
+    <p class="lede">Four CAT Scales verified on Pilot Flying J and Love's <em>own</em> location pages serve the I-5 corridor near Sacramento: Pilot Dunnigan (Yolo, north of Davis), Love's Williams (Colusa, northwest of Woodland), Flying J Lodi (San Joaquin, south of Stockton), Flying J Lathrop (San Joaquin, between Tracy and Manteca). No ScaleRegistry dedicated house; CDFA Sacramento / Yolo / Colusa / San Joaquin grids still WAF-blocked.</p>
+    <p class="meta-line">{n} verified listings · {n_yolo} Yolo · {n_colusa} Colusa · {n_sj} San Joaquin · {len(dedicated)} dedicated houses · {len(cat)} CAT stops · CDFA county grids not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Pilot and Love's (I-5 corridor)</h2>
+  <p class="section-note">We list only Sacramento-area CAT stops verified on the operator's own location page. Pilot #168 (Dunnigan / County Road 8), Love's #652 (Williams / 7th St), Flying J #617 (Lodi / Thorton Rd), and Flying J #1017 (Lathrop / Roth Rd) each list CAT Scale / CAT Scales as an amenity. Pilot Dealer #879 (El Centro Rd, Sacramento) omits CAT Scale on Pilot's amenity list — not listed. West Sacramento CAT #3390 only seen on third-party trucker pages — omitted. Use <a href="https://catscale.com/cat-scale-locator/">CAT's locator</a> for other stops. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. In California, go inside for a printed weighmaster certificate when you need one.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+
+  {call_block}
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Full CDFA Sacramento / Yolo / Colusa / San Joaquin public-scale grids (blocked on this compile). Any dedicated walk-up house in Sacramento, West Sacramento, Davis, Woodland, or Stockton with an operator page that publishes civilian weighmaster tickets. West Sacramento CAT #3390 on a primary source (third-party only tonight). Other I-5 / CA-99 Pilot / Flying J / Love's / TA CAT stops whose own pages list CAT. Lat/lng for these four stops. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/ca/dunnigan/30035-county-road-8">Pilot #168 Dunnigan</a> · <a href="https://www.loves.com/locations/ca/williams/loves-travel-stop-williams-652">Love's #652 Williams</a> · <a href="https://locations.pilotflyingj.com/us/ca/lodi/15100-thorton-rd">Flying J #617 Lodi</a> · <a href="https://locations.pilotflyingj.com/us/ca/lathrop/345-roth-rd">Flying J #1017 Lathrop</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · CDFA county grids: blocked</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/central-valley/">Central Valley public scales</a></li>
+      <li><a href="/grapevine/">Grapevine / I-5 mid-CA corridor</a></li>
+      <li><a href="/los-angeles/">Los Angeles County public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(sac)
+
+
+def grapevine_body():
+    gv_ids = ["flying-j-616-lebec", "loves-441-santa-nella", "loves-807-patterson", "flying-j-1080-patterson"]
+    gv = [s for s in STATIONS if s["id"] in gv_ids]
+    cards_c = "\n".join(card(s) for s in gv)
+    n = len(gv)
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Grapevine / I-5 mid-California · Kern · Merced · Stanislaus · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on the Grapevine / I-5 mid-CA corridor</h1>
+    <p class="lede">Four CAT Scales verified on Pilot Flying J and Love's <em>own</em> location pages serve the Grapevine I-5 climb and the mid–Central Valley I-5 corridor: Flying J Lebec / Grapevine (Kern, I-5 Exit 205, south-of-Bakersfield climb between LA and the Central Valley), Love's Santa Nella (Merced, I-5 Exit 407, between Grapevine and Tracy / Patterson), and two Patterson CAT stops (Stanislaus, Love's #807 + Flying J #1080, I-5 Exit 434). No dedicated walk-up house on this corridor; CDFA Kern / Merced / Stanislaus grids still WAF-blocked or not yet compiled.</p>
+    <p class="meta-line">{n} CAT stops verified · 1 Kern (Lebec Grapevine) · 1 Merced (Santa Nella) · 2 Stanislaus (Patterson) · 0 dedicated houses · CDFA county grids not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Flying J and Love's (Grapevine / mid-CA I-5)</h2>
+  <p class="section-note">We list only Grapevine / mid-CA I-5 CAT stops verified on the operator's own location page. Flying J #616 (Lebec / Frazier Mountain Park Rd — Grapevine), Love's #441 (Santa Nella / West Plaza Dr), Love's #807 (Patterson / S Rogers Rd), and Flying J #1080 (Patterson / Sperry Ave) each list CAT Scale / CAT Scales as an amenity. Use <a href="https://catscale.com/cat-scale-locator/">CAT's locator</a> for other stops. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. In California, go inside for a printed weighmaster certificate when you need one.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>California Commercial Vehicle Enforcement Facilities (CHP weigh stations) are for commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. See Caltrans' weigh-station primer and follow posted signs; do not treat this directory as a bypass guide. The Grapevine I-5 climb has CHP enforcement facilities near Fort Tejon and Gorman — those are not public scale houses.</p>
+    <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities)</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Full CDFA Kern / Merced / Stanislaus public-scale grids (blocked or not compiled). Any dedicated walk-up house on the Grapevine / mid-CA I-5 corridor with an operator page that publishes civilian weighmaster tickets. Lat/lng for Love's Santa Nella and Love's Patterson. Other nearby I-5 CAT stops (Ripon Flying J #618, ONE9 Lodi #1361) whose own pages list CAT. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/ca/lebec/42810-frazier-mountain-park-rd">Flying J #616 Lebec</a> · <a href="https://www.loves.com/locations/ca/santa-nella/loves-travel-stop-santa-nella-441">Love's #441 Santa Nella</a> · <a href="https://www.loves.com/locations/ca/patterson/loves-travel-stop-patterson-807">Love's #807 Patterson</a> · <a href="https://locations.pilotflyingj.com/us/ca/patterson/2275-sperry-ave">Flying J #1080 Patterson</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished)</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/central-valley/">Central Valley public scales</a></li>
+      <li><a href="/sacramento/">Sacramento approaches</a></li>
+      <li><a href="/los-angeles/">Los Angeles County public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(gv)
+
 
 def page_rv():
     return """
@@ -1126,6 +1265,24 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "sacramento" / "index.html",
+        "Sacramento approaches — I-5 corridor CAT Scales | WeighHere",
+        "Four CAT Scales on I-5 near Sacramento: Pilot Dunnigan, Love's Williams, Flying J Lodi, Flying J Lathrop. No ScaleRegistry dedicated house; CDFA grids not loaded.",
+        "sac",
+        "../",
+        sacramento_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "grapevine" / "index.html",
+        "Grapevine / I-5 mid-CA corridor — Lebec, Santa Nella, Patterson CAT | WeighHere",
+        "Four CAT Scales on Grapevine / mid-CA I-5: Flying J Lebec, Love's Santa Nella, Love's Patterson, Flying J Patterson. No dedicated house on this corridor.",
+        "gv",
+        "../",
+        grapevine_body(),
+        leaflet,
+    )
+    write(
         ROOT / "how-to-weigh-an-rv" / "index.html",
         "How to weigh an RV or fifth-wheel at a CAT Scale | WeighHere",
         "CAT platforms, no corner weights, 2,000 lb minimum, printed California weighmaster ticket. Cited from CAT’s how-to page.",
@@ -1186,7 +1343,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/central-valley/">Central Valley</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
