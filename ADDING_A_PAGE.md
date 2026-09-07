@@ -47,7 +47,7 @@ Each station object:
 
 Leave `hours_notes`, `phone`, `zip`, `lat`/`lng` null rather than guessing. `livestock` stays `"unknown"` unless a primary source says otherwise.
 
-`county` slug must match a page: `los-angeles`, `orange`, `riverside`, `san-bernardino` (Inland Empire page filters the last two), `san-diego`, `maricopa` (Phoenix page), `kern` / `fresno` / `merced` (Central Valley page filters those three), `yolo` / `colusa` / `san-joaquin` (Sacramento approaches page filters those three), or `stanislaus` (Grapevine / I-5 mid-CA page uses an id-filter list, but Patterson stations are in Stanislaus). New counties need a new folder (step 3).
+`county` slug must match a page: `los-angeles`, `orange`, `riverside`, `san-bernardino` (Inland Empire page filters the last two), `san-diego`, `maricopa` (Phoenix page), or `yolo` / `colusa` / `san-joaquin` (Sacramento approaches and Hwy 99 / Stockton pages filter specific station ids in those counties), or `kern` / `fresno` / `merced` (Central Valley page filters those three; Lebec and Santa Nella also appear on Grapevine), or Grapevine / I-5 mid-CA (`/grapevine/`) and Hwy 99 / Stockton (`/highway-99/`) which filter specific station ids (including `stanislaus` Patterson rows on Grapevine, Ripon/Lodi San Joaquin rows on Hwy 99). New counties need a new folder (step 3).
 
 ## 2. Rebuild
 
@@ -68,8 +68,6 @@ County pages read JSON. Guide pages (`how-to-weigh-an-rv`, PPM, horse, 2,000 lb,
 6. For CAT: link [catscale.com/cat-scale-locator](https://catscale.com/cat-scale-locator/). List only stops that appear on the state W&M list or that you verified on CAT/Pilot/Love’s **own** location page. Do not paste CAT’s national file into `stations.json`.
 7. Update `STATUS.md` with counts, sources, and gaps. Set `last_checked` to today’s date (`YYYY-MM-DD`).
 8. Commit generated HTML + JSON together so Netlify can serve even if `build.py` is skipped.
-
-**ID-filter pages** (corridor / themed pages): When a page groups specific stations by theme or corridor rather than by county (e.g., Grapevine / I-5 mid-CA spans Kern + Merced + Stanislaus), use an id-filter list (`gv_ids = ["flying-j-616-lebec", ...]`) instead of a county filter. This preserves exact order and avoids county-boundary confusion. County slugs for those stations still need to be valid (e.g., `stanislaus` for Patterson stations). See `grapevine_body()` in `build.py` for the pattern.
 
 ## 4. What not to do
 
