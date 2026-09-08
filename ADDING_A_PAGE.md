@@ -47,7 +47,7 @@ Each station object:
 
 Leave `hours_notes`, `phone`, `zip`, `lat`/`lng` null rather than guessing. `livestock` stays `"unknown"` unless a primary source says otherwise.
 
-`county` slug must match a page: `los-angeles`, `orange`, `riverside`, `san-bernardino` (Inland Empire page filters the last two), `san-diego`, `maricopa` (Phoenix page), or `yolo` / `colusa` / `san-joaquin` (Sacramento approaches and Hwy 99 / Stockton pages filter specific station ids in those counties), or `kern` / `fresno` / `merced` (Central Valley page filters those three; Lebec and Santa Nella also appear on Grapevine), or Grapevine / I-5 mid-CA (`/grapevine/`) and Hwy 99 / Stockton (`/highway-99/`) which filter specific station ids (including `stanislaus` Patterson rows on Grapevine, Ripon/Lodi San Joaquin rows on Hwy 99). New counties need a new folder (step 3).
+`county` slug must match a page: `los-angeles`, `orange`, `riverside`, `san-bernardino` (Inland Empire page filters the last two), `san-diego`, `maricopa` (Phoenix page), or `yolo` / `colusa` / `san-joaquin` (Sacramento approaches and Hwy 99 / Stockton pages filter specific station ids in those counties), or `madera` (Madera / Hwy 99 page), or `kern` / `fresno` / `merced` (Central Valley page filters those three; Lebec and Santa Nella also appear on Grapevine), or Grapevine / I-5 mid-CA (`/grapevine/`), Hwy 99 / Stockton (`/highway-99/`), and Madera / Hwy 99 (`/madera/`) which filter specific station ids (including `stanislaus` Patterson rows on Grapevine, Ripon/Lodi San Joaquin rows on Hwy 99). New counties need a new folder (step 3).
 
 ## 2. Rebuild
 
