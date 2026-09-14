@@ -1,56 +1,59 @@
-# WeighHere status — 11 Sep 2026
+# WeighHere status — 13 Sep 2026
 
-Compiled evening PT 11 Sep 2026 (nightly ship).
+Compiled evening PT 13 Sep 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **110** | +3 (Love’s Westmorland, Pilot Brawley, ONE9 El Centro) |
-| Los Angeles County | 45 | unchanged |
+| **Total rows in `data/stations.json`** | **114** | +3 (Pilot #1094 Tehachapi, Love’s #755 Boron, Pilot #200 Boron) |
+| Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
 | Coachella Valley / I-10 | 6 | unchanged |
 | Ontario / I-10 West | 6 | unchanged |
-| **Imperial Valley / Hwy 86** | **3** | new (Love’s #749, Pilot #1132, ONE9 #1447) |
-| I-15 / High Desert | 4 | unchanged |
+| Imperial Valley / Hwy 86 | 3 | unchanged |
+| Antelope Valley / Pearblossom | 4 | unchanged (Boron held-line removed; ships on Mojave) |
+| **Mojave / Hwy 58** | **4** | new page (3 new CAT + Love’s #392 reused) |
+| I-15 / High Desert | 4 | unchanged (Barstow cluster not re-added) |
 | San Diego County | 8 | unchanged |
 | Phoenix metro / Maricopa | 4 | unchanged |
-| Central Valley (Kern+Fresno+Merced filter) | 8 | unchanged |
+| Central Valley (Kern+Fresno+Merced filter) | 11 | +3 Kern Hwy 58 CAT (also on Mojave page) |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
 | Hwy 99 / Stockton approaches | 4 | unchanged |
 | Madera / Hwy 99 | 2 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
-| Dedicated / walk-up houses | 12–13 | unchanged (no Imperial dedicated) |
-| CAT / truck-stop cards | 43–46 | +3 new Imperial CAT rows |
+| Dedicated / walk-up houses | 12–13 | unchanged |
+| CAT / truck-stop cards | 47–50 | +3 Hwy 58 CAT |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Imperial Valley / Hwy 86** (`/imperial/`): three CAT Scales verified on Love’s and Pilot Flying J own location pages. CDFA Imperial (c=13) WAF-blocked this compile — no invented dedicated houses.
+**Mojave / Hwy 58** (`/mojave/`): corridor page Tehachapi → Boron on CA-58. Three new CAT rows verified on operator own pages; Love’s #392 Tehachapi reused (already on Central Valley).
 
-- **Love’s #749 Westmorland** — CAT on Love’s own page (Hwy 86 / Martin Rd)
-- **Pilot #1132 Brawley** — CAT on Pilot’s own page (Ben Hulse Hwy / Hwy 111–78)
-- **ONE9 Dealer #1447 El Centro** — CAT on Pilot Flying J ONE9 page (I-8 Exit 115 / Wake Ave)
+- **Pilot #1094 Tehachapi** — CAT on Pilot’s own CA-58 Exit 151 page (new row)
+- **Love’s #392 Tehachapi** — existing Kern CAT (reused)
+- **Love’s #755 Boron** — CAT Scales on Love’s own Hwy 58 Exit 199 page (new row)
+- **Pilot #200 Boron** — CAT on Pilot’s own US-395 & CA-58 page (new row; previously held from Antelope Valley compile)
 
-Blythe Public Scales (dedicated) remains on the Coachella Valley / I-10 page. No ScaleRegistry dedicated Imperial house used tonight.
+No invented hours/fees/livestock. Barstow I-15 cluster stays on `/i-15/` only.
 
 ## Sources used (this compile)
 
-- Love’s #749 Westmorland: https://www.loves.com/locations/ca/westmorland/loves-travel-stop-westmorland-749
-- Pilot #1132 Brawley: https://locations.pilotflyingj.com/us/ca/brawley/234-ben-hulse-hwy
-- ONE9 #1447 El Centro: https://locations.pilotflyingj.com/us/ca/el-centro/550-wake-ave
-- CDFA Imperial (c=13): https://apps1.cdfa.ca.gov/publicscales/view.aspx?c=13 — **WAF-blocked** this compile
+- Pilot #1094 Tehachapi: https://locations.pilotflyingj.com/us/ca/tehachapi/1668-e-tehachapi-blvd
+- Love’s #392 Tehachapi: https://www.loves.com/locations/ca/tehachapi/loves-travel-stop-tehachapi-392 (prior verify; reused)
+- Love’s #755 Boron: https://www.loves.com/locations/ca/boron/loves-travel-stop-boron-755
+- Pilot #200 Boron: https://locations.pilotflyingj.com/us/ca/boron/5725-ca-58
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
-- ScaleRegistry public scales: https://scaleregistry.com/public-scales.html (no Imperial dedicated house used)
+- CDFA Kern (c=15): still WAF-blocked from this compile path
 
 ## Gaps / deferred
 
-- CDFA Imperial c=13 still WAF-blocked from this box — no dedicated Imperial walk-up house from CDFA tonight
-- No ScaleRegistry dedicated Imperial Valley house featured
-- Livestock / fees unknown on all three new CAT rows
-- CAT staffing: store listed 24h ≠ published scale schedule
-- ONE9 dealer hours after dark — call ahead
+- No ScaleRegistry dedicated walk-up house verified on Tehachapi / Mojave / Boron stretch
+- CDFA Kern facility grid still blocked
+- Hours / fees / livestock unknown beyond store-listed 24h vs CAT staffing
 - Temecula / Corona Love’s still deferred (no own-page CAT confirmation used)
 - Ventura / Santa Barbara remain thin (industrial/quarry/ag only)
+- US-101 Salinas / Hwy 99 Tulare / I-5 Weed CAT rows researched earlier, not shipped tonight
+- Bay Area / Half Moon Bay Ox Mountain landfill scale is disposal-oriented — not featured as a general ticket shop
