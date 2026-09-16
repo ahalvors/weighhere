@@ -1,12 +1,12 @@
-# WeighHere status — 14 Sep 2026
+# WeighHere status — 15 Sep 2026
 
-Compiled evening PT 14 Sep 2026 (nightly ship).
+Compiled evening PT 15 Sep 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **116** | +2 (Love’s #382 Tulare, Flying J #1071 Tulare) |
+| **Total rows in `data/stations.json`** | **118** | +2 (Love’s #898 Salinas, Pilot #237 Salinas) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -23,35 +23,39 @@ Compiled evening PT 14 Sep 2026 (nightly ship).
 | Grapevine / I-5 mid-CA | 4 | unchanged |
 | Hwy 99 / Stockton approaches | 4 | unchanged |
 | Madera / Hwy 99 | 2 | unchanged |
-| **Tulare / Hwy 99** | **2** | new page (Love’s #382 + Flying J #1071) |
+| Tulare / Hwy 99 | 2 | unchanged |
+| **Salinas / US-101** | **2** | new page (Love’s #898 + Pilot #237) |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 49–52 | +2 Tulare Exit 85 |
+| CAT / truck-stop cards | 51–54 | +2 Salinas Exit 326 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Tulare / Hwy 99** (`/tulare/`): corridor page at CA-99 Exit 85 in Tulare. Two new CAT rows verified on operator own pages.
+**Salinas / US-101** (`/salinas/`): corridor page at US-101 Exit 326 in Salinas (Monterey County). Two new CAT rows verified on operator own pages.
 
-- **Love’s #382 Tulare** — CAT Scales on Love’s own Hwy 99 / Blackstone page (new row)
-- **Flying J #1071 Tulare** — CAT Scale on Pilot Flying J’s own Paige Ave / Exit 85 page (new row)
+- **Love’s #898 Salinas** — CAT Scales on Love’s own De La Torre / Exit 326A page (new row)
+- **Pilot #237 Salinas** — CAT Scale on Pilot Flying J’s own Work St / Exit 326B page (new row)
 
-No invented hours/fees/livestock. Earlimart / Goshen / Visalia third-party CAT rows omitted. CDFA Tulare (c=54) WAF-blocked.
+No invented hours/fees/livestock. Gilroy Garlic Farm / undeclared Gilroy chain CAT omitted. CDFA Monterey (c=27) WAF-blocked. I-5 Weed / Yreka researched (Pilot #137 + EZ Trip #1343 both list CAT on Pilot pages) but deferred to keep tonight’s ship a single honest corridor.
 
 ## Sources used (this compile)
 
-- Love’s #382 Tulare: https://www.loves.com/locations/ca/tulare/loves-travel-stop-tulare-382
-- Flying J #1071 Tulare: https://locations.pilotflyingj.com/us/ca/tulare/979-e-paige-ave
+- Love’s #898 Salinas: https://www.loves.com/locations/ca/salinas/loves-travel-stop-salinas-898
+- Pilot #237 Salinas: https://locations.pilotflyingj.com/us/ca/salinas/951-work-st
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
-- CDFA Tulare (c=54): still WAF-blocked from this compile path
+- CDFA Monterey (c=27): WAF-blocked from this compile path
+- ScaleRegistry CA public-weighing list: no Monterey / Salinas dedicated house found on this compile
 
 ## Gaps / deferred
 
-- No ScaleRegistry dedicated walk-up house verified in Tulare / Visalia
-- CDFA Tulare facility grid still blocked
+- No ScaleRegistry dedicated walk-up house verified in Salinas / Monterey
+- CDFA Monterey facility grid still blocked
 - Hours / fees / livestock unknown beyond store-listed 24h vs CAT staffing
-- Earlimart Big B’s / Goshen Travel Plaza appear on third-party CAT lists only — omitted
+- Gilroy Garlic Farm CAT appears on third-party lists / operator marketing — omitted until we treat a primary CAT amenity page the same way as Love’s/Pilot own pages
+- King City / Prunedale / Hollister Love’s CAT not own-page verified this night
+- I-5 Weed (Pilot #137) + Yreka (EZ Trip #1343) — both own-page CAT confirmed; deferred as separate far-north corridor
 - Temecula / Corona Love’s still deferred (no own-page CAT confirmation used)
 - Ventura / Santa Barbara remain thin (industrial/quarry/ag only)
-- US-101 Salinas / I-5 Weed CAT rows researched (Pilot #237 Salinas, Pilot #137 Weed) — not shipped tonight (single-stop corridors)
+- Earlimart / Goshen / Visalia third-party CAT still omitted
 - Bay Area / Half Moon Bay Ox Mountain landfill scale is disposal-oriented — not featured as a general ticket shop

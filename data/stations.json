@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14",
+  "generated": "2026-09-15",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -3859,6 +3859,78 @@
       "last_checked": "2026-09-14",
       "lat": 36.181153,
       "lng": -119.332093
+    },
+    {
+      "id": "loves-898-salinas",
+      "name": "Love's Travel Stop #898 — CAT Scale (Salinas)",
+      "address": "1264 De La Torre",
+      "city": "Salinas",
+      "state": "CA",
+      "zip": "93905",
+      "county": "monterey",
+      "phone": "(831) 500-6979",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Love’s location page lists the store Open 24-hours and lists CAT Scales as an amenity. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Love’s own Salinas location page (US-101 Exit 326A / De La Torre) lists CAT Scales among amenities. Same Exit 326 cluster as Pilot #237 (Work St / Exit 326B). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Love's location page — Salinas #898",
+      "source_url": "https://www.loves.com/locations/ca/salinas/loves-travel-stop-salinas-898",
+      "operator_url": "https://www.loves.com/locations/ca/salinas/loves-travel-stop-salinas-898",
+      "last_checked": "2026-09-15",
+      "lat": 36.659302,
+      "lng": -121.618714
+    },
+    {
+      "id": "pilot-237-salinas",
+      "name": "Pilot Travel Center #237 — CAT Scale (Salinas)",
+      "address": "951 Work St",
+      "city": "Salinas",
+      "state": "CA",
+      "zip": "93901",
+      "county": "monterey",
+      "phone": "(831) 775-0380",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Pilot Flying J location page lists the store Open 24 Hours and lists CAT Scale as an amenity. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Pilot Flying J’s own Salinas page (US-101 Exit 326B / Work St / Sanborn) lists CAT Scale among amenities. Same Exit 326 cluster as Love’s #898 (De La Torre / Exit 326A). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page — Pilot #237 Salinas",
+      "source_url": "https://locations.pilotflyingj.com/us/ca/salinas/951-work-st",
+      "operator_url": "https://locations.pilotflyingj.com/us/ca/salinas/951-work-st",
+      "last_checked": "2026-09-15",
+      "lat": 36.6651915,
+      "lng": -121.6301509
     }
   ]
 }
