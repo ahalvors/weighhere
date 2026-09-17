@@ -38,6 +38,9 @@ NAV = [
     ("/cat-2000-lb-minimum/", "2,000 lb minimum", "catmin"),
     ("/public-scale-vs-weigh-station/", "Scale vs weigh station", "vs"),
     ("/about.html", "About", "about"),
+    ("/privacy.html", "Privacy", "privacy"),
+    ("/contact.html", "Contact", "contact"),
+    ("/disclosure.html", "Affiliate Disclosure", "disclosure"),
 ]
 
 
@@ -144,7 +147,7 @@ def footer(rel="."):
     </nav>
     <p>Independent directory compiled {CHECKED_HUMAN} from public CDFA county tables, CAT Scale public pages, operator sites, county/facility pages, ScaleRegistry, Caltrans, ADOT, and Arizona Department of Agriculture weighmaster licensing pages. Missing hours, fees, or livestock policy are left blank on purpose. CDFA’s own disclaimer: the Division makes no claims, promises, or guarantees about the absolute accuracy, completeness, or adequacy of the information on its public-scales list.</p>
     <p>This site does not give legal advice about overweight citations, who must stop at an open CHP scale, or PPM claim reimbursement. Confirm with the scale, your Transportation Office, or CHP Commercial Vehicle Section as needed.</p>
-    <p>&copy; {CHECKED[:4]} WeighHere · <a href="/about.html">How we compile listings</a></p>
+    <p>&copy; {CHECKED[:4]} WeighHere · <a href="/about.html">How we compile listings</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/disclosure.html">Affiliate Disclosure</a></p>
   </div>
 </footer>
 <script src="{rel}js/site.js"></script>
@@ -1983,11 +1986,128 @@ def page_about():
   <p>Every useful listing still starts with a phone call. We flag industrial CDFA rows as call-first / may refuse walk-ups. We leave livestock and 24-hour as unknown unless a primary source said so. Missing is better than fake.</p>
   <p>Listings in this build: {len(la)} Los Angeles County rows (including one ScaleRegistry extra and one enforcement station), {len(oc)} Orange County CDFA rows, {len(ie)} Inland Empire rows (ScaleRegistry Colton, CDFA Blythe dedicated, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario/Mira Loma/Colton/Rialto/Perris/Coachella Valley, Riverside County landfills), {len(ont)} Ontario / I-10 West corridor rows (Superior Colton + five CAT), {len(coa)} Coachella Valley / I-10 corridor rows (Blythe dedicated + four CAT + Blythe landfill call-first), {len(imp)} Imperial Valley / Hwy 86 corridor rows (three CAT), {len(av)} Antelope Valley corridor rows (two dedicated / walk-up + one CAT + one call-first), {len(moj)} Mojave / Hwy 58 corridor rows (four CAT), {len(sd)} San Diego County rows (three dedicated houses, one Pilot CAT, three call-first, one enforcement), {len(phx)} Phoenix metro / Maricopa rows (four CAT stops), {len(sac)} Sacramento-approach rows (four I-5 CAT stops), {len(gv)} Grapevine / I-5 mid-CA rows, {len(h99)} Hwy 99 / Stockton-approach rows (four CAT stops), {len(tul)} Tulare / Hwy 99 corridor rows (two CAT), {len(sal)} Salinas / US-101 corridor rows (two CAT), and {len(cv)} Central Valley rows (Selma + Merced dedicated, Kern CAT). Last compiled {CHECKED_HUMAN}.</p>
 
-  <h2>Affiliate disclosure (placeholder)</h2>
-  <p>This site may later include affiliate links. Programs under consideration, not live, not verified here: U-Haul via CJ Affiliate, Amazon Associates, Tractor Supply via Partnerize/Pepperjam, Camping World via FlexOffers. There is no CAT Scale consumer affiliate program that we found. No affiliate IDs are embedded in this build. When links go live they will be marked.</p>
+  <h2>Affiliate disclosure</h2>
+  <p>WeighHere (weighhere.com) may include affiliate links in the future. No affiliate IDs are embedded in this build. Programs under consideration, not live, not verified here: U-Haul via CJ Affiliate, Amazon Associates, Tractor Supply via Partnerize/Pepperjam, Camping World via FlexOffers. There is no CAT Scale consumer affiliate program that we found. When links go live they will be marked. See <a href="/disclosure.html">full Affiliate Disclosure</a>.</p>
 
   <h2>Corrections</h2>
   <p>If a house turned you away, changed hours, or will weigh livestock, that is the data this directory is for. A public report form is not shipping in this build. Check the last-checked date on each listing. Nightly additions are documented in ADDING_A_PAGE.md in the source repo.</p>
+</div>
+</main>
+"""
+
+
+def page_privacy():
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Plain terms about what WeighHere collects (not much) and how hosting works.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <h2>Overview</h2>
+  <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names, email addresses, or payment information.</p>
+
+  <h2>Analytics</h2>
+  <p>We may use web analytics to understand traffic patterns and improve the directory. Any analytics service used respects standard Do Not Track settings and does not sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
+
+  <h2>Hosting</h2>
+  <p>WeighHere is hosted on Netlify (weighhere.netlify.app) and served via Cloudflare for the public domain weighhere.com. Both services process standard web server logs (IP addresses, user agents, requested URLs) as part of delivering pages. Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>. Netlify's privacy policy: <a href="https://www.netlify.com/privacy/">netlify.com/privacy</a>.</p>
+
+  <h2>Cookies</h2>
+  <p>WeighHere does not set cookies. Cloudflare and Netlify may set security or performance cookies as part of infrastructure. These are not tracking cookies.</p>
+
+  <h2>Third-party links</h2>
+  <p>This site links to Google Maps, operator websites, government databases (CDFA, Caltrans, ADOT), and CAT Scale. Those destinations have their own privacy policies. We do not control their practices.</p>
+
+  <h2>Affiliate links (future)</h2>
+  <p>When affiliate links go live for U-Haul, Amazon, Tractor Supply, Camping World, or other programs, clicking a link may pass a referral identifier to the destination. That is how affiliate programs work. See <a href="/disclosure.html">Affiliate Disclosure</a> for full details.</p>
+
+  <h2>Data requests</h2>
+  <p>Because WeighHere does not collect visitor accounts or personal information, there is no user database to request deletion from. If you have questions about how a listing was compiled or believe a listing incorrectly references you, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
+
+  <h2>Changes</h2>
+  <p>This privacy policy may be updated as the site evolves. The last-compiled date ({CHECKED_HUMAN}) reflects the current site build. Material changes will be noted on the <a href="/about.html">About</a> page.</p>
+</div>
+</main>
+"""
+
+
+def page_contact():
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Get in touch</p>
+    <h1>Contact</h1>
+    <p class="lede">How to reach the operator of WeighHere for corrections, affiliate inquiries, or data questions.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <h2>Email</h2>
+  <p>For corrections to listings, hours updates, new scales, affiliate partnership inquiries, or privacy questions, email:</p>
+  <p><strong><a href="mailto:ahalvor@gmail.com">ahalvor@gmail.com</a></strong></p>
+  <p>Mention WeighHere or weighhere.com in your subject line so the message routes correctly.</p>
+
+  <h2>What to report</h2>
+  <p>Useful corrections: a scale turned you away, hours changed, a house closed, livestock policy verified, a new dedicated public scale opened, a quarry or landfill confirmed they will weigh walk-ups and issue tickets.</p>
+  <p>A public report form is not shipping in this build. Email is the channel.</p>
+
+  <h2>Operator</h2>
+  <p>WeighHere is compiled and operated by Andy Halvorsen. This is an independent directory, not affiliated with CDFA, CAT Scale, CHP, Caltrans, or any scale operator.</p>
+
+  <h2>Affiliate inquiries</h2>
+  <p>If you represent U-Haul, Amazon, Tractor Supply, Camping World, or another service relevant to people weighing civilian rigs, and you want to discuss affiliate partnerships, use the email above. See <a href="/disclosure.html">Affiliate Disclosure</a> for programs under consideration.</p>
+
+  <h2>No phone</h2>
+  <p>There is no phone number for WeighHere. The phone numbers on scale listings are for the scale operators, not for this directory. Email is the correct channel.</p>
+</div>
+</main>
+"""
+
+
+def page_disclosure():
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Transparency</p>
+    <h1>Affiliate Disclosure</h1>
+    <p class="lede">No live affiliate IDs yet. When U-Haul, Amazon, Tractor Supply, Camping World, or PODS links go live, they will be marked.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <h2>Affiliate links (not live)</h2>
+  <p>WeighHere (weighhere.com, also weighhere.netlify.app) may include affiliate links in the future. As of {CHECKED_HUMAN}, no affiliate IDs are embedded in this build. When links go live, they will be clearly marked as affiliate links or partnerships.</p>
+
+  <h2>Programs under consideration</h2>
+  <ul>
+    <li><strong>U-Haul</strong> via CJ Affiliate (Commission Junction)</li>
+    <li><strong>Amazon Associates</strong> for weight-distribution hitches, portable scales, and related products</li>
+    <li><strong>Tractor Supply</strong> via Partnerize/Pepperjam for tongue-weight gauges and farm equipment</li>
+    <li><strong>Camping World</strong> via FlexOffers for RV-related products</li>
+    <li><strong>PODS</strong> or other moving and storage services if a program becomes available</li>
+  </ul>
+  <p>There is no CAT Scale consumer affiliate program that we found. CAT Scale links on this site are not monetized.</p>
+
+  <h2>How affiliate links work</h2>
+  <p>An affiliate link passes a referral identifier to the destination site. If you make a purchase or sign up for a service after clicking that link, WeighHere may earn a commission. The commission does not increase your cost. The price you pay is the same whether you use an affiliate link or go directly to the site.</p>
+
+  <h2>Editorial independence</h2>
+  <p>Listings on WeighHere are compiled from public sources: CDFA county tables, CAT Scale public pages, operator websites, ScaleRegistry, Caltrans, ADOT, and county facility pages. No scale pays to be listed. No affiliate program dictates which scales appear or how they are described.</p>
+  <p>If a U-Haul affiliate link appears on a guide page in the future, it is because U-Haul is a common moving truck, not because U-Haul paid for editorial placement. The same applies to Amazon or Tractor Supply: if a product is mentioned, it is because it is relevant to weighing a civilian rig, not because an affiliate program demanded it.</p>
+
+  <h2>Marking affiliate links</h2>
+  <p>When affiliate links go live, they will be identified. Methods may include visible labels ("affiliate link"), footnotes, or a disclosure statement on the page where the link appears. FTC guidelines require clear disclosure. WeighHere will follow those guidelines.</p>
+
+  <h2>Transparency</h2>
+  <p>This disclosure is written before any affiliate program is live. When partnerships are verified and IDs are issued, this page will be updated to reflect which programs are active. The <a href="/about.html">About</a> page will also note when affiliate links ship.</p>
+  <p>If you have questions about affiliate relationships or believe a link should be disclosed more clearly, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
+
+  <h2>No fake IDs</h2>
+  <p>We do not invent affiliate IDs or insert placeholder tracking codes. If a program is "under consideration," it means no ID is embedded. When an ID goes live, it will be real, verified, and disclosed.</p>
 </div>
 </main>
 """
@@ -2227,6 +2347,30 @@ def main():
         "about",
         "",
         page_about(),
+    )
+    write(
+        ROOT / "privacy.html",
+        "Privacy Policy — WeighHere",
+        "Privacy policy for WeighHere public scale directory. No accounts, analytics if any, Cloudflare/Netlify hosting, contact for data questions.",
+        "privacy",
+        "",
+        page_privacy(),
+    )
+    write(
+        ROOT / "contact.html",
+        "Contact — WeighHere",
+        "Contact WeighHere for corrections, affiliate inquiries, or data questions. Email ahalvor@gmail.com (Andy Halvorsen).",
+        "contact",
+        "",
+        page_contact(),
+    )
+    write(
+        ROOT / "disclosure.html",
+        "Affiliate Disclosure — WeighHere",
+        "Affiliate disclosure for WeighHere. No live affiliate IDs yet. When U-Haul, Amazon, Tractor Supply, Camping World links go live they will be marked.",
+        "disclosure",
+        "",
+        page_disclosure(),
     )
 
     (ROOT / "404.html").write_text(
