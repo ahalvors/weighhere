@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15",
+  "generated": "2026-09-16",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -3931,6 +3931,78 @@
       "last_checked": "2026-09-15",
       "lat": 36.6651915,
       "lng": -121.6301509
+    },
+    {
+      "id": "pilot-137-weed",
+      "name": "Pilot Travel Center #137 — CAT Scale (Weed)",
+      "address": "395 E Vista Dr",
+      "city": "Weed",
+      "state": "CA",
+      "zip": "96094",
+      "county": "siskiyou",
+      "phone": "(530) 938-9600",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Pilot Flying J location page lists the store Open 24 Hours and lists CAT Scale as an amenity (FAQ: yes, has a CAT scale). Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Pilot Flying J’s own Weed page (I-5 Exit 745 / E Vista Dr) lists CAT Scale among amenities. Far-north I-5 / Siskiyou County corridor with EZ Trip #1343 Yreka (Exit 776). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page — Pilot #137 Weed",
+      "source_url": "https://locations.pilotflyingj.com/us/ca/weed/395-e-vista-dr",
+      "operator_url": "https://locations.pilotflyingj.com/us/ca/weed/395-e-vista-dr",
+      "last_checked": "2026-09-16",
+      "lat": 41.3990246,
+      "lng": -122.37658
+    },
+    {
+      "id": "ez-trip-1343-yreka",
+      "name": "EZ Trip Dealer #1343 — CAT Scale (Yreka)",
+      "address": "787 Montague Rd",
+      "city": "Yreka",
+      "state": "CA",
+      "zip": "96097",
+      "county": "siskiyou",
+      "phone": "(530) 200-8954",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Pilot Flying J location page lists the store Open 24 Hours and lists CAT Scale among location amenities. Confirm the scale is working before a middle-of-the-night trip. Dealer sites can keep different staffing than corporate Pilots — call ahead if you need the ticket after dark.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Pilot Flying J’s own Yreka EZ Trip Dealer page (I-5 Exit 776 / Montague Rd) lists CAT Scale among amenities. Far-north I-5 / Siskiyou County corridor with Pilot #137 Weed (Exit 745). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station. Dealer branding (EZ Trip) on the Pilot network — call ahead if you need the ticket after dark.",
+      "source_name": "Pilot Flying J location page — EZ Trip #1343 Yreka",
+      "source_url": "https://locations.pilotflyingj.com/us/ca/yreka/787-montague-rd",
+      "operator_url": "https://locations.pilotflyingj.com/us/ca/yreka/787-montague-rd",
+      "last_checked": "2026-09-16",
+      "lat": 41.7376105,
+      "lng": -122.6237428
     }
   ]
 }
