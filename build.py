@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-16
-CHECKED_HUMAN = "16 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-17
+CHECKED_HUMAN = "17 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -31,6 +31,7 @@ NAV = [
     ("/tulare/", "Tulare / Hwy 99", "tul"),
     ("/salinas/", "Salinas / US-101", "sal"),
     ("/weed-yreka/", "Weed / Yreka / I-5", "wy"),
+    ("/corning-orland/", "Corning / Orland / I-5", "co"),
     ("/central-valley/", "Central Valley", "cv"),
     ("/how-to-weigh-an-rv/", "Weigh an RV", "rv"),
     ("/ppm-dity-southern-california/", "PPM / DITY", "ppm"),
@@ -137,6 +138,7 @@ def footer(rel="."):
         <li><a href="/tulare/">Tulare / Hwy 99</a></li>
         <li><a href="/salinas/">Salinas / US-101</a></li>
         <li><a href="/weed-yreka/">Weed / Yreka / I-5</a></li>
+        <li><a href="/corning-orland/">Corning / Orland / I-5</a></li>
         <li><a href="/central-valley/">Central Valley</a></li>
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
@@ -1107,15 +1109,78 @@ def weed_yreka_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Full CDFA Siskiyou public-scale grid (blocked on this compile). Any dedicated walk-up weighmaster house in Weed / Yreka / Mount Shasta with an operator page. Livestock policy. Other far-north I-5 CAT stops whose own pages list CAT — not third-party directories.</p>
+    <p>Full CDFA Siskiyou public-scale grid (blocked on this compile). Any dedicated walk-up weighmaster house in Weed / Yreka / Mount Shasta with an operator page. Livestock policy. Other far-north I-5 CAT stops whose own pages list CAT — not third-party directories. Mid-north Corning / Orland CAT now ships on the <a href="/corning-orland/">Corning / Orland / I-5</a> page.</p>
   </div>
   <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/ca/weed/395-e-vista-dr">Pilot #137 Weed</a> · <a href="https://locations.pilotflyingj.com/us/ca/yreka/787-montague-rd">EZ Trip #1343 Yreka</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · CDFA Siskiyou grid: blocked</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/corning-orland/">Corning / Orland / I-5 public scales</a></li>
       <li><a href="/grapevine/">Grapevine / I-5 mid-CA public scales</a></li>
       <li><a href="/sacramento/">Sacramento approaches public scales</a></li>
       <li><a href="/central-valley/">Central Valley public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+def corning_orland_body():
+    order = [
+        "loves-410-corning",
+        "pilot-1019-orland",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    co = [by_id[i] for i in order if i in by_id]
+    dedicated = [s for s in co if s["display_group"] == "dedicated"]
+    cat = [s for s in co if s["display_group"] == "cat"]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(co)
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Corning · Orland · I-5 mid-north · Tehama · Glenn · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on I-5 at Corning and Orland</h1>
+    <p class="lede">Two CAT Scales verified on Love’s and Pilot Flying J <em>own</em> location pages on mid-north I-5 between Sacramento approaches and far-north Weed / Yreka: Love’s #410 Corning (I-5 Exit 630 / South Ave) and Pilot #1019 Orland (I-5 Exit 619 / Commerce Ln). No ScaleRegistry dedicated walk-up house in Corning / Orland / Tehama / Glenn on this compile. CDFA Tehama and Glenn grids did not load (WAF blocked). For Sacramento-approach I-5 CAT (Williams / Dunnigan), use <a href="/sacramento/">Sacramento approaches</a>; for far-north I-5, use <a href="/weed-yreka/">Weed / Yreka / I-5</a>.</p>
+    <p class="meta-line">{n} verified listings · {len(dedicated)} dedicated houses · {len(cat)} CAT stops · CDFA grids not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in Corning / Orland</h2>
+    <p>ScaleRegistry’s California public-weighing list still points to inland Central Valley houses (Selma / Merced / Lancaster) — <strong>no Tehama / Glenn / Corning / Orland dedicated house</strong> verified on this compile. We are not inventing a civilian ticket shop from third-party trucker directories.</p>
+  </div>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Love’s and Pilot</h2>
+  <p class="section-note">We list only corridor CAT stops verified on the operator’s own location page. Love’s #410 (Corning / I-5 Exit 630 / South Ave) lists CAT Scales; Pilot #1019 (Orland / I-5 Exit 619 / Commerce Ln) lists CAT Scale (FAQ: yes). 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. In California, go inside for a printed weighmaster certificate when you need one. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>California Commercial Vehicle Enforcement Facilities (CHP weigh stations) are for commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. Cottonwood and other I-5 CVEFs near Redding are not ticket shops. See Caltrans’ weigh-station primer and follow posted signs; do not treat this directory as a bypass guide.</p>
+    <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities)</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Full CDFA Tehama and Glenn public-scale grids (blocked on this compile). Any dedicated walk-up weighmaster house in Corning / Orland / Red Bluff / Willows with an operator page. Livestock policy. Other mid-north I-5 CAT stops (Redding / Anderson / Willows) whose own pages list CAT — not third-party directories.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/ca/corning/loves-travel-stop-corning-410">Love’s #410 Corning</a> · <a href="https://locations.pilotflyingj.com/us/ca/orland/4444-commerce-ln">Pilot #1019 Orland</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · CDFA Tehama / Glenn grids: blocked</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
+      <li><a href="/sacramento/">Sacramento approaches public scales</a></li>
+      <li><a href="/grapevine/">Grapevine / I-5 mid-CA public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -2004,6 +2069,7 @@ def page_about():
     tul_ids = {"loves-382-tulare", "flying-j-1071-tulare"}
     sal_ids = {"loves-898-salinas", "pilot-237-salinas"}
     wy_ids = {"pilot-137-weed", "ez-trip-1343-yreka"}
+    co_ids = {"loves-410-corning", "pilot-1019-orland"}
     sac = [s for s in STATIONS if s["id"] in sac_ids]
     h99 = [s for s in STATIONS if s["id"] in h99_ids]
     gv = [s for s in STATIONS if s["id"] in gv_ids]
@@ -2015,6 +2081,7 @@ def page_about():
     tul = [s for s in STATIONS if s["id"] in tul_ids]
     sal = [s for s in STATIONS if s["id"] in sal_ids]
     wy = [s for s in STATIONS if s["id"] in wy_ids]
+    co = [s for s in STATIONS if s["id"] in co_ids]
     cv = [s for s in STATIONS if s["county"] in ("kern", "fresno", "merced")]
     return f"""
 <main id="main">
@@ -2028,7 +2095,7 @@ def page_about():
 <div class="wrap prose">
   <h2>What this is</h2>
   <p>WeighHere lists public and truck-stop scales for people who are not running a CDL for a living: U-Haul and moving trucks, RVs, horse trailers, boat and dump trailers, military PPM/DITY loads. The product is the filter Google does not have — will they weigh <em>this</em> rig, can you walk up, do you get a ticket you can use, and is this actually a cop scale.</p>
-  <p>As of {CHECKED_HUMAN} the live geography is Los Angeles County (solid), Orange County (CDFA table, walk-up not verified), Inland Empire (ScaleRegistry Colton, Blythe Public Scales from CDFA Riverside, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario + Mira Loma + Colton + Rialto + Perris + Coachella Valley cluster + I-15 High Desert, Riverside County landfills; CDFA Riverside + San Bernardino grids loaded), Ontario / I-10 West (Superior Colton + TA/Petro Ontario + Flying J Mira Loma + Pilot Colton + Flying J Fontana), Coachella Valley / I-10 (Blythe dedicated + four I-10 CAT stops), Imperial Valley / Hwy 86 (three CAT stops on Love’s/Pilot own pages; CDFA Imperial c=13 WAF-blocked; no ScaleRegistry dedicated Imperial house), Antelope Valley / Palmdale–Lancaster (Pilot #1267 CAT on Pilot’s own page plus ScaleRegistry Lancaster 80′ and Sierra Gas & Scale; Hi-Grade call-first), Mojave / Hwy 58 (four CAT stops Tehachapi–Boron on Pilot/Love’s own pages), San Diego County (Allstate Poway/Oceanside, Eckert’s San Marcos, Pilot Otay Mesa CAT, call-first transfer/landfill rows, San Onofre enforcement; CDFA San Diego c=37 grid not loaded), Phoenix metro / Maricopa (four CAT stops on Pilot/Flying J and Love’s own pages; no ScaleRegistry dedicated house; no AZ CDFA-equivalent facility grid), Central Valley (Selma + Merced dedicated houses, four Kern CAT stops on Pilot/Love’s own pages; CDFA Kern/Fresno/Merced grids not loaded), Sacramento approaches (four I-5 corridor CAT stops), Grapevine / I-5 mid-CA (four CAT stops Lebec–Patterson), Hwy 99 / Stockton approaches (Flying J #618 + Love’s #223 Ripon, ONE9 #1361 + Love’s #538 Lodi), Madera / Hwy 99 (Love’s #736 + Pilot #365), Tulare / Hwy 99 (Love’s #382 + Flying J #1071), Salinas / US-101 (Love’s #898 + Pilot #237), and Weed / Yreka / I-5 far north (Pilot #137 + EZ Trip #1343). Guide pages include dump-trailer / landfill scales (call-first gate scales vs dedicated ticket shops).</p>
+  <p>As of {CHECKED_HUMAN} the live geography is Los Angeles County (solid), Orange County (CDFA table, walk-up not verified), Inland Empire (ScaleRegistry Colton, Blythe Public Scales from CDFA Riverside, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario + Mira Loma + Colton + Rialto + Perris + Coachella Valley cluster + I-15 High Desert, Riverside County landfills; CDFA Riverside + San Bernardino grids loaded), Ontario / I-10 West (Superior Colton + TA/Petro Ontario + Flying J Mira Loma + Pilot Colton + Flying J Fontana), Coachella Valley / I-10 (Blythe dedicated + four I-10 CAT stops), Imperial Valley / Hwy 86 (three CAT stops on Love’s/Pilot own pages; CDFA Imperial c=13 WAF-blocked; no ScaleRegistry dedicated Imperial house), Antelope Valley / Palmdale–Lancaster (Pilot #1267 CAT on Pilot’s own page plus ScaleRegistry Lancaster 80′ and Sierra Gas & Scale; Hi-Grade call-first), Mojave / Hwy 58 (four CAT stops Tehachapi–Boron on Pilot/Love’s own pages), San Diego County (Allstate Poway/Oceanside, Eckert’s San Marcos, Pilot Otay Mesa CAT, call-first transfer/landfill rows, San Onofre enforcement; CDFA San Diego c=37 grid not loaded), Phoenix metro / Maricopa (four CAT stops on Pilot/Flying J and Love’s own pages; no ScaleRegistry dedicated house; no AZ CDFA-equivalent facility grid), Central Valley (Selma + Merced dedicated houses, four Kern CAT stops on Pilot/Love’s own pages; CDFA Kern/Fresno/Merced grids not loaded), Sacramento approaches (four I-5 corridor CAT stops), Grapevine / I-5 mid-CA (four CAT stops Lebec–Patterson), Hwy 99 / Stockton approaches (Flying J #618 + Love’s #223 Ripon, ONE9 #1361 + Love’s #538 Lodi), Madera / Hwy 99 (Love’s #736 + Pilot #365), Tulare / Hwy 99 (Love’s #382 + Flying J #1071), Salinas / US-101 (Love’s #898 + Pilot #237), Weed / Yreka / I-5 far north (Pilot #137 + EZ Trip #1343), and Corning / Orland / I-5 mid-north (Love’s #410 + Pilot #1019). Guide pages include dump-trailer / landfill scales (call-first gate scales vs dedicated ticket shops).</p>
 
   <h2>Sources</h2>
   <ul>
@@ -2051,7 +2118,7 @@ def page_about():
 
   <h2>Call ahead</h2>
   <p>Every useful listing still starts with a phone call. We flag industrial CDFA rows as call-first / may refuse walk-ups. We leave livestock and 24-hour as unknown unless a primary source said so. Missing is better than fake.</p>
-  <p>Listings in this build: {len(la)} Los Angeles County rows (including one ScaleRegistry extra and one enforcement station), {len(oc)} Orange County CDFA rows, {len(ie)} Inland Empire rows (ScaleRegistry Colton, CDFA Blythe dedicated, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario/Mira Loma/Colton/Rialto/Perris/Coachella Valley, Riverside County landfills), {len(ont)} Ontario / I-10 West corridor rows (Superior Colton + five CAT), {len(coa)} Coachella Valley / I-10 corridor rows (Blythe dedicated + four CAT + Blythe landfill call-first), {len(imp)} Imperial Valley / Hwy 86 corridor rows (three CAT), {len(av)} Antelope Valley corridor rows (two dedicated / walk-up + one CAT + one call-first), {len(moj)} Mojave / Hwy 58 corridor rows (four CAT), {len(sd)} San Diego County rows (three dedicated houses, one Pilot CAT, three call-first, one enforcement), {len(phx)} Phoenix metro / Maricopa rows (four CAT stops), {len(sac)} Sacramento-approach rows (four I-5 CAT stops), {len(gv)} Grapevine / I-5 mid-CA rows, {len(h99)} Hwy 99 / Stockton-approach rows (four CAT stops), {len(tul)} Tulare / Hwy 99 corridor rows (two CAT), {len(sal)} Salinas / US-101 corridor rows (two CAT), {len(wy)} Weed / Yreka / I-5 corridor rows (two CAT), and {len(cv)} Central Valley rows (Selma + Merced dedicated, Kern CAT). Last compiled {CHECKED_HUMAN}.</p>
+  <p>Listings in this build: {len(la)} Los Angeles County rows (including one ScaleRegistry extra and one enforcement station), {len(oc)} Orange County CDFA rows, {len(ie)} Inland Empire rows (ScaleRegistry Colton, CDFA Blythe dedicated, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario/Mira Loma/Colton/Rialto/Perris/Coachella Valley, Riverside County landfills), {len(ont)} Ontario / I-10 West corridor rows (Superior Colton + five CAT), {len(coa)} Coachella Valley / I-10 corridor rows (Blythe dedicated + four CAT + Blythe landfill call-first), {len(imp)} Imperial Valley / Hwy 86 corridor rows (three CAT), {len(av)} Antelope Valley corridor rows (two dedicated / walk-up + one CAT + one call-first), {len(moj)} Mojave / Hwy 58 corridor rows (four CAT), {len(sd)} San Diego County rows (three dedicated houses, one Pilot CAT, three call-first, one enforcement), {len(phx)} Phoenix metro / Maricopa rows (four CAT stops), {len(sac)} Sacramento-approach rows (four I-5 CAT stops), {len(gv)} Grapevine / I-5 mid-CA rows, {len(h99)} Hwy 99 / Stockton-approach rows (four CAT stops), {len(tul)} Tulare / Hwy 99 corridor rows (two CAT), {len(sal)} Salinas / US-101 corridor rows (two CAT), {len(wy)} Weed / Yreka / I-5 corridor rows (two CAT), {len(co)} Corning / Orland / I-5 corridor rows (two CAT), and {len(cv)} Central Valley rows (Selma + Merced dedicated, Kern CAT). Last compiled {CHECKED_HUMAN}.</p>
 
   <h2>Affiliate disclosure</h2>
   <p>WeighHere (weighhere.com) may include affiliate links in the future. No affiliate IDs are embedded in this build. Programs under consideration, not live, not verified here: U-Haul via CJ Affiliate, Amazon Associates, Tractor Supply via Partnerize/Pepperjam, Camping World via FlexOffers. There is no CAT Scale consumer affiliate program that we found. When links go live they will be marked. See <a href="/disclosure.html">full Affiliate Disclosure</a>.</p>
@@ -2360,6 +2427,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "corning-orland" / "index.html",
+        "Corning / Orland / I-5 public scales — Love’s #410, Pilot #1019 CAT | WeighHere",
+        "Two CAT Scales verified on Love’s and Pilot Flying J own pages at Corning I-5 Exit 630 and Orland I-5 Exit 619. No dedicated house; CDFA Tehama/Glenn grids not loaded.",
+        "co",
+        "../",
+        corning_orland_body(),
+        leaflet,
+    )
+    write(
         ROOT / "central-valley" / "index.html",
         "Central Valley public scales — Selma, Merced, Bakersfield CAT | WeighHere",
         "Selma Certified Public Scale, Highway 59 Scales in Merced, and Kern County CAT Scales at Pilot #613 and Love’s #830 / #230 / #392. CDFA Kern/Fresno/Merced grids not loaded.",
@@ -2453,7 +2529,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
