@@ -2148,7 +2148,7 @@ def page_privacy():
   <p>We may use web analytics to understand traffic patterns and improve the directory. Any analytics service used respects standard Do Not Track settings and does not sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
 
   <h2>Hosting</h2>
-  <p>WeighHere is hosted on Netlify (weighhere.netlify.app) and served via Cloudflare for the public domain weighhere.com. Both services process standard web server logs (IP addresses, user agents, requested URLs) as part of delivering pages. Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>. Netlify's privacy policy: <a href="https://www.netlify.com/privacy/">netlify.com/privacy</a>.</p>
+  <p>WeighHere is hosted on Netlify and served via Cloudflare for the public domain weighhere.com. Both services process standard web server logs (IP addresses, user agents, requested URLs) as part of delivering pages. Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>. Netlify's privacy policy: <a href="https://www.netlify.com/privacy/">netlify.com/privacy</a>.</p>
 
   <h2>Cookies</h2>
   <p>WeighHere does not set cookies. Cloudflare and Netlify may set security or performance cookies as part of infrastructure. These are not tracking cookies.</p>
@@ -2214,7 +2214,7 @@ def page_disclosure():
 </section>
 <div class="wrap prose">
   <h2>Affiliate links (not live)</h2>
-  <p>WeighHere (weighhere.com, also weighhere.netlify.app) may include affiliate links in the future. As of {CHECKED_HUMAN}, no affiliate IDs are embedded in this build. When links go live, they will be clearly marked as affiliate links or partnerships.</p>
+  <p>WeighHere (weighhere.com) may include affiliate links in the future. As of {CHECKED_HUMAN}, no affiliate IDs are embedded in this build. When links go live, they will be clearly marked as affiliate links or partnerships.</p>
 
   <h2>Programs under consideration</h2>
   <ul>
