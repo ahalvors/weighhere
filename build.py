@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-17
-CHECKED_HUMAN = "17 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-18
+CHECKED_HUMAN = "18 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -32,6 +32,7 @@ NAV = [
     ("/salinas/", "Salinas / US-101", "sal"),
     ("/weed-yreka/", "Weed / Yreka / I-5", "wy"),
     ("/corning-orland/", "Corning / Orland / I-5", "co"),
+    ("/buttonwillow-lost-hills/", "Buttonwillow / Lost Hills / I-5", "blh"),
     ("/central-valley/", "Central Valley", "cv"),
     ("/how-to-weigh-an-rv/", "Weigh an RV", "rv"),
     ("/ppm-dity-southern-california/", "PPM / DITY", "ppm"),
@@ -139,6 +140,7 @@ def footer(rel="."):
         <li><a href="/salinas/">Salinas / US-101</a></li>
         <li><a href="/weed-yreka/">Weed / Yreka / I-5</a></li>
         <li><a href="/corning-orland/">Corning / Orland / I-5</a></li>
+        <li><a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a></li>
         <li><a href="/central-valley/">Central Valley</a></li>
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
@@ -1181,6 +1183,69 @@ def corning_orland_body():
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/sacramento/">Sacramento approaches public scales</a></li>
       <li><a href="/grapevine/">Grapevine / I-5 mid-CA public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+
+def buttonwillow_lost_hills_body():
+    order = [
+        "ta-buttonwillow-0160",
+        "loves-230-lost-hills",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    blh = [by_id[i] for i in order if i in by_id]
+    dedicated = [s for s in blh if s["display_group"] == "dedicated"]
+    cat = [s for s in blh if s["display_group"] == "cat"]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(blh)
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Buttonwillow · Lost Hills · I-5 mid-CA · Kern County · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on I-5 at Buttonwillow and Lost Hills</h1>
+    <p class="lede">Two CAT Scales verified on TravelCenters of America and Love’s <em>own</em> location pages on mid-I-5 between the Grapevine and Santa Nella: TA #0160 Buttonwillow (I-5 Exit 257 / Highway 58 / Lagoon Drive) and Love’s #230 Lost Hills (I-5 Exit 278 / Highway 46). No ScaleRegistry dedicated walk-up house on this stretch. CDFA Kern grid did not load (WAF blocked). Mid-north Redding / Anderson only had one own-page CAT (TA Redding #0057) on this compile — deferred until a second stop verifies. For Grapevine / Lebec, use <a href="/grapevine/">Grapevine / I-5 mid-CA</a>; for broader Kern CAT (Bakersfield / Tehachapi), use <a href="/central-valley/">Central Valley</a>.</p>
+    <p class="meta-line">{n} verified listings · {len(dedicated)} dedicated houses · {len(cat)} CAT stops · CDFA grid not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on this I-5 stretch</h2>
+    <p>ScaleRegistry’s California public-weighing list still points to inland Central Valley houses (Selma / Merced / Lancaster) — <strong>no Buttonwillow / Lost Hills dedicated house</strong> verified on this compile. We are not inventing a civilian ticket shop from third-party trucker directories.</p>
+  </div>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at TA and Love’s</h2>
+  <p class="section-note">We list only corridor CAT stops verified on the operator’s own location page. TA #0160 (Buttonwillow / I-5 Exit 257 / Lagoon Drive) lists CAT Scale; Love’s #230 (Lost Hills / I-5 Exit 278 / Highway 46) lists CAT Scales. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. In California, go inside for a printed weighmaster certificate when you need one. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>California Commercial Vehicle Enforcement Facilities (CHP weigh stations) are for commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. See Caltrans’ weigh-station primer and follow posted signs; do not treat this directory as a bypass guide.</p>
+    <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities)</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Full CDFA Kern public-scale grid (blocked on this compile). Any dedicated walk-up weighmaster house in Buttonwillow / Lost Hills / Wasco with an operator page. Livestock policy. Other mid-I-5 CAT stops (Wheeler Ridge TA/Petro cluster already adjacent to Grapevine coverage) whose own pages list CAT — not third-party directories. Redding / Anderson second CAT stop for a mid-north I-5 own page.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.ta-petro.com/location/ca/ta-buttonwillow/">TA #0160 Buttonwillow</a> · <a href="https://www.loves.com/locations/ca/lost-hills/loves-travel-stop-lost-hills-230">Love’s #230 Lost Hills</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · CDFA Kern grid: blocked · TA Redding #0057 verified but alone (no second mid-north own-page CAT tonight)</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/grapevine/">Grapevine / I-5 mid-CA public scales</a></li>
+      <li><a href="/central-valley/">Central Valley public scales</a></li>
+      <li><a href="/corning-orland/">Corning / Orland / I-5 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -2436,6 +2501,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "buttonwillow-lost-hills" / "index.html",
+        "Buttonwillow / Lost Hills / I-5 public scales — TA #0160, Love’s #230 CAT | WeighHere",
+        "Two CAT Scales verified on TA and Love’s own pages at Buttonwillow I-5 Exit 257 and Lost Hills I-5 Exit 278. No dedicated house; CDFA Kern grid not loaded.",
+        "blh",
+        "../",
+        buttonwillow_lost_hills_body(),
+        leaflet,
+    )
+    write(
         ROOT / "central-valley" / "index.html",
         "Central Valley public scales — Selma, Merced, Bakersfield CAT | WeighHere",
         "Selma Certified Public Scale, Highway 59 Scales in Merced, and Kern County CAT Scales at Pilot #613 and Love’s #830 / #230 / #392. CDFA Kern/Fresno/Merced grids not loaded.",
@@ -2529,7 +2603,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

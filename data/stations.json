@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17",
+  "generated": "2026-09-18",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -2488,7 +2488,7 @@
       "source_name": "Love's Travel Stop location page \u2014 Lost Hills #230",
       "source_url": "https://www.loves.com/locations/ca/lost-hills/loves-travel-stop-lost-hills-230",
       "operator_url": "https://www.loves.com/locations/ca/lost-hills/loves-travel-stop-lost-hills-230",
-      "last_checked": "2026-09-02",
+      "last_checked": "2026-09-18",
       "lat": 35.616981,
       "lng": -119.65888
     },
@@ -4075,6 +4075,42 @@
       "last_checked": "2026-09-17",
       "lat": 39.7506816,
       "lng": -122.2080617
+    },
+    {
+      "id": "ta-buttonwillow-0160",
+      "name": "TA Buttonwillow #0160 \u2014 CAT Scale",
+      "address": "27769 Lagoon Drive",
+      "city": "Buttonwillow",
+      "state": "CA",
+      "zip": "93206",
+      "county": "kern",
+      "phone": "(661) 764-5266",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "TA\u2019s own Buttonwillow page lists fuel 24/7 and CAT Scale among amenities. That is not a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "TA\u2019s own Buttonwillow location page (I-5 Exit 257 / Highway 58 / Lagoon Drive) lists CAT Scale among amenities. Mid-I-5 corridor with Love\u2019s #230 Lost Hills (Exit 278 / Highway 46). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT\u2019s locator. Not a DOT station.",
+      "source_name": "TA Buttonwillow location page",
+      "source_url": "https://www.ta-petro.com/location/ca/ta-buttonwillow/",
+      "operator_url": "https://www.ta-petro.com/location/ca/ta-buttonwillow/",
+      "last_checked": "2026-09-18",
+      "lat": 35.4011066,
+      "lng": -119.396201
     }
   ]
 }
