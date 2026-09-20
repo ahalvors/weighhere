@@ -1,12 +1,12 @@
-# WeighHere status — 18 Sep 2026
+# WeighHere status — 19 Sep 2026
 
-Compiled evening PT 18 Sep 2026 (nightly ship).
+Compiled evening PT 19 Sep 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **123** | +1 (TA #0160 Buttonwillow); Love’s #230 Lost Hills re-checked |
+| **Total rows in `data/stations.json`** | **125** | +2 (TA #0239 + Petro #0327 Wheeler Ridge) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -18,46 +18,49 @@ Compiled evening PT 18 Sep 2026 (nightly ship).
 | I-15 / High Desert | 4 | unchanged |
 | San Diego County | 8 | unchanged |
 | Phoenix metro / Maricopa | 4 | unchanged |
-| Central Valley (Kern+Fresno+Merced filter) | 11 | unchanged (Lost Hills still included) |
+| Central Valley (Kern+Fresno+Merced filter) | 13 | +2 Wheeler Ridge rows (also on dedicated page) |
 | Sacramento approaches | 4 | unchanged |
-| Grapevine / I-5 mid-CA | 4 | unchanged |
+| Grapevine / I-5 mid-CA | 4 | unchanged (Flying J Lebec still separate exit) |
 | Hwy 99 / Stockton approaches | 4 | unchanged |
 | Madera / Hwy 99 | 2 | unchanged |
 | Tulare / Hwy 99 | 2 | unchanged |
 | Salinas / US-101 | 2 | unchanged |
 | Weed / Yreka / I-5 | 2 | unchanged |
 | Corning / Orland / I-5 | 2 | unchanged |
-| **Buttonwillow / Lost Hills / I-5** | **2** | new page (TA #0160 + Love’s #230) |
+| Buttonwillow / Lost Hills / I-5 | 2 | unchanged |
+| **Wheeler Ridge / I-5** | **2** | new page (TA #0239 + Petro #0327) |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 56–59 | +1 Buttonwillow TA |
+| CAT / truck-stop cards | 58–61 | +2 Wheeler Ridge |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Buttonwillow / Lost Hills / I-5** (`/buttonwillow-lost-hills/`): mid-I-5 corridor page between Grapevine / Lebec and Santa Nella. Preferred Redding / Anderson mid-north target had only **one** own-page CAT (TA Redding #0057 on TA’s Knighton Rd page) — no second Love’s/Pilot/TA own-page CAT in Anderson / Red Bluff / Willows — so deferred that page rather than ship a one-stop filler.
+**Wheeler Ridge / I-5** (`/wheeler-ridge/`): Laval Road / Lake Isabella cluster just north of the Grapevine climb. Preferred Redding / Anderson mid-north target still has only **one** own-page CAT (TA Redding #0057) — no second Love’s/Pilot/TA own-page CAT in Anderson / Red Bluff / Willows — so deferred that page rather than ship a one-stop filler.
 
-- **TA #0160 Buttonwillow** — CAT Scale on TA’s own Lagoon Drive / I-5 Exit 257 page (new row)
-- **Love’s #230 Lost Hills** — CAT Scales on Love’s own Highway 46 / I-5 Exit 278 page (existing row; re-verified)
+- **TA #0239 Wheeler Ridge** — CAT Scale on TA’s own South Wheeler Ridge Road / I-5 Laval Road page (new row; Arvin mailing city)
+- **Petro #0327 Wheeler Ridge** — CAT Scale on Petro’s own Dennis McCarthy Dr. / I-5 Laval Road West page (new row; Lebec)
 
-No invented hours/fees/livestock. Store pages list Open 24 Hours / fuel 24/7; that is not a published CAT staffing schedule. CDFA Kern WAF-blocked. ScaleRegistry: no Buttonwillow / Lost Hills dedicated house on this compile.
+Distinct from Flying J #616 Lebec (Frazier Mountain Park Rd / Exit 205) already on Grapevine. No invented hours/fees/livestock. Store pages list fuel 24/7; that is not a published CAT staffing schedule. CDFA Kern WAF-blocked. ScaleRegistry: no Wheeler Ridge dedicated house on this compile.
 
 ## Sources used (this compile)
 
-- TA #0160 Buttonwillow: https://www.ta-petro.com/location/ca/ta-buttonwillow/
-- Love’s #230 Lost Hills: https://www.loves.com/locations/ca/lost-hills/loves-travel-stop-lost-hills-230
-- TA Redding #0057 (verified, not shipped alone): https://www.ta-petro.com/location/ca/ta-redding/
-- Petro Corning #0309 (CAT on own page; same Exit 630 cluster as Love’s #410 — not added tonight): https://www.ta-petro.com/location/ca/petro-corning/
+- TA #0239 Wheeler Ridge: https://www.ta-petro.com/location/ca/ta-wheeler-ridge/
+- Petro #0327 Wheeler Ridge: https://www.ta-petro.com/location/ca/petro-wheeler-ridge/
+- TA Redding #0057 (re-verified, not shipped alone): https://www.ta-petro.com/location/ca/ta-redding/
+- Petro Corning #0309 (CAT on own page; Exit 630 cluster with Love’s #410 — not added tonight): https://www.ta-petro.com/location/ca/petro-corning/
+- TA Santa Nella #0163 / Petro Santa Nella #0346 (own-page CAT; Love’s #441 already on Grapevine — deferred dedicated Santa Nella page): https://www.ta-petro.com/location/ca/ta-santa-nella/ · https://www.ta-petro.com/location/ca/petro-santa-nella/
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
-- CDFA Shasta / Tehama / Glenn / Kern: WAF-blocked (“Service unavailable” / request blocked)
-- ScaleRegistry CA public-weighing list: no Redding / Anderson / Buttonwillow / Lost Hills dedicated house found on this compile
-- Love’s all-locations CA list: no Redding / Anderson / Red Bluff / Willows / Temecula / Corona stores
+- CDFA Kern / Shasta: WAF-blocked (“Service unavailable” / request blocked)
+- ScaleRegistry CA public-weighing list: Selma / Merced / Lancaster only — no Wheeler Ridge / Redding / Anderson dedicated house
+- Love’s CA store pages: no Redding / Anderson / Red Bluff / Willows stores; Orland #797 URL did not resolve to a trustworthy Orland CA page on this compile
 
 ## Gaps / deferred
 
 - Redding / Anderson mid-north I-5: only TA Redding #0057 own-page CAT verified — need a second stop before `/redding-anderson/`
 - Petro Corning #0309 CAT verified on TA page but not yet added (overlaps Corning Exit 630 with Love’s #410)
-- No ScaleRegistry dedicated walk-up house in Buttonwillow / Lost Hills / Redding / Anderson
+- Santa Nella TA #0163 + Petro #0346 own-page CAT verified; Love’s #441 already on Grapevine — candidate for a future Santa Nella-focused page
+- No ScaleRegistry dedicated walk-up house in Wheeler Ridge / Redding / Anderson
 - CDFA Kern / Shasta / Tehama / Glenn facility grids still blocked
 - Hours / fees / livestock unknown beyond store-listed 24h vs CAT staffing
 - Temecula / Corona Love’s still deferred (no Love’s CA store pages for those cities)
