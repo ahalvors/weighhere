@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-20
-CHECKED_HUMAN = "20 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-21
+CHECKED_HUMAN = "21 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -29,6 +29,7 @@ NAV = [
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
     ("/madera/", "Madera / Hwy 99", "mad"),
     ("/tulare/", "Tulare / Hwy 99", "tul"),
+    ("/bakersfield/", "Bakersfield / Hwy 99", "bak"),
     ("/salinas/", "Salinas / US-101", "sal"),
     ("/weed-yreka/", "Weed / Yreka / I-5", "wy"),
     ("/corning-orland/", "Corning / Orland / I-5", "co"),
@@ -1006,6 +1007,69 @@ def tulare_body():
 </div>
 </main>
 """ + map_script(tul)
+
+
+def bakersfield_body():
+    order = [
+        "loves-830-bakersfield",
+        "pilot-613-bakersfield",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    bak = [by_id[i] for i in order if i in by_id]
+    dedicated = [s for s in bak if s["display_group"] == "dedicated"]
+    cat = [s for s in bak if s["display_group"] == "cat"]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(bak)
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Bakersfield · Hwy 99 · Kern County · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on Hwy 99 at Bakersfield</h1>
+    <p class="lede">Two CAT Scales verified on Love's and Pilot Flying J <em>own</em> location pages on southern Hwy 99 in Bakersfield: Love's #830 (Exit 18 / Taft Hwy) and Pilot #613 (Exit 39 / Zachary Ave). No ScaleRegistry dedicated walk-up house in Bakersfield. CDFA Kern grid did not load on this compile (WAF blocked). For Tulare and Madera Hwy 99 CAT stops, use those corridor pages; for Buttonwillow and Lost Hills I-5, use the <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills</a> page; for Selma and Merced dedicated houses, see the <a href="/central-valley/">Central Valley</a> page.</p>
+    <p class="meta-line">{n} verified listings · {len(dedicated)} dedicated houses · {len(cat)} CAT stops · CDFA grid not loaded</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in Bakersfield</h2>
+    <p>ScaleRegistry's California public-weighing list still points to <strong>Selma</strong> and <strong>Merced</strong> for the broader Central Valley — <strong>no Bakersfield / Kern County dedicated house</strong>. Use the <a href="/central-valley/">Central Valley page</a> for those walk-up ticket shops. We are not inventing a civilian ticket shop from third-party trucker directories.</p>
+  </div>
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Love's and Pilot</h2>
+  <p class="section-note">We list only corridor CAT stops verified on the operator's own location page. Love's #830 (Bakersfield / Hwy 99 Exit 18 / Taft Hwy) lists CAT Scales; Pilot #613 (Bakersfield / Hwy 99 Exit 39 / Zachary Ave) confirms CAT scale in FAQ. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. In California, go inside for a printed weighmaster certificate when you need one. Use <a href="https://catscale.com/cat-scale-locator/">CAT's locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>California Commercial Vehicle Enforcement Facilities (CHP weigh stations) are for commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. See Caltrans' weigh-station primer and follow posted signs; do not treat this directory as a bypass guide.</p>
+    <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans — Weigh-Stations (Enforcement Facilities)</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Full CDFA Kern public-scale grid (blocked on this compile). Any dedicated walk-up weighmaster house in Bakersfield / Kern County with an operator page. Lat/lng for Love's #830 and Pilot #613. Livestock policy. Other Hwy 99 CAT stops south of Tulare (Delano, Earlimart, other Kern locations) whose own pages list CAT — not third-party directories.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/ca/bakersfield/loves-travel-stop-bakersfield-830">Love's #830 Bakersfield</a> · <a href="https://locations.pilotflyingj.com/us/ca/bakersfield/17047-zachary-ave">Pilot #613 Bakersfield</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · CDFA Kern grid: blocked</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tulare/">Tulare / Hwy 99 public scales</a></li>
+      <li><a href="/madera/">Madera / Hwy 99 public scales</a></li>
+      <li><a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5 public scales</a></li>
+      <li><a href="/central-valley/">Central Valley public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(bak)
 
 
 
@@ -2614,6 +2678,15 @@ def main():
         "tul",
         "../",
         tulare_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "bakersfield" / "index.html",
+        "Bakersfield / Hwy 99 public scales — Love's #830, Pilot #613 CAT | WeighHere",
+        "Two CAT Scales verified on Love's and Pilot Flying J own pages at Bakersfield Hwy 99 Exits 18 and 39. No dedicated house; CDFA Kern grid not loaded.",
+        "bak",
+        "../",
+        bakersfield_body(),
         leaflet,
     )
     write(
