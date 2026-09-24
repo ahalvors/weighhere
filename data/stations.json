@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -2344,7 +2344,7 @@
       "source_name": "Selma Certified Public Scale — operator site",
       "source_url": "https://selmacertifiedpublicscale.com/",
       "operator_url": "https://selmacertifiedpublicscale.com/",
-      "last_checked": "2026-09-02",
+      "last_checked": "2026-09-23",
       "lat": null,
       "lng": null
     },
@@ -4293,42 +4293,6 @@
       "lng": null
     },
     {
-      "id": "loves-830-bakersfield",
-      "name": "Love’s Travel Stop #830 — CAT Scale (Bakersfield)",
-      "address": "1500 Taft Hwy",
-      "city": "Bakersfield",
-      "state": "CA",
-      "zip": "93307",
-      "county": "kern",
-      "phone": "(661) 617-5324",
-      "type": "cat",
-      "certified_ticket_likely": "yes",
-      "livestock": "unknown",
-      "hours_24h": "store_listed_24h",
-      "hours_notes": "Love’s location page lists the store Open 24-hours and lists CAT Scales as an amenity. Confirm the scale is working before a middle-of-the-night trip.",
-      "walkup": "likely",
-      "call_first": false,
-      "do_not_go": false,
-      "featured": true,
-      "display_group": "cat",
-      "rig": [
-        "uhaul",
-        "rv",
-        "horse",
-        "dump",
-        "boat",
-        "car",
-        "ppm"
-      ],
-      "notes": "Love’s own Bakersfield location page (Hwy 99 Exit 18 / Taft Hwy) lists CAT Scales among amenities. Southern Hwy 99 / Kern County corridor with Pilot #613 Bakersfield (Hwy 99 Exit 39). CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
-      "source_name": "Love’s location page — Bakersfield #830",
-      "source_url": "https://www.loves.com/locations/ca/bakersfield/loves-travel-stop-bakersfield-830",
-      "operator_url": "https://www.loves.com/locations/ca/bakersfield/loves-travel-stop-bakersfield-830",
-      "last_checked": "2026-09-21",
-      "lat": null,
-      "lng": null
-    },
-    {
       "id": "pilot-613-bakersfield",
       "name": "Pilot Travel Center #613 — CAT Scale (Bakersfield)",
       "address": "17047 Zachary Ave",
@@ -4363,6 +4327,42 @@
       "last_checked": "2026-09-21",
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "ez-trip-1277-huron",
+      "name": "EZ Trip Travel Center #1277 — CAT Scale (Huron)",
+      "address": "44779 S. Lassen Avenue",
+      "city": "Huron",
+      "state": "CA",
+      "zip": "93204",
+      "county": "fresno",
+      "phone": "(559) 384-0023",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Pilot Flying J location page lists the store Open 24 Hours and FAQ confirms a CAT scale. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Pilot Flying J’s own Huron EZ Trip page (I-5 Exit 319 / S. Lassen Ave) lists CAT Scale among amenities and the FAQ confirms a CAT scale. Fresno County west of Selma on I-5. CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page — EZ Trip #1277 Huron",
+      "source_url": "https://locations.pilotflyingj.com/us/ca/huron/44779-s.-lassen-avenue",
+      "operator_url": "https://locations.pilotflyingj.com/us/ca/huron/44779-s.-lassen-avenue",
+      "last_checked": "2026-09-23",
+      "lat": 36.0749927,
+      "lng": -120.1033417
     }
   ]
 }
