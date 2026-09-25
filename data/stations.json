@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23",
+  "generated": "2026-09-24",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -2356,7 +2356,7 @@
       "state": "CA",
       "zip": "95341",
       "county": "merced",
-      "phone": "(209) 722-0623",
+      "phone": "(209) 383-1033",
       "type": "dedicated_public",
       "certified_ticket_likely": "unknown",
       "livestock": "unknown",
@@ -2376,13 +2376,13 @@
         "car",
         "ppm"
       ],
-      "notes": "Listed by ScaleRegistry as a public scale in Merced with this address and phone. No operator website published hours, fees, or livestock policy that we could verify on this compile. Call before you drive. Not a DOT station.",
-      "source_name": "ScaleRegistry public weighing locations",
-      "source_url": "https://scaleregistry.com/public-scales.html",
-      "operator_url": null,
-      "last_checked": "2026-09-02",
-      "lat": null,
-      "lng": null
+      "notes": "Listed by ScaleRegistry as a public scale in Merced (1260 CA-59) with phone (209) 383-1033. No operator website published hours, fees, or livestock policy that we could verify on this compile. Call before you drive. Also featured on the Merced / Hwy 99 corridor page with TA Livingston #0170. Not a DOT station.",
+      "source_name": "ScaleRegistry — Highway 59 Scales",
+      "source_url": "https://scaleregistry.com/companies/highway-59-scales",
+      "operator_url": "https://scaleregistry.com/companies/highway-59-scales",
+      "last_checked": "2026-09-24",
+      "lat": 37.27001,
+      "lng": -120.48751
     },
     {
       "id": "pilot-613-bakersfield-zachary",
@@ -4363,6 +4363,42 @@
       "last_checked": "2026-09-23",
       "lat": 36.0749927,
       "lng": -120.1033417
+    },
+    {
+      "id": "ta-livingston-0170",
+      "name": "TA Livingston #0170 — CAT Scale",
+      "address": "435 Winton Parkway",
+      "city": "Livingston",
+      "state": "CA",
+      "zip": "95334",
+      "county": "merced",
+      "phone": "(209) 799-3500",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "TA’s own Livingston page lists Shell gas/diesel 24/7 and CAT Scale among amenities. That is not a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "TA’s own Livingston location page (SR 99 at Exit 203 / Winton Parkway) lists CAT Scale among amenities. Paired with Highway 59 Scales (Merced dedicated house) on the Merced / Hwy 99 corridor page. CAT 2,000 lb floor; no corner weights. In California, go inside for a printed weighmaster certificate when you need one. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "TA Livingston location page",
+      "source_url": "https://www.ta-petro.com/location/ca/ta-livingston/",
+      "operator_url": "https://www.ta-petro.com/location/ca/ta-livingston/",
+      "last_checked": "2026-09-24",
+      "lat": 37.3876,
+      "lng": -120.7382
     }
   ]
 }
