@@ -305,6 +305,14 @@ footer.site nav ul { list-style: none; padding: 0; margin: 0; display: flex; fle
 
 .notice-small { font-size: 0.85rem; color: var(--muted); }
 
+/* Towing gear (Amazon Associates) box — sits below listings */
+.gear { margin-top: 2rem; }
+.gear h2 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+.gear-disclose { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.5rem; }
+.gear-disclose a { color: var(--muted); }
+.gear ul { margin: 0; padding-left: 1.1rem; font-size: 0.92rem; }
+.gear li { margin: 0.3rem 0; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }

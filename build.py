@@ -2265,7 +2265,7 @@ def page_horse():
   <p>CAT cannot legally-for-trade a corner weight. Do not try to perch one wheel on a CAT platform.</p>
 
   <h2>Gear (no fake affiliate links)</h2>
-  <p>Weight-distribution hitches, tongue-weight gauges, and portable wheel scales are sold at farm and hitch shops, including Tractor Supply. WeighHere does not have a live Tractor Supply, Amazon, or U-Haul affiliate ID on this page. If those links appear later, they will be disclosed on <a href="/about.html">About</a>. We are not inventing partner IDs.</p>
+  <p>Weight-distribution hitches, tongue-weight gauges, and portable wheel scales are sold at farm and hitch shops, including Tractor Supply. This guide page carries no affiliate links. Our scale pages include a small Amazon Associates “Towing gear” box of plain Amazon search links, disclosed on <a href="/disclosure.html">Affiliate Disclosure</a>. We are not inventing partner IDs or product IDs.</p>
   <p class="cite">Tractor Supply’s public affiliate program page: <a href="https://www.tractorsupply.com/tsc/cms/policies-information/affiliate-program">tractorsupply.com affiliate program</a></p>
   <p><a href="/los-angeles/">LA County listings</a> · <a href="/cat-2000-lb-minimum/">Under 2,000 lb?</a></p>
 </div>
@@ -2546,7 +2546,7 @@ def page_about():
   <p>Listings in this build: {len(la)} Los Angeles County rows (including one ScaleRegistry extra and one enforcement station), {len(oc)} Orange County CDFA rows, {len(ie)} Inland Empire rows (ScaleRegistry Colton, CDFA Blythe dedicated, Love’s/Pilot/Flying J/TA/Petro CAT including Ontario/Mira Loma/Colton/Rialto/Perris/Coachella Valley, Riverside County landfills), {len(ont)} Ontario / I-10 West corridor rows (Superior Colton + five CAT), {len(coa)} Coachella Valley / I-10 corridor rows (Blythe dedicated + four CAT + Blythe landfill call-first), {len(imp)} Imperial Valley / Hwy 86 corridor rows (three CAT), {len(av)} Antelope Valley corridor rows (two dedicated / walk-up + one CAT + one call-first), {len(moj)} Mojave / Hwy 58 corridor rows (four CAT), {len(sd)} San Diego County rows (three dedicated houses, one Pilot CAT, three call-first, one enforcement), {len(phx)} Phoenix metro / Maricopa rows (four CAT stops), {len(sac)} Sacramento-approach rows (four I-5 CAT stops), {len(gv)} Grapevine / I-5 mid-CA rows, {len(h99)} Hwy 99 / Stockton-approach rows (four CAT stops), {len(tul)} Tulare / Hwy 99 corridor rows (two CAT), {len(bak)} Bakersfield / Hwy 99 corridor rows (two CAT), {len(fre)} Fresno County corridor rows (Selma dedicated + one CAT), {len(mer)} Merced / Hwy 99 corridor rows (Highway 59 dedicated + one CAT), {len(sal)} Salinas / US-101 corridor rows (two CAT), {len(wy)} Weed / Yreka / I-5 corridor rows (two CAT), {len(co)} Corning / Orland / I-5 corridor rows (three CAT), {len(blh)} Buttonwillow / Lost Hills / I-5 corridor rows (two CAT), {len(wr)} Wheeler Ridge / I-5 corridor rows (two CAT), {len(sn)} Santa Nella / I-5 corridor rows (three CAT), and {len(cv)} Central Valley rows (Selma + Merced dedicated, Kern CAT). Last compiled {CHECKED_HUMAN}.</p>
 
   <h2>Affiliate disclosure</h2>
-  <p>WeighHere (weighhere.com) may include affiliate links in the future. No affiliate IDs are embedded in this build. Programs under consideration, not live, not verified here: U-Haul via CJ Affiliate, Amazon Associates, Tractor Supply via Partnerize/Pepperjam, Camping World via FlexOffers. There is no CAT Scale consumer affiliate program that we found. When links go live they will be marked. See <a href="/disclosure.html">full Affiliate Disclosure</a>.</p>
+  <p>WeighHere (weighhere.com) participates in the Amazon Services LLC Associates Program. {AMAZON_DISCLOSURE} The only live affiliate links are the Amazon search links in the “Towing gear that helps before you weigh” box near the bottom of each scale page, and each one is marked sponsored. No scale pays to be listed. Other programs (U-Haul via CJ Affiliate, Tractor Supply via Partnerize/Pepperjam, Camping World via FlexOffers) are under consideration only, with no IDs embedded. There is no CAT Scale consumer affiliate program that we found. See <a href="/disclosure.html">full Affiliate Disclosure</a>.</p>
 
   <h2>Corrections</h2>
   <p>If a house turned you away, changed hours, or will weigh livestock, that is the data this directory is for. A public report form is not shipping in this build. Check the last-checked date on each listing. Nightly additions are documented in ADDING_A_PAGE.md in the source repo.</p>
@@ -2581,8 +2581,8 @@ def page_privacy():
   <h2>Third-party links</h2>
   <p>This site links to Google Maps, operator websites, government databases (CDFA, Caltrans, ADOT), and CAT Scale. Those destinations have their own privacy policies. We do not control their practices.</p>
 
-  <h2>Affiliate links (future)</h2>
-  <p>When affiliate links go live for U-Haul, Amazon, Tractor Supply, Camping World, or other programs, clicking a link may pass a referral identifier to the destination. That is how affiliate programs work. See <a href="/disclosure.html">Affiliate Disclosure</a> for full details.</p>
+  <h2>Affiliate links</h2>
+  <p>Scale pages include Amazon Associates search links in a marked “Towing gear” box. Clicking one passes WeighHere’s Associates tag to Amazon, and Amazon may set its own cookies under its own privacy policy. That is how affiliate programs work. {AMAZON_DISCLOSURE} See <a href="/disclosure.html">Affiliate Disclosure</a> for full details.</p>
 
   <h2>Data requests</h2>
   <p>Because WeighHere does not collect visitor accounts or personal information, there is no user database to request deletion from. If you have questions about how a listing was compiled or believe a listing incorrectly references you, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
@@ -2634,45 +2634,106 @@ def page_disclosure():
   <div class="wrap">
     <p class="kicker">Transparency</p>
     <h1>Affiliate Disclosure</h1>
-    <p class="lede">No live affiliate IDs yet. When U-Haul, Amazon, Tractor Supply, Camping World, or PODS links go live, they will be marked.</p>
+    <p class="lede">{AMAZON_DISCLOSURE} Amazon Associates is the only live affiliate program on WeighHere. Links are marked, and no scale pays to be listed.</p>
   </div>
 </section>
 <div class="wrap prose">
-  <h2>Affiliate links (not live)</h2>
-  <p>WeighHere (weighhere.com) may include affiliate links in the future. As of {CHECKED_HUMAN}, no affiliate IDs are embedded in this build. When links go live, they will be clearly marked as affiliate links or partnerships.</p>
+  <h2>Amazon Associates Program (live)</h2>
+  <p>WeighHere (weighhere.com) is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>{AMAZON_DISCLOSURE}</strong></p>
+  <p>Where the links appear: the “Towing gear that helps before you weigh” box near the bottom of each scale page (below the listings). Each link opens an Amazon <em>search</em> for a type of product (tongue weight scale, weight distribution hitch, trailer brake controller, RV/trailer tire pressure monitor, wheel chocks, moving hand truck). We do not pick, test, or rank a specific product, and we do not invent product IDs. Every one of those links is tagged <code>rel="sponsored"</code> and carries the same visible disclosure line linking back to this page.</p>
 
-  <h2>Programs under consideration</h2>
+  <h2>Programs under consideration (not live)</h2>
   <ul>
     <li><strong>U-Haul</strong> via CJ Affiliate (Commission Junction)</li>
-    <li><strong>Amazon Associates</strong> for weight-distribution hitches, portable scales, and related products</li>
     <li><strong>Tractor Supply</strong> via Partnerize/Pepperjam for tongue-weight gauges and farm equipment</li>
     <li><strong>Camping World</strong> via FlexOffers for RV-related products</li>
     <li><strong>PODS</strong> or other moving and storage services if a program becomes available</li>
   </ul>
-  <p>There is no CAT Scale consumer affiliate program that we found. CAT Scale links on this site are not monetized.</p>
+  <p>No IDs from these programs are embedded as of {CHECKED_HUMAN}. There is no CAT Scale consumer affiliate program that we found. CAT Scale links on this site are not monetized.</p>
 
   <h2>How affiliate links work</h2>
-  <p>An affiliate link passes a referral identifier to the destination site. If you make a purchase or sign up for a service after clicking that link, WeighHere may earn a commission. The commission does not increase your cost. The price you pay is the same whether you use an affiliate link or go directly to the site.</p>
+  <p>An affiliate link passes a referral identifier to the destination site. If you make a purchase after clicking that link, WeighHere may earn a commission. The commission does not increase your cost. The price you pay is the same whether you use an affiliate link or go directly to the site.</p>
 
   <h2>Editorial independence</h2>
   <p>Listings on WeighHere are compiled from public sources: CDFA county tables, CAT Scale public pages, operator websites, ScaleRegistry, Caltrans, ADOT, and county facility pages. No scale pays to be listed. No affiliate program dictates which scales appear or how they are described.</p>
-  <p>If a U-Haul affiliate link appears on a guide page in the future, it is because U-Haul is a common moving truck, not because U-Haul paid for editorial placement. The same applies to Amazon or Tractor Supply: if a product is mentioned, it is because it is relevant to weighing a civilian rig, not because an affiliate program demanded it.</p>
+  <p>If a product type is mentioned in the gear box, it is because it is relevant to towing or weighing a civilian rig, not because an affiliate program demanded it.</p>
 
   <h2>Marking affiliate links</h2>
-  <p>When affiliate links go live, they will be identified. Methods may include visible labels ("affiliate link"), footnotes, or a disclosure statement on the page where the link appears. FTC guidelines require clear disclosure. WeighHere will follow those guidelines.</p>
+  <p>Affiliate links are grouped in one clearly labeled box, preceded by the sentence “{AMAZON_DISCLOSURE}” and a link to this page. FTC guidelines require clear disclosure. WeighHere follows those guidelines.</p>
 
-  <h2>Transparency</h2>
-  <p>This disclosure is written before any affiliate program is live. When partnerships are verified and IDs are issued, this page will be updated to reflect which programs are active. The <a href="/about.html">About</a> page will also note when affiliate links ship.</p>
+  <h2>Questions</h2>
   <p>If you have questions about affiliate relationships or believe a link should be disclosed more clearly, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
 
   <h2>No fake IDs</h2>
-  <p>We do not invent affiliate IDs or insert placeholder tracking codes. If a program is "under consideration," it means no ID is embedded. When an ID goes live, it will be real, verified, and disclosed.</p>
+  <p>We do not invent affiliate IDs, product IDs, or placeholder tracking codes. The Amazon Associates tag on this site is real and disclosed. If a program is “under consideration,” no ID from it is embedded.</p>
 </div>
 </main>
 """
 
 
-def write(path: Path, title, desc, current, rel, body, extra_head=""):
+# ---------------------------------------------------------------------------
+# Towing-gear affiliate block (Amazon Associates, tag weighhere-20).
+# Injected automatically by write() into every scale-listing page (any page
+# written with the LEAFLET map head), so new nightly metro pages inherit it.
+# Search links only: never invent ASINs or product IDs.
+# ---------------------------------------------------------------------------
+AMAZON_TAG = "weighhere-20"
+AMAZON_DISCLOSURE = "As an Amazon Associate, WeighHere earns from qualifying purchases."
+GEAR_ITEMS = [
+    ("Tongue weight scale", "tongue weight scale",
+     "Check hitch weight in your driveway before the CAT run; a common target is roughly 10–15% of trailer weight on the ball."),
+    ("Weight distribution hitch", "weight distribution hitch",
+     "Spreads heavy tongue weight across both axles of the tow vehicle so the front end stays planted on travel and horse trailers."),
+    ("Trailer brake controller", "trailer brake controller",
+     "Lets you set and trigger electric trailer brakes from the cab — worth having before a loaded trailer meets a long downgrade."),
+    ("RV / trailer tire pressure monitor (TPMS)", "rv trailer tire pressure monitoring system",
+     "Watches trailer tire pressure and heat while you drive; an underinflated tire on a heavy load is a common blowout."),
+    ("Wheel chocks", "wheel chocks trailer",
+     "Hold the trailer still while you unhitch, level, or measure tongue weight."),
+    ("Moving hand truck / dolly", "moving hand truck dolly",
+     "For PPM / DITY movers: load boxes and appliances between your empty and full weigh tickets without a second helper."),
+]
+
+
+def amazon_search_url(query):
+    return "https://www.amazon.com/s?k=" + "+".join(query.split()) + "&tag=" + AMAZON_TAG
+
+
+def gear_block():
+    items = "\n".join(
+        f'      <li><a href="{amazon_search_url(q)}" rel="sponsored nofollow noopener" target="_blank">{e(name)}</a> — {e(why)}</li>'
+        for name, q, why in GEAR_ITEMS
+    )
+    return f"""
+  <aside class="box gear" aria-labelledby="gear-h">
+    <h2 id="gear-h">Towing gear that helps before you weigh</h2>
+    <p class="gear-disclose"><a href="/disclosure.html">{AMAZON_DISCLOSURE}</a> Links open an Amazon search, not a specific product we tested.</p>
+    <ul>
+{items}
+    </ul>
+  </aside>
+"""
+
+
+def with_gear(body):
+    """Place the gear block below the listings: just above the Related list,
+    or at the end of the prose column if a page has no Related list."""
+    block = gear_block()
+    marker = '  <div class="related">'
+    if marker in body:
+        i = body.rindex(marker)
+        return body[:i] + block.lstrip("\n") + body[i:]
+    end = "</div>\n</main>"
+    i = body.rindex(end)
+    return body[:i] + block.lstrip("\n") + body[i:]
+
+
+def write(path: Path, title, desc, current, rel, body, extra_head="", gear=None):
+    # Scale-listing pages (written with the Leaflet map head) get the gear block.
+    if gear is None:
+        gear = LEAFLET in extra_head
+    if gear:
+        body = with_gear(body)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(header(current, rel, title, desc, extra_head) + body + footer(rel), encoding="utf-8")
     print("wrote", path.relative_to(ROOT))
@@ -2973,8 +3034,8 @@ def main():
     )
     write(
         ROOT / "about.html",
-        "About WeighHere — sources, CDFA disclaimer, affiliate placeholder",
-        "Independent public-scale directory. How listings are compiled, CDFA accuracy disclaimer, call-ahead policy, affiliate disclosure placeholder.",
+        "About WeighHere — sources, CDFA disclaimer, affiliate disclosure",
+        "Independent public-scale directory. How listings are compiled, CDFA accuracy disclaimer, call-ahead policy, Amazon Associates disclosure.",
         "about",
         "",
         page_about(),
@@ -2998,7 +3059,7 @@ def main():
     write(
         ROOT / "disclosure.html",
         "Affiliate Disclosure — WeighHere",
-        "Affiliate disclosure for WeighHere. No live affiliate IDs yet. When U-Haul, Amazon, Tractor Supply, Camping World links go live they will be marked.",
+        "Affiliate disclosure for WeighHere. As an Amazon Associate, WeighHere earns from qualifying purchases. Amazon Associates is the only live program; others are under consideration.",
         "disclosure",
         "",
         page_disclosure(),

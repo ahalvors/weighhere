@@ -76,8 +76,13 @@ County pages read JSON. Guide pages (`how-to-weigh-an-rv`, PPM, horse, 2,000 lb,
 - Do not mark livestock OK, 24-hour, or a fee unless the operator or CAT published it.
 - Do not send people to a highway weigh station for a ticket.
 - Do not give legal advice about overweight citations or PPM claims.
-- Do not put live affiliate IDs on the page until the program is actually approved; keep the About placeholder.
+- Do not add affiliate programs other than Amazon Associates (tag `weighhere-20`) until the program is actually approved; U-Haul, Tractor Supply, Camping World stay "under consideration" on `/disclosure.html`.
+- Do not invent ASINs or product IDs. Gear links are Amazon **search** links (`https://www.amazon.com/s?k=...&tag=weighhere-20`) with `rel="sponsored nofollow noopener"` and `target="_blank"`.
 
-## 5. Optional map
+## 5. Towing gear box (Amazon Associates)
+
+Every scale-listing page gets a "Towing gear that helps before you weigh" box of Amazon search links plus the visible line "As an Amazon Associate, WeighHere earns from qualifying purchases." (linked to `/disclosure.html`). You do not add it by hand: `write()` in `build.py` injects `gear_block()` into any page written with the `leaflet` head, just above `<div class="related">` (or at the end of the prose column if there is no Related list). So a new county page that follows step 3 — `write(..., county_body(), leaflet)` — inherits it automatically. Pass `gear=False` to opt a page out, or `gear=True` to force it on a page without a map. Edit the items in `GEAR_ITEMS` in `build.py`, never in generated HTML.
+
+## 6. Optional map
 
 If `lat` and `lng` are present, county pages plot Leaflet + OSM. Missing coords just omit the pin. The list is the product.
