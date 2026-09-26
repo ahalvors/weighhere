@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-24
-CHECKED_HUMAN = "24 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-25
+CHECKED_HUMAN = "25 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -589,7 +589,7 @@ def phoenix_body():
   <div class="wrap">
     <p class="kicker">Phoenix metro · Maricopa County · listings checked {CHECKED_HUMAN}</p>
     <h1>Public scales in Phoenix metro</h1>
-    <p class="lede">Arizona has no CDFA-style public county scale grid. ScaleRegistry lists no Phoenix dedicated house. What we can verify tonight: four CAT Scales on Pilot Flying J and Love’s <em>own</em> location pages along I-10 (Avondale, Tolleson, Phoenix Latham, Chandler). City of Phoenix / Maricopa landfill pages describe disposal weigh stations for facility traffic — not a published walk-up weighmaster ticket shop — so they are omitted rather than guessed.</p>
+    <p class="lede">Arizona has no CDFA-style public county scale grid. ScaleRegistry lists no Phoenix dedicated house. What we can verify tonight: five CAT Scales on Pilot Flying J and Love’s <em>own</em> location pages — I-10 cluster (Avondale, Tolleson, Phoenix Latham, Chandler) plus Pilot Dealer #1399 Litchfield Park on Loop 303 / Camelback. City of Phoenix / Maricopa landfill pages describe disposal weigh stations for facility traffic — not a published walk-up weighmaster ticket shop — so they are omitted rather than guessed.</p>
     <p class="meta-line">{n} verified listings · {len(dedicated)} dedicated houses · {len(cat)} CAT stops · {len(call)} call-first · AZ facility grid: none published like CDFA</p>
   </div>
 </section>
@@ -599,7 +599,7 @@ def phoenix_body():
 
   <div data-filter-section>
   <h2 class="section-h" id="cat">CAT Scale at Pilot / Flying J and Love’s</h2>
-  <p class="section-note">We list only Maricopa County CAT stops verified on the operator’s own location page. Flying J #611 (Phoenix / Latham), Pilot #459 (Avondale), Love’s #659 (Tolleson), and Love’s #328 (Chandler) each list CAT Scale / CAT Scales as an amenity. Pilot’s Phoenix city list also shows #1433 and #1194 — those rows do <strong>not</strong> list CAT, so they are not here. Love’s #280 Buckeye amenities on loves.com did not include CAT Scales on this compile. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop.</p>
+  <p class="section-note">We list only Maricopa County CAT stops verified on the operator’s own location page. Flying J #611 (Phoenix / Latham), Pilot #459 (Avondale), Love’s #659 (Tolleson), Love’s #328 (Chandler), and Pilot Dealer #1399 (Litchfield Park / Camelback) each list CAT Scale / CAT Scales as an amenity. Pilot’s Phoenix city list also shows #1433 and #1194 — those rows do <strong>not</strong> list CAT, so they are not here. Love’s #280 Buckeye amenities on loves.com did not include CAT Scales on this compile. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop.</p>
   <div class="cards two">{cards_c}</div>
   </div>
 
@@ -608,9 +608,9 @@ def phoenix_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Maricopa with an operator page that sells walk-up weighmaster certificates. TA Phoenix (Latham) newsroom mentions a “Scale” but not CAT Scale — omitted until TA’s own location page confirms CAT. Other Pilot / Love’s / TA metro stores on their amenity lists. Whether a City of Phoenix or Maricopa transfer/landfill gate will sell a civilian weighmaster ticket (official pages we checked describe disposal permits and facility weigh-ins, not public ticket shops). Livestock policy everywhere. Arizona printed-ticket quirks vs California Weighmaster Certificate rules for PPM movers crossing state lines.</p>
+    <p>Any dedicated public scale house in Maricopa with an operator page that sells walk-up weighmaster certificates. TA Phoenix (Latham) newsroom mentions a “Scale” but not CAT Scale — omitted until TA’s own location page confirms CAT. Other Pilot / Love’s / TA metro stores on their amenity lists. Whether a City of Phoenix or Maricopa transfer/landfill gate will sell a civilian weighmaster ticket (official pages we checked describe disposal permits and facility weigh-ins, not public ticket shops). Livestock policy everywhere. Arizona printed-ticket quirks vs California Weighmaster Certificate rules for PPM movers crossing state lines. Temecula / Corona Love’s still have no loves.com store pages to verify.</p>
   </div>
-  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/az/phoenix/6700-w-latham-st">Flying J #611 Phoenix</a> · <a href="https://locations.pilotflyingj.com/us/az/avondale/900-n-99th-ave">Pilot #459 Avondale</a> · <a href="https://www.loves.com/locations/az/tolleson/loves-travel-stop-tolleson-659">Love’s #659 Tolleson</a> · <a href="https://www.loves.com/locations/az/chandler/loves-travel-stop-chandler-328">Love’s #328 Chandler</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/az/phoenix/6700-w-latham-st">Flying J #611 Phoenix</a> · <a href="https://locations.pilotflyingj.com/us/az/avondale/900-n-99th-ave">Pilot #459 Avondale</a> · <a href="https://www.loves.com/locations/az/tolleson/loves-travel-stop-tolleson-659">Love’s #659 Tolleson</a> · <a href="https://www.loves.com/locations/az/chandler/loves-travel-stop-chandler-328">Love’s #328 Chandler</a> · <a href="https://locations.pilotflyingj.com/us/az/litchfield-park/15112-west-camelback-road">Pilot Dealer #1399 Litchfield Park</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
