@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-09-28
-CHECKED_HUMAN = "28 Sep 2026"
+CHECKED = DATA["generated"]  # 2026-09-29
+CHECKED_HUMAN = "29 Sep 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -27,6 +27,7 @@ NAV = [
     ("/casa-grande-eloy/", "Casa Grande / Eloy / I-10", "cge"),
     ("/gila-bend-yuma/", "Gila Bend / Yuma / I-8", "gby"),
     ("/quartzsite-ehrenberg/", "Quartzsite / Ehrenberg / I-10", "qe"),
+    ("/kingman/", "Kingman / I-40", "kng"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -143,6 +144,7 @@ def footer(rel="."):
         <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a></li>
         <li><a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a></li>
         <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a></li>
+        <li><a href="/kingman/">Kingman / I-40</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -632,6 +634,7 @@ def phoenix_body():
       <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10 public scales</a></li>
       <li><a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/los-angeles/">Los Angeles County public scales</a></li>
       <li><a href="/san-diego/">San Diego County public scales</a></li>
       <li><a href="/inland-empire/">Inland Empire public scales</a></li>
@@ -1965,6 +1968,7 @@ def casa_grande_eloy_body():
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/imperial/">Imperial Valley / Hwy 86 public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2032,6 +2036,7 @@ def gila_bend_yuma_body():
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/imperial/">Imperial Valley / Hwy 86 public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2101,6 +2106,7 @@ def quartzsite_ehrenberg_body():
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
       <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10 public scales</a></li>
       <li><a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8 public scales</a></li>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -2111,6 +2117,73 @@ def quartzsite_ehrenberg_body():
 """ + map_script(qe)
 
 
+
+
+
+def kingman_i40_body():
+    order_cat = [
+        "loves-970-kingman",
+        "ta-kingman-0094",
+        "flying-j-610-kingman",
+        "petro-kingman-0315",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    kng = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(kng)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on this corridor</h2>
+    <p>ScaleRegistry’s public-weighing page lists Colton, Lancaster, Merced, and Selma for California — <strong>no Kingman / Mohave dedicated house</strong>. Arizona Department of Agriculture publishes weighmaster <em>licensing</em> how-to, not a facility directory. We are not inventing a walk-up house from industrial scale vendors or third-party trucker directories. For Phoenix metro CAT southeast of here, use <a href="/phoenix/">Phoenix metro</a>.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Kingman · I-40 · Mohave County · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on I-40 at Kingman</h1>
+    <p class="lede">Four CAT Scales verified on Love’s, TA, Pilot Flying J, and Petro <em>own</em> location pages on I-40 through Kingman in Mohave County: Love’s #970 (I-40 Exit 37 / Griffith Rd), TA #0094 (I-40 Exit 48 / Beale St), Flying J #610 (I-40 Exit 53 / Andy Devine Ave), and Petro #0315 (I-40 Exit 66 / Blake Ranch Rd). No ScaleRegistry dedicated walk-up house here. No Arizona CDFA-equivalent facility grid. Love’s #272 Kingman (Exit 59) does not list CAT on its own page — omitted. For Phoenix metro CAT, use <a href="/phoenix/">Phoenix metro</a>; for I-10 west toward California, use <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Mohave County</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at Love’s / TA / Flying J / Petro</h2>
+  <p class="section-note">We list only corridor CAT stops verified on the operator’s own location page. Love’s #970 (Kingman / I-40 Exit 37) lists CAT Scales as a visible amenity on loves.com. TA #0094 (Exit 48) and Petro #0315 (Exit 66) each list CAT Scale on ta-petro.com. Flying J #610 (Exit 53) lists CAT Scale among Amenities-item amenities and FAQ confirms a CAT scale. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. Arizona weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Arizona ports of entry and ADOT virtual ports / weigh-in-motion sites are commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+    <p class="cite">Source: <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT — Virtual Port Technology</a> · <a href="https://azdot.gov/mvd/services/enforcement/port-entry-locations">ADOT — Port of Entry Locations</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Kingman / Mohave with an operator page that sells walk-up weighmaster certificates. Love’s #272 Kingman omitted (no CAT on own page). TA Express White Hills (US-93) and Bellemont / Flagstaff / Winslow / Holbrook I-40 CAT stops stay for a separate corridor page. Love’s #722 Mayer (I-17) stays elsewhere. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/az/kingman/loves-travel-stop-kingman-970">Love’s #970 Kingman</a> · <a href="https://www.ta-petro.com/location/az/ta-kingman/">TA #0094 Kingman</a> · <a href="https://locations.pilotflyingj.com/us/az/kingman/3300-e-andy-devine-ave">Flying J #610 Kingman</a> · <a href="https://www.ta-petro.com/location/az/petro-kingman/">Petro #0315 Kingman</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/phoenix/">Phoenix metro public scales</a></li>
+      <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
+      <li><a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8 public scales</a></li>
+      <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10 public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(kng)
 
 
 def antelope_valley_body():
@@ -3107,6 +3180,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "kingman" / "index.html",
+        "Kingman / I-40 public scales — Love’s, TA, Flying J, Petro CAT | WeighHere",
+        "Four CAT Scales verified on Love’s, TA, Pilot Flying J, and Petro own pages on I-40 at Kingman: Love’s #970, TA #0094, Flying J #610, and Petro #0315. No ScaleRegistry dedicated house; no Arizona CDFA-equivalent facility grid.",
+        "kng",
+        "../",
+        kingman_i40_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -3326,7 +3408,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
