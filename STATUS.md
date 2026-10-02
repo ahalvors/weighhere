@@ -1,12 +1,12 @@
-# WeighHere status — 30 Sep 2026
+# WeighHere status — 1 Oct 2026
 
-Compiled evening PT 30 Sep 2026 (nightly ship).
+Compiled evening PT 1 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **149** | +4 Pilot #593 + Pilot Express #1178 Tucson + Love’s #460 Benson + TA #0226 Willcox |
+| **Total rows in `data/stations.json`** | **154** | +5 Love’s #553 Williams + Pilot #180 Bellemont + Love’s #971 Winslow + Flying J #612 Winslow + TA #0246 Holbrook |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -22,7 +22,8 @@ Compiled evening PT 30 Sep 2026 (nightly ship).
 | Gila Bend / Yuma / I-8 | 3 | unchanged |
 | Quartzsite / Ehrenberg / I-10 west | 4 | unchanged |
 | Kingman / I-40 | 4 | unchanged |
-| **Tucson / Benson / Willcox / I-10** | **4** | **new page** — Pilot #593 + Pilot Express #1178 + Love’s #460 + TA #0226 |
+| Tucson / Benson / Willcox / I-10 | 4 | unchanged |
+| **Flagstaff / Winslow / Holbrook / I-40** | **5** | **new page** — Love’s #553 Williams + Pilot #180 Bellemont + Love’s #971 Winslow + Flying J #612 Winslow + TA #0246 Holbrook |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -40,26 +41,28 @@ Compiled evening PT 30 Sep 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 85 | +4 Tucson / Benson / Willcox / I-10 corridor |
+| CAT / truck-stop cards | 90 | +5 Flagstaff / Winslow / Holbrook / I-40 corridor |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Tucson / Benson / Willcox / I-10** (`/tucson-benson/`): new Pima / Cochise County corridor page with four CAT Scales verified on Pilot Flying J / Love’s / TA *own* location pages (Pilot: `<li class="Amenities-item">CAT Scale</li>` + FAQ Yes; Love’s: visible `<span>CAT Scales</span>` + `catscales` `fieldValue: "true"`; TA: `<li>CAT Scale</li>`). Meets the multi-stop CAT corridor bar. No ScaleRegistry dedicated Tucson/Benson/Willcox house. West-to-east on I-10 Exits 268, 273, 302, and 340.
+**Flagstaff / Winslow / Holbrook / I-40** (`/flagstaff-winslow/`): new Coconino / Navajo County corridor page with five CAT Scales verified on Love’s / Pilot Flying J / TA *own* location pages (Love’s: visible `<span>CAT Scales</span>` + `catscales` `fieldValue: "true"`; Pilot/Flying J: `<li class="Amenities-item">CAT Scale</li>` + FAQ Yes; TA: `<li>CAT Scale</li>`). Meets the multi-stop CAT corridor bar. No ScaleRegistry dedicated Flagstaff/Winslow/Holbrook house. West-to-east on I-40 Exits 163, 185, 255 (×2), and 283.
 
-- **Pilot #593 Tucson** — 5570 E Travel Plaza Way, I-10 Exit 268 — CAT Scale on Pilot amenities + FAQ
-- **Pilot Express #1178 Tucson** — 9255 S Rita Rd, I-10 Exit 273 — CAT Scale on Pilot amenities + FAQ
-- **Love’s #460 Benson** — 643 S. Highway 90, I-10 Exit 302 — CAT Scales on loves.com amenities
-- **TA #0226 Willcox** — 1501 North Fort Grant Road, I-10 Exit 340 — CAT Scale on ta-petro.com amenities
+- **Love’s #553 Williams** — 1055 N Grand Canyon Blvd, I-40 Exit 163 — CAT Scales on loves.com amenities
+- **Pilot #180 Bellemont** — 12500 W I-40, I-40 Exit 185 — CAT Scale on Pilot amenities + FAQ
+- **Love’s #971 Winslow** — 720 Transcon Ln, I-40 Exit 255 — CAT Scales on loves.com amenities
+- **Flying J #612 Winslow** — 400 Transcon Ln, I-40 Exit 255 — CAT Scale on Pilot amenities + FAQ
+- **TA #0246 Holbrook** — 3747 Express Drive, I-40 Exit 283 — CAT Scale on ta-petro.com amenities
 
-Also re-checked deferred candidates (no ship): Love’s #722 Mayer still only own-page I-17 CAT (no second I-17 stop). Redding / Anderson still only TA #0057. Temecula / Corona / Murrieta still thin. ONE9 #1424 Westley amenities still unclear. Love’s #280 Buckeye still no CAT. Love’s #272 Kingman still no CAT. Sunmart #640 Ehrenberg still no primary operator page. Ventura / Santa Barbara still thin. Flagstaff / Bellemont / Winslow / Holbrook I-40 east and TA Express White Hills (US-93) remain deferred corridor seeds. CDFA county grids not re-pulled as primary tonight (Tucson corridor stood on operator pages).
+Also re-checked deferred candidates (no ship): ONE9 Ash Fork and TA Ash Fork — no CAT on own pages (omitted). Love’s #722 Mayer still only own-page I-17 CAT (no second I-17 stop). Redding / Anderson still only TA #0057. Temecula / Corona / Murrieta still thin. TA Express White Hills (US-93) still needs a second verified US-93 / Vegas-approach stop. CDFA county grids not re-pulled as primary tonight (Flagstaff corridor stood on operator pages).
 
 ## Sources used (this compile)
 
-- Pilot #593 Tucson: https://locations.pilotflyingj.com/us/az/tucson/5570-e-travel-plaza-way
-- Pilot Express #1178 Tucson: https://locations.pilotflyingj.com/us/az/tucson/9255-s-rita-rd
-- Love’s #460 Benson: https://www.loves.com/locations/az/benson/loves-travel-stop-benson-460
-- TA #0226 Willcox: https://www.ta-petro.com/location/az/ta-willcox/
+- Love’s #553 Williams: https://www.loves.com/locations/az/williams/loves-travel-stop-williams-553
+- Pilot #180 Bellemont: https://locations.pilotflyingj.com/us/az/bellemont/12500-w-i-40
+- Love’s #971 Winslow: https://www.loves.com/locations/az/winslow/loves-travel-stop-winslow-971
+- Flying J #612 Winslow: https://locations.pilotflyingj.com/us/az/winslow/400-transcon-ln
+- TA #0246 Holbrook: https://www.ta-petro.com/location/az/ta-holbrook/
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry CA public-weighing list: https://scaleregistry.com/public-scales.html
 
@@ -70,8 +73,8 @@ Also re-checked deferred candidates (no ship): Love’s #722 Mayer still only ow
 - ONE9 #1424 Westley — visible amenities card still empty; CAT in JSON/description only — re-check before Santa Nella / I-5 extension
 - EZ Trip #1275 Madera Ave 12 — visible amenities still omit CAT (embedded JSON noise only); keep omitted from `/madera/`
 - Love’s #722 Mayer (I-17 Exit 263) — own-page CAT verified; needs a second I-17 stop for a corridor page
-- Flagstaff / Bellemont / Winslow / Holbrook I-40 east: Pilot #180 Bellemont (+ others) for a future corridor
 - TA Express White Hills (US-93) own-page CAT — deferred to a US-93 / Vegas approach page (needs a second verified stop)
+- ONE9 Ash Fork / TA Ash Fork — no CAT on own pages; keep omitted from `/flagstaff-winslow/`
 - Sunmart #640 Ehrenberg / other third-party I-10 CAT pins — omitted until operator own page confirms
 - Third-party Fresno / Fowler / Traver CAT pins omitted (no operator own page)
 - CDFA Merced / Kern / Shasta / Tehama / Glenn / Fresno / Ventura / Santa Barbara / Sacramento facility grids still often WAF-blocked
