@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -5227,6 +5227,78 @@
       "last_checked": "2026-10-01",
       "lat": 34.9054,
       "lng": -110.2108
+    },
+    {
+      "id": "loves-722-mayer",
+      "name": "Love's Travel Stop #722 \u2014 CAT Scale (Mayer)",
+      "address": "14414 S Cross L Rd",
+      "city": "Mayer",
+      "state": "AZ",
+      "zip": "86333",
+      "county": "yavapai",
+      "phone": "(928) 227-9764",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Love's location page lists the store Open 24-Hours and lists CAT Scales as an amenity. That is not the same as a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Love\u2019s own Mayer location page (I-17 Exit 263 / Arcosanti Rd) lists CAT Scales among amenities (visible amenity + fieldValue true). Yavapai County on I-17 between Phoenix and Flagstaff \u2014 pairs with Pilot #1175 Cordes Lakes (I-17 Exit 262). CAT 2,000 lb floor; no corner weights. Arizona weighmaster rules differ from California \u2014 confirm ticket needs with your TO or DMV equivalent. Do not unload horses in the lot. Confirm on CAT\u2019s locator. Not a DOT station.",
+      "source_name": "Love's Travel Stop location page \u2014 Mayer #722",
+      "source_url": "https://www.loves.com/locations/az/mayer/loves-travel-stop-mayer-722",
+      "operator_url": "https://www.loves.com/locations/az/mayer/loves-travel-stop-mayer-722",
+      "last_checked": "2026-10-02",
+      "lat": 34.334818,
+      "lng": -112.117712
+    },
+    {
+      "id": "pilot-1175-mayer",
+      "name": "Pilot Travel Center #1175 \u2014 CAT Scale (Mayer / Cordes Lakes)",
+      "address": "14905 Cordes Lake Road",
+      "city": "Mayer",
+      "state": "AZ",
+      "zip": "86333",
+      "county": "yavapai",
+      "phone": "(928) 632-4521",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Pilot Flying J's location page lists the travel center open 24 hours and lists CAT Scale as an amenity. That is not the same as a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Pilot Flying J\u2019s own Mayer / Cordes Lakes location page (I-17 Exit 262) lists CAT Scale among Amenities-item amenities and FAQ confirms a CAT scale. Yavapai County on I-17 between Phoenix and Flagstaff \u2014 pairs with Love\u2019s #722 Mayer (I-17 Exit 263 / Arcosanti Rd). CAT 2,000 lb floor; no corner weights. Arizona weighmaster rules differ from California \u2014 confirm ticket needs with your TO or DMV equivalent. Do not unload horses in the lot. Confirm on CAT\u2019s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page \u2014 Mayer #1175",
+      "source_url": "https://locations.pilotflyingj.com/us/az/mayer/14905-cordes-lake-road",
+      "operator_url": "https://locations.pilotflyingj.com/us/az/mayer/14905-cordes-lake-road",
+      "last_checked": "2026-10-02",
+      "lat": 34.3272678,
+      "lng": -112.1173363
     }
   ]
 }
