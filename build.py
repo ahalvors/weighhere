@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-10-02
-CHECKED_HUMAN = "2 Oct 2026"
+CHECKED = DATA["generated"]  # 2026-10-03
+CHECKED_HUMAN = "3 Oct 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -31,6 +31,7 @@ NAV = [
     ("/tucson-benson/", "Tucson / Benson / I-10", "tb"),
     ("/flagstaff-winslow/", "Flagstaff / Winslow / I-40", "fw"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
+    ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -151,6 +152,7 @@ def footer(rel="."):
         <li><a href="/tucson-benson/">Tucson / Benson / I-10</a></li>
         <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
+        <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -2173,7 +2175,7 @@ def kingman_i40_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Kingman / Mohave with an operator page that sells walk-up weighmaster certificates. Love’s #272 Kingman omitted (no CAT on own page). TA Express White Hills (US-93) stays for a US-93 corridor. Flagstaff / Winslow / Holbrook I-40 now lives on <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>. Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Kingman / Mohave with an operator page that sells walk-up weighmaster certificates. Love’s #272 Kingman omitted (no CAT on own page). TA Express White Hills / Henderson US-93 now live on <a href="/white-hills/">White Hills / Henderson / US-93</a>. Flagstaff / Winslow / Holbrook I-40 now lives on <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>. Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/az/kingman/loves-travel-stop-kingman-970">Love’s #970 Kingman</a> · <a href="https://www.ta-petro.com/location/az/ta-kingman/">TA #0094 Kingman</a> · <a href="https://locations.pilotflyingj.com/us/az/kingman/3300-e-andy-devine-ave">Flying J #610 Kingman</a> · <a href="https://www.ta-petro.com/location/az/petro-kingman/">Petro #0315 Kingman</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
   <div class="related">
@@ -2185,6 +2187,8 @@ def kingman_i40_body():
       <li><a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10 public scales</a></li>
       <li><a href="/tucson-benson/">Tucson / Benson / I-10 public scales</a></li>
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
+      <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
+      <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -2241,7 +2245,7 @@ def tucson_benson_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Tucson / Benson / Willcox / Pima / Cochise with an operator page that sells walk-up weighmaster certificates. Flagstaff / Winslow / Holbrook I-40 now lives on <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>. TA Express White Hills (US-93) stays for a US-93 corridor. Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Tucson / Benson / Willcox / Pima / Cochise with an operator page that sells walk-up weighmaster certificates. Flagstaff / Winslow / Holbrook I-40 now lives on <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>. TA Express White Hills / Henderson US-93 now live on <a href="/white-hills/">White Hills / Henderson / US-93</a>. Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
   <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/az/tucson/5570-e-travel-plaza-way">Pilot #593 Tucson</a> · <a href="https://locations.pilotflyingj.com/us/az/tucson/9255-s-rita-rd">Pilot Express #1178 Tucson</a> · <a href="https://www.loves.com/locations/az/benson/loves-travel-stop-benson-460">Love’s #460 Benson</a> · <a href="https://www.ta-petro.com/location/az/ta-willcox/">TA #0226 Willcox</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
   <div class="related">
@@ -2311,13 +2315,14 @@ def flagstaff_winslow_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Flagstaff / Bellemont / Winslow / Holbrook / Coconino / Navajo with an operator page that sells walk-up weighmaster certificates. ONE9 Ash Fork and TA Ash Fork omitted (no CAT on own pages). TA Express White Hills (US-93) stays for a US-93 / Vegas-approach page (needs a second verified stop). Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Flagstaff / Bellemont / Winslow / Holbrook / Coconino / Navajo with an operator page that sells walk-up weighmaster certificates. ONE9 Ash Fork and TA Ash Fork omitted (no CAT on own pages). TA Express White Hills / Henderson US-93 now live on <a href="/white-hills/">White Hills / Henderson / US-93</a>. Love’s #722 Mayer / Pilot #1175 Cordes Lakes now live on <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/az/williams/loves-travel-stop-williams-553">Love’s #553 Williams</a> · <a href="https://locations.pilotflyingj.com/us/az/bellemont/12500-w-i-40">Pilot #180 Bellemont</a> · <a href="https://www.loves.com/locations/az/winslow/loves-travel-stop-winslow-971">Love’s #971 Winslow</a> · <a href="https://locations.pilotflyingj.com/us/az/winslow/400-transcon-ln">Flying J #612 Winslow</a> · <a href="https://www.ta-petro.com/location/az/ta-holbrook/">TA #0246 Holbrook</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
       <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
+      <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/tucson-benson/">Tucson / Benson / I-10 public scales</a></li>
@@ -2376,7 +2381,7 @@ def mayer_i17_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Mayer / Cordes Lakes / Camp Verde / Black Canyon City / Yavapai with an operator page that sells walk-up weighmaster certificates. Other I-17 CAT stops north toward Flagstaff or south toward Phoenix whose own pages list CAT — not third-party directories. Love’s #381 Black Canyon City not confirmed for CAT on an operator page we treat as primary. TA Express White Hills (US-93) and TA Express Henderson (I-11) stay for a US-93 / Vegas-approach page. Lake Havasu I-40 Exit 9 CAT pair (Pilot #211 + Love’s #386) deferred to a separate corridor. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Mayer / Cordes Lakes / Camp Verde / Black Canyon City / Yavapai with an operator page that sells walk-up weighmaster certificates. Other I-17 CAT stops north toward Flagstaff or south toward Phoenix whose own pages list CAT — not third-party directories. Love’s #381 Black Canyon City not confirmed for CAT on an operator page we treat as primary. TA Express White Hills / Henderson US-93 now live on <a href="/white-hills/">White Hills / Henderson / US-93</a>. Lake Havasu I-40 Exit 9 CAT pair (Pilot #211 + Love’s #386) deferred to a separate corridor. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
   <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/az/mayer/14905-cordes-lake-road">Pilot #1175 Mayer</a> · <a href="https://www.loves.com/locations/az/mayer/loves-travel-stop-mayer-722">Love’s #722 Mayer</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
   <div class="related">
@@ -2385,6 +2390,7 @@ def mayer_i17_body():
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
+      <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
       <li><a href="/tucson-benson/">Tucson / Benson / I-10 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2396,6 +2402,72 @@ def mayer_i17_body():
 </main>
 """ + map_script(myr)
 
+
+
+
+def white_hills_us93_body():
+    order_cat = [
+        "ta-white-hills-0292",
+        "ta-henderson-0969",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    wh = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(wh)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on this corridor</h2>
+    <p>ScaleRegistry’s public-weighing page lists Colton, Lancaster, Merced, and Selma for California — <strong>no White Hills / Henderson / Mohave / Clark dedicated house</strong>. Arizona Department of Agriculture publishes weighmaster <em>licensing</em> how-to, not a facility directory. Nevada has no ScaleRegistry dedicated house used here. We are not inventing a walk-up house from industrial scale vendors or third-party trucker directories. For Kingman / I-40 east of White Hills, use <a href="/kingman/">Kingman / I-40</a>; for Phoenix metro, use <a href="/phoenix/">Phoenix metro</a>.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">White Hills · Henderson · US-93 · I-11 · Mohave · Clark · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on US-93 / I-11 toward Las Vegas</h1>
+    <p class="lede">Two CAT Scales verified on TravelCenters of America <em>own</em> location pages on the US-93 / I-11 Vegas-approach corridor: TA Express White Hills #0292 (US-93 mile marker 29, Mohave County AZ) and TA Express Henderson #0969 (I-11 Exit 15A / Railroad Pass, Clark County NV). No ScaleRegistry dedicated walk-up house here. No Arizona CDFA-equivalent facility grid. This is the northbound US-93 pair long deferred until both own-page CAT partners verified. For Kingman / I-40, use <a href="/kingman/">Kingman / I-40</a>; for Mayer / Cordes Lakes / I-17, use <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>; for Flagstaff / Winslow / I-40, use <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Mohave · Clark County</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scale at TA Express</h2>
+  <p class="section-note">We list only corridor CAT stops verified on the operator’s own location page. TA Express White Hills #0292 (US-93 MM 29) and TA Express Henderson #0969 (I-11 Exit 15A / Railroad Pass) each list CAT Scale on ta-petro.com. 2,000 lb floor. No corner weights. Do not unload horses at a truck stop. Arizona and Nevada weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Arizona and Nevada ports of entry and highway weigh / weigh-in-motion sites are commercial enforcement — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+    <p class="cite">Source: <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT — Virtual Port Technology</a> · <a href="https://azdot.gov/mvd/services/enforcement/port-entry-locations">ADOT — Port of Entry Locations</a></p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in White Hills / Dolan Springs / Boulder City / Henderson / Mohave / Clark with an operator page that sells walk-up weighmaster certificates. Lake Havasu I-40 Exit 9 CAT pair (Pilot #211 + Love’s #386) deferred to a separate corridor. Pilot Willow Beach #1234 amenities omit CAT — omitted. Love’s #381 Black Canyon City not confirmed for CAT on an operator page we treat as primary. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.ta-petro.com/location/az/ta-express-white-hills/">TA Express White Hills #0292</a> · <a href="https://www.ta-petro.com/location/nv/ta-express-henderson/">TA Express Henderson #0969</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a> · <a href="https://agriculture.az.gov/weights-measures/licensing/weighmaster">AZ Ag weighmaster licensing</a> · <a href="https://azdot.gov/mvd/services/enforcement/commercial-vehicle-permits/virtual-port-technology">ADOT Virtual Port</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
+      <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
+      <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
+      <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
+      <li><a href="/phoenix/">Phoenix metro public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(wh)
 
 
 def antelope_valley_body():
@@ -3436,6 +3508,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "white-hills" / "index.html",
+        "White Hills / Henderson / US-93 public scales — TA Express CAT | WeighHere",
+        "Two CAT Scales verified on TA own pages on the US-93 / I-11 Vegas-approach corridor: TA Express White Hills #0292 (US-93 MM 29) and TA Express Henderson #0969 (I-11 Exit 15A). No ScaleRegistry dedicated house; no Arizona CDFA-equivalent facility grid.",
+        "wh",
+        "../",
+        white_hills_us93_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -3655,7 +3736,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
