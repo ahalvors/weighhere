@@ -1,12 +1,12 @@
-# WeighHere status — 3 Oct 2026
+# WeighHere status — 4 Oct 2026
 
-Compiled evening PT 3 Oct 2026 (nightly ship).
+Compiled evening PT 4 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **158** | +2 TA Express White Hills #0292 + TA Express Henderson #0969 |
+| **Total rows in `data/stations.json`** | **160** | +2 Pilot #211 + Love’s #386 Lake Havasu City |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -25,7 +25,8 @@ Compiled evening PT 3 Oct 2026 (nightly ship).
 | Tucson / Benson / Willcox / I-10 | 4 | unchanged |
 | Flagstaff / Winslow / Holbrook / I-40 | 5 | unchanged |
 | Mayer / Cordes Lakes / I-17 | 2 | unchanged |
-| **White Hills / Henderson / US-93** | **2** | **new page** — TA Express White Hills #0292 + TA Express Henderson #0969 |
+| White Hills / Henderson / US-93 | 2 | unchanged |
+| **Lake Havasu / I-40 Exit 9** | **2** | **new page** — Pilot #211 + Love’s #386 |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -43,25 +44,24 @@ Compiled evening PT 3 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 94 | +2 White Hills / Henderson / US-93 corridor |
+| CAT / truck-stop cards | 96 | +2 Lake Havasu / I-40 Exit 9 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**White Hills / Henderson / US-93** (`/white-hills/`): new Mohave / Clark corridor page with two CAT Scales verified on TravelCenters of America *own* location pages (both: visible `<li>CAT Scale</li>` on ta-petro.com food/amenities tab; JSON-LD GasStation with street address, phone, geo). Meets the multi-stop CAT corridor bar (same pattern as Mayer / Casa Grande). US-93 Vegas-approach pair long deferred until both own-page CAT partners re-verified tonight. Northbound White Hills (US-93 MM 29, AZ) then Henderson Railroad Pass (I-11 Exit 15A, NV).
+**Lake Havasu / I-40 Exit 9** (`/lake-havasu/`): new Mohave County page for the I-40 / AZ-95 junction north of Lake Havasu City, with two CAT Scales verified tonight on the operators’ *own* location pages. Long-deferred pair, now shipped as its own corridor page. Framed for boat trailers, RVs, toy haulers, U-Haul and PPM moves.
 
-- **TA Express White Hills #0292** — 19210 US Hwy 93, White Hills AZ 86445, US-93 MM 29 — CAT Scale on ta-petro.com amenities
-- **TA Express Henderson #0969** — 1550 Railroad Pass Casino Road, Henderson NV 89002, I-11 Exit 15A — CAT Scale on ta-petro.com amenities
+- **Pilot Travel Center #211** — 14750 AZ-95, Lake Havasu City AZ 86404, I-40/AZ-95 Exit 9 — Pilot page lists CAT Scale in amenities and FAQ answers yes; store Open 24 Hours; phone (928) 764-2410; geo 34.728256, -114.315209
+- **Love’s Travel Stop #386** — 14875 AZ Hwy-95, Lake Havasu City AZ 86404, Exit 9 on I-40 — Love’s page lists CAT Scales among Select Amenities; store open 24 hours; phone (928) 764-1505; geo 34.724959, -114.315844
 
-Also re-checked deferred candidates (no ship tonight as primary): Lake Havasu I-40 Exit 9 pair (Pilot #211 + Love’s #386) still deferred to a separate corridor. Pilot Willow Beach #1234 amenities omit CAT — omitted. Love’s #381 Black Canyon City — no own-page CAT confirmation used. Temecula / Corona / Murrieta still thin. Redding / Anderson still only TA #0057. CDFA county grids not re-pulled as primary tonight (US-93 corridor stood on operator pages).
+Cross-links added from Kingman, White Hills, Mayer, Flagstaff, Tucson and other AZ pages, nav, footer, home lede, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
 
 ## Sources used (this compile)
 
-- TA Express White Hills #0292: https://www.ta-petro.com/location/az/ta-express-white-hills/
-- TA Express Henderson #0969: https://www.ta-petro.com/location/nv/ta-express-henderson/
+- Pilot #211 Lake Havasu City: https://locations.pilotflyingj.com/us/az/lake-havasu-city/14750-az-95
+- Love’s #386 Lake Havasu City: https://www.loves.com/locations/az/lake-havasu-city/loves-travel-stop-lake-havasu-city-386
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry CA public-weighing list: https://scaleregistry.com/public-scales.html
-- Also noted (deferred): https://locations.pilotflyingj.com/us/az/lake-havasu-city/14750-az-95 · https://www.loves.com/locations/az/lake-havasu-city/loves-travel-stop-lake-havasu-city-386
 
 ## Gaps / deferred
 
@@ -69,7 +69,8 @@ Also re-checked deferred candidates (no ship tonight as primary): Lake Havasu I-
 - Redding / Anderson mid-north I-5: only TA Redding #0057 own-page CAT — need a second stop before `/redding-anderson/`
 - ONE9 #1424 Westley — visible amenities card still empty; CAT in JSON/description only — re-check before Santa Nella / I-5 extension
 - EZ Trip #1275 Madera Ave 12 — visible amenities still omit CAT (embedded JSON noise only); keep omitted from `/madera/`
-- Lake Havasu I-40 Exit 9 — Pilot #211 + Love’s #386 both previously own-page CAT; ship `/lake-havasu/` next when ready (re-verify first)
+- Lake Havasu City in-town / Parker AZ — no dedicated public scale house found on an operator page; Lake Havasu page has CAT only
+- Next candidates: Temecula / Corona (needs official pages), Redding / Anderson (needs a second own-page CAT), Ventura / Santa Barbara CDFA re-pull
 - Pilot Willow Beach #1234 — amenities omit CAT; keep omitted
 - Love’s #381 Black Canyon City — no own-page CAT confirmation used; keep omitted
 - ONE9 Ash Fork / TA Ash Fork — no CAT on own pages; keep omitted from `/flagstaff-winslow/`
