@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-10-04
-CHECKED_HUMAN = "4 Oct 2026"
+CHECKED = DATA["generated"]  # 2026-10-05
+CHECKED_HUMAN = "5 Oct 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -33,6 +33,7 @@ NAV = [
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
+    ("/las-vegas/", "Las Vegas / I-15", "lv"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -155,6 +156,7 @@ def footer(rel="."):
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
+        <li><a href="/las-vegas/">Las Vegas / I-15</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -1684,6 +1686,7 @@ def i15_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/inland-empire/">Inland Empire public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
       <li><a href="/san-diego/">San Diego County public scales</a></li>
@@ -2191,6 +2194,7 @@ def kingman_i40_body():
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
@@ -2327,6 +2331,7 @@ def flagstaff_winslow_body():
       <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/tucson-benson/">Tucson / Benson / I-10 public scales</a></li>
@@ -2396,6 +2401,7 @@ def mayer_i17_body():
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
       <li><a href="/tucson-benson/">Tucson / Benson / I-10 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2462,6 +2468,7 @@ def white_hills_us93_body():
     <ul>
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10 public scales</a></li>
@@ -2539,6 +2546,72 @@ def lake_havasu_i40_body():
 </main>
 """ + map_script(lh)
 
+
+def las_vegas_i15_body():
+    order_cat = [
+        "flying-j-jean-513",
+        "ta-las-vegas-0108",
+        "pilot-north-las-vegas-341",
+        "petro-north-las-vegas-0331",
+        "loves-las-vegas-340",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    lv = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(lv)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in Las Vegas</h2>
+    <p>ScaleRegistry’s public-weighing page lists Colton, Lancaster, Merced, and Selma for California — <strong>no Las Vegas / Clark County dedicated walk-up house</strong>. Nevada does not publish a CDFA-style public-scale grid we can cite. We are not inventing a walk-up house from industrial scale vendors, recyclers, or third-party trucker directories. Every stop below is a CAT Scale at a truck stop, verified on the operator’s own page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Las Vegas · North Las Vegas · Primm · Apex · I-15 · Clark County NV · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in Las Vegas / I-15</h1>
+    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along I-15 through the Las Vegas valley, south to north: Flying J #513 at Primm (Exit 1), TA Las Vegas #0108 (Blue Diamond, Exit 33), Pilot #341 North Las Vegas (Craig Rd, Exit 48), Petro North Las Vegas #0331 (Speedway Blvd, Exit 54), and Love’s #340 at Apex (Exit 64). Useful for U-Haul and PPM moves into or out of Vegas, RVs and toy haulers heading to Lake Mead or the desert, and horse trailers on I-15. For the US-93 / I-11 approach from Arizona (TA Express Henderson), use <a href="/white-hills/">White Hills / Henderson / US-93</a>; for Barstow and the California side of I-15, use <a href="/i-15/">I-15 / High Desert</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Clark County NV</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-15 through Las Vegas</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Flying J #513 and Pilot #341 list CAT Scale in their own amenities (Pilot #341 also answers yes to “has a CAT scale”); TA #0108 and Petro #0331 list CAT Scale on TA Petro’s own pages; Love’s #340 lists CAT Scales among amenities. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Nevada weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Highway weigh / commercial-enforcement sites on I-15 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house or certified public scale in Las Vegas, Henderson, or Clark County with an operator page that sells walk-up weighmaster certificates. Pilot-family stops whose own amenities list omits CAT were left off: ONE9 #1395 Jean (Exit 12), ONE9 #1488 Cheyenne Ave, ONE9 #1492 Apex (Exit 58), ONE9 #1477 Moapa, and Flying J #1171 Mesquite. Petro Henderson (I-11 Exit 15A) does not list CAT on its own page; TA Express Henderson does and stays on <a href="/white-hills/">White Hills / Henderson / US-93</a>. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/nv/jean/115-west-primm-blvd.">Flying J #513 Jean</a> · <a href="https://www.ta-petro.com/location/nv/ta-las-vegas/">TA Las Vegas #0108</a> · <a href="https://locations.pilotflyingj.com/us/nv/north-las-vegas/3812-e-craig-rd">Pilot #341 North Las Vegas</a> · <a href="https://www.ta-petro.com/location/nv/petro-north-las-vegas/">Petro North Las Vegas #0331</a> · <a href="https://www.loves.com/locations/nv/las-vegas/loves-travel-stop-las-vegas-340">Love’s #340 Las Vegas</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
+      <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
+      <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
+      <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/ppm-dity-southern-california/">Military PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(lv)
 
 
 def antelope_valley_body():
@@ -3597,6 +3670,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "las-vegas" / "index.html",
+        "Las Vegas / I-15 public scales — Flying J, TA, Pilot, Petro & Love’s CAT | WeighHere",
+        "Five CAT Scales verified on operator own pages along I-15 through Las Vegas: Flying J #513 Primm, TA #0108 Blue Diamond, Pilot #341 Craig Rd, Petro #0331 Speedway, Love’s #340 Apex. For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "lv",
+        "../",
+        las_vegas_i15_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -3816,7 +3898,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
