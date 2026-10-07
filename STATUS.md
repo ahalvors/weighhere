@@ -1,12 +1,12 @@
-# WeighHere status — 5 Oct 2026
+# WeighHere status — 6 Oct 2026
 
-Compiled evening PT 5 Oct 2026 (nightly ship).
+Compiled evening PT 6 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **165** | +5 Las Vegas / I-15 CAT (Flying J #513, TA #0108, Pilot #341, Petro #0331, Love’s #340) |
+| **Total rows in `data/stations.json`** | **170** | +5 Reno / Sparks / Fernley / I-80 CAT (TA #0172, Petro #0338, ONE9 #1359, Pilot #340, Flying J #1005) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -27,7 +27,8 @@ Compiled evening PT 5 Oct 2026 (nightly ship).
 | Mayer / Cordes Lakes / I-17 | 2 | unchanged |
 | White Hills / Henderson / US-93 | 2 | unchanged |
 | Lake Havasu / I-40 Exit 9 | 2 | unchanged |
-| **Las Vegas / I-15** | **5** | **new page** — Flying J #513 Jean, TA #0108, Pilot #341, Petro #0331, Love’s #340 |
+| Las Vegas / I-15 | 5 | unchanged |
+| **Reno / Sparks / Fernley / I-80** | **5** | **new page** — TA #0172, Petro #0338, ONE9 #1359, Pilot #340, Flying J #1005 |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -45,32 +46,35 @@ Compiled evening PT 5 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 101 | +5 Las Vegas / I-15 |
+| CAT / truck-stop cards | 106 | +5 Reno / Sparks / Fernley / I-80 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Las Vegas / I-15** (`/las-vegas/`): new Clark County NV page covering I-15 through the Las Vegas valley, Primm to Apex, with five CAT Scales verified tonight on the operators’ *own* location pages. First Nevada metro page; pairs with `/white-hills/` (US-93 / I-11 Henderson approach) and `/i-15/` (Barstow / High Desert side).
+**Reno / Sparks / Fernley / I-80** (`/reno-sparks/`): new northern Nevada page covering I-80 from Sparks east to Fernley (Washoe, Storey and Lyon Counties), with five CAT Scales verified tonight on the operators’ *own* location pages. Pairs with `/sacramento/` (Donner / I-80 California side) and `/las-vegas/`.
 
-- **Flying J #513 Jean / Primm** — 115 West Primm Blvd, Jean NV 89019, I-15 Exit 1 — own amenities list CAT Scale; Open 24 Hours; (702) 679-6666; geo 35.6097184, -115.3917507
-- **TA Las Vegas #0108** — 8050 Dean Martin Drive, Las Vegas NV 89139, I-15 Blue Diamond Exit 33 — TA page lists CAT Scale; fuel 24/7; (702) 361-1176; geo 36.0433, -115.1873
-- **Pilot Travel Center #341 North Las Vegas** — 3812 E Craig Rd, North Las Vegas NV 89031, I-15 Exit 48 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (702) 644-1600; geo 36.2409528, -115.0978424
-- **Petro North Las Vegas #0331** — 6595 North Hollywood Blvd, North Las Vegas NV 89115, I-15 Exit 54 (Speedway Blvd) — Petro page lists CAT Scale; fuel 24/7; (702) 632-2640; geo 36.2797, -115.0261
-- **Love’s Travel Stop #340 Las Vegas (Apex)** — 12501 Apex Great Basin Pkwy, Las Vegas NV 89165, Exit 64 on I-15 — Love’s page lists CAT Scales among amenities; store and Truck Care open 24 hours; (702) 643-7398; geo 36.381561, -114.896529
+- **TA Sparks #0172** — 200 North McCarren (as published), Sparks NV 89431, I-80 Exit 19 — TA page lists CAT Scale; fuel 24/7; 775-359-0550; geo 39.5351, -119.7361
+- **Petro Sparks #0338** — 1950 East Greg St, Sparks NV 89431, I-80 Exit 21 — Petro page lists CAT Scale; fuel 24/7; 775-355-8888; geo 39.5233, -119.7087
+- **ONE9 Travel Center #1359 Sparks** — 400 USA Parkway (Hwy 439), Sparks NV 89437 (Storey County), I-80 Exit 32 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 316-7002; geo 39.5590145, -119.4898624
+- **Pilot Travel Center #340 Fernley** — 465 Pilot Rd, Fernley NV 89408, I-80 Exit 46 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 575-5115; geo 39.6137157, -119.2658856 (page also showed a limited-fuel notice tonight; not reflected in listing)
+- **Flying J Travel Center #1005 Fernley** — 480 Truck Inn Way, Fernley NV 89408, I-80 Exit 48 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 575-5919; geo 39.6149587, -119.21674
 
-Cross-links added from White Hills, Lake Havasu, I-15 / High Desert and other pages’ Related lists, nav, footer, home lede, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
+Cross-links added from Las Vegas, Sacramento, White Hills, Kingman, Flagstaff, Mayer, I-15 Related lists, nav, footer, 404, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
 
 ## Sources used (this compile)
 
-- Flying J #513 Jean: https://locations.pilotflyingj.com/us/nv/jean/115-west-primm-blvd.
-- TA Las Vegas #0108: https://www.ta-petro.com/location/nv/ta-las-vegas/
-- Pilot #341 North Las Vegas: https://locations.pilotflyingj.com/us/nv/north-las-vegas/3812-e-craig-rd
-- Petro North Las Vegas #0331: https://www.ta-petro.com/location/nv/petro-north-las-vegas/
-- Love’s #340 Las Vegas: https://www.loves.com/locations/nv/las-vegas/loves-travel-stop-las-vegas-340
+- TA Sparks #0172: https://www.ta-petro.com/location/nv/ta-sparks/
+- Petro Sparks #0338: https://www.ta-petro.com/location/nv/petro-sparks/
+- ONE9 #1359 Sparks: https://locations.pilotflyingj.com/us/nv/sparks/400-usa-parkway-(hwy-439)
+- Pilot #340 Fernley: https://locations.pilotflyingj.com/us/nv/fernley/465-pilot-rd
+- Flying J #1005 Fernley: https://locations.pilotflyingj.com/us/nv/fernley/480-truck-inn-way
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
-- ScaleRegistry CA public-weighing list: https://scaleregistry.com/public-scales.html
+- ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
 
 ## Gaps / deferred
+
+- Reno: no dedicated walk-up public scale house found on an operator page; Love’s northern Nevada locations not checked on Love’s own pages (loves.com state list did not render server-side); Carson City / US-395 and Truckee have no own-page CAT yet
+- Other NV I-80 Pilot/TA stops (Winnemucca, Mill City, Carlin, Wells, West Wendover) are candidates for a future Elko / Winnemucca page
 
 - Las Vegas omitted (own amenities list does not show CAT): ONE9 #1395 Jean Exit 12, ONE9 #1488 Cheyenne Ave, ONE9 #1492 Apex Exit 58, ONE9 #1477 Moapa, Flying J #1171 Mesquite, ONE9 #1504 Searchlight; Petro Henderson (no CAT on TA Petro page)
 - No Las Vegas / Clark County dedicated walk-up house found on an operator page; Nevada has no CDFA-style grid we can cite
