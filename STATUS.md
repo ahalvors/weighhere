@@ -1,12 +1,12 @@
-# WeighHere status — 6 Oct 2026
+# WeighHere status — 7 Oct 2026
 
-Compiled evening PT 6 Oct 2026 (nightly ship).
+Compiled evening PT 7 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **170** | +5 Reno / Sparks / Fernley / I-80 CAT (TA #0172, Petro #0338, ONE9 #1359, Pilot #340, Flying J #1005) |
+| **Total rows in `data/stations.json`** | **175** | +5 Winnemucca / Elko / Wells / I-80 CAT (TA #0181, Pilot #485, Flying J #770, ONE9 #387, Petro #0392) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -28,7 +28,8 @@ Compiled evening PT 6 Oct 2026 (nightly ship).
 | White Hills / Henderson / US-93 | 2 | unchanged |
 | Lake Havasu / I-40 Exit 9 | 2 | unchanged |
 | Las Vegas / I-15 | 5 | unchanged |
-| **Reno / Sparks / Fernley / I-80** | **5** | **new page** — TA #0172, Petro #0338, ONE9 #1359, Pilot #340, Flying J #1005 |
+| Reno / Sparks / Fernley / I-80 | 5 | unchanged |
+| **Winnemucca / Elko / Wells / I-80** | **5** | **new page** — TA Mill City #0181, Pilot #485, Flying J #770, ONE9 #387 Carlin, Petro Wells #0392 |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -46,39 +47,40 @@ Compiled evening PT 6 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 106 | +5 Reno / Sparks / Fernley / I-80 |
+| CAT / truck-stop cards | 111 | +5 Winnemucca / Elko / Wells / I-80 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Reno / Sparks / Fernley / I-80** (`/reno-sparks/`): new northern Nevada page covering I-80 from Sparks east to Fernley (Washoe, Storey and Lyon Counties), with five CAT Scales verified tonight on the operators’ *own* location pages. Pairs with `/sacramento/` (Donner / I-80 California side) and `/las-vegas/`.
+**Winnemucca / Elko / Wells / I-80** (`/elko-winnemucca/`): new northeastern Nevada page covering I-80 from Mill City east to Wells (Pershing, Humboldt and Elko Counties), with five CAT Scales verified tonight on the operators’ *own* location pages. Continues east from `/reno-sparks/`.
 
-- **TA Sparks #0172** — 200 North McCarren (as published), Sparks NV 89431, I-80 Exit 19 — TA page lists CAT Scale; fuel 24/7; 775-359-0550; geo 39.5351, -119.7361
-- **Petro Sparks #0338** — 1950 East Greg St, Sparks NV 89431, I-80 Exit 21 — Petro page lists CAT Scale; fuel 24/7; 775-355-8888; geo 39.5233, -119.7087
-- **ONE9 Travel Center #1359 Sparks** — 400 USA Parkway (Hwy 439), Sparks NV 89437 (Storey County), I-80 Exit 32 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 316-7002; geo 39.5590145, -119.4898624
-- **Pilot Travel Center #340 Fernley** — 465 Pilot Rd, Fernley NV 89408, I-80 Exit 46 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 575-5115; geo 39.6137157, -119.2658856 (page also showed a limited-fuel notice tonight; not reflected in listing)
-- **Flying J Travel Center #1005 Fernley** — 480 Truck Inn Way, Fernley NV 89408, I-80 Exit 48 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 575-5919; geo 39.6149587, -119.21674
+- **TA Mill City #0181** — 6000 E. Frontage Road, Mill City NV 89418, I-80 Exit 151 (W) / 149 (E) as published — TA page lists CAT Scale; fuel 24/7; 775-538-7311; geo 40.6932, -118.056
+- **Pilot Travel Center #485 Winnemucca** — 5625 W Winnemucca Blvd, 89445, I-80 Exit 173 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 625-2800; geo 40.9313223, -117.8043156
+- **Flying J Travel Center #770 Winnemucca** — 1880 W Winnemucca Blvd, 89445, I-80 Exit 176 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 623-0111; geo 40.9602428, -117.7481523
+- **ONE9 Travel Center #387 Carlin** — 791 10th St, Carlin NV 89822, I-80 & NV-278 Exit 280 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (775) 754-6384; geo 40.7197077, -116.1061135
+- **Petro Wells #0392** — 1440 6th Street, Wells NV 89835, I-80 Exit 352A — Petro page lists CAT Scale (and RV Dump); fuel 24/7; 775-455-4305; geo 41.101, -114.9561
 
-Cross-links added from Las Vegas, Sacramento, White Hills, Kingman, Flagstaff, Mayer, I-15 Related lists, nav, footer, 404, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
+Cross-links added from Reno / Sparks Related list, nav, footer, home/404 lede, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
 
 ## Sources used (this compile)
 
-- TA Sparks #0172: https://www.ta-petro.com/location/nv/ta-sparks/
-- Petro Sparks #0338: https://www.ta-petro.com/location/nv/petro-sparks/
-- ONE9 #1359 Sparks: https://locations.pilotflyingj.com/us/nv/sparks/400-usa-parkway-(hwy-439)
-- Pilot #340 Fernley: https://locations.pilotflyingj.com/us/nv/fernley/465-pilot-rd
-- Flying J #1005 Fernley: https://locations.pilotflyingj.com/us/nv/fernley/480-truck-inn-way
+- TA Mill City #0181: https://www.ta-petro.com/location/nv/ta-mill-city/
+- Pilot #485 Winnemucca: https://locations.pilotflyingj.com/us/nv/winnemucca/5625-w-winnemucca-blvd
+- Flying J #770 Winnemucca: https://locations.pilotflyingj.com/us/nv/winnemucca/1880-w-winnemucca-blvd
+- ONE9 #387 Carlin: https://locations.pilotflyingj.com/us/nv/carlin/791-10th-st
+- Petro Wells #0392: https://www.ta-petro.com/location/nv/petro-wells/
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
 
 ## Gaps / deferred
 
+- Elko / Winnemucca: Flying J #692 Wells (156 US-93, Exit 352) and Pilot #147 West Wendover (1200 Wendover Blvd, Exit 410) answer yes in FAQ but visible amenities lists omit CAT Scale — held back; re-check. TA Express Carlin #0975 and TA Express Wendover #0458 show no CAT on TA pages. ONE9 Dealer #1501 Winnemucca shows no CAT. No own-page CAT in Elko city. No dedicated walk-up house found. Love’s NV still unchecked.
+
 - Reno: no dedicated walk-up public scale house found on an operator page; Love’s northern Nevada locations not checked on Love’s own pages (loves.com state list did not render server-side); Carson City / US-395 and Truckee have no own-page CAT yet
-- Other NV I-80 Pilot/TA stops (Winnemucca, Mill City, Carlin, Wells, West Wendover) are candidates for a future Elko / Winnemucca page
 
 - Las Vegas omitted (own amenities list does not show CAT): ONE9 #1395 Jean Exit 12, ONE9 #1488 Cheyenne Ave, ONE9 #1492 Apex Exit 58, ONE9 #1477 Moapa, Flying J #1171 Mesquite, ONE9 #1504 Searchlight; Petro Henderson (no CAT on TA Petro page)
 - No Las Vegas / Clark County dedicated walk-up house found on an operator page; Nevada has no CDFA-style grid we can cite
-- Next candidates: Mesquite / St. George I-15 (needs own-page CAT), Temecula / Corona, Redding / Anderson, Ventura / Santa Barbara CDFA re-pull
+- Next candidates: Mesquite / St. George I-15 (needs own-page CAT), Carson City / US-395, Temecula / Corona, Redding / Anderson, Ventura / Santa Barbara CDFA re-pull
 - Temecula / Corona / Murrieta Love’s / Pilot / TA — no official store/city pages treated as primary tonight; keep deferred
 - Redding / Anderson mid-north I-5: only TA Redding #0057 own-page CAT — need a second stop before `/redding-anderson/`
 - ONE9 #1424 Westley — visible amenities card still empty; CAT in JSON/description only — re-check before Santa Nella / I-5 extension

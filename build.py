@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-10-06
-CHECKED_HUMAN = "6 Oct 2026"
+CHECKED = DATA["generated"]  # 2026-10-07
+CHECKED_HUMAN = "7 Oct 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -35,6 +35,7 @@ NAV = [
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
     ("/las-vegas/", "Las Vegas / I-15", "lv"),
     ("/reno-sparks/", "Reno / Sparks / Fernley / I-80", "rno"),
+    ("/elko-winnemucca/", "Winnemucca / Elko / Wells / I-80", "elk"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -159,6 +160,7 @@ def footer(rel="."):
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
         <li><a href="/las-vegas/">Las Vegas / I-15</a></li>
         <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a></li>
+        <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -2676,6 +2678,7 @@ def reno_sparks_i80_body():
     <h2>Related</h2>
     <ul>
       <li><a href="/sacramento/">Sacramento approaches public scales</a></li>
+      <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2687,6 +2690,72 @@ def reno_sparks_i80_body():
 </div>
 </main>
 """ + map_script(rno)
+
+
+def elko_winnemucca_i80_body():
+    order_cat = [
+        "ta-mill-city-0181",
+        "pilot-winnemucca-485",
+        "flying-j-winnemucca-770",
+        "one9-carlin-387",
+        "petro-wells-0392",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    elk = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(elk)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house between Fernley and Wendover</h2>
+    <p>Nevada does not publish a CDFA-style public-scale grid we can cite, and ScaleRegistry’s public-weighing page lists no walk-up house in Pershing, Humboldt or Elko County. We are not inventing one from mine-site scales, feed yards, recyclers, landfill gate scales, or third-party trucker directories. Every stop below is a CAT Scale at a truck stop, verified on the operator’s own page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Mill City · Winnemucca · Carlin · Elko · Wells · I-80 · Pershing, Humboldt &amp; Elko Counties NV · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in Winnemucca / Elko / Wells (I-80)</h1>
+    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along I-80 across northeastern Nevada, west to east: TA Mill City #0181 (Exit 151/149), Pilot #485 Winnemucca (Exit 173), Flying J #770 Winnemucca (Exit 176), ONE9 #387 Carlin (Exit 280, about 22 miles west of Elko), and Petro Wells #0392 (Exit 352A at US-93). Stops are far apart out here, so plan your weigh before you leave town. Useful for U-Haul and PPM moves on the I-80 run between Reno and Salt Lake City, RVs and toy haulers headed for the Ruby Mountains or Jarbidge, and horse and stock trailers on US-95 or US-93. Heading west, the next CAT stops are on <a href="/reno-sparks/">Reno / Sparks / Fernley</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Pershing, Humboldt &amp; Elko Counties NV</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-80 through Winnemucca, Carlin and Wells</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. TA Mill City #0181 and Petro Wells #0392 list CAT Scale on TA Petro’s own pages; Pilot #485, Flying J #770 and ONE9 #387 list CAT Scale in their own amenities and answer yes to “has a CAT scale”. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Nevada weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Highway weigh / commercial-enforcement sites on I-80 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Winnemucca, Elko or Wells with an operator page that sells walk-up weighmaster certificates. Flying J #692 Wells and Pilot #147 West Wendover answer yes to “has a CAT scale” in their FAQ, but their visible amenities lists did not show CAT Scale tonight, so they are held back until that matches. TA Express Carlin #0975 and TA Express Wendover #0458 do not list a CAT Scale on TA’s own pages. No own-page CAT found in the city of Elko itself. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.ta-petro.com/location/nv/ta-mill-city/">TA Mill City #0181</a> · <a href="https://locations.pilotflyingj.com/us/nv/winnemucca/5625-w-winnemucca-blvd">Pilot #485 Winnemucca</a> · <a href="https://locations.pilotflyingj.com/us/nv/winnemucca/1880-w-winnemucca-blvd">Flying J #770 Winnemucca</a> · <a href="https://locations.pilotflyingj.com/us/nv/carlin/791-10th-st">ONE9 #387 Carlin</a> · <a href="https://www.ta-petro.com/location/nv/petro-wells/">Petro Wells #0392</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
+      <li><a href="/sacramento/">Sacramento approaches public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(elk)
 
 
 def antelope_valley_body():
@@ -3763,6 +3832,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "elko-winnemucca" / "index.html",
+        "Winnemucca / Elko / Wells I-80 public scales — TA, Pilot, Flying J, ONE9 & Petro CAT | WeighHere",
+        "Five CAT Scales verified on operator own pages along I-80 in northeastern Nevada: TA #0181 Mill City, Pilot #485 and Flying J #770 Winnemucca, ONE9 #387 Carlin, Petro #0392 Wells. For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "elk",
+        "../",
+        elko_winnemucca_i80_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -3982,7 +4060,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
