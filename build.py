@@ -193,6 +193,7 @@ def footer(rel="."):
   </div>
 </footer>
 <script src="{rel}js/site.js"></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "43fa83f1a27d4fcea9b7fb6fcc8fbfa9"}}'></script>
 </body>
 </html>
 """
@@ -3523,7 +3524,7 @@ def page_privacy():
   <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names, email addresses, or payment information.</p>
 
   <h2>Analytics</h2>
-  <p>We may use web analytics to understand traffic patterns and improve the directory. Any analytics service used respects standard Do Not Track settings and does not sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
+  <p>WeighHere uses Cloudflare Web Analytics, which is cookieless and collects only aggregate page views and performance data. It does not track individual visitors across sites or sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
 
   <h2>Hosting</h2>
   <p>WeighHere is hosted on Netlify and served via Cloudflare for the public domain weighhere.com. Both services process standard web server logs (IP addresses, user agents, requested URLs) as part of delivering pages. Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>. Netlify's privacy policy: <a href="https://www.netlify.com/privacy/">netlify.com/privacy</a>.</p>
