@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
-CHECKED = DATA["generated"]  # 2026-10-09
-CHECKED_HUMAN = "9 Oct 2026"
+CHECKED = DATA["generated"]  # 2026-10-10
+CHECKED_HUMAN = "10 Oct 2026"
 
 NAV = [
     ("/", "LA County", "la"),
@@ -38,6 +38,7 @@ NAV = [
     ("/elko-winnemucca/", "Winnemucca / Elko / Wells / I-80", "elk"),
     ("/st-george-cedar-city/", "St. George / Cedar City / I-15", "sgc"),
     ("/fillmore-nephi/", "Fillmore / Nephi / I-15", "fn"),
+    ("/springville-salt-lake/", "Springville / Salt Lake / I-15", "ssl"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -165,6 +166,7 @@ def footer(rel="."):
         <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a></li>
         <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a></li>
         <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a></li>
+        <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -1699,6 +1701,7 @@ def i15_body():
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
+      <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/inland-empire/">Inland Empire public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
@@ -2618,6 +2621,7 @@ def las_vegas_i15_body():
     <ul>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
+      <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
@@ -2822,6 +2826,7 @@ def st_george_cedar_city_i15_body():
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
+      <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
@@ -2856,7 +2861,7 @@ def fillmore_nephi_i15_body():
   <div class="wrap">
     <p class="kicker">Fillmore · Nephi · I-15 · Millard &amp; Juab Counties UT · listings checked {CHECKED_HUMAN}</p>
     <h1>Public scales in Fillmore / Nephi (I-15)</h1>
-    <p class="lede">Two CAT Scales verified on the operators’ <em>own</em> location pages along I-15 through mid-Utah, south to north: Love’s #835 Fillmore (Exit 163) and Flying J #743 Nephi (Exit 222). Useful for U-Haul and PPM moves between southwestern Utah and the Salt Lake valley, RVs headed for Fish Lake / Capitol Reef approaches, and horse trailers on I-15. Heading southwest, the previous verified cluster is on <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a> (Parowan Exit 78). Flying J Beaver #509, TA Fillmore #0519, Flying J Scipio #510, ONE9 Fillmore #1479, Flying J Richfield #773, and TA Express Salina still omit CAT from their own amenities lists — held back.</p>
+    <p class="lede">Two CAT Scales verified on the operators’ <em>own</em> location pages along I-15 through mid-Utah, south to north: Love’s #835 Fillmore (Exit 163) and Flying J #743 Nephi (Exit 222). Useful for U-Haul and PPM moves between southwestern Utah and the Salt Lake valley, RVs headed for Fish Lake / Capitol Reef approaches, and horse trailers on I-15. Heading southwest, the previous verified cluster is on <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a> (Parowan Exit 78). Heading northeast into the Wasatch Front, see <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>. Flying J Beaver #509, TA Fillmore #0519, Flying J Scipio #510, ONE9 Fillmore #1479, Flying J Richfield #773, and TA Express Salina still omit CAT from their own amenities lists — held back.</p>
     <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Millard &amp; Juab Counties UT</p>
   </div>
 </section>
@@ -2883,8 +2888,8 @@ def fillmore_nephi_i15_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
-      <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
@@ -2896,6 +2901,73 @@ def fillmore_nephi_i15_body():
 </div>
 </main>
 """ + map_script(fn)
+
+
+def springville_salt_lake_i15_body():
+    order_cat = [
+        "loves-springville-518",
+        "flying-j-salt-lake-city-746",
+        "loves-salt-lake-city-436",
+        "flying-j-north-salt-lake-772",
+        "ta-tooele-0060",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    ssl = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(ssl)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on the Wasatch Front tonight</h2>
+    <p>Utah does not publish a CDFA-style public-scale grid we can cite for this corridor, and ScaleRegistry’s public-weighing page lists no walk-up house in Utah, Salt Lake, Davis, or Tooele County UT. We are not inventing one from industrial scale vendors, recyclers, landfill gate scales, or third-party trucker directories. Every stop below is a CAT Scale at a truck stop, verified on the operator’s own page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Springville · Salt Lake City · North Salt Lake · Tooele · I-15 / I-80 · Utah, Salt Lake, Davis &amp; Tooele Counties UT · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in Springville / Salt Lake (I-15)</h1>
+    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along the Wasatch Front north of Nephi: Love’s #518 Springville (I-15 Exit 260), Flying J #746 Salt Lake City (I-15 &amp; I-80 / SR-201 Exit 17), Love’s #436 Salt Lake City (I-80 Exit 118 / Redwood Rd), Flying J #772 North Salt Lake (I-215 Exit 27), and TA Tooele #0060 (I-80 Exit 99). Useful for U-Haul and PPM moves into the Provo / Salt Lake valley, RVs on I-15 / I-80, and horse trailers on the Wasatch Front. Heading southwest, the previous verified cluster is on <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a> (Nephi Exit 222). Love’s #686 Brigham City (I-15 Exit 363) is own-page CAT-verified but held for a separate northern Utah page.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Utah, Salt Lake, Davis &amp; Tooele Counties UT</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-15 / I-80 through Springville and Salt Lake</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Love’s #518 and #436 list CAT Scales among amenities; Flying J #746 and #772 list CAT Scale in amenities and answer yes to “has a CAT scale”; TA Tooele #0060 lists CAT Scale among amenities. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Utah weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Highway weigh / commercial-enforcement sites on I-15 and I-80 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Springville, Provo, Spanish Fork, Salt Lake City, North Salt Lake or Tooele County with an operator page that sells walk-up weighmaster certificates. Love’s #686 Brigham City (I-15 Exit 363) lists CAT Scales on Love’s own page — held for a Brigham / northern Utah corridor rather than stretching this metro page. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/ut/springville/loves-travel-stop-springville-518">Love’s #518 Springville</a> · <a href="https://locations.pilotflyingj.com/us/ut/salt-lake-city/2025-s-900-w">Flying J #746 Salt Lake City</a> · <a href="https://www.loves.com/locations/ut/salt-lake-city/loves-travel-stop-salt-lake-city-436">Love’s #436 Salt Lake City</a> · <a href="https://locations.pilotflyingj.com/us/ut/north-salt-lake/885-north-pointe-cir">Flying J #772 North Salt Lake</a> · <a href="https://www.ta-petro.com/location/ut/ta-tooele/">TA Tooele #0060</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
+      <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
+      <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
+      <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(ssl)
 
 
 
@@ -4000,6 +4072,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "springville-salt-lake" / "index.html",
+        "Springville / Salt Lake / I-15 public scales — Love’s, Flying J & TA CAT | WeighHere",
+        "Five CAT Scales verified on operator own pages on the Wasatch Front: Love’s #518 Springville, Flying J #746 and Love’s #436 Salt Lake City, Flying J #772 North Salt Lake, TA Tooele #0060. For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "ssl",
+        "../",
+        springville_salt_lake_i15_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -4219,7 +4300,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

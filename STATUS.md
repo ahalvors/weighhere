@@ -1,12 +1,12 @@
-# WeighHere status — 9 Oct 2026
+# WeighHere status — 10 Oct 2026
 
-Compiled evening PT 9 Oct 2026 (nightly ship).
+Compiled evening PT 10 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **180** | +2 Fillmore / Nephi / I-15 CAT (Love’s #835, Flying J #743) |
+| **Total rows in `data/stations.json`** | **185** | +5 Springville / Salt Lake / I-15 CAT (Love’s #518, Flying J #746, Love’s #436, Flying J #772, TA #0060) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -31,7 +31,8 @@ Compiled evening PT 9 Oct 2026 (nightly ship).
 | Reno / Sparks / Fernley / I-80 | 5 | unchanged |
 | Winnemucca / Elko / Wells / I-80 | 5 | unchanged |
 | St. George / Cedar City / Parowan / I-15 | 3 | unchanged |
-| **Fillmore / Nephi / I-15** | **2** | **new page** — Love’s #835 Fillmore, Flying J #743 Nephi |
+| Fillmore / Nephi / I-15 | 2 | unchanged |
+| **Springville / Salt Lake / I-15** | **5** | **new page** — Love’s #518 Springville, Flying J #746 SLC, Love’s #436 SLC, Flying J #772 North Salt Lake, TA Tooele #0060 |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -49,49 +50,50 @@ Compiled evening PT 9 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 116 | +2 Fillmore / Nephi / I-15 |
+| CAT / truck-stop cards | 121 | +5 Springville / Salt Lake / I-15 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Fillmore / Nephi / I-15** (`/fillmore-nephi/`): new mid-Utah page covering I-15 from Fillmore north through Nephi (Millard and Juab Counties UT), with two CAT Scales verified tonight on the operators’ *own* location pages. Continues northeast from `/st-george-cedar-city/` (Beaver / Scipio / Richfield / Salina / TA Fillmore still held back — amenities omit CAT).
+**Springville / Salt Lake / I-15** (`/springville-salt-lake/`): new Wasatch Front page covering I-15 / I-80 from Springville (Utah County) through Salt Lake City and North Salt Lake, plus TA Tooele on I-80 west (Tooele County). Continues northeast from `/fillmore-nephi/` (Nephi Exit 222). Five CAT Scales verified tonight on the operators’ *own* location pages.
 
-- **Love’s Travel Stop #835 Fillmore** — 915 South 1100 West, Fillmore UT 84631, I-15 Exit 163 — Love’s page lists CAT Scales; store Open 24-hours; (435) 334-7002; geo 38.948548, -112.352721
-- **Flying J Travel Center #743 Nephi** — 1597 S Main St, Nephi UT 84648, I-15 Exit 222 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (435) 250-4522; geo 39.685231, -111.836382
+- **Love’s Travel Stop #518 Springville** — 358 South 2200 West, Springville UT 84663, I-15 Exit 260 — Love’s page lists CAT Scales; store Open 24-hours; (801) 489-8746; geo 40.162271, -111.651681
+- **Flying J Travel Center #746 Salt Lake City** — 2025 S 900 W, Salt Lake City UT 84104, I-15 & I-80 / SR-201 Exit 17 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (801) 972-3711; geo 40.726649, -111.915592
+- **Love’s Travel Stop #436 Salt Lake City** — 25 N. Redwood Rd., Salt Lake City UT 84116, I-80 Exit 118 — Love’s page lists CAT Scales; store Open 24-Hours; (801) 239-1100; geo 40.769949, -111.939921
+- **Flying J Travel Center #772 North Salt Lake** — 885 North Pointe Cir, North Salt Lake UT 84054, I-215 Exit 27 — amenities list CAT Scale and FAQ answers yes; Open 24 Hours; (801) 936-1408; geo 40.836158, -111.934078
+- **TA Tooele #0060** — 8836 North Highway 40, Salt Lake City UT 84074 (Tooele County / Lake Point area), I-80 Exit 99 — TA page lists CAT Scale; Shell gas/diesel 24/7; (801) 250-8585; geo 40.6899, -112.2629
 
-Cross-links added from St. George / Cedar City, Las Vegas, and I-15 / High Desert Related lists, nav, footer, 404 lede, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
+Cross-links added from Fillmore / Nephi, St. George / Cedar City, Las Vegas, and I-15 / High Desert Related lists, nav, footer, 404 lede, and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
 
 ### Candidates checked but not shipped as own pages tonight
 
-- **Carson City / US-395**: Maverik #409 College Pkwy lists a CAT Scale in third-party directories — not a Pilot / Love’s / TA / Flying J / Petro own page, so held under the CAT rule. No Truckee / Gardnerville chain own-page CAT found.
-- **Temecula / Corona / Murrieta**: Pilot Dealer #1458 Perris (23261 Cajalco Expressway) lists CAT Scale on its own amenities — alone tonight; no second Temecula / Corona / Murrieta Love’s or TA own-page CAT confirmed. Deferred until a second stop verifies.
-- **Redding / Anderson**: still only TA Redding #0057 own-page CAT.
-- **Beaver / Fillmore gap stops held**: Flying J Dealer #509 Beaver (amenities omit CAT), TA Fillmore #0519 (amenities omit CAT), Flying J Dealer #510 Scipio (amenities omit CAT), ONE9 #1479 Fillmore (empty amenities / no CAT), Flying J #773 Richfield (amenities omit CAT), TA Express Salina (no CAT on own page).
-- **Love’s Fernley #246**, **Love’s Winnemucca #797**, **Love’s Carlin #978**: own pages list CAT Scales — optional future adds to existing Reno / Elko corridor pages, not a new corridor tonight.
+- **Love’s #686 Brigham City** (I-15 Exit 363): own page lists CAT Scales — held for a separate Brigham / northern Utah corridor rather than stretching this metro page.
+- **Carson City / US-395**: Maverik third-party CAT only — still held.
+- **Temecula / Corona / Murrieta**: Pilot Dealer #1458 Perris still alone — need a second own-page CAT.
+- **Redding / Anderson**: still only TA Redding #0057.
+- **Beaver / Fillmore gap stops**: Flying J #509 Beaver, TA Fillmore #0519, Flying J Scipio #510, ONE9 Fillmore #1479, Flying J Richfield #773, TA Express Salina — amenities still omit CAT (not re-fetched tonight; held from 9 Oct).
+- **Love’s Fernley #246**, **Love’s Winnemucca #797**, **Love’s Carlin #978**: optional future adds to existing Reno / Elko corridor pages.
 
 ## Sources used (this compile)
 
-- Love’s #835 Fillmore: https://www.loves.com/locations/ut/fillmore/loves-travel-stop-fillmore-835
-- Flying J #743 Nephi: https://locations.pilotflyingj.com/us/ut/nephi/1597-s-main-st
-- Re-check Flying J #509 Beaver (held): https://locations.pilotflyingj.com/us/ut/beaver/653-w-1400-n
-- Re-check TA Fillmore #0519 (held): https://www.ta-petro.com/location/ut/ta-fillmore/
-- Flying J Scipio #510 (held): https://locations.pilotflyingj.com/us/ut/scipio/810-n-800-w-st
-- ONE9 Fillmore #1479 (held): https://locations.pilotflyingj.com/us/ut/fillmore/1155-n-cedar-mountain-rd
-- Flying J Richfield #773 (held): https://locations.pilotflyingj.com/us/ut/richfield/35-e-flying-j-dr
-- TA Express Salina (held): https://www.ta-petro.com/location/ut/ta-express-salina/
-- Pilot #1458 Perris (alone for Temecula corridor): https://locations.pilotflyingj.com/us/ca/perris/23261-cajalco-expressway
-- Love’s Fernley #246 (optional Reno add): https://www.loves.com/locations/nv/fernley/loves-travel-stop-fernley-246
+- Love’s #518 Springville: https://www.loves.com/locations/ut/springville/loves-travel-stop-springville-518
+- Flying J #746 Salt Lake City: https://locations.pilotflyingj.com/us/ut/salt-lake-city/2025-s-900-w
+- Love’s #436 Salt Lake City: https://www.loves.com/locations/ut/salt-lake-city/loves-travel-stop-salt-lake-city-436
+- Flying J #772 North Salt Lake: https://locations.pilotflyingj.com/us/ut/north-salt-lake/885-north-pointe-cir
+- TA Tooele #0060: https://www.ta-petro.com/location/ut/ta-tooele/
+- Love’s #686 Brigham City (held for next north page): https://www.loves.com/locations/ut/brigham-city/loves-travel-stop-brigham-city-686
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
 
 ## Gaps / deferred
 
+- Love’s #686 Brigham City own-page CAT — next northern Utah I-15 candidate (with Snowville / Tremonton if verified)
 - Mesquite / Beaver Dam gap: Flying J Dealer #1171 Mesquite still omits CAT from amenities
 - Flying J Dealer #509 Beaver amenities omit CAT — gap between Parowan and Fillmore
 - Carson City / US-395 / Truckee: no Pilot/Love’s/TA/Flying J/Petro own-page CAT yet (Maverik third-party only)
 - Temecula / Corona / Murrieta: Pilot Perris #1458 alone — need a second own-page CAT before `/temecula-corona/`
 - Redding / Anderson mid-north I-5: only TA Redding #0057 — need a second stop before `/redding-anderson/`
-- Next candidates: Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
+- Next candidates: Brigham / northern Utah (Love’s #686 + more), Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
 - Elko / Winnemucca held: Flying J #692 Wells and Pilot #147 West Wendover (FAQ yes, amenities omit CAT)
 - Las Vegas omitted ONE9s still amenities-omit CAT
 - ONE9 #1424 Westley — visible amenities card still empty
