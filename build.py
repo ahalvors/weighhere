@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "11 Oct 2026"
+CHECKED_HUMAN = "12 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -40,6 +40,7 @@ NAV = [
     ("/fillmore-nephi/", "Fillmore / Nephi / I-15", "fn"),
     ("/springville-salt-lake/", "Springville / Salt Lake / I-15", "ssl"),
     ("/brigham-ogden/", "Brigham / Ogden / I-15", "bo"),
+    ("/mccammon-idaho-falls/", "McCammon / Idaho Falls / I-15", "mif"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -169,6 +170,7 @@ def footer(rel="."):
         <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a></li>
         <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a></li>
         <li><a href="/brigham-ogden/">Brigham / Ogden / I-15</a></li>
+        <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -1705,6 +1707,7 @@ def i15_body():
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/inland-empire/">Inland Empire public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
@@ -2626,6 +2629,7 @@ def las_vegas_i15_body():
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
@@ -2832,6 +2836,7 @@ def st_george_cedar_city_i15_body():
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
@@ -2895,6 +2900,7 @@ def fillmore_nephi_i15_body():
     <ul>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
@@ -2962,6 +2968,7 @@ def springville_salt_lake_i15_body():
     <h2>Related</h2>
     <ul>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
@@ -3001,7 +3008,7 @@ def brigham_ogden_i15_body():
   <div class="wrap">
     <p class="kicker">Ogden · Brigham City · I-15 · Weber &amp; Box Elder Counties UT · listings checked {CHECKED_HUMAN}</p>
     <h1>Public scales in Brigham / Ogden (I-15)</h1>
-    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along I-15 north of the Salt Lake metro: Flying J #744 Ogden (I-15 Exit 343), ONE9 #294 Ogden (I-15 &amp; UT-39 Exit 344), and Love’s #686 Brigham City (I-15 Exit 363). Useful for U-Haul and PPM moves into Ogden / Brigham City, RVs headed toward Idaho on I-15, and horse trailers on the north Wasatch Front. Heading south, the previous verified cluster is on <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a> (North Salt Lake I-215 Exit 27). Flying J #748 Willard and Flying J #774 Snowville answer yes to a CAT FAQ but still omit CAT Scale from their visible amenities lists — held back.</p>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along I-15 north of the Salt Lake metro: Flying J #744 Ogden (I-15 Exit 343), ONE9 #294 Ogden (I-15 &amp; UT-39 Exit 344), and Love’s #686 Brigham City (I-15 Exit 363). Useful for U-Haul and PPM moves into Ogden / Brigham City, RVs headed toward Idaho on I-15, and horse trailers on the north Wasatch Front. Heading south, the previous verified cluster is on <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a> (North Salt Lake I-215 Exit 27). Heading north into Idaho, see <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a> (McCammon Exit 47 / Idaho Falls Exit 113). Flying J #748 Willard and Flying J #774 Snowville answer yes to a CAT FAQ but still omit CAT Scale from their visible amenities lists — held back.</p>
     <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Weber &amp; Box Elder Counties UT</p>
   </div>
 </section>
@@ -3028,6 +3035,7 @@ def brigham_ogden_i15_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
@@ -3042,6 +3050,71 @@ def brigham_ogden_i15_body():
 </div>
 </main>
 """ + map_script(bo)
+
+
+def mccammon_idaho_falls_i15_body():
+    order_cat = [
+        "flying-j-mccammon-641",
+        "flying-j-idaho-falls-1043",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    mif = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(mif)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house on eastern Idaho I-15 tonight</h2>
+    <p>Idaho does not publish a CDFA-style public-scale grid we can cite for this corridor, and ScaleRegistry’s public-weighing page lists no walk-up house in Bannock or Bonneville County ID. We are not inventing one from industrial scale vendors, grain elevators, recyclers, landfill gate scales, or third-party trucker directories. Every stop below is a CAT Scale at a truck stop, verified on the operator’s own page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">McCammon · Pocatello · Idaho Falls · I-15 · Bannock &amp; Bonneville Counties ID · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in McCammon / Idaho Falls (I-15)</h1>
+    <p class="lede">Two CAT Scales verified on Flying J’s <em>own</em> location pages along I-15 in eastern Idaho: Flying J #641 McCammon (I-15 Exit 47, at US-30 south of Pocatello) and Flying J #1043 Idaho Falls (I-15 Exit 113). Useful for U-Haul and PPM moves into Pocatello or Idaho Falls, RVs headed to Yellowstone or Island Park, and horse trailers on the Snake River Plain. Heading south into Utah, the previous verified cluster is on <a href="/brigham-ogden/">Brigham / Ogden / I-15</a> (Brigham City Exit 363). TA Express Dubois #0940 (I-15 Exit 137) does not list a CAT Scale on its own page — not included.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Bannock &amp; Bonneville Counties ID</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-15 from McCammon to Idaho Falls</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Both Flying J pages list CAT Scale in amenities and answer yes to “has a CAT scale.” 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Idaho port-of-entry and highway weigh / commercial-enforcement sites on I-15 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Pocatello, Blackfoot, Idaho Falls or Bannock/Bingham/Bonneville County with an operator page that sells walk-up weighmaster certificates. A Pocatello-proper or Blackfoot CAT stop on an operator’s own page (none found tonight). Love’s Idaho own-page locations could not be loaded tonight. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30">Flying J #641 McCammon</a> · <a href="https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr">Flying J #1043 Idaho Falls</a> · <a href="https://www.ta-petro.com/location/id/ta-express-dubois/">TA Express Dubois #0940</a> (checked, no CAT listed) · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
+      <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
+      <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80 public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(mif)
+
 
 
 
@@ -4164,6 +4237,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "mccammon-idaho-falls" / "index.html",
+        "McCammon / Idaho Falls / I-15 public scales — Flying J CAT | WeighHere",
+        "Two CAT Scales verified on Flying J’s own pages on eastern Idaho I-15: Flying J #641 McCammon (Exit 47) and Flying J #1043 Idaho Falls (Exit 113). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "mif",
+        "../",
+        mccammon_idaho_falls_i15_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -4383,7 +4465,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

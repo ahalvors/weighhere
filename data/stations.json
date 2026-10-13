@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11",
+  "generated": "2026-10-12",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, and Love's location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -6451,6 +6451,78 @@
       "last_checked": "2026-10-11",
       "lat": 41.508809,
       "lng": -112.053738
+    },
+    {
+      "id": "flying-j-mccammon-641",
+      "name": "Flying J Travel Center #641 McCammon — CAT Scale",
+      "address": "587 E US-30",
+      "city": "McCammon",
+      "state": "ID",
+      "zip": "83250",
+      "county": "bannock",
+      "phone": "(208) 845-0866",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Flying J’s own #641 page lists the store as Open 24 Hours and CAT Scale among amenities. That is the store’s hours, not a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Flying J’s own McCammon page (I-15 Exit 47, at US-30) lists CAT Scale among amenities and answers yes to “has a CAT scale.” Bannock County ID, south of Pocatello where US-30 splits off toward Lava Hot Springs and Soda Springs. Useful for PPM / U-Haul and RV weigh-ins coming up from Utah on I-15. CAT 2,000 lb floor; no corner weights. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page — Flying J #641 McCammon",
+      "source_url": "https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30",
+      "operator_url": "https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30",
+      "last_checked": "2026-10-12",
+      "lat": 42.659976,
+      "lng": -112.2066968
+    },
+    {
+      "id": "flying-j-idaho-falls-1043",
+      "name": "Flying J Travel Center #1043 Idaho Falls — CAT Scale",
+      "address": "6485 W Overland Dr",
+      "city": "Idaho Falls",
+      "state": "ID",
+      "zip": "83402",
+      "county": "bonneville",
+      "phone": "(208) 522-4149",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "hours_24h": "store_listed_24h",
+      "hours_notes": "Flying J’s own #1043 page lists the store as Open 24 Hours and CAT Scale among amenities. That is the store’s hours, not a published CAT-staffing schedule. Confirm the scale is working before a middle-of-the-night trip.",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "notes": "Flying J’s own Idaho Falls page (I-15 Exit 113) lists CAT Scale among amenities and answers yes to “has a CAT scale.” Bonneville County ID; north end of this corridor toward Rexburg, Yellowstone and the Montana line. Useful for PPM / U-Haul moves into Idaho Falls and RVs heading to Yellowstone or Island Park. CAT 2,000 lb floor; no corner weights. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot Flying J location page — Flying J #1043 Idaho Falls",
+      "source_url": "https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr",
+      "operator_url": "https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr",
+      "last_checked": "2026-10-12",
+      "lat": 43.4395888,
+      "lng": -112.1153279
     }
   ]
 }
