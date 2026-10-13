@@ -13,7 +13,7 @@ CHECKED = DATA["generated"]  # 2026-10-11
 CHECKED_HUMAN = "11 Oct 2026"
 
 NAV = [
-    ("/", "LA County", "la"),
+    ("/los-angeles/", "LA County", "la"),
     ("/orange-county/", "Orange County", "oc"),
     ("/inland-empire/", "Inland Empire", "ie"),
     ("/i-15/", "I-15 / High Desert", "i15"),
@@ -4389,6 +4389,9 @@ def main():
         encoding="utf-8",
     )
     print("wrote 404.html")
+    import subprocess, sys as _sys
+    for tool in ("tools/add_canonicals.py", "tools/seo.py"):
+        subprocess.run([_sys.executable, str(ROOT / tool)], check=True)
 
 
 if __name__ == "__main__":

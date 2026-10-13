@@ -86,3 +86,17 @@ Every scale-listing page gets a "Towing gear that helps before you weigh" box of
 ## 6. Optional map
 
 If `lat` and `lng` are present, county pages plot Leaflet + OSM. Missing coords just omit the pin. The list is the product.
+
+## SEO (titles, descriptions, intro, JSON-LD, sitemap) — automatic
+
+`python3 build.py` finishes by running `tools/add_canonicals.py` and `tools/seo.py`. Do not hand-edit titles, descriptions, or `sitemap.xml`; `seo.py` owns them.
+
+For a new listing page, add one line to `PLACES` in `tools/seo.py`:
+
+```python
+"new-slug": ("City & City, ST", "State"),
+```
+
+That produces the title `CAT & Public Truck Scales near City & City, ST | WeighHere` (it falls back to shorter forms to stay ≤ ~62 chars), a meta description naming the first stops with exits (exits are read from each station's `notes`, e.g. "I-15 Exit 343" — keep writing them that way), a short data-only intro under the lede, "Nearby" links to the closest pages not already in Related, an ItemList JSON-LD block, a hub link on the homepage, and a sitemap entry whose `<lastmod>` is the newest `last_checked` on the page. If the slug is missing from `PLACES` the build still works (uses the `<h1>`) and prints a WARN.
+
+The homepage (`/`) is a region hub; the LA listings live only at `/los-angeles/`.
