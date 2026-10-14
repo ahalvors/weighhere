@@ -189,6 +189,7 @@ def footer(rel="."):
         <li><a href="/santa-nella/">Santa Nella / I-5</a></li>
         <li><a href="/central-valley/">Central Valley</a></li>
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
+        <li><a href="/guides/ppm-weight-tickets/">PPM weight tickets (U-Haul)</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3523,7 +3524,142 @@ def page_ppm():
   <p>PCS Pay It Forward publishes a detailed walkthrough of certified weight tickets for a PPM, including branch quirks and common mistakes. Read it as a guide; we are not copying their text into this page. Your Transportation Office still owns the requirement.</p>
   <p><a href="https://pcspayitforward.com/certified-weight-tickets-ppm-move/">pcspayitforward.com — How to Get Certified Weight Tickets for a PPM Move</a></p>
 
+  <p>Moving from outside Southern California? Read the full guide: <a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a>.</p>
   <p><a href="/los-angeles/">Los Angeles County scales</a> · <a href="/how-to-weigh-an-rv/">How CAT platforms work</a></p>
+</div>
+</main>
+"""
+
+
+GUIDE_PPM_FAQ = [
+    ("Do I have to weigh empty first?",
+     "No single order is universal. Navy guidance says the empty and full tickets can come from origin, destination, or a combination, while the Coast Guard requires both at origin. Many movers weigh empty at origin before loading and full right after. Ask your Transportation Office which order your branch accepts."),
+    ("Can I use the Weigh My Truck app PDF for a PPM?",
+     "CAT says the app PDF is certified in every state except California, where a printed California Weighmaster Certificate is needed. Outside California, ask your Transportation Office whether it accepts the PDF, and pick up the printed ticket inside anyway so you have the weighmaster signature in hand."),
+    ("How much does a CAT Scale weigh cost?",
+     "CAT’s published U.S. price is $15.25 for a first weigh and $5.25 for a reweigh of the same vehicle at the same scale within 24 hours. In California, a Weighmaster Certificate is $30.50 for a first weigh and $10.50 for a reweigh. DFAS lists weight ticket fees as an authorized PPM operating expense, so keep the receipt."),
+    ("Do I need a separate pair of tickets for my car and the U-Haul?",
+     "Yes, if both carry household goods. Army and Navy PPM handouts require an empty and a full ticket for each vehicle, and a new pair for each trip if one vehicle makes several runs."),
+    ("Can I weigh at a highway weigh station?",
+     "Not for a ticket. State weigh stations are enforcement sites run by the highway patrol, not counters that sell certified tickets. Use a CAT Scale, a dedicated public scale house, or an on-base scale your Transportation Office approves."),
+    ("What if I lose a CAT ticket?",
+     "CAT says it keeps electronic records of sold tickets for seven years and takes copy requests through its ticket-copy request form."),
+]
+
+
+def guide_ppm_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_PPM_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_ppm_tickets():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_PPM_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · Military move · PPM (formerly DITY)</p>
+    <h1>How to get PPM weight tickets for a U-Haul move</h1>
+    <p class="lede">A Personally Procured Move pays on the weight you actually haul, and the only proof finance accepts is a pair of certified weight tickets: one empty, one full, for every vehicle and every trip. Here is how to get them right the first time at a CAT Scale or public scale, with the rules quoted from DFAS, Military OneSource, Army and Navy transportation offices, and CAT Scale itself.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>This guide summarizes published government and CAT Scale pages. It is not legal or entitlement advice, and branch rules differ. <strong>Your Transportation Office (TO) owns the requirement.</strong> Ask them before you weigh, especially about towing a car and which order to weigh in.</p>
+  </div>
+
+  <h2>What the government actually asks for</h2>
+  <p>DFAS lists the PPM paperwork plainly: your orders, the DD 1351-2 travel voucher, the DD 2278 from the Transportation Office, a paid rental agreement, vehicle registration if you used your own vehicle or trailer, and <strong>copies of certified weight tickets, one for the gross (full) weight and one for the tare (empty) weight</strong>. Your shipment weight is the difference between the two.</p>
+  <p>Military OneSource adds that the tickets must come from a certified weigh station, that you need a pair for each segment of the move (including multiple TDY trips en route), and that privately owned truck scales are an accepted place to get them. It also says you have 45 days from the planned move start date to turn in your paperwork, so weigh carefully the first time.</p>
+  <p>One detail that saves money: DFAS lists <strong>weight ticket fees</strong> as an authorized operating expense, next to the truck rental, fuel, and packing supplies. Keep the scale receipt with the ticket.</p>
+  <p class="cite">Sources: <a href="https://www.dfas.mil/MilitaryMembers/travelpay/armypcs/dityppmmoves/">DFAS, Personally Procured Moves (PPM)</a> · <a href="https://www.militaryonesource.mil/moving-pcs/plan-to-move/military-pcs-moving-faqs/">Military OneSource, PCS and Moving FAQs</a></p>
+
+  <h2>Step by step: the empty ticket and the full ticket</h2>
+  <ol>
+    <li><strong>Pick up the U-Haul and hook up anything it will tow.</strong> Fort Hood’s weight-ticket handout says a rental truck and trailer must be weighed together, both empty and full. Weigh the exact combination you will drive.</li>
+    <li><strong>Fuel.</strong> Fort Hood’s handout shows a full tank for both weighs. Navy guidance says the tanks should be full at each weighing, or, if the empty weigh comes first, no fuel may be added between the two weighs. The point is the same: fuel should not change your household-goods weight.</li>
+    <li><strong>Everybody out.</strong> Navy guidance says no passengers in the vehicle when it is weighed. That includes pets.</li>
+    <li><strong>Weigh empty</strong> before a single box goes in. Have the ticket marked EMPTY.</li>
+    <li><strong>Load, then weigh full</strong> with the same truck, the same trailer, and the same fuel rule. Have it marked FULL.</li>
+    <li><strong>Check both tickets before you leave the lot</strong>: legible, weighmaster signature present, your identification on it, EMPTY or FULL plus the vehicle described.</li>
+  </ol>
+  <p>Navy guidance allows the empty and full tickets to come from origin, destination, or a combination. A NAVSUP checklist notes the Coast Guard wants both at origin. If you plan to weigh full at origin and empty at destination after unloading, confirm that with your TO first.</p>
+  <p class="cite">Sources: <a href="https://home.army.mil/hood/9217/7513/9573/how_to_weigh.pdf">Fort Hood, How to Obtain Proper Weight Tickets (PDF)</a> · <a href="https://www.navsup.navy.mil/Portals/65/HHG/Documents/PPM-Handout-V.10.pdf">NAVSUP PPM handout (PDF)</a> · <a href="https://www.navsup.navy.mil/Portals/65/HHG/Documents/PPM/PPM_Checklist_24_Jul_18.pdf">NAVSUP PPM checklist (PDF)</a></p>
+
+  <h2>Towing a car behind the U-Haul</h2>
+  <p>This is where published guidance disagrees, so ask before you weigh. Fort Hood’s handout says a rental truck pulling an auto transport with your car on it is weighed together, car included, empty and full. The Navy handout says that if you are towing a personal vehicle behind a rental, detach it before getting weight tickets. Either way, the rule that never changes is consistency: the empty and full tickets have to describe the same combination, or the difference is meaningless.</p>
+
+  <h2>More than one vehicle, or more than one trip</h2>
+  <p>Every vehicle that carries household goods needs its own empty and full pair. Fort Hood’s PPM packet checklist calls for original weight tickets, empty and full, for each vehicle. NAVSUP says each conveyance, meaning each trip or vehicle, must be supported by a full and an empty ticket, and a local move needs one pair for each trip. So if you drive a 15-foot U-Haul and also pack your pickup, that is four tickets. If the U-Haul makes two runs across town, that is two pairs for the truck.</p>
+  <p class="cite">Source: <a href="https://home.army.mil/hood/5817/5494/7369/PPM_PACKET_TURN-IN_HANDOUT_AUG_2025.pdf">Fort Hood, PPM Packet Turn-In handout, Aug 2025 (PDF)</a></p>
+
+  <h2>What has to be printed on the ticket</h2>
+  <p>Fort Hood’s turn-in handout says every weight ticket must show your <strong>name, rank, and last four of your SSN</strong>, and be marked <strong>EMPTY or FULL with the vehicle type</strong>, with examples like “POV &amp; rental trailer EMPTY” or “Rental truck FULL.” NAVSUP’s checklist adds that tickets must be certified, legible, unaltered, and descriptive enough to identify the vehicle.</p>
+  <p>At a CAT Scale, the cashier asks for information through fixed fields. CAT’s DITY Move Tips page lists the common military answers:</p>
+  <ul>
+    <li>Truck/Tractor #: license plate</li>
+    <li>Company name: branch of service</li>
+    <li>Trailer #: rank</li>
+    <li>Commodity: name and last four of SSN</li>
+  </ul>
+  <p>CAT’s Weigh My Truck help page suggests a different layout (name, grade, and last four under company name, and “Military Move” as the commodity). Both pages tell you to verify what your branch requires, so ask your TO which version it wants and say it the same way at both weighs. CAT is firm on two things: <strong>the weighmaster must sign the ticket</strong> (it usually prints automatically, so double-check), and tickets cannot be edited after they print because they are legal documents.</p>
+  <p class="cite">Sources: <a href="https://catscale.com/contact-us/dity-move-tips/">CAT Scale, DITY Move Tips</a> · <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ</a> · <a href="https://weighmytruck.com/Help">Weigh My Truck Help</a></p>
+
+  <h2>How a CAT weigh works, and what it costs</h2>
+  <p>CAT says no appointment is needed. Pull on with the vehicle split between platform 1 and platform 2 (platform 1 is closest to the intercom sign), press the intercom button, give the cashier your information, pull off, and go inside for the ticket. A trailer goes on platform 3.</p>
+  <p>CAT publishes U.S. pricing of <strong>$15.25 for a first weigh and $5.25 for a reweigh</strong>. Its reweigh rule requires the same vehicle, the same scale, the full-price ticket presented, and a reweigh within 24 hours. If you weigh empty, load nearby, and come back to the same scale the same day, ask the cashier whether the full weigh rings up as a reweigh.</p>
+  <p><strong>California is different.</strong> CAT says a California Weighmaster Certificate is needed when you are being paid by weight, and lists it at $30.50 for a first weigh and $10.50 for a reweigh. The Weigh My Truck app PDF is certified everywhere except California, so in California go inside for the printed certificate. Prices were checked on CAT’s pages on 14 Oct 2026; confirm at the booth. Our <a href="/ppm-dity-southern-california/">Southern California PPM page</a> covers the California details and local scale houses.</p>
+  <p>A loaded box truck is normally well above CAT’s 2,000 lb floor. A car alone, or a small empty trailer, may not be, so see <a href="/cat-2000-lb-minimum/">what CAT’s 2,000 lb minimum means</a>.</p>
+
+  <h2>Where to weigh: CAT, public scale house, or on base</h2>
+  <ul>
+    <li><strong>CAT Scales at truck stops</strong> are open long hours and need no appointment, which makes them the easiest weekend option for most U-Haul moves.</li>
+    <li><strong>Dedicated public scale houses</strong> have licensed weighmasters used to DMV and military certificates, and they handle light vehicles CAT will not. Hours are usually weekday-heavy.</li>
+    <li><strong>On-base scales</strong> may be available. Ask your TO; we do not list installation scales.</li>
+    <li><strong>Not a highway weigh station.</strong> Those are enforcement sites, not ticket counters. Rental box trucks can still be required to stop at open stations in some states, which is a separate thing. See <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>.</li>
+  </ul>
+
+  <h2>Find a scale near your duty station or route</h2>
+  <p>Every WeighHere listing links to its source, and CAT locations are verified on the operator’s own page. A few areas where PPM movers often start or pass through:</p>
+  <ul>
+    <li>Southern California: <a href="/san-diego/">San Diego County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/los-angeles/">Los Angeles County</a>, <a href="/i-15/">I-15 / High Desert (Barstow, Hesperia)</a>, <a href="/mojave/">Mojave / Boron / Tehachapi</a></li>
+    <li>Northern and Central California: <a href="/sacramento/">Sacramento approaches</a>, <a href="/highway-99/">Stockton / Lodi</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/bakersfield/">Bakersfield</a></li>
+    <li>Arizona: <a href="/phoenix/">Phoenix metro</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma</a></li>
+    <li>Nevada: <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley</a></li>
+    <li>Utah and Idaho: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a></li>
+  </ul>
+  <p>Outside our coverage, use the <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>, or see <a href="/">all WeighHere areas</a>.</p>
+
+  <h2>Mistakes that get tickets rejected</h2>
+  <ul>
+    <li>No weighmaster signature, or a ticket you cannot read.</li>
+    <li>Not marked EMPTY or FULL, or no vehicle description.</li>
+    <li>Different combinations on the two tickets, such as a trailer on the full weigh but not the empty.</li>
+    <li>Passengers aboard, or fuel added between weighs.</li>
+    <li>One pair of tickets for two vehicles or two trips.</li>
+    <li>A phone PDF in California instead of the printed Weighmaster Certificate.</li>
+    <li>Losing the originals. Fort Hood asks for original tickets, and every office says keep copies.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How CAT’s three platforms work</a></li>
+      <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
 </div>
 </main>
 """
@@ -3765,6 +3901,7 @@ def page_vs():
     <li>If the pin sits on a freeway shoulder with CHP parking and no cashier booth you can walk up to, it is not WeighHere’s kind of listing.</li>
   </ul>
   <p><a href="/los-angeles/#do-not-go">Carson I-405 — do not go for a ticket</a> · <a href="/los-angeles/">LA public scales</a></p>
+  <p>Weighing a rental truck for a military move? See <a href="/guides/ppm-weight-tickets/">how to get PPM weight tickets for a U-Haul move</a>.</p>
 </div>
 </main>
 """
@@ -4481,6 +4618,16 @@ def main():
         "ppm",
         "../",
         page_ppm(),
+    )
+    write(
+        ROOT / "guides" / "ppm-weight-tickets" / "index.html",
+        "How to Get PPM Weight Tickets for a U-Haul Move | WeighHere",
+        "Empty and full certified weight tickets for a military PPM (DITY) move: what to print, towing, fuel, multiple trips, CAT Scale cost, and California rules.",
+        "ppm",
+        "../../",
+        page_guide_ppm_tickets(),
+        guide_ppm_faq_jsonld(),
+        gear=False,
     )
     write(
         ROOT / "horse-trailer" / "index.html",

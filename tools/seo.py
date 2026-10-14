@@ -247,6 +247,7 @@ def main():
   <div class="related">
     <h2>Guides</h2>
     <ul>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
@@ -281,12 +282,17 @@ def main():
             found.append(f"{BASE}/{d}/")
         elif d.endswith(".html") and d not in ("index.html", "404.html"):
             found.append(f"{BASE}/{d}")
+    gdir = os.path.join(ROOT, "guides")
+    if os.path.isdir(gdir):
+        for g in sorted(os.listdir(gdir)):
+            if os.path.isfile(os.path.join(gdir, g, "index.html")):
+                found.append(f"{BASE}/guides/{g}/")
     found = [u for u in order if u in found] + [u for u in found if u not in order]
     urls += [u for u in found if u != BASE + "/"]
     out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
         slug = u[len(BASE) + 1:].rstrip("/")
-        lm = max(old.get(u, SEO_UPDATED), SEO_UPDATED)
+        lm = max(old.get(u, date.today().isoformat() if old else SEO_UPDATED), SEO_UPDATED)
         if slug in pages:
             lm = max([lm] + [s.get("last_checked") or "" for s in pages[slug]["sts"]])
         out.append(f"  <url><loc>{u}</loc><lastmod>{lm[:10]}</lastmod></url>")
