@@ -19,7 +19,7 @@ from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://weighhere.com"
-SEO_UPDATED = "2026-10-12"  # bump when this pass changes page content site-wide
+SEO_UPDATED = "2026-10-13"  # bump when this pass changes page content site-wide
 
 # slug -> (place used in title/description, state label for hub grouping)
 PLACES = {
@@ -66,6 +66,7 @@ PLACES = {
     "springville-salt-lake": ("Salt Lake City, UT", "Utah"),
     "brigham-ogden": ("Ogden & Brigham City, UT", "Utah"),
     "mccammon-idaho-falls": ("McCammon & Idaho Falls, ID", "Idaho"),
+    "boise-treasure-valley": ("Boise & Treasure Valley, ID", "Idaho"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho"}
 

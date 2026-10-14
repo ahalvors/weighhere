@@ -1,12 +1,12 @@
-# WeighHere status — 12 Oct 2026
+# WeighHere status — 13 Oct 2026
 
-Compiled evening PT 12 Oct 2026 (nightly ship).
+Compiled evening PT 13 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **190** | +2 McCammon / Idaho Falls / I-15 CAT (Flying J #641, Flying J #1043) — first Idaho rows |
+| **Total rows in `data/stations.json`** | **195** | +5 Boise / Treasure Valley / I-84 CAT |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -33,8 +33,9 @@ Compiled evening PT 12 Oct 2026 (nightly ship).
 | St. George / Cedar City / Parowan / I-15 | 3 | unchanged |
 | Fillmore / Nephi / I-15 | 2 | unchanged |
 | Springville / Salt Lake / I-15 | 5 | unchanged |
-| Brigham / Ogden / I-15 | 3 | unchanged (now links north to Idaho) |
-| **McCammon / Idaho Falls / I-15** | **2** | **new page** — Flying J #641 McCammon, Flying J #1043 Idaho Falls |
+| Brigham / Ogden / I-15 | 3 | unchanged |
+| McCammon / Idaho Falls / I-15 | 2 | unchanged (now links west to Treasure Valley) |
+| **Boise / Treasure Valley / I-84** | **5** | **new page** — ONE9 #1428 Caldwell, Flying J #638 Caldwell, TA #0167 Boise, Pilot #350 Mountain Home, Flying J #640 Jerome |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -52,47 +53,58 @@ Compiled evening PT 12 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 126 | +2 McCammon / Idaho Falls / I-15 |
+| CAT / truck-stop cards | 131 | +5 Boise / Treasure Valley / I-84 |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**McCammon / Idaho Falls / I-15** (`/mccammon-idaho-falls/`): first Idaho page, continuing I-15 north from `/brigham-ogden/`. Two CAT Scales verified tonight on Flying J’s *own* location pages (amenities list CAT Scale and FAQ answers yes).
+**Boise / Treasure Valley / I-84** (`/boise-treasure-valley/`): southwestern Idaho I-84 corridor, west of last night’s McCammon / Idaho Falls I-15 page. Five CAT Scales verified tonight on the operators’ *own* location pages (amenities list CAT Scale; Flying J / Pilot FAQ also yes where present).
 
-- **Flying J Travel Center #641 McCammon** — 587 E US-30, McCammon ID 83250, I-15 Exit 47 (Bannock County) — Open 24 Hours; (208) 845-0866; geo 42.6599760, -112.2066968
-- **Flying J Travel Center #1043 Idaho Falls** — 6485 W Overland Dr, Idaho Falls ID 83402, I-15 Exit 113 (Bonneville County) — Open 24 Hours; (208) 522-4149; geo 43.4395888, -112.1153279
+- **ONE9 Dealer #1428 Caldwell** — 122 W Simplot Blvd, Caldwell ID 83605, I-84 business loop at W Simplot Blvd (Canyon County) — Open 24 Hours; (208) 459-0027; geo 43.6699588, -116.6997722
+- **Flying J Travel Center #638 Caldwell** — 3512 Franklin Rd, Caldwell ID 83605, I-84 Exit 29 (Canyon County) — Open 24 Hours; (208) 453-9225; geo 43.6616509, -116.6546368
+- **TA Boise #0167** — 4115 Broadway Ave, Boise ID 83705, I-84 Exit 54 (Ada County) — (208) 344-1091; geo 43.5656, -116.1994
+- **Pilot Travel Center #350 Mountain Home** — 1050 US-20, Mountain Home ID 83647, I-84/US-20 Exit 95 (Elmore County) — Open 24 Hours; (208) 587-4465; geo 43.14257813, -115.6629562
+- **Flying J Travel Center #640 Jerome** — 5350 US-93, Jerome ID 83338, I-84 Exit 173 (Jerome County) — Open 24 Hours; (208) 324-3454; geo 42.6495296, -114.4429066
 
-Cross-links added from Brigham / Ogden (lede + Related), Springville / Salt Lake, Fillmore / Nephi, St. George / Cedar City, Las Vegas and I-15 / High Desert Related lists, nav, footer, 404 lede, homepage hub (new Idaho group via `tools/seo.py` STATE_NAMES), and sitemap. Hours shown are store-listed 24h, not CAT staffing. Livestock unknown. No dedicated house verified.
+Cross-links added from McCammon / Idaho Falls and other pages that already linked to McCammon (Related), nav, footer, 404 lede, homepage hub (Idaho group via `tools/seo.py`), and sitemap. Hours shown are store-listed 24h where published, not CAT staffing. Livestock unknown. No dedicated house verified.
 
 ### Candidates checked but not shipped tonight
 
-- **TA Express Dubois #0940** (I-15 Exit 137): own TA page lists no CAT Scale — not included.
-- **Love’s Idaho**: loves.com state locations page returned HTTP 500 tonight; no Love’s Idaho own page verified.
-- **Pocatello proper / Blackfoot**: no Pilot/Flying J/TA own-page location in Pilot’s Idaho list.
-- **Boise / Treasure Valley (next candidate)**: Pilot’s Idaho list shows ONE9 Dealer #777 Boise (3353 Federal Way), ONE9 Dealer #1426 Nampa, ONE9 Dealer #1428 Caldwell, ONE9 Dealer #1429 Fruitland, Pilot #350 Mountain Home, Flying J #640 Jerome — all show CAT Scale in their own-page amenities on a first pass tonight; not yet shipped (need exits/addresses/geo recorded). TA Boise also exists (not checked).
-- Prior holds unchanged: Flying J #748 Willard, #774 Snowville (FAQ-yes / amenities-omit), Tremonton, Carson City, Temecula / Corona, Redding, Beaver-gap stops, Love’s Fernley / Winnemucca / Carlin.
+- **ONE9 Dealer #777 Boise** (3353 Federal Way, I-84 Exit 54): own page amenities list omits CAT Scale (CAT appears only in opaque JSON / services text dump) — held (same rule as Willard / Snowville).
+- **ONE9 Dealer #1426 Nampa** (612 Northside Blvd): no visible Amenities card on own page tonight — held.
+- **ONE9 Dealer #1429 Fruitland** (2001 Hwy 30 W): no visible Amenities card on own page tonight — held.
+- **Love’s Idaho**: loves.com Idaho locations still HTTP 500; no Love’s Idaho own page verified.
+- Prior holds unchanged: TA Express Dubois #0940 (no CAT), Flying J #748 Willard, #774 Snowville (FAQ-yes / amenities-omit), Tremonton, Carson City, Temecula / Corona, Redding, Beaver-gap stops, Love’s Fernley / Winnemucca / Carlin.
 
 ## Sources used (this compile)
 
-- Flying J #641 McCammon: https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30
-- Flying J #1043 Idaho Falls: https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr
-- TA Express Dubois #0940 (checked, no CAT listed): https://www.ta-petro.com/location/id/ta-express-dubois/
+- ONE9 #1428 Caldwell: https://locations.pilotflyingj.com/us/id/caldwell/122-w-simplot-blvd
+- Flying J #638 Caldwell: https://locations.pilotflyingj.com/us/id/caldwell/3512-franklin-rd
+- TA Boise #0167: https://www.ta-petro.com/location/id/ta-boise/
+- Pilot #350 Mountain Home: https://locations.pilotflyingj.com/us/id/mountain-home/1050-us-20
+- Flying J #640 Jerome: https://locations.pilotflyingj.com/us/id/jerome/5350-us-93
+- ONE9 #777 Boise (checked, amenities omit CAT): https://locations.pilotflyingj.com/us/id/boise/3353-federal-way
+- ONE9 #1426 Nampa (checked, no amenities card): https://locations.pilotflyingj.com/us/id/nampa/612-northside-blvd
+- ONE9 #1429 Fruitland (checked, no amenities card): https://locations.pilotflyingj.com/us/id/fruitland/2001-hwy-30-w
 - Pilot Flying J Idaho index: https://locations.pilotflyingj.com/us/id
+- TA Petro Idaho index: https://www.ta-petro.com/location/id/
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
 
 ## Gaps / deferred
 
-- Boise / Treasure Valley / Mountain Home / Jerome (Idaho I-84) — strong next candidate (6 Pilot-family own pages show CAT Scale)
-- Pocatello proper / Blackfoot — no own-page CAT stop found; Love’s Idaho pages unreachable tonight (HTTP 500)
+- Twin Falls / Burley / I-84 east of Jerome — next Idaho corridor candidate if a second own-page CAT verifies near Twin Falls
+- ONE9 #777 Boise, #1426 Nampa, #1429 Fruitland — hold until amenities list CAT Scale
+- Love’s Idaho pages unreachable (HTTP 500)
+- Pocatello proper / Blackfoot — no own-page CAT stop found
 - Flying J #748 Willard and Flying J #774 Snowville — FAQ-yes / amenities-omit CAT (held)
-- Tremonton — no Love’s/Pilot/TA own-page CAT verified tonight
+- Tremonton — no Love’s/Pilot/TA own-page CAT verified
 - Mesquite / Beaver Dam gap: Flying J Dealer #1171 Mesquite still omits CAT from amenities
 - Flying J Dealer #509 Beaver amenities omit CAT — gap between Parowan and Fillmore
 - Carson City / US-395 / Truckee: no Pilot/Love’s/TA/Flying J/Petro own-page CAT yet (Maverik third-party only)
 - Temecula / Corona / Murrieta: Pilot Perris #1458 alone — need a second own-page CAT before `/temecula-corona/`
 - Redding / Anderson mid-north I-5: only TA Redding #0057 — need a second stop before `/redding-anderson/`
-- Next candidates: Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
+- Next candidates: Twin Falls / Burley (if own-page CAT cluster), Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
 - Elko / Winnemucca held: Flying J #692 Wells and Pilot #147 West Wendover (FAQ yes, amenities omit CAT)
 - Las Vegas omitted ONE9s still amenities-omit CAT
 - ONE9 #1424 Westley — visible amenities card still empty
