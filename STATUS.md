@@ -71,7 +71,7 @@ Cross-links added from Boise, McCammon and every page that already linked to Boi
 
 ### Candidates checked but not shipped tonight
 
-- **Twin Falls city CAT** (third-party lists show one at 3204 Kimberly Rd; a third-party site claims a "Pilot #392 Twin Falls"): no operator own page found; Pilot’s Idaho locations don’t include Twin Falls — held.
+- **Twin Falls city CAT** (third-party lists show one at 3204 Kimberly Rd; a third-party site claims a "Pilot #392 Twin Falls"): no operator own page found (no Pilot Twin Falls store page turned up) — held.
 - **Jerome Exit 165 / 168, Eden Exit 182**: third-party trucker lists show CAT scales; operators not identified on own pages — held.
 - **Love’s #301 Post Falls** (I-90 Exit 2): own page lists CAT Scales, but it is a lone north-Idaho stop — held for a future Spokane / Coeur d’Alene / I-90 page once a Washington stop verifies.
 - **Pilot Flying J site moved**: `locations.pilotflyingj.com` now 301s to `pilotcompany.com/locations/...`; store pages still resolve, state index pages 404. Existing source URLs still work via redirect.
