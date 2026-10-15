@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "13 Oct 2026"
+CHECKED_HUMAN = "14 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -42,6 +42,7 @@ NAV = [
     ("/brigham-ogden/", "Brigham / Ogden / I-15", "bo"),
     ("/mccammon-idaho-falls/", "McCammon / Idaho Falls / I-15", "mif"),
     ("/boise-treasure-valley/", "Boise / Treasure Valley / I-84", "btv"),
+    ("/twin-falls-burley/", "Twin Falls / Burley / I-84", "tfb"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -173,6 +174,7 @@ def footer(rel="."):
         <li><a href="/brigham-ogden/">Brigham / Ogden / I-15</a></li>
         <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a></li>
         <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a></li>
+        <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -1712,6 +1714,7 @@ def i15_body():
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/inland-empire/">Inland Empire public scales</a></li>
       <li><a href="/coachella/">Coachella Valley / I-10 public scales</a></li>
@@ -2635,6 +2638,7 @@ def las_vegas_i15_body():
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/reno-sparks/">Reno / Sparks / Fernley / I-80 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
@@ -2843,6 +2847,7 @@ def st_george_cedar_city_i15_body():
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
@@ -2908,6 +2913,7 @@ def fillmore_nephi_i15_body():
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
       <li><a href="/i-15/">I-15 / High Desert public scales</a></li>
@@ -2977,6 +2983,7 @@ def springville_salt_lake_i15_body():
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
       <li><a href="/las-vegas/">Las Vegas / I-15 public scales</a></li>
@@ -3045,6 +3052,7 @@ def brigham_ogden_i15_body():
     <ul>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
       <li><a href="/st-george-cedar-city/">St. George / Cedar City / I-15 public scales</a></li>
@@ -3065,6 +3073,7 @@ def mccammon_idaho_falls_i15_body():
     order_cat = [
         "flying-j-mccammon-641",
         "flying-j-idaho-falls-1043",
+        "loves-idaho-falls-478",
     ]
     by_id = {s["id"]: s for s in STATIONS}
     cat = [by_id[i] for i in order_cat if i in by_id]
@@ -3083,7 +3092,7 @@ def mccammon_idaho_falls_i15_body():
   <div class="wrap">
     <p class="kicker">McCammon · Pocatello · Idaho Falls · I-15 · Bannock &amp; Bonneville Counties ID · listings checked {CHECKED_HUMAN}</p>
     <h1>Public scales in McCammon / Idaho Falls (I-15)</h1>
-    <p class="lede">Two CAT Scales verified on Flying J’s <em>own</em> location pages along I-15 in eastern Idaho: Flying J #641 McCammon (I-15 Exit 47, at US-30 south of Pocatello) and Flying J #1043 Idaho Falls (I-15 Exit 113). Useful for U-Haul and PPM moves into Pocatello or Idaho Falls, RVs headed to Yellowstone or Island Park, and horse trailers on the Snake River Plain. Heading south into Utah, the previous verified cluster is on <a href="/brigham-ogden/">Brigham / Ogden / I-15</a> (Brigham City Exit 363). TA Express Dubois #0940 (I-15 Exit 137) does not list a CAT Scale on its own page — not included.</p>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along I-15 in eastern Idaho: Flying J #641 McCammon (I-15 Exit 47, at US-30 south of Pocatello), and two at Idaho Falls I-15 Exit 113 — Flying J #1043 and Love’s #478. Useful for U-Haul and PPM moves into Pocatello or Idaho Falls, RVs headed to Yellowstone or Island Park, and horse trailers on the Snake River Plain. Heading south into Utah, the previous verified cluster is on <a href="/brigham-ogden/">Brigham / Ogden / I-15</a> (Brigham City Exit 363). TA Express Dubois #0940 (I-15 Exit 137) does not list a CAT Scale on its own page — not included.</p>
     <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Bannock &amp; Bonneville Counties ID</p>
   </div>
 </section>
@@ -3093,7 +3102,7 @@ def mccammon_idaho_falls_i15_body():
 
   <div data-filter-section>
   <h2 class="section-h" id="cat">CAT Scales on I-15 from McCammon to Idaho Falls</h2>
-  <p class="section-note">We list only stops verified on the operator’s own location page. Both Flying J pages list CAT Scale in amenities and answer yes to “has a CAT scale.” 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Both Flying J pages list CAT Scale in amenities and answer yes to “has a CAT scale”; Love’s #478 lists CAT Scales in its own amenities. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
   <div class="cards two">{cards_c}</div>
   </div>
   <hr class="hazard">
@@ -3104,13 +3113,14 @@ def mccammon_idaho_falls_i15_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Pocatello, Blackfoot, Idaho Falls or Bannock/Bingham/Bonneville County with an operator page that sells walk-up weighmaster certificates. A Pocatello-proper or Blackfoot CAT stop on an operator’s own page (none found tonight). Love’s Idaho own-page locations could not be loaded tonight. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Pocatello, Blackfoot, Idaho Falls or Bannock/Bingham/Bonneville County with an operator page that sells walk-up weighmaster certificates. A Pocatello-proper or Blackfoot CAT stop on an operator’s own page (none found yet). Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
-  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30">Flying J #641 McCammon</a> · <a href="https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr">Flying J #1043 Idaho Falls</a> · <a href="https://www.ta-petro.com/location/id/ta-express-dubois/">TA Express Dubois #0940</a> (checked, no CAT listed) · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/id/mccammon/587-e-us-30">Flying J #641 McCammon</a> · <a href="https://locations.pilotflyingj.com/us/id/idaho-falls/6485-w-overland-dr">Flying J #1043 Idaho Falls</a> · <a href="https://www.loves.com/locations/id/idaho-falls/loves-travel-stop-idaho-falls-478">Love’s #478 Idaho Falls</a> · <a href="https://www.ta-petro.com/location/id/ta-express-dubois/">TA Express Dubois #0940</a> (checked, no CAT listed) · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/springville-salt-lake/">Springville / Salt Lake / I-15 public scales</a></li>
       <li><a href="/fillmore-nephi/">Fillmore / Nephi / I-15 public scales</a></li>
@@ -3153,7 +3163,7 @@ def boise_treasure_valley_i84_body():
   <div class="wrap">
     <p class="kicker">Boise · Caldwell · Mountain Home · Jerome · I-84 · Ada, Canyon, Elmore &amp; Jerome Counties ID · listings checked {CHECKED_HUMAN}</p>
     <h1>Public scales in Boise / Treasure Valley (I-84)</h1>
-    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along I-84 across southwestern Idaho, west to east: ONE9 #1428 Caldwell (I-84 business loop at W Simplot Blvd), Flying J #638 Caldwell (I-84 Exit 29), TA Boise #0167 (I-84 Exit 54), Pilot #350 Mountain Home (I-84/US-20 Exit 95), and Flying J #640 Jerome (I-84 Exit 173). Useful for U-Haul and PPM moves into Boise / Nampa / Caldwell, RVs on I-84 toward Twin Falls, and horse trailers on the Snake River Plain. Heading east on I-15 toward Pocatello / Idaho Falls, see <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>. ONE9 #777 Boise, ONE9 #1426 Nampa and ONE9 #1429 Fruitland still omit CAT Scale from their visible amenities lists (or have no amenities card) — held back. Love’s Idaho own pages returned HTTP 500 tonight.</p>
+    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along I-84 across southwestern Idaho, west to east: ONE9 #1428 Caldwell (I-84 business loop at W Simplot Blvd), Flying J #638 Caldwell (I-84 Exit 29), TA Boise #0167 (I-84 Exit 54), Pilot #350 Mountain Home (I-84/US-20 Exit 95), and Flying J #640 Jerome (I-84 Exit 173). Useful for U-Haul and PPM moves into Boise / Nampa / Caldwell, RVs on I-84 toward Twin Falls, and horse trailers on the Snake River Plain. Heading east on I-15 toward Pocatello / Idaho Falls, see <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>. ONE9 #777 Boise, ONE9 #1426 Nampa and ONE9 #1429 Fruitland still omit CAT Scale from their visible amenities lists (or have no amenities card) — held back. Heading east on I-84 past Jerome toward Burley, see <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a> (Love’s Bliss Exit 141, Love’s Heyburn Exit 211).</p>
     <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Ada, Canyon, Elmore &amp; Jerome Counties ID</p>
   </div>
 </section>
@@ -3174,12 +3184,13 @@ def boise_treasure_valley_i84_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Boise, Nampa, Caldwell, Mountain Home or Ada/Canyon/Elmore County with an operator page that sells walk-up weighmaster certificates. ONE9 #777 Boise, ONE9 #1426 Nampa and ONE9 #1429 Fruitland if their amenities cards start listing CAT Scale. Love’s Idaho own-page locations (state index HTTP 500 tonight). Twin Falls / Burley / I-84 east of Jerome. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+    <p>Any dedicated public scale house in Boise, Nampa, Caldwell, Mountain Home or Ada/Canyon/Elmore County with an operator page that sells walk-up weighmaster certificates. ONE9 #777 Boise, ONE9 #1426 Nampa and ONE9 #1429 Fruitland if their amenities cards start listing CAT Scale. A Love’s or other chain own-page CAT stop inside the Boise metro (Love’s Idaho stores are at Bliss, Heyburn, Idaho Falls and Post Falls). Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
   </div>
   <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/id/caldwell/122-w-simplot-blvd">ONE9 #1428 Caldwell</a> · <a href="https://locations.pilotflyingj.com/us/id/caldwell/3512-franklin-rd">Flying J #638 Caldwell</a> · <a href="https://www.ta-petro.com/location/id/ta-boise/">TA Boise #0167</a> · <a href="https://locations.pilotflyingj.com/us/id/mountain-home/1050-us-20">Pilot #350 Mountain Home</a> · <a href="https://locations.pilotflyingj.com/us/id/jerome/5350-us-93">Flying J #640 Jerome</a> · <a href="https://locations.pilotflyingj.com/us/id/boise/3353-federal-way">ONE9 #777 Boise</a> (checked, amenities omit CAT) · <a href="https://locations.pilotflyingj.com/us/id/nampa/612-northside-blvd">ONE9 #1426 Nampa</a> (checked, no amenities card) · <a href="https://locations.pilotflyingj.com/us/id/fruitland/2001-hwy-30-w">ONE9 #1429 Fruitland</a> (checked, no amenities card) · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
       <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80 public scales</a></li>
@@ -3192,6 +3203,72 @@ def boise_treasure_valley_i84_body():
 </div>
 </main>
 """ + map_script(btv)
+
+
+def twin_falls_burley_i84_body():
+    order_cat = [
+        "loves-bliss-812",
+        "flying-j-jerome-640",
+        "loves-heyburn-334",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    tfb = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(tfb)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in the Magic Valley tonight</h2>
+    <p>Idaho does not publish a CDFA-style public-scale grid we can cite for this corridor, and ScaleRegistry’s public-weighing page lists no walk-up house in Gooding, Jerome, Twin Falls, Cassia or Minidoka County ID. We are not inventing one from industrial scale vendors, grain elevators, dairy or feed scales, recyclers, landfill gate scales, or third-party trucker directories. Every stop below is a CAT Scale at a truck stop, verified on the operator’s own page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Bliss · Jerome · Twin Falls · Burley · Heyburn · I-84 · Gooding, Jerome &amp; Minidoka Counties ID · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales near Twin Falls / Burley (I-84)</h1>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along I-84 through Idaho’s Magic Valley, west to east: Love’s #812 Bliss (I-84 Exit 141 / US-30), Flying J #640 Jerome (I-84 Exit 173, the US-93 interchange about 7 miles north of Twin Falls), and Love’s #334 Heyburn (I-84 Exit 211 / US-30, across the Snake from Burley). Useful for U-Haul and PPM moves into Twin Falls, Jerome, Burley or Rupert, RVs on I-84 between Boise and the Utah line, and horse trailers headed to the Hagerman Valley or the South Hills. Heading west toward Mountain Home and Boise, see <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>; heading east on I-86 / I-15 toward Pocatello, see <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>. There is no own-page-verified CAT stop inside Twin Falls city tonight.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Gooding, Jerome &amp; Minidoka Counties ID</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-84 from Bliss to Heyburn</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Both Love’s pages list CAT Scales in their amenities; Flying J #640 lists CAT Scale in amenities and answers yes to “has a CAT scale.” Flying J #640 also appears on the Boise / Treasure Valley page because it is the Twin Falls interchange. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Idaho weighmaster rules differ from California — confirm ticket needs with your TO or DMV equivalent. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Idaho port-of-entry and highway weigh / commercial-enforcement sites on I-84 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>A CAT or certified public scale inside Twin Falls city (US-93 / Kimberly Road) on an operator’s own page; third-party trucker directories list one, but we have not found the operator’s page. Other I-84 Magic Valley stops (Jerome Exit 165 / 168, Eden Exit 182) that third-party lists show with scales but that we have not verified on an operator page. Any dedicated public scale house in Twin Falls, Jerome, Cassia or Minidoka County with an operator page that sells walk-up weighmaster certificates. Livestock policy everywhere. Store-listed 24h vs published CAT staffing.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/id/bliss/loves-travel-stop-bliss-812">Love’s #812 Bliss</a> · <a href="https://locations.pilotflyingj.com/us/id/jerome/5350-us-93">Flying J #640 Jerome</a> · <a href="https://www.loves.com/locations/id/heyburn/loves-travel-stop-heyburn-334">Love’s #334 Heyburn</a> · <a href="https://www.loves.com/news/2020/december/loves-travel-stops-opens-four-new-locations-largest-location-ever-opens-in-idaho">Love’s newsroom: Bliss opening</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
+      <li><a href="/brigham-ogden/">Brigham / Ogden / I-15 public scales</a></li>
+      <li><a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80 public scales</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(tfb)
+
 
 
 
@@ -3633,7 +3710,7 @@ def page_guide_ppm_tickets():
     <li>Northern and Central California: <a href="/sacramento/">Sacramento approaches</a>, <a href="/highway-99/">Stockton / Lodi</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/bakersfield/">Bakersfield</a></li>
     <li>Arizona: <a href="/phoenix/">Phoenix metro</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma</a></li>
     <li>Nevada: <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley</a></li>
-    <li>Utah and Idaho: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a></li>
+    <li>Utah and Idaho: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a></li>
   </ul>
   <p>Outside our coverage, use the <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>, or see <a href="/">all WeighHere areas</a>.</p>
 
@@ -4452,8 +4529,8 @@ def main():
     )
     write(
         ROOT / "mccammon-idaho-falls" / "index.html",
-        "McCammon / Idaho Falls / I-15 public scales — Flying J CAT | WeighHere",
-        "Two CAT Scales verified on Flying J’s own pages on eastern Idaho I-15: Flying J #641 McCammon (Exit 47) and Flying J #1043 Idaho Falls (Exit 113). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "McCammon / Idaho Falls / I-15 public scales — Flying J & Love’s CAT | WeighHere",
+        "Three CAT Scales verified on operator own pages on eastern Idaho I-15: Flying J #641 McCammon (Exit 47), Flying J #1043 and Love’s #478 Idaho Falls (Exit 113). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
         "mif",
         "../",
         mccammon_idaho_falls_i15_body(),
@@ -4466,6 +4543,15 @@ def main():
         "btv",
         "../",
         boise_treasure_valley_i84_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "twin-falls-burley" / "index.html",
+        "Twin Falls / Burley / I-84 public scales — Love’s & Flying J CAT | WeighHere",
+        "Three CAT Scales verified on operator own pages on Idaho’s Magic Valley I-84: Love’s #812 Bliss (Exit 141), Flying J #640 Jerome (Exit 173, US-93 to Twin Falls), Love’s #334 Heyburn (Exit 211, Burley). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "tfb",
+        "../",
+        twin_falls_burley_i84_body(),
         leaflet,
     )
     write(
@@ -4698,7 +4784,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

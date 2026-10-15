@@ -67,6 +67,7 @@ PLACES = {
     "brigham-ogden": ("Ogden & Brigham City, UT", "Utah"),
     "mccammon-idaho-falls": ("McCammon & Idaho Falls, ID", "Idaho"),
     "boise-treasure-valley": ("Boise & Treasure Valley, ID", "Idaho"),
+    "twin-falls-burley": ("Twin Falls & Burley, ID", "Idaho"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho"}
 
