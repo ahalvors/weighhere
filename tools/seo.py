@@ -68,8 +68,9 @@ PLACES = {
     "mccammon-idaho-falls": ("McCammon & Idaho Falls, ID", "Idaho"),
     "boise-treasure-valley": ("Boise & Treasure Valley, ID", "Idaho"),
     "twin-falls-burley": ("Twin Falls & Burley, ID", "Idaho"),
+    "spokane-post-falls": ("Spokane, WA & Post Falls, ID", "Washington"),
 }
-STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho"}
+STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington"}
 
 INTRO_RE = re.compile(r'\n?<p class="seo-intro">.*?</p>', re.S)
 LD_RE = re.compile(r'\n?<script type="application/ld\+json" data-seo>.*?</script>', re.S)
@@ -230,7 +231,7 @@ def main():
         groups.setdefault(p["region"], []).append((p["place"], d, len([s for s in p["sts"] if not s.get("do_not_go")])))
     total = len({s["id"] for p in pages.values() for s in p["sts"] if not s.get("do_not_go")})
     sec = []
-    for region in ["California", "Arizona", "Nevada", "Utah", "Idaho"] + sorted(set(groups) - set(STATE_NAMES.values())):
+    for region in ["California", "Arizona", "Nevada", "Utah", "Idaho", "Washington"] + sorted(set(groups) - set(STATE_NAMES.values())):
         if region not in groups:
             continue
         lis = "".join(f'<li><a href="/{d}/">{esc(pl)}</a> · {n} listing{"s" if n != 1 else ""}</li>' for pl, d, n in sorted(groups[region], key=lambda x: x[0].lower().replace("the ", "")))
@@ -238,7 +239,7 @@ def main():
     hub = f"""<main id="main">
 <section class="page-head">
   <div class="wrap">
-    <p class="kicker">California · Arizona · Nevada · Utah · Idaho</p>
+    <p class="kicker">California · Arizona · Nevada · Utah · Idaho · Washington</p>
     <h1>Find a CAT scale or public truck scale near you</h1>
     <p class="lede">WeighHere lists {total} scales that will weigh a U-Haul, RV, travel trailer, horse trailer, or PPM move: CAT Scales at truck stops, dedicated public scale houses, and call-first plants. Pick the area you are driving through. Every listing links to its source, and we tell you which highway weigh stations not to use for a ticket.</p>
   </div>
@@ -262,7 +263,7 @@ def main():
 """
     text = re.sub(r'<main id="main">.*?(?=<footer)', lambda m: hub, text, count=1, flags=re.S)
     text = re.sub(r"<title>.*?</title>", "<title>CAT Scales &amp; Public Truck Scales Near You | WeighHere</title>", text, count=1, flags=re.S)
-    text = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="Find a CAT scale or public truck scale near you in California, Arizona, Nevada, Utah and Idaho. {total} listings for RVs, U-Haul moves, trailers and PPM weigh tickets.">', text, count=1)
+    text = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="Find a CAT scale or public truck scale near you in California, Arizona, Nevada, Utah, Idaho and Washington. {total} listings for RVs, U-Haul moves, trailers and PPM weigh tickets.">', text, count=1)
     text = text.replace('<li><a href="/los-angeles/" aria-current="page">', '<li><a href="/los-angeles/">')
     text = re.sub(r'<link rel="stylesheet" href="https://unpkg.com/leaflet[^\n]*\n<script src="https://unpkg.com/leaflet[^\n]*\n', "", text)
     open(idx, "w", encoding="utf-8").write(text)
