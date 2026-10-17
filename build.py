@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "15 Oct 2026"
+CHECKED_HUMAN = "16 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -44,6 +44,7 @@ NAV = [
     ("/boise-treasure-valley/", "Boise / Treasure Valley / I-84", "btv"),
     ("/twin-falls-burley/", "Twin Falls / Burley / I-84", "tfb"),
     ("/spokane-post-falls/", "Spokane / Post Falls / I-90", "spk"),
+    ("/moses-lake-ritzville/", "Moses Lake / Ritzville / I-90", "mlr"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -177,6 +178,7 @@ def footer(rel="."):
         <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a></li>
         <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a></li>
         <li><a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a></li>
+        <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -3132,6 +3134,7 @@ def mccammon_idaho_falls_i15_body():
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
       <li><a href="/spokane-post-falls/">Spokane / Post Falls / I-90 public scales</a></li>
+      <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90 public scales</a></li>
     </ul>
   </div>
 </div>
@@ -3202,6 +3205,7 @@ def boise_treasure_valley_i84_body():
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
       <li><a href="/spokane-post-falls/">Spokane / Post Falls / I-90 public scales</a></li>
+      <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90 public scales</a></li>
     </ul>
   </div>
 </div>
@@ -3268,6 +3272,7 @@ def twin_falls_burley_i84_body():
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
       <li><a href="/spokane-post-falls/">Spokane / Post Falls / I-90 public scales</a></li>
+      <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90 public scales</a></li>
     </ul>
   </div>
 </div>
@@ -3326,6 +3331,7 @@ def spokane_post_falls_i90_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
       <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
@@ -3341,6 +3347,72 @@ def spokane_post_falls_i90_body():
 """ + map_script(spk)
 
 
+
+
+
+
+def moses_lake_ritzville_i90_body():
+    order_cat = [
+        "loves-moses-lake-827",
+        "loves-ritzville-514",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    mlr = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(mlr)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in Moses Lake / Ritzville tonight</h2>
+    <p>We have not found a walk-up public scale house in Grant or Adams County with an operator page we can cite, and ScaleRegistry’s public-weighing page lists none here. We are not inventing one from industrial scale vendors, grain elevators, recyclers, landfill or transfer-station gate scales, or third-party trucker directories. Every stop below is a CAT Scale at a Love’s Travel Stop, verified on Love’s own location page.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Moses Lake · Ritzville · I-90 mid-Washington · Grant &amp; Adams Counties · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales near Moses Lake / Ritzville (I-90)</h1>
+    <p class="lede">Two CAT Scales verified on Love’s <em>own</em> location pages on mid-Washington I-90, west to east: Love’s #827 Moses Lake (I-90 Exit 174) and Love’s #514 Ritzville (I-90 Exit 221). About 47 miles apart on the corridor between Seattle and Spokane. Useful for U-Haul and PPM moves into Moses Lake, Ephrata, Othello or Ritzville, RVs crossing central Washington on I-90, and horse trailers headed to the Columbia Basin. For the Spokane end of I-90, see <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Grant &amp; Adams Counties WA</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-90 from Moses Lake to Ritzville</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Both Love’s #827 and Love’s #514 list CAT Scales in their amenities and list the store as Open 24-hours — that is store hours, not a published CAT-staffing schedule. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Washington weighmaster rules differ from California — confirm ticket needs with your TO or licensing office. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Washington State Patrol weigh stations on I-90 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Moses Lake, Ephrata, Othello or Ritzville with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at both Love’s stops (only store hours are published). Love’s #413 Ellensburg (I-90 Exit 106) is a verified CAT on Love’s own page but sits farther west toward Seattle — held for a Cascades / Seattle-east cluster. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/wa/moses-lake/loves-travel-stop-moses-lake-827">Love’s #827 Moses Lake</a> · <a href="https://www.loves.com/locations/wa/ritzville/loves-travel-stop-ritzville-514">Love’s #514 Ritzville</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/spokane-post-falls/">Spokane / Post Falls / I-90 public scales</a></li>
+      <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
+      <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(mlr)
 
 
 
@@ -3781,7 +3853,7 @@ def page_guide_ppm_tickets():
     <li>Northern and Central California: <a href="/sacramento/">Sacramento approaches</a>, <a href="/highway-99/">Stockton / Lodi</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/bakersfield/">Bakersfield</a></li>
     <li>Arizona: <a href="/phoenix/">Phoenix metro</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma</a></li>
     <li>Nevada: <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley</a></li>
-    <li>Utah, Idaho and Washington: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a></li>
+    <li>Utah, Idaho and Washington: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a></li>
   </ul>
   <p>Outside our coverage, use the <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>, or see <a href="/">all WeighHere areas</a>.</p>
 
@@ -4635,6 +4707,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "moses-lake-ritzville" / "index.html",
+        "Moses Lake / Ritzville / I-90 public scales — Love’s CAT | WeighHere",
+        "Two CAT Scales verified on Love’s own pages on mid-Washington I-90: Love’s #827 Moses Lake (Exit 174) and Love’s #514 Ritzville (Exit 221). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "mlr",
+        "../",
+        moses_lake_ritzville_i90_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -4864,7 +4945,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
