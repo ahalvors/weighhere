@@ -1,12 +1,12 @@
-# WeighHere status — 16 Oct 2026
+# WeighHere status — 17 Oct 2026
 
-Compiled evening PT 16 Oct 2026 (nightly ship).
+Compiled evening PT 17 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **204** | +2 mid-WA I-90 CAT (Love’s #827 Moses Lake, Love’s #514 Ritzville) |
+| **Total rows in `data/stations.json`** | **206** | +2 Tri-Cities WA CAT (Love’s #811 Pasco, Love’s #681 Prosser) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -38,7 +38,8 @@ Compiled evening PT 16 Oct 2026 (nightly ship).
 | Boise / Treasure Valley / I-84 | 5 | unchanged |
 | Twin Falls / Burley / I-84 | 3 | unchanged |
 | Spokane / Post Falls / I-90 | 4 | unchanged |
-| **Moses Lake / Ritzville / I-90** | **2** | **new page** — Love’s #827 Moses Lake, Love’s #514 Ritzville |
+| Moses Lake / Ritzville / I-90 | 2 | unchanged |
+| **Pasco / Prosser / Tri-Cities** | **2** | **new page** — Love’s #811 Pasco (US-395), Love’s #681 Prosser (I-82 Exit 80) |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -56,21 +57,21 @@ Compiled evening PT 16 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 140 | +2 Moses Lake / Ritzville I-90 |
+| CAT / truck-stop cards | 142 | +2 Pasco / Prosser Tri-Cities |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Moses Lake / Ritzville / I-90** (`/moses-lake-ritzville/`): Second Washington page, filling the mid-I-90 gap STATUS named after Spokane. Both stops verified CAT Scales on Love’s own store pages (amenities list “CAT Scales”; store Open 24-hours).
+**Pasco / Prosser / Tri-Cities** (`/pasco-prosser/`): Third Washington page, using the Tri-Cities / I-82 cluster STATUS held last night. Both stops re-verified tonight on Love’s own store pages (amenities list “CAT Scales”; store open 24 hours).
 
-- **Love’s Travel Stop #827 Moses Lake** — 4315 Prichard Rd, Moses Lake WA 98837, I-90 Exit 174 (Grant County) — CAT Scales in Love’s amenities, store Open 24-hours; (509) 761-5419; geo 47.102584, -119.341493. Store hours ≠ published CAT staffing → `hours_24h: store_listed_24h`.
-- **Love’s Travel Stop #514 Ritzville** — 1370 N Highway 261, Ritzville WA 99169, I-90 Exit 221 (Adams County) — CAT Scales in Love’s amenities, store Open 24-hours; (509) 659-1005; geo 47.11319, -118.36694. ~47 miles east of Moses Lake on I-90 toward Spokane.
+- **Love’s Travel Stop #811 Pasco** — 2252 E Kartchner St, Pasco WA 99301, US-395 at the Kartchner St exit (Franklin County; Love’s publishes a street exit, no mile number) — CAT Scales in Love’s amenities, store Open 24-Hours; (509) 412-6432; geo 46.264151, -119.082472.
+- **Love’s Travel Stop #681 Prosser** — 700 Wine Country Rd, Prosser WA 99350, I-82 Exit 80 at Gap Rd (Benton County) — CAT Scales in Love’s amenities, store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (509) 786-1293; geo 46.219559, -119.79295. ~34 miles straight-line west of Pasco.
 
-Wiring: new `moses_lake_ritzville_i90_body()` + `write()` in `build.py`, NAV, footer, 404 lede, about-page line, Related on Spokane / Boise / Twin Falls / McCammon, `tools/seo.py` PLACES (`"moses-lake-ritzville": ("Moses Lake & Ritzville, WA", "Washington")`). `CHECKED_HUMAN` → 16 Oct 2026. Livestock unknown; no dedicated house verified.
+Wiring: new `pasco_prosser_tri_cities_body()` + `write()` in `build.py`, NAV, footer, 404 lede, about-page line, Related on Spokane / Moses Lake, `tools/seo.py` PLACES (`"pasco-prosser": ("Pasco & Prosser, WA", "Washington")`). `CHECKED_HUMAN` → 17 Oct 2026. Livestock unknown; CAT staffing hours unpublished; no dedicated house verified.
 
-### Candidates checked but not shipped tonight
+### Candidates held (last checked 16 Oct unless noted)
 
-- **TA Grandview WA** (I-82 Exit 73): TA own page amenities do **not** list CAT Scale — Tri-Cities page still needs a second own-page CAT besides Love’s #811 Pasco / #681 Prosser (both Love’s CAT-verified; held as a separate cluster for a future Tri-Cities / I-82 page).
+- **TA Grandview WA** (I-82 Exit 73): not re-checked tonight; last check TA own page amenities did **not** list CAT Scale — kept off `/pasco-prosser/`.
 - **TA Seattle East** (North Bend, I-90 Exit 34): CAT Scale on TA own page — lonely without a second Cascades stop tonight; Love’s #413 Ellensburg (I-90 Exit 106) is Love’s-own CAT-verified but ~70 miles east — held for a Cascades / Seattle-east cluster.
 - **TA Express Blaine** (I-5 Exit 275): CAT Scale on TA own page — lonely; no second north-I-5 CAT cluster tonight.
 - **Portland metro**: TA Troutdale (I-84 Exit 17) + TA Aurora (I-5 Exit 278) + Love’s #449 Troutdale all CAT-verified — strong OR cluster, deferred so tonight stays on the WA I-90 corridor after Spokane.
@@ -80,21 +81,15 @@ Wiring: new `moses_lake_ritzville_i90_body()` + `write()` in `build.py`, NAV, fo
 
 ## Sources used (this compile)
 
-- Love’s #827 Moses Lake: https://www.loves.com/locations/wa/moses-lake/loves-travel-stop-moses-lake-827
-- Love’s #514 Ritzville: https://www.loves.com/locations/wa/ritzville/loves-travel-stop-ritzville-514
-- Love’s locations API (discovery only): https://www.loves.com/api/fetch_stores
-- TA Petro WA index: https://www.ta-petro.com/location/wa/
-- TA Grandview (checked, no CAT): https://www.ta-petro.com/location/wa/ta-grandview/
-- TA Seattle East (checked, CAT, held): https://www.ta-petro.com/location/wa/ta-seattle-east/
-- TA Express Blaine (checked, CAT, held): https://www.ta-petro.com/location/wa/ta-express-blaine/
-- TA Troutdale / Aurora / Coburg / Petro Phoenix OR (CAT verified, deferred): ta-petro.com OR location pages
+- Love’s #811 Pasco: https://www.loves.com/locations/wa/pasco/loves-travel-stop-pasco-811
+- Love’s #681 Prosser: https://www.loves.com/locations/wa/prosser/loves-travel-stop-prosser-681
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
 
 ## Gaps / deferred
 
 - Love’s #413 Ellensburg (I-90 Exit 106) — CAT on Love’s own page; hold for Cascades / Seattle-east with TA Seattle East
-- Tri-Cities / I-82: Love’s #811 Pasco + Love’s #681 Prosser CAT-verified; TA Grandview still no CAT
+- Tri-Cities: shipped 17 Oct with Love’s Pasco + Prosser; TA Grandview not listed (no CAT on TA page at last check); Kennewick / Richland own-page CAT not yet searched
 - Portland / Troutdale / Aurora OR cluster (TA + Love’s) — ready when OR corridor is next
 - Ontario OR / I-84 west of Fruitland: Love’s #372 has CAT; need a coherent second nearby or Baker City page
 - Spokane: CAT staffing hours unpublished; Broadway hours conflict with Pilot’s listing; no dedicated house
@@ -108,7 +103,7 @@ Wiring: new `moses_lake_ritzville_i90_body()` + `write()` in `build.py`, NAV, fo
 - Carson City / US-395 / Truckee: no Pilot/Love’s/TA/Flying J/Petro own-page CAT yet (Maverik third-party only)
 - Temecula / Corona / Murrieta: Pilot Perris #1458 alone — need a second own-page CAT before `/temecula-corona/`
 - Redding / Anderson mid-north I-5: only TA Redding #0057 — need a second stop before `/redding-anderson/`
-- Next candidates: Cascades / Seattle-east (TA Seattle East + Love’s #413 Ellensburg), Tri-Cities / I-82 (Pasco + Prosser), Portland / Troutdale / Aurora OR, Blaine if a second north-I-5 CAT appears, Ontario OR / Baker City I-84, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
+- Next candidates: Cascades / Seattle-east (TA Seattle East + Love’s #413 Ellensburg), Portland / Troutdale / Aurora OR, Blaine if a second north-I-5 CAT appears, Ontario OR / Baker City I-84, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
 - Elko / Winnemucca held: Flying J #692 Wells and Pilot #147 West Wendover (FAQ yes, amenities omit CAT)
 - Las Vegas omitted ONE9s still amenities-omit CAT
 - ONE9 #1424 Westley — visible amenities card still empty

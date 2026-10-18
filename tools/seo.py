@@ -70,6 +70,7 @@ PLACES = {
     "twin-falls-burley": ("Twin Falls & Burley, ID", "Idaho"),
     "spokane-post-falls": ("Spokane, WA & Post Falls, ID", "Washington"),
     "moses-lake-ritzville": ("Moses Lake & Ritzville, WA", "Washington"),
+    "pasco-prosser": ("Pasco & Prosser, WA", "Washington"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington"}
 
