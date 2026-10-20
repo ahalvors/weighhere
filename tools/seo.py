@@ -69,6 +69,7 @@ PLACES = {
     "boise-treasure-valley": ("Boise & Treasure Valley, ID", "Idaho"),
     "twin-falls-burley": ("Twin Falls & Burley, ID", "Idaho"),
     "spokane-post-falls": ("Spokane, WA & Post Falls, ID", "Washington"),
+    "north-bend-ellensburg": ("North Bend & Ellensburg, WA", "Washington"),
     "moses-lake-ritzville": ("Moses Lake & Ritzville, WA", "Washington"),
     "pasco-prosser": ("Pasco & Prosser, WA", "Washington"),
     "portland-troutdale": ("Portland, Troutdale & Aurora, OR", "Oregon"),
