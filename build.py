@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "19 Oct 2026"
+CHECKED_HUMAN = "20 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -48,6 +48,7 @@ NAV = [
     ("/moses-lake-ritzville/", "Moses Lake / Ritzville / I-90", "mlr"),
     ("/pasco-prosser/", "Pasco / Prosser / Tri-Cities", "tcp"),
     ("/portland-troutdale/", "Portland / Troutdale / Aurora", "pdx"),
+    ("/eugene-albany-roseburg/", "Albany / Eugene / Roseburg / I-5", "ear"),
     ("/sacramento/", "Sacramento approaches", "sac"),
     ("/grapevine/", "Grapevine / I-5 mid-CA", "gv"),
     ("/highway-99/", "Hwy 99 / Stockton", "h99"),
@@ -184,7 +185,8 @@ def footer(rel="."):
         <li><a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a></li>
         <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a></li>
         <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a></li>
-        <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora</a></li>
+        <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a></li>
+        <li><a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a></li>
         <li><a href="/sacramento/">Sacramento approaches</a></li>
         <li><a href="/grapevine/">Grapevine / I-5 mid-CA</a></li>
         <li><a href="/highway-99/">Hwy 99 / Stockton</a></li>
@@ -3600,12 +3602,13 @@ def portland_troutdale_aurora_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Portland, Gresham, Beaverton, Hillsboro, Oregon City or Woodburn with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops (only store hours are published). Pilot / Flying J own-page CAT stops in the metro have not been checked yet. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Portland, Gresham, Beaverton, Hillsboro, Oregon City or Woodburn with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops (only store hours are published). Pilot / Flying J own-page CAT stops in the metro have not been checked yet. For the next CAT stops south on I-5, see <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.ta-petro.com/location/or/ta-troutdale/">TA Troutdale #0183</a> · <a href="https://www.loves.com/locations/or/troutdale/loves-travel-stop-troutdale-449">Love’s #449 Troutdale</a> · <a href="https://www.ta-petro.com/location/or/ta-aurora/">TA Aurora #0056</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5 public scales</a></li>
       <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities public scales</a></li>
       <li><a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90 public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
@@ -3621,6 +3624,71 @@ def portland_troutdale_aurora_body():
 </main>
 """ + map_script(pdx)
 
+
+
+def eugene_albany_roseburg_i5_body():
+    order_cat = [
+        "loves-albany-728",
+        "ta-coburg-0482",
+        "loves-roseburg-312",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    ear = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(ear)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in the Willamette Valley or Douglas County tonight</h2>
+    <p>We have not found a walk-up public scale house in Linn, Benton, Lane or Douglas County with an operator page we can cite, and ScaleRegistry’s public-weighing page lists none in Oregon. We are not inventing one from industrial scale vendors, gravel yards, mills, recyclers, transfer-station gate scales, or third-party trucker directories. All three stops below are CAT Scales at truck stops, verified on Love’s and TA Petro’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Albany · Corvallis · Eugene · Springfield · Coburg · Roseburg · I-5 · Linn, Lane &amp; Douglas Counties OR · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on I-5 near Eugene, OR (Albany, Coburg &amp; Roseburg)</h1>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along I-5 through the southern Willamette Valley: Love’s #728 Albany at Exit 238, TA Coburg #0482 at Exit 199 just north of Eugene, and Love’s #312 Roseburg at Exit 119. Albany to Coburg is about 39 interstate miles; Coburg to Roseburg is about 80. Useful for U-Haul and PPM moves into Eugene, Springfield, Corvallis, Albany or Roseburg, RVs heading down I-5 toward southern Oregon and California, and horse trailers in the valley. For the Portland metro, see <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>; south of the state line, see <a href="/weed-yreka/">Weed / Yreka / I-5</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Linn, Lane &amp; Douglas Counties OR</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales in Albany, Coburg and Roseburg</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Love’s #728 Albany and Love’s #312 Roseburg list CAT Scales in their amenities and list the store and Truck Care as Open 24-hours; TA Coburg lists CAT Scale on TA Petro’s own page and shows the location as Open 24 Hours. Those are store hours, not a published CAT-staffing schedule. None of the stops we have verified is inside Eugene itself — Coburg (Exit 199) is the closest. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. Oregon weighmaster rules differ from California — confirm ticket needs with your TO or licensing office. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Oregon DOT weigh stations on I-5 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Albany, Corvallis, Eugene, Springfield or Roseburg with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops (only store hours are published). Pilot / Flying J own-page CAT stops in the valley have not been checked yet. South of Roseburg, Petro Phoenix #0324 (I-5 Exit 24, near Medford) lists CAT Scale on TA Petro’s page but is held until it has a nearby partner stop. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/or/albany/loves-travel-stop-albany-728">Love’s #728 Albany</a> · <a href="https://www.ta-petro.com/location/or/ta-coburg/">TA Coburg #0482</a> · <a href="https://www.loves.com/locations/or/roseburg/loves-travel-stop-roseburg-312">Love’s #312 Roseburg</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
+      <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
+      <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(ear)
 
 
 def antelope_valley_body():
@@ -4950,6 +5018,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "eugene-albany-roseburg" / "index.html",
+        "Albany / Eugene / Roseburg / I-5 public scales — Love’s and TA CAT | WeighHere",
+        "Three CAT Scales verified on operator pages on I-5 in Oregon: Love’s #728 Albany (Exit 238), TA Coburg near Eugene (Exit 199) and Love’s #312 Roseburg (Exit 119). For U-Haul, PPM, RV and horse trailers. No dedicated walk-up house.",
+        "ear",
+        "../",
+        eugene_albany_roseburg_i5_body(),
+        leaflet,
+    )
+    write(
         ROOT / "sacramento" / "index.html",
         "Sacramento approaches public scales — Dunnigan, Williams, Lodi, Lathrop CAT | WeighHere",
         "Four I-5 corridor CAT Scales verified on Pilot Flying J and Love’s own pages near Sacramento. No ScaleRegistry dedicated house; CDFA grids not loaded.",
@@ -5179,7 +5256,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

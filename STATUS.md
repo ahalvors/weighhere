@@ -1,12 +1,12 @@
-# WeighHere status — 19 Oct 2026
+# WeighHere status — 20 Oct 2026
 
-Compiled evening PT 19 Oct 2026 (nightly ship).
+Compiled evening PT 20 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **211** | +2 I-90 Cascades WA CAT (TA Seattle East #0176, Love’s #413 Ellensburg) |
+| **Total rows in `data/stations.json`** | **214** | +3 I-5 Oregon CAT (Love’s #728 Albany, TA Coburg #0482, Love’s #312 Roseburg) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -41,7 +41,8 @@ Compiled evening PT 19 Oct 2026 (nightly ship).
 | Moses Lake / Ritzville / I-90 | 2 | unchanged |
 | Pasco / Prosser / Tri-Cities | 2 | unchanged |
 | Portland / Troutdale / Aurora OR | 3 | unchanged |
-| **North Bend / Ellensburg / I-90** | **2** | **new page** — TA Seattle East #0176 (I-90 Exit 34), Love’s #413 Ellensburg (I-90 Exit 106) |
+| North Bend / Ellensburg / I-90 | 2 | unchanged |
+| **Albany / Eugene / Roseburg / I-5** | **3** | **new page** — Love’s #728 Albany (I-5 Exit 238), TA Coburg #0482 (I-5 Exit 199), Love’s #312 Roseburg (I-5 Exit 119) |
 | Central Valley (Kern+Fresno+Merced filter) | 19 | unchanged |
 | Sacramento approaches | 4 | unchanged |
 | Grapevine / I-5 mid-CA | 4 | unchanged |
@@ -59,24 +60,28 @@ Compiled evening PT 19 Oct 2026 (nightly ship).
 | Santa Nella / I-5 | 3 | unchanged |
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
-| CAT / truck-stop cards | 147 | +2 North Bend / Ellensburg |
+| CAT / truck-stop cards | 150 | +3 Albany / Coburg / Roseburg |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**North Bend / Ellensburg / I-90** (`/north-bend-ellensburg/`): fourth Washington page, the Cascades / Snoqualmie Pass cluster STATUS had held since 16 Oct. Both re-verified tonight on the operators’ own pages.
+**Albany / Eugene / Roseburg / I-5** (`/eugene-albany-roseburg/`): second Oregon page. Unlocks TA Coburg, held since 15–19 Oct as “lonely”: Love’s `/api/fetch_stores` showed two Oregon I-5 Love’s with CAT Scales either side of it, and all three were re-verified tonight on the operators’ own pages.
 
-- **TA Seattle East #0176** — 46630 North Bend Way, North Bend WA 98045, I-90 Exit 34 (King County) — CAT Scale on TA Petro’s page; (425) 888-1119; geo 47.4683, -121.7181. The page does **not** say Open 24 Hours (lists only Popeyes/Starbucks and truck-service bay hours), so `hours_24h` is `unknown` and the card says call first on hours.
-- **Love’s Travel Stop #413 Ellensburg** — 1512 Hwy 97, Ellensburg WA 98926, I-90 Exit 106 (Kittitas County) — CAT Scales in Love’s amenities, store and Truck Care Open 24-hours, RV mechanical/tires and propane exchange listed; (509) 925-5200; geo 47.007647, -120.585862.
-- About 72 interstate miles apart (Exit 34 to Exit 106), opposite sides of Snoqualmie Pass.
+- **Love’s Travel Stop #728 Albany** — 6457 Old Salem Rd NE, Albany OR 97321, I-5 Exit 238/Old Salem Rd (Linn County; Love’s API preferredName “Millersburg”) — CAT Scales in amenities; store, Truck Care and Arby’s Open 24-hours; RV-friendly parking, RV mechanical/tires, bulk propane + exchange; (541) 928-1900; geo 44.698743, -123.055073.
+- **TA Coburg #0482** — 32910 E. Pearl St., Coburg OR 97408, I-5 Exit 199 (Lane County) — CAT Scale in TA amenities, page says Open 24 Hours (truck service 6 AM–10 PM listed separately); (541) 868-2880; geo 44.13637, -123.05737 (TA page JSON-LD).
+- **Love’s Travel Stop #312 Roseburg** — 280 Grant Smith Rd, Roseburg OR 97471, I-5 Exit 119 (Douglas County) — CAT Scales; store, Truck Care, Arby’s Open 24-hours; RV mechanical/tires, RV dump, propane exchange; (541) 679-1916; geo 43.150503, -123.367895.
+- Albany→Coburg ≈ 39 interstate miles (Exit 238→199); Coburg→Roseburg ≈ 80 (Exit 199→119).
 
-Wiring: new `north_bend_ellensburg_i90_body()` + `write()` in `build.py`, NAV, footer, 404 lede, about-page line, Moses Lake page now links west to it (hold note replaced) and lists it in Related, `tools/seo.py` PLACES (`"north-bend-ellensburg": ("North Bend & Ellensburg, WA", "Washington")`). `CHECKED_HUMAN` → 19 Oct 2026. Livestock unknown; CAT staffing hours unpublished; no dedicated house verified (ScaleRegistry lists none here).
+Wiring: new `eugene_albany_roseburg_i5_body()` + `write()` in `build.py`, NAV (`ear`), footer, 404 lede, about-page line, Portland page links south to it (what-we-need note + Related), `tools/seo.py` PLACES (`"eugene-albany-roseburg": ("Eugene, Albany & Roseburg, OR", "Oregon")`), ADDING_A_PAGE county-slug list (`linn` / `lane` / `douglas`). `CHECKED_HUMAN` → 20 Oct 2026. Livestock unknown; CAT staffing hours unpublished (store hours only); no dedicated house verified (ScaleRegistry lists none in Oregon).
 
 ### Candidates held (last checked 16 Oct unless noted)
 
+- **Petro Phoenix #0324** (I-5 Exit 24, Medford area; CAT + Open 24 Hours re-checked 19 Oct): still lonely — Love’s API shows no Love’s between Roseburg (Exit 119) and the CA line; Love’s #823 Klamath Falls (US-97, CAT) is ~75 mi away by OR-140 and not an I-5 corridor partner. Grants Pass / Medford Pilot / Flying J own pages not searched tonight.
+- **Other Oregon Love’s with CAT in API (20 Oct)**: #650 Boardman (I-84 Exit 159), #795 Madras (US-97/26), #823 Klamath Falls (US-97), #372 Ontario, #569 Baker City. #902 Aurora (I-5 Exit 278) API does **not** flag CAT.
+
 - **TA Grandview WA** (I-82 Exit 73): not re-checked tonight; last check TA own page amenities did **not** list CAT Scale — kept off `/pasco-prosser/`.
 - **Cascades / I-90**: shipped 19 Oct (TA Seattle East + Love’s #413). Pilot / Flying J own-page CAT closer to Seattle not checked (Pilot state index still 404).
-- **TA Coburg #0482** (I-5 Exit 199, re-checked 19 Oct: CAT Scale on TA page, Open 24 Hours) and **Petro Phoenix #0324** (I-5 Exit 24, re-checked 19 Oct: CAT Scale, Open 24 Hours) — each lonely; ~170 mi apart. Need a second own-page CAT near Eugene or Medford.
+- **TA Coburg #0482**: shipped 20 Oct on `/eugene-albany-roseburg/`.
 - **TA Express Blaine** (I-5 Exit 275): CAT Scale on TA own page — lonely; no second north-I-5 CAT cluster tonight.
 - **Portland metro**: shipped 18 Oct. Pilot / Flying J own-page CAT in the metro (e.g. Wilsonville, Portland) not yet searched — candidate additions.
 - **Ontario OR / I-84**: Love’s #372 Ontario (Exit 374) CAT-verified; TA Huntington still no CAT; Love’s #569 Baker City CAT-verified but farther west — held.
@@ -85,9 +90,10 @@ Wiring: new `north_bend_ellensburg_i90_body()` + `write()` in `build.py`, NAV, f
 
 ## Sources used (this compile)
 
-- TA Seattle East #0176: https://www.ta-petro.com/location/wa/ta-seattle-east/
-- Love’s #413 Ellensburg: https://www.loves.com/locations/wa/ellensburg/loves-travel-stop-ellensburg-413
-- TA Coburg #0482 (held): https://www.ta-petro.com/location/or/ta-coburg/
+- Love’s #728 Albany: https://www.loves.com/locations/or/albany/loves-travel-stop-albany-728
+- TA Coburg #0482: https://www.ta-petro.com/location/or/ta-coburg/
+- Love’s #312 Roseburg: https://www.loves.com/locations/or/roseburg/loves-travel-stop-roseburg-312
+- Love’s store API (OR filter): https://www.loves.com/api/fetch_stores
 - Petro Phoenix #0324 (held): https://www.ta-petro.com/location/or/petro-phoenix/
 - CAT Scale locator (linked, not republished): https://catscale.com/cat-scale-locator/
 - ScaleRegistry public-weighing list: https://scaleregistry.com/public-scales.html
@@ -97,7 +103,8 @@ Wiring: new `north_bend_ellensburg_i90_body()` + `write()` in `build.py`, NAV, f
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)
 - Tri-Cities: shipped 17 Oct with Love’s Pasco + Prosser; TA Grandview not listed (no CAT on TA page at last check); Kennewick / Richland own-page CAT not yet searched
 - Portland: shipped 18 Oct (TA Troutdale, Love’s #449, TA Aurora); Pilot / Flying J metro stops not yet checked; no dedicated house; CAT staffing hours unpublished
-- TA Coburg / Petro Phoenix OR (CAT verified earlier on TA pages) — candidates for a Eugene / southern-Oregon I-5 page
+- Eugene / I-5: shipped 20 Oct (Love’s #728 Albany, TA Coburg, Love’s #312 Roseburg); no dedicated house; CAT staffing hours unpublished; Pilot / Flying J Willamette Valley own pages not searched
+- Petro Phoenix #0324 (Medford) still lonely — candidate for a Medford / Klamath or Grants Pass page if a second own-page CAT appears
 - Ontario OR / I-84 west of Fruitland: Love’s #372 has CAT; need a coherent second nearby or Baker City page
 - Spokane: CAT staffing hours unpublished; Broadway hours conflict with Pilot’s listing; no dedicated house
 - ONE9 #777 Boise, #1426 Nampa, #1429 Fruitland — hold until amenities list CAT Scale
@@ -110,7 +117,7 @@ Wiring: new `north_bend_ellensburg_i90_body()` + `write()` in `build.py`, NAV, f
 - Carson City / US-395 / Truckee: no Pilot/Love’s/TA/Flying J/Petro own-page CAT yet (Maverik third-party only)
 - Temecula / Corona / Murrieta: Pilot Perris #1458 alone — need a second own-page CAT before `/temecula-corona/`
 - Redding / Anderson mid-north I-5: only TA Redding #0057 — need a second stop before `/redding-anderson/`
-- Next candidates: Eugene / Coburg + Medford / Phoenix OR on I-5, Blaine if a second north-I-5 CAT appears, Ontario OR / Baker City I-84, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
+- Next candidates: Ontario / Baker City OR I-84 (both Love’s CAT in API 20 Oct, ~70 mi), Boardman OR I-84 (Love’s #650 CAT) possibly with Pasco/Hermiston, Madras / Bend US-97, Medford / Phoenix OR on I-5 if a partner appears, Blaine if a second north-I-5 CAT appears, Ontario OR / Baker City I-84, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
 - Elko / Winnemucca held: Flying J #692 Wells and Pilot #147 West Wendover (FAQ yes, amenities omit CAT)
 - Las Vegas omitted ONE9s still amenities-omit CAT
 - ONE9 #1424 Westley — visible amenities card still empty

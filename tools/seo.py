@@ -73,6 +73,7 @@ PLACES = {
     "moses-lake-ritzville": ("Moses Lake & Ritzville, WA", "Washington"),
     "pasco-prosser": ("Pasco & Prosser, WA", "Washington"),
     "portland-troutdale": ("Portland, Troutdale & Aurora, OR", "Oregon"),
+    "eugene-albany-roseburg": ("Eugene, Albany & Roseburg, OR", "Oregon"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
