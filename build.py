@@ -204,6 +204,7 @@ def footer(rel="."):
         <li><a href="/central-valley/">Central Valley</a></li>
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
         <li><a href="/guides/ppm-weight-tickets/">PPM weight tickets (U-Haul)</a></li>
+        <li><a href="/guides/cat-scale-cost/">CAT Scale cost</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3345,6 +3346,7 @@ def spokane_post_falls_i90_body():
       <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3415,6 +3417,7 @@ def north_bend_ellensburg_i90_body():
       <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities public scales</a></li>
       <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3481,6 +3484,7 @@ def moses_lake_ritzville_i90_body():
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
       <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3547,6 +3551,7 @@ def pasco_prosser_tri_cities_body():
       <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3614,6 +3619,7 @@ def portland_troutdale_aurora_body():
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3680,6 +3686,7 @@ def eugene_albany_roseburg_i5_body():
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3968,6 +3975,7 @@ def page_rv():
 
   <h2>Where to do this in Los Angeles County</h2>
   <p>Verified on this site: Montebello CAT Scale (on the CDFA list) and Pilot Castaic (CDFA + Pilot location page lists CAT Scale). Harbor, Bandini, and Commerce are CDFA truck-stop scales that may not be CAT-branded — call. For a house that will weigh a light RV or a toad under 2,000 lb, use Certified Scales, Rawlins, Santa Fe Springs, or Allstate Logistics instead.</p>
+  <p>Prices, reweigh rules, and the free app: <a href="/guides/cat-scale-cost/">how much a CAT Scale costs</a>.</p>
   <p><a href="/los-angeles/">Los Angeles County listings</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a></p>
 </div>
 </main>
@@ -4110,7 +4118,7 @@ def page_guide_ppm_tickets():
   <h2>How a CAT weigh works, and what it costs</h2>
   <p>CAT says no appointment is needed. Pull on with the vehicle split between platform 1 and platform 2 (platform 1 is closest to the intercom sign), press the intercom button, give the cashier your information, pull off, and go inside for the ticket. A trailer goes on platform 3.</p>
   <p>CAT publishes U.S. pricing of <strong>$15.25 for a first weigh and $5.25 for a reweigh</strong>. Its reweigh rule requires the same vehicle, the same scale, the full-price ticket presented, and a reweigh within 24 hours. If you weigh empty, load nearby, and come back to the same scale the same day, ask the cashier whether the full weigh rings up as a reweigh.</p>
-  <p><strong>California is different.</strong> CAT says a California Weighmaster Certificate is needed when you are being paid by weight, and lists it at $30.50 for a first weigh and $10.50 for a reweigh. The Weigh My Truck app PDF is certified everywhere except California, so in California go inside for the printed certificate. Prices were checked on CAT’s pages on 14 Oct 2026; confirm at the booth. Our <a href="/ppm-dity-southern-california/">Southern California PPM page</a> covers the California details and local scale houses.</p>
+  <p><strong>California is different.</strong> CAT says a California Weighmaster Certificate is needed when you are being paid by weight, and lists it at $30.50 for a first weigh and $10.50 for a reweigh. The Weigh My Truck app PDF is certified everywhere except California, so in California go inside for the printed certificate. Prices were checked on CAT’s pages on 14 Oct 2026; confirm at the booth. Our <a href="/ppm-dity-southern-california/">Southern California PPM page</a> covers the California details and local scale houses. For more on prices and reweigh rules, see <a href="/guides/cat-scale-cost/">how much a CAT Scale costs</a>.</p>
   <p>A loaded box truck is normally well above CAT’s 2,000 lb floor. A car alone, or a small empty trailer, may not be, so see <a href="/cat-2000-lb-minimum/">what CAT’s 2,000 lb minimum means</a>.</p>
 
   <h2>Where to weigh: CAT, public scale house, or on base</h2>
@@ -4151,6 +4159,134 @@ def page_guide_ppm_tickets():
     <ul>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/how-to-weigh-an-rv/">How CAT’s three platforms work</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+GUIDE_CAT_FAQ = [
+    ("How much does a CAT Scale weigh cost?",
+     "CAT Scale publishes U.S. pricing of $15.25 for a first weigh and $5.25 for a reweigh. Canadian locations are C$26.00 and C$8.50. Prices were checked on CAT's pages on 21 Oct 2026; confirm at the fuel desk."),
+    ("What counts as a CAT Scale reweigh?",
+     "CAT's FAQ says the $5.25 reweigh applies when it is the same vehicle (truck and trailer), you present the full-price ticket, you use the same scale, and you come back within 24 hours of the full-price weigh."),
+    ("Does a CAT Scale weigh cost more in California?",
+     "Only if you need a California Weighmaster Certificate, which CAT says applies when you are paid by weight or registering a vehicle with the California DMV. That certificate is $30.50 for a first weigh and $10.50 for a reweigh. For most loads a California Guaranteed ticket at $15.25 and $5.25 is enough."),
+    ("Do I need an appointment to use a CAT Scale?",
+     "No. CAT says no appointment is necessary. Pull onto the scale, press the intercom button, give the cashier your information, then pull off and go inside for the ticket."),
+    ("Is the Weigh My Truck app free?",
+     "Yes. Weigh My Truck's help page says the app is free and CAT charges nothing extra to use it; you pay the normal weigh price. The emailed PDF is certified everywhere except California."),
+    ("Can a CAT Scale weigh my car or a small trailer?",
+     "Usually not. CAT says its scales are set to a 2,000 lb threshold and asks owners of anything estimated lighter to call its help desk at 1-877-228-7225, ext. 6. A dedicated public scale house is the better choice for light vehicles."),
+    ("Can a CAT Scale give me corner or wheel weights?",
+     "No. CAT says its scales give axle weights and a gross weight, but not individual wheel or corner weights, and it does not allow that type of weighing."),
+    ("What if I lose my CAT Scale ticket?",
+     "CAT keeps an electronic record of every ticket for seven years. You can request a copy through the Ticket Copy Request form on catscale.com."),
+]
+
+
+def guide_cat_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_CAT_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_cat_cost():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_CAT_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · CAT Scale · Prices</p>
+    <h1>How much does a CAT Scale cost, and how does it work?</h1>
+    <p class="lede">A CAT Scale weigh costs $15.25 in the U.S., and a reweigh within 24 hours costs $5.25. California weighmaster certificates cost more. Here is what you pay, what you get for it, and how to drive on and off without holding up the truckers behind you, all taken from CAT Scale’s own pages.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>Prices below were read from CAT Scale and Weigh My Truck pages on 21 Oct 2026. CAT can change them, so confirm at the fuel desk before you weigh. WeighHere is independent and not affiliated with CAT Scale Company.</p>
+  </div>
+
+  <h2>CAT Scale prices at a glance</h2>
+  <table>
+    <thead><tr><th>Ticket</th><th>First weigh</th><th>Reweigh</th></tr></thead>
+    <tbody>
+      <tr><td>Standard CAT ticket, U.S.</td><td>$15.25</td><td>$5.25</td></tr>
+      <tr><td>Standard CAT ticket, Canada</td><td>C$26.00</td><td>C$8.50</td></tr>
+      <tr><td>California Guaranteed ticket</td><td>$15.25</td><td>$5.25</td></tr>
+      <tr><td>California Weighmaster Certificate</td><td>$30.50</td><td>$10.50</td></tr>
+    </tbody>
+  </table>
+  <p>The Weigh My Truck app is free, and CAT says there is no extra charge for weighing through it. You pay the same price per weigh. CAT accepts Visa, Mastercard, Discover, American Express, and PayPal in the app, plus the usual fleet cards.</p>
+  <p class="cite">Sources: <a href="https://weighmytruck.com/Help">Weigh My Truck Help/FAQ</a> · <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ (Q12, Q13, Q21)</a></p>
+
+  <h2>How the reweigh discount works</h2>
+  <p>The $5.25 reweigh is the part most people miss. CAT’s FAQ says it applies only when all four of these are true:</p>
+  <ul>
+    <li>It is the <strong>same vehicle</strong>, meaning the same truck and the same trailer.</li>
+    <li>You <strong>present the full-price ticket</strong>, and its number is recorded on the reweigh ticket.</li>
+    <li>You use the <strong>same scale</strong> as the full-price weigh.</li>
+    <li>You come back <strong>within 24 hours</strong>.</li>
+  </ul>
+  <p>For a do-it-yourself move, that can mean weighing the empty U-Haul, loading nearby, and coming back to the same truck stop the same day for a cheaper full weigh. Ask the cashier first. If your two weighs have to happen at different scales, or a day apart, plan on two full-price tickets.</p>
+  <p>CAT also caps the cost for someone shuffling a load to get legal. After a full-price weigh and two reweighs, $25.75 so far, the on-duty manager may void further reweighs until you are legal, and you pay only for the reweigh that shows you legal. CAT’s example total is $31.00.</p>
+
+  <h2>When California costs more</h2>
+  <p>CAT says you need a California Weighmaster Certificate if you are being paid by weight or registering a vehicle with the California DMV. That certificate is $30.50 for a first weigh and $10.50 for a reweigh at the same location within 24 hours. For most other loads, CAT says the California Guaranteed ticket at the standard price will do.</p>
+  <p>The Weigh My Truck PDF is certified everywhere except California, because California certificates need information the app does not collect. In California, go inside for the printed certificate. Military movers should read <a href="/ppm-dity-southern-california/">PPM / DITY weight tickets in Southern California</a> before they pay.</p>
+
+  <h2>How a CAT weigh works, step by step</h2>
+  <ol>
+    <li><strong>Find a CAT Scale.</strong> Most sit behind truck stops such as Pilot, Flying J, Love’s, TA, and Petro. Use a <a href="/">WeighHere area page</a> or the <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. No appointment is needed.</li>
+    <li><strong>Pull on slowly and stop with every axle on the deck.</strong> A CAT Scale has three platforms. Put the steer axle (front wheels) on platform 1, the drive or rear axle on platform 2, and any trailer, boat, or tow car on platform 3. Platform 1 is the one closest to the intercom sign.</li>
+    <li><strong>Press the intercom button</strong> and give the cashier what they ask for. Commercial drivers give a truck number, company, trailer number, and commodity. Everyone else just answers the same fields. CAT’s DITY page lists the usual military answers.</li>
+    <li><strong>Pull off and go inside</strong> to pay and pick up the ticket. With the app, the weight appears on your phone and a PDF arrives by email, and two printed copies are held at the fuel desk for one hour.</li>
+    <li><strong>Read the ticket before you leave.</strong> CAT says tickets are legal documents and cannot be edited after they print.</li>
+  </ol>
+  <p class="cite">Sources: <a href="https://catscale.com/how-to-weigh/">CAT Scale, How To Weigh</a> · <a href="https://catscale.com/contact-us/dity-move-tips/">CAT Scale, DITY Move Tips</a></p>
+
+  <h2>What you get for $15.25</h2>
+  <ul>
+    <li><strong>Axle weights and a gross weight.</strong> You see steer, drive, and trailer weights plus the total. That is enough to compare against your GVWR and axle ratings. See <a href="/how-to-weigh-an-rv/">how to weigh an RV or fifth-wheel at a CAT Scale</a>.</li>
+    <li><strong>No corner or wheel weights.</strong> CAT says its scales cannot weigh each corner and it does not allow that type of weighing.</li>
+    <li><strong>A certified ticket.</strong> CAT says every CAT Scale is certified in its state and meets government requirements for billing.</li>
+    <li><strong>The CAT guarantee.</strong> If a state fines you for being overweight after a CAT Scale showed you legal, CAT says it will check the scale and either reimburse the fine or send a representative to court with you.</li>
+    <li><strong>A copy later.</strong> CAT keeps an electronic record of every ticket for seven years and has a ticket copy request form.</li>
+  </ul>
+
+  <h2>When a CAT Scale is the wrong scale</h2>
+  <p>CAT says its scales are set to a 2,000 lb threshold. A car headed to the DMV, an empty utility trailer, or a small boat trailer may not register. Call CAT’s help desk at 1-877-228-7225, ext. 6, or go to a dedicated public scale house, which often weighs light vehicles and has a licensed weighmaster on site. Our page on <a href="/cat-2000-lb-minimum/">CAT’s 2,000 lb minimum</a> lists Los Angeles County options. Horse owners should also read <a href="/horse-trailer/">weighing a horse trailer</a> before pulling into a busy truck stop.</p>
+  <p>A highway weigh station is not a substitute either. Those are enforcement sites, not ticket counters. See <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>.</p>
+
+  <h2>Find a CAT Scale near you</h2>
+  <p>Every WeighHere listing links to its source, and CAT locations are checked against the operator’s own page. Popular areas:</p>
+  <ul>
+    <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/san-diego/">San Diego</a>, <a href="/sacramento/">Sacramento</a>, <a href="/fresno/">Fresno</a>, <a href="/bakersfield/">Bakersfield</a></li>
+    <li>Arizona and Nevada: <a href="/phoenix/">Phoenix</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/reno-sparks/">Reno / Sparks</a></li>
+    <li>Utah and Idaho: <a href="/springville-salt-lake/">Springville / Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley</a></li>
+    <li>Washington and Oregon: <a href="/spokane-post-falls/">Spokane / Post Falls</a>, <a href="/portland-troutdale/">Portland / Troutdale</a>, <a href="/eugene-albany-roseburg/">Eugene / Albany / Roseburg</a></li>
+  </ul>
+  <p>See <a href="/">all WeighHere areas</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
     </ul>
@@ -4350,6 +4486,7 @@ def page_catmin():
     <li><a href="/los-angeles/#santa-fe-springs-public-scale">Santa Fe Springs Public Scale</a> — Mon–Fri 8 a.m.–midnight; first come, first served.</li>
   </ul>
   <p>Do not drive to the I-405 Carson CHP weigh station with a Honda and a hope. That is enforcement, not a $25 ticket.</p>
+  <p>Above the floor? See <a href="/guides/cat-scale-cost/">how much a CAT Scale costs and how a weigh works</a>.</p>
   <p class="cite"><a href="https://catscale.com/how-to-weigh/">catscale.com/how-to-weigh</a> · <a href="https://catscale.com/contact-us/faq/">CAT FAQ Q22 (weight threshold)</a> · <a href="https://amove.com/resource-center/public-scales/">Allstate public scales</a></p>
 </div>
 </main>
@@ -5185,6 +5322,16 @@ def main():
         "../../",
         page_guide_ppm_tickets(),
         guide_ppm_faq_jsonld(),
+        gear=False,
+    )
+    write(
+        ROOT / "guides" / "cat-scale-cost" / "index.html",
+        "How Much Does a CAT Scale Cost? Prices and How It Works | WeighHere",
+        "A CAT Scale weigh is $15.25 and a reweigh $5.25 in the U.S. California weighmaster certificates, reweigh rules, the free app, and how to weigh, from CAT's own pages.",
+        "catcost",
+        "../../",
+        page_guide_cat_cost(),
+        guide_cat_faq_jsonld(),
         gear=False,
     )
     write(

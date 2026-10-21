@@ -255,6 +255,7 @@ def main():
     <h2>Guides</h2>
     <ul>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost? Prices and how it works</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
