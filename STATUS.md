@@ -1,12 +1,12 @@
-# WeighHere status — 22 Oct 2026
+# WeighHere status — 23 Oct 2026
 
-Compiled evening PT 22 Oct 2026 (nightly ship).
+Compiled evening PT 23 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **218** | +2 US-97 central Oregon CAT (Love’s #795 Madras, Love’s #823 Klamath Falls) |
+| **Total rows in `data/stations.json`** | **221** | +3 I-84 Columbia River CAT (Pilot #195 Biggs, Love’s #650 Boardman, Pilot #390 Stanfield) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -61,36 +61,34 @@ Compiled evening PT 22 Oct 2026 (nightly ship).
 | Landfill / waste rows (sitewide) | 12 | unchanged |
 | Dedicated / walk-up houses | 12–13 | unchanged |
 | Ontario / Baker City / I-84 (OR) | 2 | unchanged |
-| **Madras / Klamath Falls / US-97 (OR)** | **2** | **new page 22 Oct** — Love’s #795 Madras (Hall Rd exit), Love’s #823 Klamath Falls (Dan O’Brien Way exit) |
-| CAT / truck-stop cards | 154 | +2 Madras / Klamath Falls |
+| Madras / Klamath Falls / US-97 (OR) | 2 | unchanged |
+| **Biggs / Boardman / Stanfield / I-84 (OR)** | **3** | **new page 23 Oct** — Pilot #195 Biggs Junction (Exit 104), Love’s #650 Boardman (Exit 159), Pilot #390 Stanfield (Exit 188) |
+| CAT / truck-stop cards | 157 | +3 Biggs / Boardman / Stanfield |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Madras / Klamath Falls / US-97** (`/madras-klamath-falls/`): fourth Oregon page, first in central Oregon. Both stops verified tonight (22 Oct) on Love’s own location pages.
+**Biggs / Boardman / Stanfield / I-84** (`/biggs-boardman-stanfield/`): fifth Oregon page, first on the Columbia River stretch of I-84 (Sherman, Morrow & Umatilla Counties). All three stops verified tonight (23 Oct) on the operators’ own pages.
 
-- **Love’s Travel Stop #795 Madras** — 1678 SE Highway 97, Madras OR 97741, US-97 / US-26 Hall Rd exit (Jefferson County) — CAT Scales in amenities; store Open 24-Hours (Arby’s 7 a.m.–10 p.m.); RV-friendly parking, RV dump, bulk propane, propane tank exchange; (541) 675-6008; geo 44.61226, -121.137633.
-- **Love’s Travel Stop #823 Klamath Falls** — 250 Dan O’Brien Way, Klamath Falls OR 97601, US-97 Dan O’Brien Way exit (Klamath County) — CAT Scales; store Open 24-Hours; RV-friendly parking, RV dump, bulk propane; (541) 363-4499; geo 42.258046, -121.799445.
+- **Pilot Travel Center #195 Biggs Junction** — 91485 Biggs Rufus Hwy, Wasco OR 97065, I-84 Exit 104 at US-97 (Sherman County) — CAT Scale in the store’s own offerings; Open 24 Hours; cylinder propane; (541) 739-2174; geo 45.6695, -120.8349.
+- **Love’s Travel Stop #650 Boardman** — 78665 Tower Road, Boardman OR 97818, I-84 Exit 159 (Morrow County) — CAT Scales; store + Truck Care Open 24-hours; RV-friendly parking, bulk propane, tank exchange; (541) 481-2934; geo 45.825166, -119.798742.
+- **Pilot Travel Center #390 Stanfield** — 2115 S Hwy 395, Stanfield OR 97875, I-84 Exit 188 at US-395 (Umatilla County) — CAT Scale in own offerings; Open 24 Hours; bulk + cylinder propane; (541) 449-1403; geo 45.765135, -119.205112. Pilot posts “store enhancements underway — some amenities temporarily unavailable”; flagged call-ahead in hours_notes.
 
-Wiring: new `madras_klamath_falls_us97_body()` + `write()` in `build.py`, NAV (`mkf`), footer, 404 lede hub list, PPM guide + CAT cost guide Oregon lines, Eugene and Ontario pages Related links to it, `tools/seo.py` PLACES (`"madras-klamath-falls": ("Madras & Klamath Falls, OR", "Oregon")`), ADDING_A_PAGE county-slug list (`jefferson` / `klamath`). `CHECKED_HUMAN` → 22 Oct 2026. Livestock unknown; CAT staffing hours unpublished (store hours only); no dedicated house verified (ScaleRegistry lists none in Oregon). No Bend / Redmond CAT verified. Love’s #650 Boardman (I-84 Exit 159) re-checked tonight: CAT Scales + store/Truck Care Open 24-hours, (541) 481-2934 — still lonely, held for a Boardman / Pendleton / Hermiston page.
+Wiring: new `biggs_boardman_stanfield_i84_body()` + `write()` in `build.py`, NAV (`bbs`), footer, guide Oregon lines, 404 lede hub list, Ontario / Madras / Portland pages Related links, `tools/seo.py` PLACES, ADDING_A_PAGE county-slug list (`sherman` / `morrow` / `umatilla`). `CHECKED_HUMAN` → 23 Oct 2026. Held: Flying J #934 La Grande (Exit 265) — live page offerings omit CAT Scale (CAT only appears in its nearby-stops list; search-index snapshot said yes). No Pendleton / Hermiston operator-page CAT.
 
-Previous ship (21 Oct): `/ontario-baker-city/` — Love’s #372 Ontario (I-84 Exit 374) + Love’s #569 Baker City (I-84 Exit 304).
+Previous ship (22 Oct): `/madras-klamath-falls/` — Love’s #795 Madras + Love’s #823 Klamath Falls.
 
 ## Sources used (this compile)
 
-- Love’s #795 Madras: https://www.loves.com/locations/or/madras/loves-travel-stop-madras-795
-- Love’s #823 Klamath Falls: https://www.loves.com/locations/or/klamath-falls/loves-travel-stop-klamath-falls-823
-- Love’s #650 Boardman (held): https://www.loves.com/locations/or/boardman/loves-travel-stop-boardman-650
-
-Prior compile (21 Oct):
-
-- Love’s #372 Ontario: https://www.loves.com/locations/or/ontario/loves-travel-stop-ontario-372
-- Love’s #569 Baker City: https://www.loves.com/locations/or/baker-city/loves-travel-stop-baker-city-569
+- Pilot #195 Biggs Junction: https://locations.pilotflyingj.com/us/or/wasco/91485-biggs-rufus-hwy
+- Love’s #650 Boardman: https://www.loves.com/locations/or/boardman/loves-travel-stop-boardman-650
+- Pilot #390 Stanfield: https://locations.pilotflyingj.com/us/or/stanfield/2115-s-hwy-395
+- Flying J #934 La Grande (held): https://locations.pilotflyingj.com/us/or/la-grande/63276-or-203
 
 ## Gaps / deferred
 
 - Madras / Klamath Falls US-97: shipped 22 Oct; no dedicated house; CAT staffing hours unpublished; no Bend / Redmond CAT verified; Pilot / Flying J / TA Petro US-97 own pages not searched
-- Love’s #650 Boardman (I-84 Exit 159): CAT + 24h re-verified 22 Oct — lonely; need Pendleton / Hermiston / La Grande own-page CAT partner
+- Biggs / Boardman / Stanfield I-84: shipped 23 Oct; Stanfield store work underway (amenities may be unavailable); CAT staffing hours unpublished; no dedicated house; Flying J #934 La Grande held (live offerings omit CAT); EZ Trip #1226 Biggs offerings omit CAT; no Pendleton / Hermiston CAT
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)
 - Tri-Cities: shipped 17 Oct with Love’s Pasco + Prosser; TA Grandview not listed (no CAT on TA page at last check); Kennewick / Richland own-page CAT not yet searched
 - Portland: shipped 18 Oct (TA Troutdale, Love’s #449, TA Aurora); Pilot / Flying J metro stops not yet checked; no dedicated house; CAT staffing hours unpublished
@@ -108,7 +106,7 @@ Prior compile (21 Oct):
 - Carson City / US-395 / Truckee: no Pilot/Love’s/TA/Flying J/Petro own-page CAT yet (Maverik third-party only)
 - Temecula / Corona / Murrieta: Pilot Perris #1458 alone — need a second own-page CAT before `/temecula-corona/`
 - Redding / Anderson mid-north I-5: only TA Redding #0057 — need a second stop before `/redding-anderson/`
-- Next candidates: Boardman OR I-84 (Love’s #650 CAT) with a Pendleton/Hermiston partner, Medford / Phoenix OR on I-5 if a partner appears, Blaine if a second north-I-5 CAT appears, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
+- Next candidates: La Grande if Flying J #934 offerings add CAT, Pilot #232 Ontario OR (Exit 376A) own-page check, Pilot Central Point / Chemult / Klamath Falls OR own-page checks (could unlock Medford with Petro Phoenix), Medford / Phoenix OR on I-5 if a partner appears, Blaine if a second north-I-5 CAT appears, Temecula / Corona (if a second CAT verifies), Carson City if a chain own-page CAT appears, Redding / Anderson second stop, Snowville / Willard if amenities catch up, ONE9 Boise/Nampa/Fruitland if amenities catch up, Ventura / Santa Barbara CDFA re-pull, Beaver if amenities catch up, Love’s Fernley / Winnemucca / Carlin as corridor extensions
 - Elko / Winnemucca held: Flying J #692 Wells and Pilot #147 West Wendover (FAQ yes, amenities omit CAT)
 - Las Vegas omitted ONE9s still amenities-omit CAT
 - ONE9 #1424 Westley — visible amenities card still empty
