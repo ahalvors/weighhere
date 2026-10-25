@@ -126,9 +126,7 @@ def header(current, rel, title, description, extra_head=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#14532d">
 <link rel="stylesheet" href="{rel}css/site.css">
 {leaflet}
 </head>
@@ -137,7 +135,7 @@ def header(current, rel, title, description, extra_head=""):
 <header class="mast">
   <div class="wrap mast-inner">
     <a class="brand" href="/">WeighHere<span>Public scales for U-Hauls, RVs, horse trailers, and PPM loads</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">All areas &amp; guides</button>
     <nav class="site-nav" id="site-nav">
       <ul>
         {''.join(nav_items)}
