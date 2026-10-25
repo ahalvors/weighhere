@@ -77,6 +77,7 @@ PLACES = {
     "ontario-baker-city": ("Ontario & Baker City, OR", "Oregon"),
     "madras-klamath-falls": ("Madras & Klamath Falls, OR", "Oregon"),
     "biggs-boardman-stanfield": ("Biggs, Boardman & Stanfield, OR", "Oregon"),
+    "medford-central-point": ("Medford & Central Point, OR", "Oregon"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
