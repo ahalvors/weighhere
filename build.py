@@ -127,6 +127,11 @@ def header(current, rel, title, description, extra_head=""):
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
 <meta name="theme-color" content="#14532d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="{rel}css/site.css">
 {leaflet}
 </head>
@@ -134,7 +139,7 @@ def header(current, rel, title, description, extra_head=""):
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast">
   <div class="wrap mast-inner">
-    <a class="brand" href="/">WeighHere<span>Public scales for U-Hauls, RVs, horse trailers, and PPM loads</span></a>
+    <a class="brand" href="/"><img class="brand-logo" src="/img/weighhere-logo.svg" alt="WeighHere" width="173" height="44"><span>Public scales for U-Hauls, RVs, horse trailers, and PPM loads</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">All areas &amp; guides</button>
     <nav class="site-nav" id="site-nav">
       <ul>

@@ -26,8 +26,8 @@ h1,h2,h3{text-wrap:balance}
 /* Header */
 .mast{background:var(--surface);border-bottom:1px solid var(--line);position:relative}
 .mast-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.25rem;padding-block:.9rem}
-.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;line-height:1.2;padding-left:2.1rem;position:relative}
-.brand::before{content:"";position:absolute;left:0;top:.15rem;width:1.55rem;height:1.55rem;border-radius:7px;background:var(--accent) linear-gradient(180deg,transparent 58%,var(--gold) 58%,var(--gold) 72%,transparent 72%)}
+.brand{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;color:var(--ink);line-height:1.2}
+.brand-logo{display:block;height:44px;width:auto}
 .brand span{font-weight:400;font-size:.8rem;color:var(--muted);letter-spacing:0;margin-top:.1rem}
 .menu-toggle{font:inherit;font-size:.88rem;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid #c6dfcd;border-radius:999px;padding:.45rem 1rem;cursor:pointer}
 .menu-toggle::after{content:" ▾"}
@@ -148,3 +148,5 @@ footer.site p{margin:0;max-width:75ch}
   .card,.box{break-inside:avoid;box-shadow:none}
   footer.site{background:#fff;color:#000}
 }
+
+@media (max-width:600px){.brand-logo{height:36px}.brand span{font-size:.74rem}}
