@@ -1,12 +1,12 @@
-# WeighHere status — 24 Oct 2026
+# WeighHere status — 25 Oct 2026
 
-Compiled evening PT 23 Oct 2026 (nightly ship).
+Compiled evening PT 25 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **223** | +2 Rogue Valley I-5 CAT (Pilot #391 Central Point, Petro Phoenix #0324) |
+| **Total rows in `data/stations.json`** | **226** | +3 western New Mexico I-40 CAT (TA Gallup #0008, Flying J #305 Jamestown, Petro Milan #0313) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -63,28 +63,33 @@ Compiled evening PT 23 Oct 2026 (nightly ship).
 | Ontario / Baker City / I-84 (OR) | 2 | unchanged |
 | Madras / Klamath Falls / US-97 (OR) | 2 | unchanged |
 | Biggs / Boardman / Stanfield / I-84 (OR) | 3 | shipped 23 Oct |
-| **Medford / Central Point / Phoenix / I-5 (OR)** | **2** | **new page 24 Oct** — Pilot #391 Central Point (Exit 33), Petro Phoenix #0324 (Exit 24) |
-| CAT / truck-stop cards | 159 | +2 Medford / Central Point |
+| Medford / Central Point / Phoenix / I-5 (OR) | 2 | shipped 24 Oct |
+| **Gallup / Jamestown / Milan / I-40 (NM)** | **3** | **new page 25 Oct** — TA Gallup #0008 (Exit 16), Flying J #305 Jamestown (Exit 39), Petro Milan #0313 (Exit 79); first New Mexico page |
+| CAT / truck-stop cards | 162 | +3 Gallup / Jamestown / Milan |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Medford / Central Point / Phoenix / I-5** (`/medford-central-point/`): sixth Oregon page, first in the Rogue Valley (Jackson County). Unlocks the long-lonely Petro Phoenix #0324 with a second own-page CAT nine miles north. Both verified tonight (24 Oct) on the operators’ own pages.
+**Gallup / Jamestown / Milan / I-40** (`/gallup-milan/`): first New Mexico page, continuing I-40 east from Flagstaff / Winslow / Holbrook. All three verified tonight (25 Oct) on the operators’ own pages.
 
-- **Pilot Travel Center #391 Central Point** — 1600 E Pine St, Central Point OR 97502, I-5 Exit 33 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; cylinder propane; (541) 664-7001 (page contact block also shows (541) 664-1035, which third-party listings tie to the food court); geo 42.37564, -122.89975.
-- **Petro Phoenix #0324** — 3730 Fern Valley Rd., Phoenix OR 97535, I-5 Exit 24 — CAT Scale in amenities; Open 24 Hours; (541) 535-3372; geo 42.2795, -122.8116.
+- **TA Gallup #0008** — 3404 W Historical Highway 66, Gallup NM 87301, I-40 Exit 16 — CAT Scale in amenities; page says fuel 24/7 (7 AM–8 PM shown is the Country Pride restaurant), so `hours_24h` left unknown; (505) 863-6801; geo 35.5059, -108.8359.
+- **Flying J #305 Jamestown** — 1 Giant Crossing, Jamestown NM 87347, I-40 Exit 39 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 863-8858; geo 35.48057, -108.43421.
+- **Petro Milan #0313** — 1430 Motel Drive, Milan NM 87021, I-40 Exit 79 at Horizon Rd — CAT Scale in amenities; fuel 24/7 (6 AM–10 PM shown is Iron Skillet), `hours_24h` unknown; (505) 285-6648; geo 35.181, -107.9038.
 
-Wiring: new `medford_central_point_i5_body()` + `write()` in `build.py`, NAV (`mcp`), footer, guide Oregon lines, 404 lede hub list, Weed / Eugene / Madras pages Related links, `tools/seo.py` PLACES. County slug `jackson`. `CHECKED_HUMAN` → 24 Oct 2026.
+Wiring: new `gallup_milan_i40_body()` + `write()` in `build.py`, NAV (`gml`), footer, 404/home lede hub list, PPM guide (new New Mexico line), Flagstaff / Winslow Related link, `tools/seo.py` PLACES. County slugs `mckinley`, `cibola`. `CHECKED_HUMAN` → 25 Oct 2026.
 
-Previous ship (23 Oct): `/biggs-boardman-stanfield/` — Pilot #195 Biggs Junction + Love’s #650 Boardman + Pilot #390 Stanfield.
+Previous ship (24 Oct): `/medford-central-point/` — Pilot #391 Central Point + Petro Phoenix #0324.
 
 ## Sources used (this compile)
 
-- Pilot #391 Central Point: https://locations.pilotflyingj.com/us/or/central-point/1600-e-pine-st
-- Petro Phoenix #0324: https://www.ta-petro.com/location/or/petro-phoenix/
+- TA Gallup #0008: https://www.ta-petro.com/location/nm/ta-gallup/
+- Flying J #305 Jamestown: https://locations.pilotflyingj.com/us/nm/jamestown/1-giant-crossing
+- Petro Milan #0313: https://www.ta-petro.com/location/nm/petro-milan/
 
 ## Gaps / deferred
 
+- Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
+- Albuquerque I-40 candidates for a next NM page: TA Albuquerque #0081 (Exit 159A, TA page lists CAT) and Flying J #689 Albuquerque (9911 Avalon Rd NW, Exit 153, code 318 in Pilot nearby data) — own-page check Flying J, then ship `/albuquerque/`; TA Moriarty / TA Santa Rosa also unchecked
 - Madras / Klamath Falls US-97: shipped 22 Oct; no dedicated house; CAT staffing hours unpublished; no Bend / Redmond CAT verified; Pilot / Flying J / TA Petro US-97 own pages not searched
 - Biggs / Boardman / Stanfield I-84: shipped 23 Oct; Stanfield store work underway (amenities may be unavailable); CAT staffing hours unpublished; no dedicated house; Flying J #934 La Grande held (live offerings omit CAT); EZ Trip #1226 Biggs offerings omit CAT; no Pendleton / Hermiston CAT
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)

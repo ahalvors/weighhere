@@ -78,6 +78,7 @@ PLACES = {
     "madras-klamath-falls": ("Madras & Klamath Falls, OR", "Oregon"),
     "biggs-boardman-stanfield": ("Biggs, Boardman & Stanfield, OR", "Oregon"),
     "medford-central-point": ("Medford & Central Point, OR", "Oregon"),
+    "gallup-milan": ("Gallup & Milan, NM", "New Mexico"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
