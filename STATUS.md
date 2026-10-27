@@ -1,12 +1,12 @@
-# WeighHere status — 25 Oct 2026
+# WeighHere status — 26 Oct 2026
 
-Compiled evening PT 25 Oct 2026 (nightly ship).
+Compiled evening PT 26 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **226** | +3 western New Mexico I-40 CAT (TA Gallup #0008, Flying J #305 Jamestown, Petro Milan #0313) |
+| **Total rows in `data/stations.json`** | **229** | +3 Albuquerque CAT (Flying J #689, TA Albuquerque #0081, Pilot #1106) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -64,32 +64,33 @@ Compiled evening PT 25 Oct 2026 (nightly ship).
 | Madras / Klamath Falls / US-97 (OR) | 2 | unchanged |
 | Biggs / Boardman / Stanfield / I-84 (OR) | 3 | shipped 23 Oct |
 | Medford / Central Point / Phoenix / I-5 (OR) | 2 | shipped 24 Oct |
-| **Gallup / Jamestown / Milan / I-40 (NM)** | **3** | **new page 25 Oct** — TA Gallup #0008 (Exit 16), Flying J #305 Jamestown (Exit 39), Petro Milan #0313 (Exit 79); first New Mexico page |
-| CAT / truck-stop cards | 162 | +3 Gallup / Jamestown / Milan |
+| Gallup / Jamestown / Milan / I-40 (NM) | 3 | shipped 25 Oct |
+| **Albuquerque / I-40 · I-25 (NM)** | **3** | **new page 26 Oct** — Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D), Pilot #1106 (I-25 Exit 215) |
+| CAT / truck-stop cards | 165 | +3 Albuquerque |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Gallup / Jamestown / Milan / I-40** (`/gallup-milan/`): first New Mexico page, continuing I-40 east from Flagstaff / Winslow / Holbrook. All three verified tonight (25 Oct) on the operators’ own pages.
+**Albuquerque / I-40 · I-25** (`/albuquerque/`): second New Mexico page, continuing I-40 east from Gallup / Milan. All three verified tonight (26 Oct) on the operators’ own pages.
 
-- **TA Gallup #0008** — 3404 W Historical Highway 66, Gallup NM 87301, I-40 Exit 16 — CAT Scale in amenities; page says fuel 24/7 (7 AM–8 PM shown is the Country Pride restaurant), so `hours_24h` left unknown; (505) 863-6801; geo 35.5059, -108.8359.
-- **Flying J #305 Jamestown** — 1 Giant Crossing, Jamestown NM 87347, I-40 Exit 39 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 863-8858; geo 35.48057, -108.43421.
-- **Petro Milan #0313** — 1430 Motel Drive, Milan NM 87021, I-40 Exit 79 at Horizon Rd — CAT Scale in amenities; fuel 24/7 (6 AM–10 PM shown is Iron Skillet), `hours_24h` unknown; (505) 285-6648; geo 35.181, -107.9038.
+- **Flying J #689 Albuquerque** — 9911 Avalon Rd NW, Albuquerque NM 87105, I-40 Exit 153 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 831-2001; geo 35.07993, -106.74595.
+- **TA Albuquerque #0081** — 2501 University Blvd NE, Albuquerque NM 87107, I-40 Exit 159A/D (I-25 Exit 225 NB / 227 SB) — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (505) 884-1066; geo 35.1111, -106.6247.
+- **Pilot #1106 Albuquerque (Broadway)** — 9220 Broadway Blvd SE, Albuquerque NM 87105, I-25 Exit 215 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 933-1055; geo 34.96023, -106.66057.
 
-Wiring: new `gallup_milan_i40_body()` + `write()` in `build.py`, NAV (`gml`), footer, 404/home lede hub list, PPM guide (new New Mexico line), Flagstaff / Winslow Related link, `tools/seo.py` PLACES. County slugs `mckinley`, `cibola`. `CHECKED_HUMAN` → 25 Oct 2026.
+Wiring: new `albuquerque_body()` + `write()` in `build.py`, NAV (`abq`), footer, 404/home lede hub list, PPM guide New Mexico line, Gallup / Milan Related + gap note, `tools/seo.py` PLACES. County slug `bernalillo`. `CHECKED_HUMAN` → 26 Oct 2026.
 
-Previous ship (24 Oct): `/medford-central-point/` — Pilot #391 Central Point + Petro Phoenix #0324.
+Previous ship (25 Oct): `/gallup-milan/` — TA Gallup #0008 + Flying J #305 Jamestown + Petro Milan #0313.
 
 ## Sources used (this compile)
 
-- TA Gallup #0008: https://www.ta-petro.com/location/nm/ta-gallup/
-- Flying J #305 Jamestown: https://locations.pilotflyingj.com/us/nm/jamestown/1-giant-crossing
-- Petro Milan #0313: https://www.ta-petro.com/location/nm/petro-milan/
+- Flying J #689 Albuquerque: https://locations.pilotflyingj.com/us/nm/albuquerque/9911-avalon-rd-nw
+- TA Albuquerque #0081: https://www.ta-petro.com/location/nm/ta-albuquerque/
+- Pilot #1106 Albuquerque: https://locations.pilotflyingj.com/us/nm/albuquerque/9220-broadway-blvd-se
 
 ## Gaps / deferred
 
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
-- Albuquerque I-40 candidates for a next NM page: TA Albuquerque #0081 (Exit 159A, TA page lists CAT) and Flying J #689 Albuquerque (9911 Avalon Rd NW, Exit 153, code 318 in Pilot nearby data) — own-page check Flying J, then ship `/albuquerque/`; TA Moriarty / TA Santa Rosa also unchecked
+- Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement. Next NM: Pilot #475 Moriarty (I-40 Exit 196, CAT in Pilot nearby data) own-page check, then TA Moriarty / TA Santa Rosa / Tucumcari for an east-I-40 page; Los Lunas / Socorro / Las Cruces on I-25 unchecked
 - Madras / Klamath Falls US-97: shipped 22 Oct; no dedicated house; CAT staffing hours unpublished; no Bend / Redmond CAT verified; Pilot / Flying J / TA Petro US-97 own pages not searched
 - Biggs / Boardman / Stanfield I-84: shipped 23 Oct; Stanfield store work underway (amenities may be unavailable); CAT staffing hours unpublished; no dedicated house; Flying J #934 La Grande held (live offerings omit CAT); EZ Trip #1226 Biggs offerings omit CAT; no Pendleton / Hermiston CAT
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)

@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "25 Oct 2026"
+CHECKED_HUMAN = "26 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -31,6 +31,7 @@ NAV = [
     ("/tucson-benson/", "Tucson / Benson / I-10", "tb"),
     ("/flagstaff-winslow/", "Flagstaff / Winslow / I-40", "fw"),
     ("/gallup-milan/", "Gallup / Jamestown / Milan / I-40 (NM)", "gml"),
+    ("/albuquerque/", "Albuquerque / I-40 · I-25 (NM)", "abq"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -177,6 +178,7 @@ def footer(rel="."):
         <li><a href="/tucson-benson/">Tucson / Benson / I-10</a></li>
         <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a></li>
         <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a></li>
+        <li><a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -2386,6 +2388,7 @@ def flagstaff_winslow_body():
     <h2>Related</h2>
     <ul>
       <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM) public scales</a></li>
+      <li><a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM) public scales</a></li>
       <li><a href="/mayer/">Mayer / Cordes Lakes / I-17 public scales</a></li>
       <li><a href="/white-hills/">White Hills / Henderson / US-93 public scales</a></li>
       <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9 public scales</a></li>
@@ -4030,12 +4033,13 @@ def gallup_milan_i40_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Gallup or Grants with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops. ONE9 #1358 Gallup (Exit 16) is held: its page FAQ has said it has a CAT scale, but its own offerings list does not include one. Love’s #215 Gallup does not list a CAT Scale on its own page. Albuquerque CAT stops are not on this page yet. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Gallup or Grants with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops. ONE9 #1358 Gallup (Exit 16) is held: its page FAQ has said it has a CAT scale, but its own offerings list does not include one. Love’s #215 Gallup does not list a CAT Scale on its own page. Albuquerque CAT stops now live on <a href="/albuquerque/">Albuquerque / I-40 · I-25</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.ta-petro.com/location/nm/ta-gallup/">TA Gallup #0008</a> · <a href="https://locations.pilotflyingj.com/us/nm/jamestown/1-giant-crossing">Flying J #305 Jamestown</a> · <a href="https://www.ta-petro.com/location/nm/petro-milan/">Petro Milan #0313</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/albuquerque/">Albuquerque / I-40 · I-25 public scales</a></li>
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/kingman/">Kingman / I-40 public scales</a></li>
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
@@ -4050,6 +4054,71 @@ def gallup_milan_i40_body():
 </div>
 </main>
 """ + map_script(gml)
+
+
+def albuquerque_body():
+    order_cat = [
+        "flying-j-689-albuquerque",
+        "ta-albuquerque-0081",
+        "pilot-1106-albuquerque",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    abq = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(abq)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in Albuquerque yet</h2>
+    <p>We have not found a walk-up public scale house in Albuquerque with an operator page we can cite, and ScaleRegistry’s public-weighing page lists none in New Mexico. We are not inventing one from gravel yards, recyclers, landfill gate scales, or third-party trucker directories. All three stops below are CAT Scales at truck stops, verified on TA Petro’s and Pilot Flying J’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Albuquerque · I-40 · I-25 · Bernalillo County NM · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in Albuquerque, New Mexico (I-40 and I-25)</h1>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages in Albuquerque: Flying J #689 on the west side (I-40 Exit 153), TA Albuquerque #0081 at the Big I (I-40 Exit 159A/D, I-25 Exit 225/227) and Pilot #1106 on Broadway at the south edge of town (I-25 Exit 215). Useful for U-Haul and PPM moves through New Mexico, RVs and fifth-wheels on I-40 or I-25, and horse and stock trailers heading for the Rio Grande Valley. West on I-40, see <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40</a>.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Bernalillo County NM</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales in Albuquerque</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. Flying J #689 and Pilot #1106 include CAT Scale in their store offerings and say Open 24 Hours. TA Albuquerque lists CAT Scale among its amenities and says fuel is available 24/7, but publishes no 24-hour store statement, so we leave its scale hours blank. None of the three publishes a CAT-staffing schedule. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh the tow vehicle for the trailer number. Do not unload horses at a truck stop. New Mexico weighmaster rules differ from California — confirm ticket needs with your TO or licensing office. Use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a> for other stops.</p>
+  <div class="cards two">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>New Mexico ports of entry on I-40 and I-25 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Albuquerque with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops. Pilot #475 Moriarty (I-40 Exit 196) shows a CAT Scale in Pilot’s nearby-store data but has not had its own page checked yet, so it is not listed. TA Moriarty, TA Santa Rosa, Los Lunas and Santa Fe stops are unchecked. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://locations.pilotflyingj.com/us/nm/albuquerque/9911-avalon-rd-nw">Flying J #689 Albuquerque</a> · <a href="https://www.ta-petro.com/location/nm/ta-albuquerque/">TA Albuquerque #0081</a> · <a href="https://locations.pilotflyingj.com/us/nm/albuquerque/9220-broadway-blvd-se">Pilot #1106 Albuquerque</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a> (linked, not republished) · <a href="https://scaleregistry.com/public-scales.html">ScaleRegistry public scales</a></p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 public scales</a></li>
+      <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(abq)
 
 
 def antelope_valley_body():
@@ -4489,7 +4558,7 @@ def page_guide_ppm_tickets():
     <li>Southern California: <a href="/san-diego/">San Diego County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/los-angeles/">Los Angeles County</a>, <a href="/i-15/">I-15 / High Desert (Barstow, Hesperia)</a>, <a href="/mojave/">Mojave / Boron / Tehachapi</a></li>
     <li>Northern and Central California: <a href="/sacramento/">Sacramento approaches</a>, <a href="/highway-99/">Stockton / Lodi</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/bakersfield/">Bakersfield</a></li>
     <li>Arizona: <a href="/phoenix/">Phoenix metro</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma</a></li>
-    <li>New Mexico: <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40</a></li>
+    <li>New Mexico: <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25</a></li>
     <li>Nevada: <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley</a></li>
     <li>Utah, Idaho, Washington and Oregon: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / I-5</a></li>
   </ul>
@@ -5555,6 +5624,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "albuquerque" / "index.html",
+        "Albuquerque public scales — CAT on I-40 and I-25 | WeighHere",
+        "Three CAT Scales verified on operator pages in Albuquerque, NM: Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D) and Pilot #1106 (I-25 Exit 215). For U-Haul, PPM, RV and horse trailers.",
+        "abq",
+        "../",
+        albuquerque_body(),
+        leaflet,
+    )
+    write(
         ROOT / "medford-central-point" / "index.html",
         "Medford / Central Point / Phoenix / I-5 public scales — CAT in the Rogue Valley | WeighHere",
         "Two CAT Scales verified on operator pages on I-5 around Medford, Oregon: Pilot #391 Central Point (Exit 33) and Petro Phoenix #0324 (Exit 24). For U-Haul, PPM, RV and horse trailers.",
@@ -5803,7 +5881,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
