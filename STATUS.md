@@ -1,4 +1,4 @@
-# WeighHere status — 26 Oct 2026
+# WeighHere status — 27 Oct 2026
 
 Compiled evening PT 26 Oct 2026 (nightly ship).
 
@@ -6,7 +6,7 @@ Compiled evening PT 26 Oct 2026 (nightly ship).
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **229** | +3 Albuquerque CAT (Flying J #689, TA Albuquerque #0081, Pilot #1106) |
+| **Total rows in `data/stations.json`** | **232** | +3 Moriarty / Santa Rosa CAT (Pilot #475, TA Moriarty #0229, TA Santa Rosa #0023) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -65,32 +65,36 @@ Compiled evening PT 26 Oct 2026 (nightly ship).
 | Biggs / Boardman / Stanfield / I-84 (OR) | 3 | shipped 23 Oct |
 | Medford / Central Point / Phoenix / I-5 (OR) | 2 | shipped 24 Oct |
 | Gallup / Jamestown / Milan / I-40 (NM) | 3 | shipped 25 Oct |
-| **Albuquerque / I-40 · I-25 (NM)** | **3** | **new page 26 Oct** — Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D), Pilot #1106 (I-25 Exit 215) |
-| CAT / truck-stop cards | 165 | +3 Albuquerque |
+| Albuquerque / I-40 · I-25 (NM) | 3 | page 26 Oct — Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D), Pilot #1106 (I-25 Exit 215) |
+| **Moriarty / Santa Rosa / I-40 (NM)** | **3** | **new page 27 Oct** — Pilot #475 Moriarty (I-40 Exit 196), TA Moriarty #0229 (Exit 194), TA Santa Rosa #0023 (Exit 277) |
+| CAT / truck-stop cards | 168 | +3 Moriarty / Santa Rosa |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Albuquerque / I-40 · I-25** (`/albuquerque/`): second New Mexico page, continuing I-40 east from Gallup / Milan. All three verified tonight (26 Oct) on the operators’ own pages.
+**Moriarty / Santa Rosa / I-40** (`/moriarty-santa-rosa/`): third New Mexico page, continuing I-40 east from Albuquerque. All three verified tonight (27 Oct) on the operators’ own pages.
 
-- **Flying J #689 Albuquerque** — 9911 Avalon Rd NW, Albuquerque NM 87105, I-40 Exit 153 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 831-2001; geo 35.07993, -106.74595.
-- **TA Albuquerque #0081** — 2501 University Blvd NE, Albuquerque NM 87107, I-40 Exit 159A/D (I-25 Exit 225 NB / 227 SB) — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (505) 884-1066; geo 35.1111, -106.6247.
-- **Pilot #1106 Albuquerque (Broadway)** — 9220 Broadway Blvd SE, Albuquerque NM 87105, I-25 Exit 215 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 933-1055; geo 34.96023, -106.66057.
+- **Pilot #475 Moriarty** — 305 W Abrahames Rd, Moriarty NM 87035, I-40 Exit 196 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 832-4947; geo 35.01154, -106.04629.
+- **TA Moriarty #0229** — 1700 U.S. Route 66 West, Moriarty NM 87035, I-40 Exit 194 — CAT Scale in amenities; printed hours are restaurant only, `hours_24h` unknown; (505) 832-4421; geo 35.0095, -106.065.
+- **TA Santa Rosa #0023** — 2634 Historic Route 66, Santa Rosa NM 88435, I-40 Exit 277 — CAT Scale in amenities; `hours_24h` unknown; (575) 935-9939; geo 34.9443, -104.6407.
+- Excluded: ONE9 Dealer #1422 Moriarty (820 Central Ave, I-40 Exit 197) — own amenities list no CAT Scale.
 
-Wiring: new `albuquerque_body()` + `write()` in `build.py`, NAV (`abq`), footer, 404/home lede hub list, PPM guide New Mexico line, Gallup / Milan Related + gap note, `tools/seo.py` PLACES. County slug `bernalillo`. `CHECKED_HUMAN` → 26 Oct 2026.
+Wiring: new `moriarty_santa_rosa_body()` + `write()` in `build.py`, NAV (`msr`), footer, 404/home lede hub list, PPM guide New Mexico line, Albuquerque lede/Related + gap note, Flagstaff / Winslow Related, `tools/seo.py` PLACES. County slugs `torrance`, `guadalupe`. `CHECKED_HUMAN` → 27 Oct 2026.
 
-Previous ship (25 Oct): `/gallup-milan/` — TA Gallup #0008 + Flying J #305 Jamestown + Petro Milan #0313.
+Previous ship (26 Oct): `/albuquerque/` — Flying J #689 + TA Albuquerque #0081 + Pilot #1106.
 
 ## Sources used (this compile)
 
-- Flying J #689 Albuquerque: https://locations.pilotflyingj.com/us/nm/albuquerque/9911-avalon-rd-nw
-- TA Albuquerque #0081: https://www.ta-petro.com/location/nm/ta-albuquerque/
-- Pilot #1106 Albuquerque: https://locations.pilotflyingj.com/us/nm/albuquerque/9220-broadway-blvd-se
+- Pilot #475 Moriarty: https://locations.pilotflyingj.com/us/nm/moriarty/305-w-abrahames-rd
+- ONE9 Dealer #1422 Moriarty (no CAT): https://locations.pilotflyingj.com/us/nm/moriarty/820-central-ave
+- TA Moriarty #0229: https://www.ta-petro.com/location/nm/ta-moriarty/
+- TA Santa Rosa #0023: https://www.ta-petro.com/location/nm/ta-santa-rosa/
 
 ## Gaps / deferred
 
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
-- Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement. Next NM: Pilot #475 Moriarty (I-40 Exit 196, CAT in Pilot nearby data) own-page check, then TA Moriarty / TA Santa Rosa / Tucumcari for an east-I-40 page; Los Lunas / Socorro / Las Cruces on I-25 unchecked
+- Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement; Los Lunas / Socorro / Las Cruces on I-25 unchecked
+- Moriarty / Santa Rosa I-40: shipped 27 Oct; no dedicated house; CAT staffing hours unpublished; TA Moriarty / TA Santa Rosa publish no 24-hour store statement; Pilot Flying J has no Tucumcari / Santa Rosa store pages (404) and TA has no Tucumcari page; Love’s Santa Rosa / Tucumcari and Clines Corners own pages not yet searched. Next NM: Tucumcari CAT check (extend this page or ship with San Jon), then I-25 south (Los Lunas / Socorro / Las Cruces)
 - Madras / Klamath Falls US-97: shipped 22 Oct; no dedicated house; CAT staffing hours unpublished; no Bend / Redmond CAT verified; Pilot / Flying J / TA Petro US-97 own pages not searched
 - Biggs / Boardman / Stanfield I-84: shipped 23 Oct; Stanfield store work underway (amenities may be unavailable); CAT staffing hours unpublished; no dedicated house; Flying J #934 La Grande held (live offerings omit CAT); EZ Trip #1226 Biggs offerings omit CAT; no Pendleton / Hermiston CAT
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)
