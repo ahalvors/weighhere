@@ -72,26 +72,37 @@ Compiled evening PT 26 Oct 2026 (nightly ship).
 
 ## What shipped tonight
 
-**Moriarty / Santa Rosa / I-40** (`/moriarty-santa-rosa/`): third New Mexico page, continuing I-40 east from Albuquerque. All three verified tonight (27 Oct) on the operators’ own pages.
+**Las Cruces / Deming / Lordsburg / I-10** (`/las-cruces-deming-lordsburg/`): fourth New Mexico page, first on I-10 (southern NM, El Paso to the Arizona line). All seven verified tonight (28 Oct) on the operators’ own pages.
 
-- **Pilot #475 Moriarty** — 305 W Abrahames Rd, Moriarty NM 87035, I-40 Exit 196 — CAT Scale (code 318) in the store’s own offerings; Open 24 Hours; (505) 832-4947; geo 35.01154, -106.04629.
-- **TA Moriarty #0229** — 1700 U.S. Route 66 West, Moriarty NM 87035, I-40 Exit 194 — CAT Scale in amenities; printed hours are restaurant only, `hours_24h` unknown; (505) 832-4421; geo 35.0095, -106.065.
-- **TA Santa Rosa #0023** — 2634 Historic Route 66, Santa Rosa NM 88435, I-40 Exit 277 — CAT Scale in amenities; `hours_24h` unknown; (575) 935-9939; geo 34.9443, -104.6407.
-- Excluded: ONE9 Dealer #1422 Moriarty (820 Central Ave, I-40 Exit 197) — own amenities list no CAT Scale.
+- **Love’s #259 Las Cruces** — 8993 Robert Larson Blvd, Las Cruces NM 88007, I-10 Exit 132 — CAT Scales in amenities; Store Open 24-Hours; (575) 527-5102; geo 32.269415, -106.922518.
+- **Pilot #266 Las Cruces** — 2681 W Amador Ave, Las Cruces NM 88005, I-10 Exit 139 — CAT Scale (code 318) in own offerings; Open 24 Hours; (575) 523-2700; geo 32.29702, -106.81013.
+- **TA Las Cruces #0014** — 202 N Motel Blvd, Las Cruces NM 88007, I-10 Exit 139 — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (575) 527-7400; geo 32.2977, -106.8115.
+- **Petro Deming #0385** — 14150 Hwy 418 SW Ste C, Deming NM 88030, I-10 Exit 68 — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (575) 546-7070; geo 32.2386, -107.9927.
+- **Pilot #163 Lordsburg** — 1124 E Motel Dr, Lordsburg NM 88045, I-10 Exit 24 — CAT Scale (code 318) in own offerings; Open 24 Hours; (575) 912-1072 (contact block shows 912-1073); geo 32.3424, -108.6813.
+- **Flying J #690 Lordsburg** — 11 Old Hwy 70, Lordsburg NM 88045, I-10 Exit 24 — CAT Scale (code 318) in own offerings (Pilot’s city-list summary omits it, store page lists it); Open 24 Hours; (575) 286-4798; geo 32.3411, -108.6775.
+- **Love’s #276 Lordsburg** — 900 W Motel Dr, Lordsburg NM 88045, I-10 Exit 20 WB / 20B EB — CAT Scales in amenities; Store Open 24-hours (limited services; weekend truck care 7am–11pm); (575) 542-8462; geo 32.353872, -108.73557.
+- Excluded: ONE9 Dealer #1489 Deming (1310 W Spruce St) — no amenities listed on Pilot’s page.
 
-Wiring: new `moriarty_santa_rosa_body()` + `write()` in `build.py`, NAV (`msr`), footer, 404/home lede hub list, PPM guide New Mexico line, Albuquerque lede/Related + gap note, Flagstaff / Winslow Related, `tools/seo.py` PLACES. County slugs `torrance`, `guadalupe`. `CHECKED_HUMAN` → 27 Oct 2026.
+Note: locations.pilotflyingj.com store URLs now 301 to pilotcompany.com/locations/…; data still cites the pilotflyingj.com URLs (they redirect).
 
-Previous ship (26 Oct): `/albuquerque/` — Flying J #689 + TA Albuquerque #0081 + Pilot #1106.
+Wiring: new `las_cruces_deming_lordsburg_body()` + `write()` in `build.py`, NAV (`lcdl`), footer, 404/home lede hub list, PPM guide New Mexico line, Albuquerque gap note, Tucson / Benson and other NM/AZ Related lists, `tools/seo.py` PLACES. County slugs `dona-ana`, `luna`, `hidalgo`. `CHECKED_HUMAN` → 28 Oct 2026. stations.json 239 rows.
+
+Previous ship (27 Oct): `/moriarty-santa-rosa/` — Pilot #475 + TA Moriarty #0229 + TA Santa Rosa #0023.
 
 ## Sources used (this compile)
 
-- Pilot #475 Moriarty: https://locations.pilotflyingj.com/us/nm/moriarty/305-w-abrahames-rd
-- ONE9 Dealer #1422 Moriarty (no CAT): https://locations.pilotflyingj.com/us/nm/moriarty/820-central-ave
-- TA Moriarty #0229: https://www.ta-petro.com/location/nm/ta-moriarty/
-- TA Santa Rosa #0023: https://www.ta-petro.com/location/nm/ta-santa-rosa/
+- Love’s #259 Las Cruces: https://www.loves.com/locations/nm/las-cruces/loves-travel-stop-las-cruces-259
+- Pilot #266 Las Cruces: https://pilotcompany.com/locations/us/nm/las-cruces/2681-w-amador-ave
+- TA Las Cruces #0014: https://www.ta-petro.com/location/nm/ta-las-cruces/
+- Petro Deming #0385: https://www.ta-petro.com/location/nm/petro-deming/
+- ONE9 Dealer #1489 Deming (no amenities): https://locations.pilotflyingj.com/us/nm/deming
+- Pilot #163 Lordsburg: https://pilotcompany.com/locations/us/nm/lordsburg/1124-e-motel-dr
+- Flying J #690 Lordsburg: https://pilotcompany.com/locations/us/nm/lordsburg/11-old-hwy-70
+- Love’s #276 Lordsburg: https://www.loves.com/locations/nm/lordsburg/loves-travel-stop-lordsburg-276
 
 ## Gaps / deferred
 
+- Las Cruces / Deming / Lordsburg I-10: shipped 28 Oct; no dedicated house; CAT staffing hours unpublished; TA Las Cruces / Petro Deming publish only fuel 24/7 (no store statement); ONE9 #1489 Deming lists no amenities; I-25 Los Lunas / Socorro / T or C unchecked; TA Glenrio #0471 (I-40 Exit 369, CAT in amenities) and TA Springer seen on TA’s NM index — candidates for an east-I-40 / I-25 north page
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
 - Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement; Los Lunas / Socorro / Las Cruces on I-25 unchecked
 - Moriarty / Santa Rosa I-40: shipped 27 Oct; no dedicated house; CAT staffing hours unpublished; TA Moriarty / TA Santa Rosa publish no 24-hour store statement; Pilot Flying J has no Tucumcari / Santa Rosa store pages (404) and TA has no Tucumcari page; Love’s Santa Rosa / Tucumcari and Clines Corners own pages not yet searched. Next NM: Tucumcari CAT check (extend this page or ship with San Jon), then I-25 south (Los Lunas / Socorro / Las Cruces)
