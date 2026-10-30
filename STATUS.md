@@ -1,12 +1,12 @@
-# WeighHere status — 27 Oct 2026
+# WeighHere status — 29 Oct 2026
 
-Compiled evening PT 26 Oct 2026 (nightly ship).
+Compiled evening PT 29 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **232** | +3 Moriarty / Santa Rosa CAT (Pilot #475, TA Moriarty #0229, TA Santa Rosa #0023) |
+| **Total rows in `data/stations.json`** | **241** | +2 Tucumcari / Glenrio CAT (Love’s #262, TA Glenrio #0471) |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -66,46 +66,38 @@ Compiled evening PT 26 Oct 2026 (nightly ship).
 | Medford / Central Point / Phoenix / I-5 (OR) | 2 | shipped 24 Oct |
 | Gallup / Jamestown / Milan / I-40 (NM) | 3 | shipped 25 Oct |
 | Albuquerque / I-40 · I-25 (NM) | 3 | page 26 Oct — Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D), Pilot #1106 (I-25 Exit 215) |
-| **Moriarty / Santa Rosa / I-40 (NM)** | **3** | **new page 27 Oct** — Pilot #475 Moriarty (I-40 Exit 196), TA Moriarty #0229 (Exit 194), TA Santa Rosa #0023 (Exit 277) |
-| CAT / truck-stop cards | 168 | +3 Moriarty / Santa Rosa |
+| Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
+| Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
+| **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
+| CAT / truck-stop cards | 177 | +2 Tucumcari / Glenrio |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Las Cruces / Deming / Lordsburg / I-10** (`/las-cruces-deming-lordsburg/`): fourth New Mexico page, first on I-10 (southern NM, El Paso to the Arizona line). All seven verified tonight (28 Oct) on the operators’ own pages.
+**Tucumcari / Glenrio / I-40** (`/tucumcari-glenrio/`): fifth New Mexico page, closes the east-I-40 run to the Texas line. Both verified tonight (29 Oct) on the operators’ own pages.
 
-- **Love’s #259 Las Cruces** — 8993 Robert Larson Blvd, Las Cruces NM 88007, I-10 Exit 132 — CAT Scales in amenities; Store Open 24-Hours; (575) 527-5102; geo 32.269415, -106.922518.
-- **Pilot #266 Las Cruces** — 2681 W Amador Ave, Las Cruces NM 88005, I-10 Exit 139 — CAT Scale (code 318) in own offerings; Open 24 Hours; (575) 523-2700; geo 32.29702, -106.81013.
-- **TA Las Cruces #0014** — 202 N Motel Blvd, Las Cruces NM 88007, I-10 Exit 139 — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (575) 527-7400; geo 32.2977, -106.8115.
-- **Petro Deming #0385** — 14150 Hwy 418 SW Ste C, Deming NM 88030, I-10 Exit 68 — CAT Scale in amenities; fuel 24/7 only, `hours_24h` unknown; (575) 546-7070; geo 32.2386, -107.9927.
-- **Pilot #163 Lordsburg** — 1124 E Motel Dr, Lordsburg NM 88045, I-10 Exit 24 — CAT Scale (code 318) in own offerings; Open 24 Hours; (575) 912-1072 (contact block shows 912-1073); geo 32.3424, -108.6813.
-- **Flying J #690 Lordsburg** — 11 Old Hwy 70, Lordsburg NM 88045, I-10 Exit 24 — CAT Scale (code 318) in own offerings (Pilot’s city-list summary omits it, store page lists it); Open 24 Hours; (575) 286-4798; geo 32.3411, -108.6775.
-- **Love’s #276 Lordsburg** — 900 W Motel Dr, Lordsburg NM 88045, I-10 Exit 20 WB / 20B EB — CAT Scales in amenities; Store Open 24-hours (limited services; weekend truck care 7am–11pm); (575) 542-8462; geo 32.353872, -108.73557.
-- Excluded: ONE9 Dealer #1489 Deming (1310 W Spruce St) — no amenities listed on Pilot’s page.
+- **Love’s #262 Tucumcari** — 1900 Mountain Rd, Tucumcari NM 88401, I-40 Exit 333 — CAT Scales in amenities; Store Open 24-hours, Truck Care Open 24-hours; (575) 461-1900; geo 35.158604, -103.701308.
+- **TA Glenrio #0471** — 1583 Frontage Rd 4132, Glenrio NM 88434, I-40 Exit 369 — CAT Scale in amenities; only restaurant hours printed (some days “Call For Hours”), `hours_24h` unknown; (575) 288-9968; geo 35.175246, -103.104073.
+- Excluded: Love’s #285 Santa Rosa (Exit 277) — amenities list omits CAT Scales. Pilot Flying J has no Tucumcari store page.
 
-Note: locations.pilotflyingj.com store URLs now 301 to pilotcompany.com/locations/…; data still cites the pilotflyingj.com URLs (they redirect).
+Wiring: new `tucumcari_glenrio_body()` + `write()` in `build.py`, NAV (`tg`), footer, 404/home lede hub list, PPM guide New Mexico line, Moriarty gap/section note + Related, Albuquerque and AZ Related lists, `tools/seo.py` PLACES, ADDING_A_PAGE county table. County slug `quay`. `CHECKED_HUMAN` → 29 Oct 2026. stations.json 241 rows.
 
-Wiring: new `las_cruces_deming_lordsburg_body()` + `write()` in `build.py`, NAV (`lcdl`), footer, 404/home lede hub list, PPM guide New Mexico line, Albuquerque gap note, Tucson / Benson and other NM/AZ Related lists, `tools/seo.py` PLACES. County slugs `dona-ana`, `luna`, `hidalgo`. `CHECKED_HUMAN` → 28 Oct 2026. stations.json 239 rows.
-
-Previous ship (27 Oct): `/moriarty-santa-rosa/` — Pilot #475 + TA Moriarty #0229 + TA Santa Rosa #0023.
+Previous ship (28 Oct): `/las-cruces-deming-lordsburg/` — Love’s #259, Pilot #266, TA #0014 Las Cruces; Petro Deming #0385; Pilot #163, Flying J #690, Love’s #276 Lordsburg.
 
 ## Sources used (this compile)
 
-- Love’s #259 Las Cruces: https://www.loves.com/locations/nm/las-cruces/loves-travel-stop-las-cruces-259
-- Pilot #266 Las Cruces: https://pilotcompany.com/locations/us/nm/las-cruces/2681-w-amador-ave
-- TA Las Cruces #0014: https://www.ta-petro.com/location/nm/ta-las-cruces/
-- Petro Deming #0385: https://www.ta-petro.com/location/nm/petro-deming/
-- ONE9 Dealer #1489 Deming (no amenities): https://locations.pilotflyingj.com/us/nm/deming
-- Pilot #163 Lordsburg: https://pilotcompany.com/locations/us/nm/lordsburg/1124-e-motel-dr
-- Flying J #690 Lordsburg: https://pilotcompany.com/locations/us/nm/lordsburg/11-old-hwy-70
-- Love’s #276 Lordsburg: https://www.loves.com/locations/nm/lordsburg/loves-travel-stop-lordsburg-276
+- Love’s #262 Tucumcari: https://www.loves.com/locations/nm/tucumcari/loves-travel-stop-tucumcari-262
+- TA Glenrio #0471: https://www.ta-petro.com/location/nm/ta-glenrio/
+- Love’s #285 Santa Rosa (no CAT): https://www.loves.com/locations/nm/santa-rosa/loves-travel-stop-santa-rosa-285
+- TA NM index (also lists TA Springer, I-25 Exit 419, CAT Scale in amenities): https://www.ta-petro.com/location/nm/
 
 ## Gaps / deferred
 
 - Las Cruces / Deming / Lordsburg I-10: shipped 28 Oct; no dedicated house; CAT staffing hours unpublished; TA Las Cruces / Petro Deming publish only fuel 24/7 (no store statement); ONE9 #1489 Deming lists no amenities; I-25 Los Lunas / Socorro / T or C unchecked; TA Glenrio #0471 (I-40 Exit 369, CAT in amenities) and TA Springer seen on TA’s NM index — candidates for an east-I-40 / I-25 north page
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
 - Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement; Los Lunas / Socorro / Las Cruces on I-25 unchecked
-- Moriarty / Santa Rosa I-40: shipped 27 Oct; no dedicated house; CAT staffing hours unpublished; TA Moriarty / TA Santa Rosa publish no 24-hour store statement; Pilot Flying J has no Tucumcari / Santa Rosa store pages (404) and TA has no Tucumcari page; Love’s Santa Rosa / Tucumcari and Clines Corners own pages not yet searched. Next NM: Tucumcari CAT check (extend this page or ship with San Jon), then I-25 south (Los Lunas / Socorro / Las Cruces)
+- Tucumcari / Glenrio I-40: shipped 29 Oct; no dedicated house; CAT staffing hours unpublished; TA Glenrio publishes only restaurant hours; San Jon (Roady’s Chisum) not checked; Love’s Belen #726, Truth or Consequences #1045, Las Vegas NM #733, Clayton #22, Clovis #329/#760 own pages not yet checked. TA Springer (I-25 Exit 419, CAT in amenities seen 29 Oct) is a candidate for an I-25 north page (Springer / Raton / Las Vegas NM)
+- Moriarty / Santa Rosa I-40: shipped 27 Oct; Love’s #285 Santa Rosa checked 29 Oct (no CAT); no dedicated house; CAT staffing hours unpublished; TA Moriarty / TA Santa Rosa publish no 24-hour store statement; Pilot Flying J has no Tucumcari / Santa Rosa store pages (404) and TA has no Tucumcari page; Love’s Santa Rosa / Tucumcari and Clines Corners own pages not yet searched. Next NM: Tucumcari CAT check (extend this page or ship with San Jon), then I-25 south (Los Lunas / Socorro / Las Cruces)
 - Madras / Klamath Falls US-97: shipped 22 Oct; no dedicated house; CAT staffing hours unpublished; no Bend / Redmond CAT verified; Pilot / Flying J / TA Petro US-97 own pages not searched
 - Biggs / Boardman / Stanfield I-84: shipped 23 Oct; Stanfield store work underway (amenities may be unavailable); CAT staffing hours unpublished; no dedicated house; Flying J #934 La Grande held (live offerings omit CAT); EZ Trip #1226 Biggs offerings omit CAT; no Pendleton / Hermiston CAT
 - Cascades: shipped 19 Oct; TA Seattle East hours unpublished (no 24-hour statement on TA page)
