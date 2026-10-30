@@ -226,6 +226,7 @@ def footer(rel="."):
         <li><a href="/how-to-weigh-an-rv/">How to weigh an RV</a></li>
         <li><a href="/guides/ppm-weight-tickets/">PPM weight tickets (U-Haul)</a></li>
         <li><a href="/guides/cat-scale-cost/">CAT Scale cost</a></li>
+        <li><a href="/guides/tongue-weight/">Trailer &amp; tongue weight</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3376,6 +3377,7 @@ def spokane_post_falls_i90_body():
       <li><a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3447,6 +3449,7 @@ def north_bend_ellensburg_i90_body():
       <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3514,6 +3517,7 @@ def moses_lake_ritzville_i90_body():
       <li><a href="/twin-falls-burley/">Twin Falls / Burley / I-84 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3581,6 +3585,7 @@ def pasco_prosser_tri_cities_body():
       <li><a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3650,6 +3655,7 @@ def portland_troutdale_aurora_body():
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3719,6 +3725,7 @@ def eugene_albany_roseburg_i5_body():
       <li><a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3787,6 +3794,7 @@ def ontario_baker_city_i84_body():
       <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3855,6 +3863,7 @@ def madras_klamath_falls_us97_body():
       <li><a href="/weed-yreka/">Weed / Yreka / I-5 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3922,6 +3931,7 @@ def biggs_boardman_stanfield_i84_body():
       <li><a href="/portland-troutdale/">Portland / Troutdale / Aurora public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3988,6 +3998,7 @@ def medford_central_point_i5_body():
       <li><a href="/corning-orland/">Corning / Orland / I-5 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4055,6 +4066,7 @@ def gallup_milan_i40_body():
       <li><a href="/phoenix/">Phoenix metro public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4122,6 +4134,7 @@ def albuquerque_body():
       <li><a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4193,6 +4206,7 @@ def las_cruces_deming_lordsburg_body():
       <li><a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4259,6 +4273,7 @@ def moriarty_santa_rosa_body():
       <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4324,6 +4339,7 @@ def tucumcari_glenrio_body():
       <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4588,7 +4604,7 @@ def page_rv():
   <h2>What CAT actually measures</h2>
   <p>A CAT Scale is three platforms. CAT’s own diagrams put the steer axle on platform 1, the drive axle on platform 2, and the trailer (or tow car) on platform 3. For a motorhome, CAT says the coach must be completely on the scale, steer on 1, drive on 2, platform 3 likely empty. Same idea for a truck and fifth-wheel: truck on 1 and 2, trailer on 3.</p>
   <blockquote>Our scales can give you axle weights and a total gross weight, however, they cannot weigh each corner of the vehicle. We cannot provide individual wheel weights and, to prevent damage to your vehicle as well as our scales, do not allow that type of weighing.<cite> — CAT Scale, How To Weigh (motorhome)</cite></blockquote>
-  <p>If you need corner weights for tire loading or a weight-distribution hitch setup, CAT is the wrong tool. Dedicated public houses sometimes offer axle splits; portable wheel scales are a different product. RV owners on the Grand Design owners’ forum work around CAT’s three-platform limit by weighing the truck alone, then the combination, and subtracting to get pin or tongue weight — that is owner math, not a CAT corner-weight service.</p>
+  <p>If you need corner weights for tire loading or a weight-distribution hitch setup, CAT is the wrong tool. Dedicated public houses sometimes offer axle splits; portable wheel scales are a different product. RV owners on the Grand Design owners’ forum work around CAT’s three-platform limit by weighing the truck alone, then the combination, and subtracting to get pin or tongue weight — that is owner math, not a CAT corner-weight service. Our <a href="/guides/tongue-weight/">tongue weight guide</a> walks through that math.</p>
   <p class="cite">Sources: <a href="https://catscale.com/how-to-weigh/">catscale.com/how-to-weigh</a> · <a href="https://www.mygrandrv.com/threads/weighing-on-a-cat-scale.52312/">Weighing on a CAT Scale? (Grand Design forum, 2020)</a></p>
 
   <h2>The 2,000 lb floor</h2>
@@ -4798,8 +4814,135 @@ def page_guide_ppm_tickets():
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets in Southern California</a></li>
       <li><a href="/how-to-weigh-an-rv/">How CAT’s three platforms work</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+GUIDE_TONGUE_FAQ = [
+    ("Can a CAT Scale weigh my trailer tongue directly?",
+     "No. A CAT Scale reads platform weights, not the load on your hitch ball. You find tongue weight by comparing two weighs of the tow vehicle: once hitched and once alone. The difference on the tow vehicle’s axles is the weight the trailer was putting on it."),
+    ("What should tongue weight be on a travel trailer?",
+     "Follow your tow vehicle and trailer manuals first. Nissan’s 2026 towing guide, for example, says to keep conventional tongue load between 10% and 15% of the actual trailer weight and never above the vehicle’s maximum tongue load. Fifth-wheel and gooseneck hitches use different ranges, so check your own manual."),
+    ("Is the trailer’s dry weight good enough?",
+     "No. Oregon DOT’s towing brochure notes that manufacturers often publish a dry or empty weight, but to choose a tow vehicle and hitch you need to know what the trailer weighs fully loaded. Weigh it packed the way you travel."),
+    ("Do I have to unhook the trailer on the scale?",
+     "No, and you should not. Weigh the combination, pull off, drop the trailer somewhere you are allowed to park, and come back for a reweigh of the tow vehicle alone. Ask the fuel desk where you may unhook."),
+    ("Does a weight-distributing hitch change the numbers?",
+     "Yes. Oregon DOT explains that a weight-distributing hitch spreads tongue weight across the tow vehicle and trailer axles. The bars move load between axles, so a weigh with bars engaged shows how your axles are loaded, not the full tongue weight. Weigh once with the bars engaged to check axle ratings."),
+    ("What if my trailer and truck are under 2,000 lb?",
+     "CAT says its scales are set to a 2,000 lb threshold, so a small utility trailer on its own may not register. Weigh it hitched, or use a dedicated public scale house. Call CAT’s help desk at 1-877-228-7225, ext. 6, if you are unsure."),
+]
+
+
+def guide_tongue_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_TONGUE_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_tongue():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_TONGUE_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · Travel trailer · Tongue weight</p>
+    <h1>How to weigh a travel trailer and check tongue weight at a CAT Scale</h1>
+    <p class="lede">A truck-stop scale can tell you what your loaded travel trailer, horse trailer, boat or utility trailer really weighs, and how much of it is sitting on your hitch. It takes two passes over the scale and a little subtraction. Here is the method, the numbers to compare against, and where to find a scale.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>This guide uses CAT Scale’s own <a href="https://catscale.com/how-to-weigh/">How To Weigh</a> page, the Oregon DOT / NHTSA brochure <a href="https://www.oregon.gov/ODOT/Safety/Documents/TowingATrailer.pdf">Towing a Trailer: Being Equipped for Safety</a>, and Nissan’s <a href="https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-towing-guide.pdf">2026 Towing Guide</a>, read on 29 Oct 2026. Your own vehicle and trailer manuals always win. WeighHere is independent and not affiliated with CAT Scale Company.</p>
+  </div>
+
+  <h2>Why the sticker weight is not enough</h2>
+  <p>Trailer brochures usually quote a dry weight. Oregon DOT’s towing brochure says that figure is not what matters: to pick a tow vehicle and hitch, you need to know how much the trailer weighs fully loaded, including water, propane, gear, a boat or motorcycle, and anything else you carry. The only way to know that number is to weigh the trailer packed the way you travel.</p>
+  <p>Tongue weight matters just as much. Oregon DOT calls it the amount of the trailer’s weight that presses down on the hitch. Too little can make the trailer sway. Too much can take weight off the tow vehicle’s front wheels so it steers less well.</p>
+
+  <h2>The ratings you are checking against</h2>
+  <p>Find these on the tow vehicle’s door-jamb label, in its owner’s manual, and on the trailer’s VIN label. Oregon DOT defines them this way:</p>
+  <table>
+    <thead><tr><th>Rating</th><th>What it limits</th></tr></thead>
+    <tbody>
+      <tr><td>GVWR (gross vehicle weight rating)</td><td>What the tow vehicle may weigh fully loaded, including the tongue weight it carries</td></tr>
+      <tr><td>GCWR (gross combination weight rating)</td><td>The tow vehicle, trailer, passengers, equipment and fuel together</td></tr>
+      <tr><td>GAWR (gross axle weight rating)</td><td>What a single axle can carry. Oregon DOT says the rating on the certification label must not be exceeded</td></tr>
+      <tr><td>Towing capacity and max tongue weight</td><td>Listed in the owner’s manual and can vary with equipment</td></tr>
+    </tbody>
+  </table>
+  <p>For a conventional ball-hitch trailer, Nissan’s 2026 towing guide says to keep tongue load between 10% and 15% of the actual trailer weight, and never above the vehicle’s maximum tongue load. It adds that some trailers need different numbers, so follow the trailer maker. Fifth-wheels and goosenecks use different ranges; check your manual.</p>
+
+  <h2>Step 1: weigh the whole rig</h2>
+  <p>Load everything as you would for a trip, with full tanks if you travel that way. CAT’s instructions for a truck and trailer are to get the whole combination on the scale with the steer axle on platform 1 and the drive or rear axle on platform 2. The trailer will normally show up on platform 3. For a truck and boat, and for a truck and fifth-wheel, CAT gives the same positions.</p>
+  <p>Press the intercom button, tell the weighmaster it is a first weigh, and say you will be back for a reweigh. Then pull off and pay inside. Our <a href="/guides/cat-scale-cost/">CAT Scale cost guide</a> has current prices, including the cheaper reweigh.</p>
+  <p>From this ticket you get:</p>
+  <ul>
+    <li><strong>Gross combined weight:</strong> the total of all three platforms. Compare it with the tow vehicle’s GCWR.</li>
+    <li><strong>Tow vehicle axles, hitched:</strong> platforms 1 and 2. Compare each with its GAWR, and their sum with the tow vehicle’s GVWR.</li>
+    <li><strong>Trailer axles:</strong> platform 3. Compare it with the trailer’s axle ratings.</li>
+  </ul>
+  <p>If you use a weight-distributing hitch, do this pass with the bars set the way you tow. Oregon DOT notes that the hitch shifts tongue weight among all the axles, which is exactly what you want to check here.</p>
+
+  <h2>Step 2: weigh the tow vehicle alone</h2>
+  <p>Unhook the trailer somewhere you are allowed to leave it. Do not unhook on the scale. Ask the fuel desk where you may drop it. Then drive the tow vehicle back on with the steer axle on platform 1 and the rear axle on platform 2, and ask for a reweigh.</p>
+  <p>Keep the same people and cargo in the vehicle for both passes, or the subtraction will be off.</p>
+
+  <h2>Step 3: do the math</h2>
+  <table>
+    <thead><tr><th>You want</th><th>Calculation</th></tr></thead>
+    <tbody>
+      <tr><td>Tongue weight (what the hitch carries)</td><td>Tow vehicle hitched (platforms 1 + 2, first ticket) minus tow vehicle alone (reweigh)</td></tr>
+      <tr><td>Loaded trailer weight</td><td>Gross combined weight minus tow vehicle alone</td></tr>
+      <tr><td>Tongue weight as a share of trailer weight</td><td>Tongue weight ÷ loaded trailer weight × 100</td></tr>
+    </tbody>
+  </table>
+  <p>Nissan’s guide gives its own example: for a 1,500 lb trailer, 10% is 150 lb. Run the same multiplication on your loaded trailer weight to get your target range, then compare your measured tongue weight. If you are low, Nissan says to move some load forward. If you are high, move load back or lighten the trailer, and stay under your vehicle’s maximum tongue load either way.</p>
+  <p>With a weight-distributing hitch engaged, the first ticket shows how load is spread, not the full tongue weight. If you need the true tongue number, do an extra pass with the bars released before you unhook.</p>
+
+  <h2>What a CAT Scale will not do</h2>
+  <ul>
+    <li><strong>Wheel or corner weights.</strong> CAT says its scales give axle and gross weights but cannot weigh each corner, and it does not allow that kind of weighing. For side-to-side balance you need a separate wheel-position weighing service. See our <a href="/how-to-weigh-an-rv/">RV and fifth-wheel page</a>.</li>
+    <li><strong>Very light loads.</strong> CAT scales are set to a 2,000 lb threshold. An empty utility trailer by itself may not read. See <a href="/cat-2000-lb-minimum/">CAT’s 2,000 lb minimum</a>.</li>
+    <li><strong>Ticket edits.</strong> CAT says a printed ticket is a legal document and cannot be altered afterward.</li>
+  </ul>
+  <p>Hauling animals? Read <a href="/horse-trailer/">weighing a horse trailer</a> before you pull into a busy truck stop. And a highway weigh station is not where you go for this. See <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>.</p>
+
+  <h2>Find a scale near you</h2>
+  <p>Every WeighHere listing links to its source. Popular areas for RV and trailer owners:</p>
+  <ul>
+    <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/san-diego/">San Diego</a>, <a href="/sacramento/">Sacramento</a>, <a href="/coachella/">Coachella Valley</a></li>
+    <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg</a></li>
+    <li>Utah, Idaho and the Northwest: <a href="/st-george-cedar-city/">St. George / Cedar City</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley</a>, <a href="/portland-troutdale/">Portland / Troutdale</a>, <a href="/spokane-post-falls/">Spokane / Post Falls</a></li>
+  </ul>
+  <p>See <a href="/">all WeighHere areas</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <p class="cite">Sources: <a href="https://catscale.com/how-to-weigh/">CAT Scale, How To Weigh</a> · <a href="https://www.oregon.gov/ODOT/Safety/Documents/TowingATrailer.pdf">Oregon DOT, Towing a Trailer: Being Equipped for Safety (PDF)</a> · <a href="https://www.nissanusa.com/content/dam/Nissan/us/manuals-and-guides/shared/2026/2026-nissan-towing-guide.pdf">Nissan 2026 Towing Guide (PDF)</a>. Read 29 Oct 2026.</p>
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
     </ul>
   </div>
 </div>
@@ -4924,6 +5067,7 @@ def page_guide_cat_cost():
     <ul>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -4969,7 +5113,7 @@ def page_horse():
   <h2>What to weigh, and in what order</h2>
   <ol>
     <li>Empty trailer (or empty truck + trailer) on a quiet day — true empty, not brochure dry weight.</li>
-    <li>Travel-day load: horses on, hay, water, tack. Stay hooked. CAT will not give per-corner numbers; pin/tongue weight is a second weigh of the truck or owner math.</li>
+    <li>Travel-day load: horses on, hay, water, tack. Stay hooked. CAT will not give per-corner numbers; pin/tongue weight is a second weigh of the truck or owner math (see <a href="/guides/tongue-weight/">how to check tongue weight</a>).</li>
     <li>Compare truck GVWR, payload (door sticker), trailer GVWR, and GCWR. Close is not fine.</li>
   </ol>
   <p>CAT cannot legally-for-trade a corner weight. Do not try to perch one wheel on a CAT platform.</p>
@@ -6051,6 +6195,16 @@ def main():
         "../../",
         page_guide_cat_cost(),
         guide_cat_faq_jsonld(),
+        gear=False,
+    )
+    write(
+        ROOT / "guides" / "tongue-weight" / "index.html",
+        "How to Weigh a Travel Trailer and Check Tongue Weight | WeighHere",
+        "Weigh a loaded travel trailer at a CAT Scale and work out tongue weight with two passes. GVWR, GCWR, GAWR and the 10-15% tongue rule, from official sources.",
+        "tongue",
+        "../../",
+        page_guide_tongue(),
+        guide_tongue_faq_jsonld(),
         gear=False,
     )
     write(
