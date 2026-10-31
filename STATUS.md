@@ -1,12 +1,13 @@
-# WeighHere status — 29 Oct 2026
+# WeighHere status — 30 Oct 2026
 
-Compiled evening PT 29 Oct 2026 (nightly ship).
+Compiled evening PT 30 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **241** | +2 Tucumcari / Glenrio CAT (Love’s #262, TA Glenrio #0471) |
+| **Total rows in `data/stations.json`** | **243** | +2 Belen / Truth or Consequences CAT (Love’s #726, Love’s #1045) |
+| Belen / Truth or Consequences / I-25 (NM) | 2 | new 30 Oct |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -74,25 +75,28 @@ Compiled evening PT 29 Oct 2026 (nightly ship).
 
 ## What shipped tonight
 
-**Tucumcari / Glenrio / I-40** (`/tucumcari-glenrio/`): fifth New Mexico page, closes the east-I-40 run to the Texas line. Both verified tonight (29 Oct) on the operators’ own pages.
+**Belen / Truth or Consequences / I-25** (`/belen-truth-or-consequences/`): sixth New Mexico page, first on central I-25, fills the Albuquerque–Las Cruces gap. Both verified tonight (30 Oct) on Love’s own pages.
 
-- **Love’s #262 Tucumcari** — 1900 Mountain Rd, Tucumcari NM 88401, I-40 Exit 333 — CAT Scales in amenities; Store Open 24-hours, Truck Care Open 24-hours; (575) 461-1900; geo 35.158604, -103.701308.
-- **TA Glenrio #0471** — 1583 Frontage Rd 4132, Glenrio NM 88434, I-40 Exit 369 — CAT Scale in amenities; only restaurant hours printed (some days “Call For Hours”), `hours_24h` unknown; (575) 288-9968; geo 35.175246, -103.104073.
-- Excluded: Love’s #285 Santa Rosa (Exit 277) — amenities list omits CAT Scales. Pilot Flying J has no Tucumcari store page.
+- **Love’s #726 Belen** — 1903 Camino Del Llano, Belen NM 87002, I-25 Exit 191 — CAT Scales in amenities; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (505) 864-6107; geo 34.652601, -106.793411. County slug `valencia`.
+- **Love’s #1045 Truth or Consequences** — 224 Dr Hubble Rd, Truth or Consequences NM 87901, I-25 Exit 79 — CAT Scales in amenities; Store Open 24-hours; (575) 297-6012; geo 33.155286, -107.258575. County slug `sierra`.
+- Checked, no CAT in amenities: Love’s #733 Las Vegas NM (I-25 Exit 347), Love’s #22 Clayton (US-87).
+- TA Springer (I-25 Exit 419) own page confirmed CAT Scale tonight but held — needs a second north-I-25 stop before an I-25 north page (Las Vegas NM has no CAT).
 
-Wiring: new `tucumcari_glenrio_body()` + `write()` in `build.py`, NAV (`tg`), footer, 404/home lede hub list, PPM guide New Mexico line, Moriarty gap/section note + Related, Albuquerque and AZ Related lists, `tools/seo.py` PLACES, ADDING_A_PAGE county table. County slug `quay`. `CHECKED_HUMAN` → 29 Oct 2026. stations.json 241 rows.
+Wiring: new `belen_truth_or_consequences_body()` + `write()` in `build.py`, NAV (`btc`), footer, 404 lede hub list, PPM guide New Mexico line, Flagstaff related, Albuquerque and Las Cruces gap notes + Related, `tools/seo.py` PLACES, ADDING_A_PAGE county table. `CHECKED_HUMAN` → 30 Oct 2026. stations.json 243 rows.
 
-Previous ship (28 Oct): `/las-cruces-deming-lordsburg/` — Love’s #259, Pilot #266, TA #0014 Las Cruces; Petro Deming #0385; Pilot #163, Flying J #690, Love’s #276 Lordsburg.
+Previous ship (29 Oct): `/tucumcari-glenrio/` — Love’s #262 Tucumcari, TA Glenrio #0471.
 
 ## Sources used (this compile)
 
-- Love’s #262 Tucumcari: https://www.loves.com/locations/nm/tucumcari/loves-travel-stop-tucumcari-262
-- TA Glenrio #0471: https://www.ta-petro.com/location/nm/ta-glenrio/
-- Love’s #285 Santa Rosa (no CAT): https://www.loves.com/locations/nm/santa-rosa/loves-travel-stop-santa-rosa-285
-- TA NM index (also lists TA Springer, I-25 Exit 419, CAT Scale in amenities): https://www.ta-petro.com/location/nm/
+- Love’s #726 Belen: https://www.loves.com/locations/nm/belen/loves-travel-stop-belen-726
+- Love’s #1045 Truth or Consequences: https://www.loves.com/locations/nm/truth-or-consequences/loves-travel-stop-truth-or-consequences-1045
+- Love’s #733 Las Vegas NM (no CAT): https://www.loves.com/locations/nm/las-vegas/loves-travel-stop-las-vegas-733
+- Love’s #22 Clayton (no CAT): https://www.loves.com/locations/nm/clayton/loves-travel-stop-clayton-22
+- TA Springer (CAT, held): https://www.ta-petro.com/location/nm/ta-springer/
 
 ## Gaps / deferred
 
+- Belen / Truth or Consequences I-25: shipped 30 Oct; no dedicated house; CAT staffing hours unpublished; Los Lunas and Socorro own pages not checked; Pilot/TA have no verified central-I-25 NM CAT. I-25 north (Springer / Raton / Santa Fe) needs a second CAT stop beside TA Springer; Love’s Clovis #329/#760 still unchecked
 - Las Cruces / Deming / Lordsburg I-10: shipped 28 Oct; no dedicated house; CAT staffing hours unpublished; TA Las Cruces / Petro Deming publish only fuel 24/7 (no store statement); ONE9 #1489 Deming lists no amenities; I-25 Los Lunas / Socorro / T or C unchecked; TA Glenrio #0471 (I-40 Exit 369, CAT in amenities) and TA Springer seen on TA’s NM index — candidates for an east-I-40 / I-25 north page
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
 - Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement; Los Lunas / Socorro / Las Cruces on I-25 unchecked

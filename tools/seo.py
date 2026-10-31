@@ -82,6 +82,7 @@ PLACES = {
     "albuquerque": ("Albuquerque, NM", "New Mexico"),
     "moriarty-santa-rosa": ("Moriarty & Santa Rosa, NM", "New Mexico"),
     "tucumcari-glenrio": ("Tucumcari & Glenrio, NM", "New Mexico"),
+    "belen-truth-or-consequences": ("Belen & Truth or Consequences, NM", "New Mexico"),
     "las-cruces-deming-lordsburg": ("Las Cruces, Deming & Lordsburg, NM", "New Mexico"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
