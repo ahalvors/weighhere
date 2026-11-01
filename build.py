@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "30 Oct 2026"
+CHECKED_HUMAN = "31 Oct 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -35,6 +35,7 @@ NAV = [
     ("/moriarty-santa-rosa/", "Moriarty / Santa Rosa / I-40 (NM)", "msr"),
     ("/tucumcari-glenrio/", "Tucumcari / Glenrio / I-40 (NM)", "tg"),
     ("/belen-truth-or-consequences/", "Belen / Truth or Consequences / I-25 (NM)", "btc"),
+    ("/clovis-hobbs-eunice/", "Clovis / Hobbs / Eunice (eastern NM)", "che"),
     ("/las-cruces-deming-lordsburg/", "Las Cruces / Deming / Lordsburg / I-10 (NM)", "lcdl"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
@@ -186,6 +187,7 @@ def footer(rel="."):
         <li><a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 (NM)</a></li>
         <li><a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a></li>
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
+        <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
@@ -4339,6 +4341,7 @@ def tucumcari_glenrio_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM) public scales</a></li>
       <li><a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 public scales</a></li>
       <li><a href="/albuquerque/">Albuquerque / I-40 · I-25 public scales</a></li>
       <li><a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 public scales</a></li>
@@ -4419,6 +4422,73 @@ def belen_truth_or_consequences_body():
 </div>
 </main>
 """ + map_script(btc)
+
+
+def clovis_hobbs_eunice_body():
+    order_cat = [
+        "loves-329-clovis",
+        "pilot-557-hobbs",
+        "loves-760-eunice",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    che = cat
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(che)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in eastern New Mexico yet</h2>
+    <p>We have not found a walk-up public scale house in Clovis, Portales, Hobbs, Lovington or Eunice with an operator page we can cite. We are not inventing one from feed lots, dairies, oilfield yards, gravel pits, landfill gate scales, or third-party trucker directories. All three stops below are CAT Scales at truck stops, verified on Love’s and Pilot’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Clovis · Hobbs · Eunice · Curry &amp; Lea Counties NM · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in eastern New Mexico (Clovis, Hobbs &amp; Eunice)</h1>
+    <p class="lede">Three CAT Scales verified on the operators’ <em>own</em> location pages along the Texas line in eastern New Mexico: Love’s #329 Clovis on US-60, Pilot #557 Hobbs on US-62 / US-180, and Love’s #760 Eunice on NM-18. Useful for U-Haul and PPM moves to or from Cannon AFB, RVs and fifth-wheels crossing to Lubbock or Midland–Odessa, and horse and stock trailers in dairy and ranch country.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Curry &amp; Lea Counties NM</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales in eastern New Mexico</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. All three pages list a CAT Scale and say the store is open 24 hours; none publishes a CAT-staffing schedule. Clovis is about 140 miles north of Hobbs, so these are separate weigh points rather than one cluster: Clovis covers US-60 / US-84 and Cannon AFB, Hobbs and Eunice cover the Lea County oilfield. North on US-54 / I-40, the nearest verified stop is Love’s #262 Tucumcari on <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40</a>. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>New Mexico ports of entry on US-60, US-62 and the other Texas-line crossings are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Curry, Roosevelt, Lea, Eddy or Chaves County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all three stops. Roswell, Artesia and Carlsbad stops have no own-page CAT verified yet. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329">Love’s #329 Clovis</a> · <a href="https://locations.pilotflyingj.com/us/nm/hobbs/3710-w-carlsbad-hwy">Pilot #557 Hobbs</a> · <a href="https://www.loves.com/locations/nm/eunice/loves-travel-stop-eunice-760">Love’s #760 Eunice</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 public scales</a></li>
+      <li><a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 public scales</a></li>
+      <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(che)
 
 
 def antelope_valley_body():
@@ -4858,7 +4928,7 @@ def page_guide_ppm_tickets():
     <li>Southern California: <a href="/san-diego/">San Diego County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/los-angeles/">Los Angeles County</a>, <a href="/i-15/">I-15 / High Desert (Barstow, Hesperia)</a>, <a href="/mojave/">Mojave / Boron / Tehachapi</a></li>
     <li>Northern and Central California: <a href="/sacramento/">Sacramento approaches</a>, <a href="/highway-99/">Stockton / Lodi</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/bakersfield/">Bakersfield</a></li>
     <li>Arizona: <a href="/phoenix/">Phoenix metro</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma</a></li>
-    <li>New Mexico: <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10</a></li>
+    <li>New Mexico: <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10</a>, <a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
     <li>Nevada: <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley</a></li>
     <li>Utah, Idaho, Washington and Oregon: <a href="/brigham-ogden/">Ogden / Brigham City</a>, <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise / Mountain Home / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / I-5</a></li>
   </ul>
@@ -6070,6 +6140,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "clovis-hobbs-eunice" / "index.html",
+        "Clovis / Hobbs / Eunice public scales — CAT in eastern New Mexico | WeighHere",
+        "Three CAT Scales verified on operators’ own pages in eastern New Mexico: Love’s #329 Clovis (US-60), Pilot #557 Hobbs (US-62) and Love’s #760 Eunice (NM-18). For U-Haul, PPM, RV and horse trailers.",
+        "che",
+        "../",
+        clovis_hobbs_eunice_body(),
+        leaflet,
+    )
+    write(
         ROOT / "belen-truth-or-consequences" / "index.html",
         "Belen / Truth or Consequences / I-25 public scales — CAT in central New Mexico | WeighHere",
         "Two CAT Scales verified on Love’s own pages on I-25 between Albuquerque and Las Cruces: Love’s #726 Belen (Exit 191) and Love’s #1045 Truth or Consequences (Exit 79). For U-Haul, PPM, RV and horse trailers.",
@@ -6355,7 +6434,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 (NM)</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 (NM)</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a>, <a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",

@@ -1,13 +1,14 @@
-# WeighHere status — 30 Oct 2026
+# WeighHere status — 31 Oct 2026
 
-Compiled evening PT 30 Oct 2026 (nightly ship).
+Compiled evening PT 31 Oct 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **243** | +2 Belen / Truth or Consequences CAT (Love’s #726, Love’s #1045) |
-| Belen / Truth or Consequences / I-25 (NM) | 2 | new 30 Oct |
+| **Total rows in `data/stations.json`** | **246** | +3 Clovis / Hobbs / Eunice CAT (Love’s #329, Pilot #557, Love’s #760) |
+| Clovis / Hobbs / Eunice (eastern NM) | 3 | new 31 Oct |
+| Belen / Truth or Consequences / I-25 (NM) | 2 | 30 Oct |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
 | Inland Empire (Riverside + San Bernardino filter) | 23 | unchanged |
@@ -70,33 +71,34 @@ Compiled evening PT 30 Oct 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 177 | +2 Tucumcari / Glenrio |
+| CAT / truck-stop cards | 182 | +3 Clovis / Hobbs / Eunice |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
-**Belen / Truth or Consequences / I-25** (`/belen-truth-or-consequences/`): sixth New Mexico page, first on central I-25, fills the Albuquerque–Las Cruces gap. Both verified tonight (30 Oct) on Love’s own pages.
+**Clovis / Hobbs / Eunice** (`/clovis-hobbs-eunice/`): seventh New Mexico page, first in eastern NM off the interstates (Curry and Lea Counties, Texas line). All three verified tonight (31 Oct) on operators’ own pages.
 
-- **Love’s #726 Belen** — 1903 Camino Del Llano, Belen NM 87002, I-25 Exit 191 — CAT Scales in amenities; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (505) 864-6107; geo 34.652601, -106.793411. County slug `valencia`.
-- **Love’s #1045 Truth or Consequences** — 224 Dr Hubble Rd, Truth or Consequences NM 87901, I-25 Exit 79 — CAT Scales in amenities; Store Open 24-hours; (575) 297-6012; geo 33.155286, -107.258575. County slug `sierra`.
-- Checked, no CAT in amenities: Love’s #733 Las Vegas NM (I-25 Exit 347), Love’s #22 Clayton (US-87).
-- TA Springer (I-25 Exit 419) own page confirmed CAT Scale tonight but held — needs a second north-I-25 stop before an I-25 north page (Las Vegas NM has no CAT).
+- **Love’s #329 Clovis** — 4700 Mabry Dr., Clovis NM 88101, US-60 at the County Road G exit — CAT Scales in amenities; Store Open 24-hours; (575) 762-2966; geo 34.394791, -103.144305. County slug `curry`.
+- **Pilot #557 Hobbs** — 3710 W Carlsbad Hwy, Hobbs NM 88240, US-62 / US-180 — CAT Scale (offering code 318) in the store’s own offerings list on Pilot’s page (the visible "Services" text with CAT on that page belongs to nearby TX stores, so check the store’s own offerings array); Open 24 Hours; (575) 391-0120; geo 32.697805, -103.183759. County slug `lea`.
+- **Love’s #760 Eunice** — 16 Andrews Hwy, Eunice NM 88231, NM-18 at the Hwy 234 / Andrews exit — CAT Scales in amenities; Store Open 24-Hours; RV hookups / dump; (575) 394-0015; geo 32.434398, -103.121134. County slug `lea`. Love’s all-locations list still files #760 under Clovis; its own page says Eunice.
+- Found while checking (not on site yet): Love’s #614 Albuquerque (I-40 Exit 149) and Love’s #963 Albuquerque (I-25 Exit 221 / Sunport) both list CAT Scales — candidates to extend `/albuquerque/`. Love’s #257 Milan (I-40 Exit 79) lists CAT — candidate for `/gallup-milan/`. Love’s #817 Santa Teresa (NM-136) lists CAT — candidate for `/las-cruces-deming-lordsburg/` or a Santa Teresa / El Paso page. Love’s #210 Albuquerque (Exit 158) has no CAT.
 
-Wiring: new `belen_truth_or_consequences_body()` + `write()` in `build.py`, NAV (`btc`), footer, 404 lede hub list, PPM guide New Mexico line, Flagstaff related, Albuquerque and Las Cruces gap notes + Related, `tools/seo.py` PLACES, ADDING_A_PAGE county table. `CHECKED_HUMAN` → 30 Oct 2026. stations.json 243 rows.
+Wiring: new `clovis_hobbs_eunice_body()` + `write()` in `build.py`, NAV (`che`), footer, 404 lede hub list, PPM guide New Mexico line, Tucumcari Related, `tools/seo.py` PLACES, ADDING_A_PAGE county table. `CHECKED_HUMAN` → 31 Oct 2026. stations.json 246 rows.
 
-Previous ship (29 Oct): `/tucumcari-glenrio/` — Love’s #262 Tucumcari, TA Glenrio #0471.
+Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen, Love’s #1045 Truth or Consequences.
 
 ## Sources used (this compile)
 
-- Love’s #726 Belen: https://www.loves.com/locations/nm/belen/loves-travel-stop-belen-726
-- Love’s #1045 Truth or Consequences: https://www.loves.com/locations/nm/truth-or-consequences/loves-travel-stop-truth-or-consequences-1045
-- Love’s #733 Las Vegas NM (no CAT): https://www.loves.com/locations/nm/las-vegas/loves-travel-stop-las-vegas-733
-- Love’s #22 Clayton (no CAT): https://www.loves.com/locations/nm/clayton/loves-travel-stop-clayton-22
-- TA Springer (CAT, held): https://www.ta-petro.com/location/nm/ta-springer/
+- Love’s #329 Clovis: https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329
+- Pilot #557 Hobbs: https://locations.pilotflyingj.com/us/nm/hobbs/3710-w-carlsbad-hwy (redirects to pilotcompany.com/locations/us/nm/hobbs/3710-w-carlsbad-hwy)
+- Love’s #760 Eunice: https://www.loves.com/locations/nm/eunice/loves-travel-stop-eunice-760
+- Love’s #614 / #963 Albuquerque, #257 Milan, #817 Santa Teresa (CAT, held for extensions); #210 Albuquerque (no CAT): loves.com/locations/nm/... store pages
+- TA NM index (no eastern NM TA): https://www.ta-petro.com/location/nm/
 
 ## Gaps / deferred
 
-- Belen / Truth or Consequences I-25: shipped 30 Oct; no dedicated house; CAT staffing hours unpublished; Los Lunas and Socorro own pages not checked; Pilot/TA have no verified central-I-25 NM CAT. I-25 north (Springer / Raton / Santa Fe) needs a second CAT stop beside TA Springer; Love’s Clovis #329/#760 still unchecked
+- Clovis / Hobbs / Eunice: shipped 31 Oct; no dedicated house; CAT staffing hours unpublished; Roswell, Artesia, Carlsbad, Portales, Lovington own-page CAT not verified (no TA in eastern NM; Pilot Roswell/Carlsbad not searched). Next NM: add Love’s #614 + #963 to Albuquerque, Love’s #257 to Gallup / Milan, Love’s #817 Santa Teresa to Las Cruces
+- Belen / Truth or Consequences I-25: shipped 30 Oct; no dedicated house; CAT staffing hours unpublished; Los Lunas and Socorro own pages not checked; Pilot/TA have no verified central-I-25 NM CAT. I-25 north (Springer / Raton / Santa Fe) needs a second CAT stop beside TA Springer; Love’s Clovis #329 / Eunice #760 shipped 31 Oct on /clovis-hobbs-eunice/
 - Las Cruces / Deming / Lordsburg I-10: shipped 28 Oct; no dedicated house; CAT staffing hours unpublished; TA Las Cruces / Petro Deming publish only fuel 24/7 (no store statement); ONE9 #1489 Deming lists no amenities; I-25 Los Lunas / Socorro / T or C unchecked; TA Glenrio #0471 (I-40 Exit 369, CAT in amenities) and TA Springer seen on TA’s NM index — candidates for an east-I-40 / I-25 north page
 - Gallup / Milan I-40 NM: shipped 25 Oct; no dedicated house; CAT staffing hours unpublished; TA Gallup / Petro Milan publish no 24-hour store statement; ONE9 #1358 Gallup held (FAQ yes, own offerings omit CAT); Love’s #215 Gallup lists no CAT
 - Albuquerque: shipped 26 Oct; no dedicated house; CAT staffing hours unpublished; TA #0081 publishes no 24-hour store statement; Los Lunas / Socorro / Las Cruces on I-25 unchecked
