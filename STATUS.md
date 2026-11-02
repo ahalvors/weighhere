@@ -1,13 +1,14 @@
-# WeighHere status — 31 Oct 2026
+# WeighHere status — 1 Nov 2026
 
-Compiled evening PT 31 Oct 2026 (nightly ship).
+Compiled evening PT 1 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **246** | +3 Clovis / Hobbs / Eunice CAT (Love’s #329, Pilot #557, Love’s #760) |
-| Clovis / Hobbs / Eunice (eastern NM) | 3 | new 31 Oct |
+| **Total rows in `data/stations.json`** | **251** | +5 El Paso / Anthony / Santa Teresa CAT (Love’s #817, Love’s #447, Pilot #435, Flying J #728, Petro El Paso) |
+| El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | new 1 Nov — first Texas page |
+| Clovis / Hobbs / Eunice (eastern NM) | 3 | 31 Oct |
 | Belen / Truth or Consequences / I-25 (NM) | 2 | 30 Oct |
 | Los Angeles County | 46 | unchanged |
 | Orange County | 7 | unchanged |
@@ -71,10 +72,25 @@ Compiled evening PT 31 Oct 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 182 | +3 Clovis / Hobbs / Eunice |
+| CAT / truck-stop cards | 187 | +5 El Paso / Anthony / Santa Teresa |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**El Paso / Anthony / Santa Teresa** (`/el-paso-santa-teresa/`): first Texas page (El Paso County TX, plus Santa Teresa in Doña Ana County NM). All five verified tonight (1 Nov) on operators’ own pages.
+
+- **Love’s #817 Santa Teresa** — 2401 Airport Rd, Santa Teresa NM 88008, NM-136 at Airport Road — CAT Scales in amenities; Store Open 24-Hours; (575) 619-6090; geo 31.862229, -106.687231. County slug `dona-ana`.
+- **Love’s #447 Anthony TX** — 3000 Mountain Pass Blvd, Anthony TX 79821, I-10 Exit 0 — CAT Scales in amenities; Store Open 24-hours; (915) 886-3915; geo 31.997879, -106.581219. County slug `el-paso`.
+- **Pilot #435 Anthony TX** — 2015 Antonio St, Anthony TX 79821, I-10 Exit 0 — CAT (offering 318) in the store’s own offerings array; Open 24 Hours; status Open; phone left blank (Pilot shows only toll-free (833) 260-7867); geo 31.9965, -106.5862.
+- **Flying J #728 El Paso** — 1301 Horizon Blvd, El Paso TX 79928, I-10 Exit 37 — CAT (offering 318) in the store’s own offerings array; Open 24 Hours; (915) 852-4141; geo 31.6620526, -106.2380879.
+- **Petro El Paso** — 1295 Horizon Blvd, El Paso TX 79927, I-10 Exit 37 — CAT Scale in amenities; fuel 24/7 only, no store-hours statement; (915) 790-4529; geo 31.6609, -106.2424. TA page shows no store number.
+- Held: **Flying J #724 Anthony TX** (3001 Mountain Pass Blvd, I-10 Exit 0) lists CAT but Pilot’s data marks it "Temporarily Closed". Add when it reopens.
+
+Wiring: new `el_paso_santa_teresa_body()` + `write()` in `build.py`, NAV (`eps`), footer, 404 lede hub list, PPM guide (new Texas line), Las Cruces Related, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 1 Nov 2026.
+
+Previous ship (31 Oct): `/clovis-hobbs-eunice/` — Love’s #329 Clovis, Pilot #557 Hobbs, Love’s #760 Eunice.
+
+## Previous ship detail (31 Oct)
 
 **Clovis / Hobbs / Eunice** (`/clovis-hobbs-eunice/`): seventh New Mexico page, first in eastern NM off the interstates (Curry and Lea Counties, Texas line). All three verified tonight (31 Oct) on operators’ own pages.
 
@@ -89,6 +105,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- El Paso stops (1 Nov): https://www.loves.com/locations/nm/santa-teresa/loves-travel-stop-santa-teresa-817 · https://www.loves.com/locations/tx/anthony/loves-travel-stop-anthony-447 · https://pilotcompany.com/locations/us/tx/anthony/2015-antonio-st · https://pilotcompany.com/locations/us/tx/el-paso/1301-horizon-blvd · https://www.ta-petro.com/location/tx/petro-el-paso/ · held: https://pilotcompany.com/locations/us/tx/anthony/3001-mountain-pass-blvd
 - Love’s #329 Clovis: https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329
 - Pilot #557 Hobbs: https://locations.pilotflyingj.com/us/nm/hobbs/3710-w-carlsbad-hwy (redirects to pilotcompany.com/locations/us/nm/hobbs/3710-w-carlsbad-hwy)
 - Love’s #760 Eunice: https://www.loves.com/locations/nm/eunice/loves-travel-stop-eunice-760
@@ -97,6 +114,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- El Paso / Anthony / Santa Teresa: shipped 1 Nov; no dedicated house; CAT staffing hours unpublished; Petro El Paso store hours unpublished; Flying J #724 Anthony temporarily closed (held); Clint / Fabens / Van Horn / Fort Hancock east on I-10 unchecked. Next: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`, then Van Horn / Pecos or Amarillo for more Texas pages
 - Clovis / Hobbs / Eunice: shipped 31 Oct; no dedicated house; CAT staffing hours unpublished; Roswell, Artesia, Carlsbad, Portales, Lovington own-page CAT not verified (no TA in eastern NM; Pilot Roswell/Carlsbad not searched). Next NM: add Love’s #614 + #963 to Albuquerque, Love’s #257 to Gallup / Milan, Love’s #817 Santa Teresa to Las Cruces
 - Belen / Truth or Consequences I-25: shipped 30 Oct; no dedicated house; CAT staffing hours unpublished; Los Lunas and Socorro own pages not checked; Pilot/TA have no verified central-I-25 NM CAT. I-25 north (Springer / Raton / Santa Fe) needs a second CAT stop beside TA Springer; Love’s Clovis #329 / Eunice #760 shipped 31 Oct on /clovis-hobbs-eunice/
 - Las Cruces / Deming / Lordsburg I-10: shipped 28 Oct; no dedicated house; CAT staffing hours unpublished; TA Las Cruces / Petro Deming publish only fuel 24/7 (no store statement); ONE9 #1489 Deming lists no amenities; I-25 Los Lunas / Socorro / T or C unchecked; TA Glenrio #0471 (I-40 Exit 369, CAT in amenities) and TA Springer seen on TA’s NM index — candidates for an east-I-40 / I-25 north page
