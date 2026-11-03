@@ -1,13 +1,14 @@
-# WeighHere status — 1 Nov 2026
+# WeighHere status — 2 Nov 2026
 
-Compiled evening PT 1 Nov 2026 (nightly ship).
+Compiled evening PT 2 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **251** | +5 El Paso / Anthony / Santa Teresa CAT (Love’s #817, Love’s #447, Pilot #435, Flying J #728, Petro El Paso) |
-| El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | new 1 Nov — first Texas page |
+| **Total rows in `data/stations.json`** | **257** | +6 Amarillo CAT (Love’s #250, Love’s #200, TA #0055, Petro #0307, Pilot #436, Flying J #723) |
+| Amarillo / I-40 (TX) | 6 | new 2 Nov — second Texas page |
+| El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | 1 Nov — first Texas page |
 | Clovis / Hobbs / Eunice (eastern NM) | 3 | 31 Oct |
 | Belen / Truth or Consequences / I-25 (NM) | 2 | 30 Oct |
 | Los Angeles County | 46 | unchanged |
@@ -72,10 +73,27 @@ Compiled evening PT 1 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 187 | +5 El Paso / Anthony / Santa Teresa |
+| CAT / truck-stop cards | 193 | +6 Amarillo |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Amarillo** (`/amarillo/`): second Texas page (Potter County; all six geocode to Potter via the Census geocoder). All six verified tonight (2 Nov) on operators’ own pages.
+
+- **Love’s #250 Amarillo (west)** — 14701 I-40 W, Amarillo TX 79124, I-40 Exit 60 — CAT Scales in amenities; Store Open 24-Hours; RV hookup/dump; (806) 358-2551; geo 35.187837, -102.011289.
+- **Love’s #200 Amarillo (east)** — 6930 I-40 E, Amarillo TX 79120, I-40 Exit 74 / Whitaker Rd — CAT Scales in amenities; Store + Truck Care Open 24-hours; (806) 373-7775; geo 35.191927, -101.760945.
+- **TA Amarillo #0055** — 7000 E Interstate 40, Amarillo TX 79118, I-40 Exit 74 — CAT Scale under Other Amenities; fuel 24/7 only, no store-hours statement; (806) 342-3080; geo 35.1915, -101.7589.
+- **Petro Amarillo #0307** — 8500 E I-40 at Lakeside Dr, Amarillo TX 79118, I-40 Exit 75 — CAT Scale under Other Amenities; fuel 24/7 only, no store-hours statement; (806) 372-4899; geo 35.1917, -101.7437.
+- **Pilot #436 Amarillo** — 715 S Lakeside Dr, Amarillo TX 79118, I-40 Exit 75 — CAT (offering 318) in the store’s own offerings array (the Southern Tire Mart sub-listing at the same address has no CAT — ignore it); status Open; is24Hours true; (806) 335-3323; geo 35.195618, -101.741115.
+- **Flying J #723 Amarillo** — 9601 E I-40, Amarillo TX 79118, I-40 Exit 76 — CAT (offering 318) in own offerings; status Open; is24Hours true; (806) 335-1475; geo 35.194246, -101.723823.
+- Checked, no CAT: Love’s #261 Amarillo (I-27 Exit 115/116, Canyon Dr), Love’s #229 Claude (I-40 Exit 96). Love’s station-code list files Store 721 under Amarillo, but its own page is Alma TX (I-45) — ignore.
+- Pilot’s nearby data shows Pilot 6555 US-385 (Vega area, I-40 / US-385, CAT 318) — candidate to extend `/amarillo/` west after an own-page check.
+
+Wiring: new `amarillo_body()` + `write()` in `build.py`, NAV (`ama`), footer, 404 lede hub list, PPM guide Texas line, El Paso + Tucumcari Related, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 2 Nov 2026.
+
+Previous ship (1 Nov): `/el-paso-santa-teresa/` — Love’s #817, Love’s #447, Pilot #435, Flying J #728, Petro El Paso.
+
+## Previous ship detail (1 Nov)
 
 **El Paso / Anthony / Santa Teresa** (`/el-paso-santa-teresa/`): first Texas page (El Paso County TX, plus Santa Teresa in Doña Ana County NM). All five verified tonight (1 Nov) on operators’ own pages.
 
@@ -88,7 +106,6 @@ Compiled evening PT 1 Nov 2026 (nightly ship).
 
 Wiring: new `el_paso_santa_teresa_body()` + `write()` in `build.py`, NAV (`eps`), footer, 404 lede hub list, PPM guide (new Texas line), Las Cruces Related, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 1 Nov 2026.
 
-Previous ship (31 Oct): `/clovis-hobbs-eunice/` — Love’s #329 Clovis, Pilot #557 Hobbs, Love’s #760 Eunice.
 
 ## Previous ship detail (31 Oct)
 
@@ -105,6 +122,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Amarillo stops (2 Nov): https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-250 · https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-200 · https://www.ta-petro.com/location/tx/ta-amarillo/ · https://www.ta-petro.com/location/tx/petro-amarillo/ · https://pilotcompany.com/locations/us/tx/amarillo/715-s-lakeside-dr · https://pilotcompany.com/locations/us/tx/amarillo/9601-e-i-40 · no CAT: loves-travel-stop-amarillo-261, loves-travel-stop-claude-229 · county check: geocoding.geo.census.gov
 - El Paso stops (1 Nov): https://www.loves.com/locations/nm/santa-teresa/loves-travel-stop-santa-teresa-817 · https://www.loves.com/locations/tx/anthony/loves-travel-stop-anthony-447 · https://pilotcompany.com/locations/us/tx/anthony/2015-antonio-st · https://pilotcompany.com/locations/us/tx/el-paso/1301-horizon-blvd · https://www.ta-petro.com/location/tx/petro-el-paso/ · held: https://pilotcompany.com/locations/us/tx/anthony/3001-mountain-pass-blvd
 - Love’s #329 Clovis: https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329
 - Pilot #557 Hobbs: https://locations.pilotflyingj.com/us/nm/hobbs/3710-w-carlsbad-hwy (redirects to pilotcompany.com/locations/us/nm/hobbs/3710-w-carlsbad-hwy)
@@ -114,6 +132,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Amarillo: shipped 2 Nov; no dedicated house; CAT staffing hours unpublished; TA #0055 / Petro #0307 store hours unpublished; Canyon, Vega (Pilot 6555 US-385 candidate), Hereford, Dumas (Love’s #626), Vega, Dalhart (Love’s #836) unchecked. Still pending: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`; Van Horn / Pecos / Fort Stockton (Love’s #542) for more I-10 Texas
 - El Paso / Anthony / Santa Teresa: shipped 1 Nov; no dedicated house; CAT staffing hours unpublished; Petro El Paso store hours unpublished; Flying J #724 Anthony temporarily closed (held); Clint / Fabens / Van Horn / Fort Hancock east on I-10 unchecked. Next: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`, then Van Horn / Pecos or Amarillo for more Texas pages
 - Clovis / Hobbs / Eunice: shipped 31 Oct; no dedicated house; CAT staffing hours unpublished; Roswell, Artesia, Carlsbad, Portales, Lovington own-page CAT not verified (no TA in eastern NM; Pilot Roswell/Carlsbad not searched). Next NM: add Love’s #614 + #963 to Albuquerque, Love’s #257 to Gallup / Milan, Love’s #817 Santa Teresa to Las Cruces
 - Belen / Truth or Consequences I-25: shipped 30 Oct; no dedicated house; CAT staffing hours unpublished; Los Lunas and Socorro own pages not checked; Pilot/TA have no verified central-I-25 NM CAT. I-25 north (Springer / Raton / Santa Fe) needs a second CAT stop beside TA Springer; Love’s Clovis #329 / Eunice #760 shipped 31 Oct on /clovis-hobbs-eunice/
