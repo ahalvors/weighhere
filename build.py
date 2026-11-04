@@ -258,6 +258,7 @@ def footer(rel="."):
         <li><a href="/guides/ppm-weight-tickets/">PPM weight tickets (U-Haul)</a></li>
         <li><a href="/guides/cat-scale-cost/">CAT Scale cost</a></li>
         <li><a href="/guides/tongue-weight/">Trailer &amp; tongue weight</a></li>
+        <li><a href="/guides/uhaul-truck-weight/">U-Haul truck weights</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3410,6 +3411,7 @@ def spokane_post_falls_i90_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3482,6 +3484,7 @@ def north_bend_ellensburg_i90_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3550,6 +3553,7 @@ def moses_lake_ritzville_i90_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3618,6 +3622,7 @@ def pasco_prosser_tri_cities_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3688,6 +3693,7 @@ def portland_troutdale_aurora_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3758,6 +3764,7 @@ def eugene_albany_roseburg_i5_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3827,6 +3834,7 @@ def ontario_baker_city_i84_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3896,6 +3904,7 @@ def madras_klamath_falls_us97_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3964,6 +3973,7 @@ def biggs_boardman_stanfield_i84_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4031,6 +4041,7 @@ def medford_central_point_i5_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4099,6 +4110,7 @@ def gallup_milan_i40_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4168,6 +4180,7 @@ def albuquerque_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4242,6 +4255,7 @@ def las_cruces_deming_lordsburg_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4309,6 +4323,7 @@ def moriarty_santa_rosa_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4377,6 +4392,7 @@ def tucumcari_glenrio_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4513,6 +4529,7 @@ def el_paso_santa_teresa_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4583,6 +4600,7 @@ def van_horn_fort_stockton_pecos_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4653,6 +4671,7 @@ def amarillo_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4720,6 +4739,7 @@ def clovis_hobbs_eunice_body():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5195,6 +5215,7 @@ def page_guide_ppm_tickets():
       <li><a href="/how-to-weigh-an-rv/">How CAT’s three platforms work</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
     </ul>
@@ -5330,6 +5351,123 @@ def page_guide_tongue():
 """
 
 
+GUIDE_UHAUL_FAQ = [
+    ("How much does an empty 26-foot U-Haul weigh?",
+     "U-Haul lists the 26-foot truck at 13,140 lb empty, with a 12,859 lb max load and a 25,999 lb gross vehicle weight rating. U-Haul also says its measurements are approximate and the truck you get may vary, so weigh it if the number matters."),
+    ("How much does an empty 15-foot U-Haul weigh?",
+     "U-Haul lists the 15-foot truck at 8,115 lb empty, with a 6,385 lb max load and a 14,500 lb gross vehicle weight rating."),
+    ("Can I use U-Haul’s published empty weight for my PPM?",
+     "No. DFAS asks for certified weight tickets, one for the empty (tare) weight and one for the full (gross) weight. A number from a website is not a certified ticket. Weigh the actual truck empty, then again full."),
+    ("What is the difference between max load and GVWR?",
+     "GVWR (gross vehicle weight rating) is the most the loaded truck may weigh, including the truck itself. Max load is U-Haul’s figure for how much cargo you can add. For most trucks, empty weight plus max load comes out at or near the GVWR."),
+    ("Do I need a CDL to drive a 26-foot U-Haul?",
+     "The 26-foot truck is rated at 25,999 lb, one pound under the 26,001 lb mark FMCSA uses for Class B commercial vehicles. Do not load it past its rating. If you are unsure about your situation, ask U-Haul or your state licensing office."),
+    ("Where can I weigh a U-Haul?",
+     "Any certified public scale that takes walk-up customers, including CAT Scales at truck stops. CAT says its scales weigh vehicles between 2,000 and 200,000 lb, so every U-Haul truck is in range. Highway weigh stations are for enforcement, not for selling tickets."),
+    ("How much does it cost to weigh a U-Haul at a CAT Scale?",
+     "CAT Scale lists $15.25 for a first weigh and $5.25 for a reweigh of the same vehicle on the same scale within 24 hours (checked 4 Nov 2026). California weighmaster certificates cost more. Confirm at the fuel desk."),
+]
+
+
+def guide_uhaul_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_UHAUL_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_uhaul_weight():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_UHAUL_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · U-Haul · Moving weight</p>
+    <h1>How much does a U-Haul truck weigh? Empty weight, max load and GVWR</h1>
+    <p class="lede">An empty U-Haul weighs from about 4,500 lb (the pickup) to about 13,100 lb (the 26-foot truck), according to U-Haul’s own equipment pages. Here is every size side by side, what the numbers mean for how much you can pack, and why a PPM move still needs a real empty weight ticket.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>Figures below were read from U-Haul’s equipment pages on 4 Nov 2026. U-Haul says all rental truck measurements are approximate and the equipment you receive may vary between production models. WeighHere is independent and not affiliated with U-Haul or CAT Scale.</p>
+  </div>
+
+  <h2>U-Haul truck weights by size</h2>
+  <table>
+    <thead><tr><th>U-Haul vehicle</th><th>Empty weight</th><th>Max load</th><th>GVWR (gross)</th><th>Towing capacity</th></tr></thead>
+    <tbody>
+      <tr><td>Pickup truck</td><td>4,474 lb</td><td>2,280 lb</td><td>6,800 lb</td><td>up to 6,000 lb</td></tr>
+      <tr><td>Cargo van</td><td>4,985 lb</td><td>4,030 lb</td><td>9,070 lb</td><td>not listed</td></tr>
+      <tr><td>10-foot truck</td><td>5,790 lb</td><td>2,850 lb</td><td>8,600 lb</td><td>up to 6,000 lb</td></tr>
+      <tr><td>15-foot truck</td><td>8,115 lb</td><td>6,385 lb</td><td>14,500 lb</td><td>up to 10,000 lb</td></tr>
+      <tr><td>20-foot truck</td><td>8,800 lb</td><td>5,700 lb</td><td>14,500 lb</td><td>up to 7,500 lb</td></tr>
+      <tr><td>26-foot truck</td><td>13,140 lb</td><td>12,859 lb</td><td>25,999 lb</td><td>up to 10,000 lb</td></tr>
+    </tbody>
+  </table>
+  <p>Two things stand out. The 15-foot and 20-foot trucks share the same 14,500 lb rating, so the bigger box actually carries less: U-Haul lists 6,385 lb of load for the 15-foot truck and 5,700 lb for the 20-foot. And the 26-foot truck roughly doubles the cargo of either one.</p>
+  <p class="cite">Sources: <a href="https://www.uhaul.com/Truck-Rentals/Pickup-Truck/">U-Haul pickup truck</a> · <a href="https://www.uhaul.com/Truck-Rentals/Cargo-Van/">U-Haul cargo van</a> · <a href="https://www.uhaul.com/Trucks/10ft-Moving-Truck-Rental/TM/">U-Haul 10′ truck</a> · <a href="https://www.uhaul.com/Trucks/15ft-Moving-Truck-Rental/EL/">U-Haul 15′ truck</a> · <a href="https://www.uhaul.com/Trucks/20ft-Moving-Truck-Rental/DC/">U-Haul 20′ truck</a> · <a href="https://www.uhaul.com/Trucks/26ft-Moving-Truck-Rental/JH/">U-Haul 26′ truck</a>. Read 4 Nov 2026.</p>
+
+  <h2>What empty weight, max load and GVWR mean</h2>
+  <ul>
+    <li><strong>Empty weight</strong> is the truck with nothing in the box. On a scale ticket this is the tare weight.</li>
+    <li><strong>GVWR</strong> (gross vehicle weight rating) is the most the truck may weigh loaded: truck, fuel, people, and everything you packed.</li>
+    <li><strong>Max load</strong> is U-Haul’s figure for how much cargo you can add. For most sizes it is the GVWR minus the empty weight. On the pickup, cargo van and 10-foot truck the published numbers do not add up exactly, which is one more reason to trust a scale over a spec sheet.</li>
+    <li><strong>Towing capacity</strong> is separate. A car on a tow dolly or auto transport is not part of the truck’s max load, but it is part of what the whole rig weighs on a scale.</li>
+  </ul>
+  <p>Your passengers count against the GVWR too. If two adults ride up front, that weight comes out of what you can put in the back.</p>
+
+  <h2>Why the published empty weight is not enough for a PPM</h2>
+  <p>If you are doing a military Personally Procured Move (PPM, formerly DITY), you are paid on the weight you actually haul. DFAS asks for copies of <strong>certified weight tickets</strong>, one for the gross (full) weight and one for the tare (empty) weight. Military OneSource says the tickets must come from a certified scale and that you need a pair for each trip. A number from U-Haul’s website is not a certified ticket, and the truck on your lot may not match it.</p>
+  <p>So weigh the real truck: once empty, with anything it will tow hooked up, then again full. Our <a href="/guides/ppm-weight-tickets/">PPM weight ticket guide</a> covers fuel, passengers, and what has to be printed on each ticket, and the free <a href="/ppm-weigh-checklist/">PPM weigh-day checklist</a> fits on one page.</p>
+  <p class="cite">Sources: <a href="https://www.dfas.mil/MilitaryMembers/travelpay/armypcs/dityppmmoves/">DFAS, Personally Procured Moves (PPM)</a> · <a href="https://www.militaryonesource.mil/moving-pcs/plan-to-move/military-pcs-moving-faqs/">Military OneSource, PCS and Moving FAQs</a></p>
+
+  <h2>Am I overloaded? Weigh it and check</h2>
+  <p>You cannot eyeball a full moving truck. Boxes of books and a packed garage add up fast, and the 10-foot truck only has about 2,850 lb of room. The only real answer is a scale.</p>
+  <ol>
+    <li><strong>Weigh after loading</strong>, with fuel in the tank and anything you are towing hooked up the way you will drive.</li>
+    <li><strong>Read the truck’s gross</strong> on the ticket. For a truck alone, compare it with the GVWR above, or better, with the rating on the label inside the driver’s door of your actual truck.</li>
+    <li><strong>If you are over</strong>, take something out and reweigh. At a CAT Scale a reweigh of the same vehicle on the same scale within 24 hours is cheaper than a first weigh.</li>
+  </ol>
+  <p>CAT Scale says its scales weigh vehicles between 2,000 and 200,000 lb, so every U-Haul truck is well within range, even the pickup. CAT lists $15.25 for a first weigh and $5.25 for a reweigh in the U.S. (checked 4 Nov 2026). In California, a weighmaster certificate costs more. Our <a href="/guides/cat-scale-cost/">CAT Scale cost guide</a> explains the reweigh rules and the free Weigh My Truck app, and <a href="/how-to-weigh-an-rv/">how CAT’s three platforms work</a> shows where to stop on the scale.</p>
+  <p class="cite">Sources: <a href="https://catscale.com/faq/">CAT Scale FAQ (Q12, Q22)</a> · <a href="https://catscale.com/how-to-weigh/">CAT Scale, How To Weigh</a></p>
+
+  <h2>The 26-foot truck and the 26,001 lb line</h2>
+  <p>U-Haul rates its 26-foot truck at 25,999 lb gross. FMCSA’s Class B commercial license class starts at single vehicles rated at 26,001 lb or more. That is why the rating matters: stay under it on the scale, not just on paper. If you are unsure what license your trip needs, ask U-Haul or your state licensing office rather than guessing.</p>
+  <p class="cite">Source: <a href="https://www.fmcsa.dot.gov/registration/commercial-drivers-license/drivers">FMCSA, Commercial Driver’s License classes</a></p>
+
+  <h2>Where to weigh a U-Haul</h2>
+  <p>Use a certified public scale: a CAT Scale at a truck stop or a dedicated public scale house. Highway weigh stations are for enforcement and do not sell tickets. See <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>. Popular areas for movers:</p>
+  <ul>
+    <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/sacramento/">Sacramento</a>, <a href="/ppm-dity-southern-california/">PPM scales in Southern California</a></li>
+    <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/tucson-benson/">Tucson / Benson</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
+    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a></li>
+    <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
+  </ul>
+  <p>See <a href="/">all WeighHere areas</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/ppm-weigh-checklist/">Free PPM weigh-day checklist</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
 GUIDE_CAT_FAQ = [
     ("How much does a CAT Scale weigh cost?",
      "CAT Scale publishes U.S. pricing of $15.25 for a first weigh and $5.25 for a reweigh. Canadian locations are C$26.00 and C$8.50. Prices were checked on CAT's pages on 21 Oct 2026; confirm at the fuel desk."),
@@ -5448,6 +5586,7 @@ def page_guide_cat_cost():
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -6701,6 +6840,16 @@ def main():
         "../../",
         page_guide_cat_cost(),
         guide_cat_faq_jsonld(),
+        gear=False,
+    )
+    write(
+        ROOT / "guides" / "uhaul-truck-weight" / "index.html",
+        "How Much Does a U-Haul Truck Weigh? Empty Weight & GVWR | WeighHere",
+        "Empty weight, max load and GVWR for every U-Haul truck, from U-Haul's own pages, plus why a PPM move still needs certified empty and full weight tickets.",
+        "uhaulwt",
+        "../../",
+        page_guide_uhaul_weight(),
+        guide_uhaul_faq_jsonld(),
         gear=False,
     )
     write(
