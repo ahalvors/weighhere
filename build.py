@@ -5917,7 +5917,7 @@ def page_privacy():
   <p>Scale pages include Amazon Associates search links in a marked “Towing gear” box. Clicking one passes WeighHere’s Associates tag to Amazon, and Amazon may set its own cookies under its own privacy policy. That is how affiliate programs work. {AMAZON_DISCLOSURE} See <a href="/disclosure.html">Affiliate Disclosure</a> for full details.</p>
 
   <h2>Data requests</h2>
-  <p>Because WeighHere does not collect visitor accounts or personal information, there is no user database to request deletion from. If you have questions about how a listing was compiled or believe a listing incorrectly references you, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
+  <p>Because WeighHere does not collect visitor accounts or personal information, there is no user database to request deletion from. If you have questions about how a listing was compiled or believe a listing incorrectly references you, contact <a href="/contact.html">support@weighhere.com</a>.</p>
 
   <h2>Changes</h2>
   <p>This privacy policy may be updated as the site evolves. The last-compiled date ({CHECKED_HUMAN}) reflects the current site build. Material changes will be noted on the <a href="/about.html">About</a> page.</p>
@@ -5939,7 +5939,7 @@ def page_contact():
 <div class="wrap prose">
   <h2>Email</h2>
   <p>For corrections to listings, hours updates, new scales, affiliate partnership inquiries, or privacy questions, email:</p>
-  <p><strong><a href="mailto:ahalvor@gmail.com">ahalvor@gmail.com</a></strong></p>
+  <p><strong><a href="mailto:support@weighhere.com">support@weighhere.com</a></strong></p>
   <p>Mention WeighHere or weighhere.com in your subject line so the message routes correctly.</p>
 
   <h2>What to report</h2>
@@ -5994,7 +5994,7 @@ def page_disclosure():
   <p>Affiliate links are grouped in one clearly labeled box, preceded by the sentence “{AMAZON_DISCLOSURE}” and a link to this page. FTC guidelines require clear disclosure. WeighHere follows those guidelines.</p>
 
   <h2>Questions</h2>
-  <p>If you have questions about affiliate relationships or believe a link should be disclosed more clearly, contact <a href="/contact.html">ahalvor@gmail.com</a>.</p>
+  <p>If you have questions about affiliate relationships or believe a link should be disclosed more clearly, contact <a href="/contact.html">support@weighhere.com</a>.</p>
 
   <h2>No fake IDs</h2>
   <p>We do not invent affiliate IDs, product IDs, or placeholder tracking codes. The Amazon Associates tag on this site is real and disclosed. If a program is “under consideration,” no ID from it is embedded.</p>
@@ -6776,7 +6776,7 @@ def main():
     write(
         ROOT / "contact.html",
         "Contact — WeighHere",
-        "Contact WeighHere for corrections, affiliate inquiries, or data questions. Email ahalvor@gmail.com (Andy Halvorsen).",
+        "Contact WeighHere for corrections, affiliate inquiries, or data questions. Email support@weighhere.com (Andy Halvorsen).",
         "contact",
         "",
         page_contact(),
