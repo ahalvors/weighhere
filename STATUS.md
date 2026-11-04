@@ -1,13 +1,14 @@
-# WeighHere status — 2 Nov 2026
+# WeighHere status — 3 Nov 2026
 
-Compiled evening PT 2 Nov 2026 (nightly ship).
+Compiled evening PT 3 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **257** | +6 Amarillo CAT (Love’s #250, Love’s #200, TA #0055, Petro #0307, Pilot #436, Flying J #723) |
-| Amarillo / I-40 (TX) | 6 | new 2 Nov — second Texas page |
+| **Total rows in `data/stations.json`** | **263** | +6 Far West Texas CAT (Pilot #209 Van Horn, Flying J #553 + Love’s #542 Fort Stockton, Pilot #1146 + Flying J #736 + Love’s #492 Pecos) |
+| Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | new 3 Nov — third Texas page |
+| Amarillo / I-40 (TX) | 6 | 2 Nov |
 | El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | 1 Nov — first Texas page |
 | Clovis / Hobbs / Eunice (eastern NM) | 3 | 31 Oct |
 | Belen / Truth or Consequences / I-25 (NM) | 2 | 30 Oct |
@@ -73,10 +74,27 @@ Compiled evening PT 2 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 193 | +6 Amarillo |
+| CAT / truck-stop cards | 199 | +6 Far West Texas |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Van Horn / Fort Stockton / Pecos** (`/van-horn-fort-stockton-pecos/`): third Texas page (Culberson, Pecos and Reeves Counties; all six confirmed via the Census geocoder). All six verified tonight (3 Nov) on operators’ own pages; every one says the store is open 24 hours.
+
+- **Pilot #209 Van Horn** — 501 Van Horn Dr, Van Horn TX 79855, I-10 Exit 140A — CAT (offering 318) in own offerings; status Open; is24Hours true; (915) 295-4150; geo 31.03603, -104.829483. County slug `culberson`.
+- **Flying J #553 Fort Stockton** — 2571 N Front St, Fort Stockton TX 79735, I-10 Exit 259 — CAT 318 in own offerings; Open; 24h; (432) 336-3410; geo 30.905212, -102.885118. County slug `pecos`.
+- **Love’s #542 Fort Stockton** — 2723 E US Highway 290, Fort Stockton TX 79735, I-10 Exit 261 — CAT Scales in amenities; Store Open 24-hours; RV dump; (432) 336-3622; geo 30.893377, -102.852146.
+- **Pilot #1146 Pecos** — 2500 S Bickley Ave, Pecos TX 79772, I-20 Exit 39 — CAT 318 in own offerings; Open; 24h; (432) 445-0002; geo 31.400866, -103.520955. County slug `reeves`.
+- **Flying J #736 Pecos** — 100 E Pinehurst St, Pecos TX 79772, I-20 Exit 42 — CAT 318 in own offerings; Open; 24h; (432) 294-6626; geo 31.401153, -103.485879.
+- **Love’s #492 Pecos** — 5202 S Cedar St, Pecos TX 79772, I-20 Exit 42 — CAT Scales in amenities; Store Open 24-hours; RV dump; (432) 445-1490; geo 31.399839, -103.479374.
+- Checked, no CAT: Love’s #256 Van Horn (I-10 Exit 140B). Xpress Fuel #1349 Van Horn lists no CAT on Pilot’s city index.
+- Seen in a third-party fuel-stop list (not a source for listings), not yet own-page checked: Pilot #1134 Orla (US-285 & RM 652), Pilot #1227 Pyote (I-20 Exit 66), Pilot #1205 / #1207 Monahans — candidates for a Monahans / Odessa page with Love’s #339 Odessa (I-20 Exit 115) and TA Big Spring.
+
+Wiring: new `van_horn_fort_stockton_pecos_body()` + `write()` in `build.py`, NAV (`vfp`), footer, 404 lede hub list, PPM guide Texas line, El Paso + Amarillo + other Related lists, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 3 Nov 2026.
+
+Previous ship (2 Nov): `/amarillo/` — Love’s #250, Love’s #200, TA #0055, Petro #0307, Pilot #436, Flying J #723.
+
+## Previous ship detail (2 Nov)
 
 **Amarillo** (`/amarillo/`): second Texas page (Potter County; all six geocode to Potter via the Census geocoder). All six verified tonight (2 Nov) on operators’ own pages.
 
@@ -122,6 +140,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Far West Texas stops (3 Nov): https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr · https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st · https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542 · https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave · https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st · https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492 · no CAT: loves-travel-stop-van-horn-256 · county check: geocoding.geo.census.gov · Love’s TX state index returns HTTP 500 (store pages OK); Pilot city indexes at locations.pilotflyingj.com/us/tx/<city> work
 - Amarillo stops (2 Nov): https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-250 · https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-200 · https://www.ta-petro.com/location/tx/ta-amarillo/ · https://www.ta-petro.com/location/tx/petro-amarillo/ · https://pilotcompany.com/locations/us/tx/amarillo/715-s-lakeside-dr · https://pilotcompany.com/locations/us/tx/amarillo/9601-e-i-40 · no CAT: loves-travel-stop-amarillo-261, loves-travel-stop-claude-229 · county check: geocoding.geo.census.gov
 - El Paso stops (1 Nov): https://www.loves.com/locations/nm/santa-teresa/loves-travel-stop-santa-teresa-817 · https://www.loves.com/locations/tx/anthony/loves-travel-stop-anthony-447 · https://pilotcompany.com/locations/us/tx/anthony/2015-antonio-st · https://pilotcompany.com/locations/us/tx/el-paso/1301-horizon-blvd · https://www.ta-petro.com/location/tx/petro-el-paso/ · held: https://pilotcompany.com/locations/us/tx/anthony/3001-mountain-pass-blvd
 - Love’s #329 Clovis: https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329
@@ -132,6 +151,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Van Horn / Fort Stockton / Pecos: shipped 3 Nov; no dedicated house; CAT staffing hours unpublished; livestock unknown; Sierra Blanca, Fort Hancock, Balmorhea, Monahans, Pyote, Orla, Kermit unchecked. Next Texas: Monahans / Odessa / Midland / Big Spring on I-20 (Pilot #1205/#1207/#1227, Love’s #339, TA Big Spring own-page checks), Pilot Vega + Dumas/Dalhart for the Panhandle, Flying J #724 Anthony if it reopens
 - Amarillo: shipped 2 Nov; no dedicated house; CAT staffing hours unpublished; TA #0055 / Petro #0307 store hours unpublished; Canyon, Vega (Pilot 6555 US-385 candidate), Hereford, Dumas (Love’s #626), Vega, Dalhart (Love’s #836) unchecked. Still pending: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`; Van Horn / Pecos / Fort Stockton (Love’s #542) for more I-10 Texas
 - El Paso / Anthony / Santa Teresa: shipped 1 Nov; no dedicated house; CAT staffing hours unpublished; Petro El Paso store hours unpublished; Flying J #724 Anthony temporarily closed (held); Clint / Fabens / Van Horn / Fort Hancock east on I-10 unchecked. Next: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`, then Van Horn / Pecos or Amarillo for more Texas pages
 - Clovis / Hobbs / Eunice: shipped 31 Oct; no dedicated house; CAT staffing hours unpublished; Roswell, Artesia, Carlsbad, Portales, Lovington own-page CAT not verified (no TA in eastern NM; Pilot Roswell/Carlsbad not searched). Next NM: add Love’s #614 + #963 to Albuquerque, Love’s #257 to Gallup / Milan, Love’s #817 Santa Teresa to Las Cruces

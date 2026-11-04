@@ -87,6 +87,7 @@ PLACES = {
     "las-cruces-deming-lordsburg": ("Las Cruces, Deming & Lordsburg, NM", "New Mexico"),
     "el-paso-santa-teresa": ("El Paso, Anthony & Santa Teresa", "Texas"),
     "amarillo": ("Amarillo, TX", "Texas"),
+    "van-horn-fort-stockton-pecos": ("Van Horn, Fort Stockton & Pecos, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
