@@ -40,7 +40,10 @@
 </section>
 <div class="wrap prose">
   <h2>Overview</h2>
-  <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names, email addresses, or payment information.</p>
+  <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names or payment information. The only personal data we collect is an email address if you choose to join our mailing list (see below).</p>
+
+  <h2 id="email">Email list</h2>
+  <p>If you sign up for the free PPM weigh-day checklist, we store the email address you enter using our host&rsquo;s form service (Netlify Forms). We use it only to send occasional scale and moving tips from WeighHere. We do not sell or share it. Every email will include a way to unsubscribe, or you can ask to be removed at any time through our <a href="/contact.html">contact page</a>, and we will delete your address.</p>
 
   <h2>Analytics</h2>
   <p>WeighHere uses Cloudflare Web Analytics, which is cookieless and collects only aggregate page views and performance data. It does not track individual visitors across sites or sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
@@ -64,6 +67,23 @@
   <p>This privacy policy may be updated as the site evolves. The last-compiled date (3 Nov 2026) reflects the current site build. Material changes will be noted on the <a href="/about.html">About</a> page.</p>
 </div>
 </main>
+
+<section class="signup" aria-labelledby="signup-h">
+  <div class="wrap">
+    <form name="newsletter" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <h2 id="signup-h">Free PPM weigh-day checklist</h2>
+      <p class="signup-sub">Get the one-page empty/full weight-ticket checklist for a military PPM or U-Haul move.</p>
+      <div class="signup-row">
+        <label for="signup-email" class="sr-only">Email address</label>
+        <input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit">Send me the checklist</button>
+      </div>
+      <p class="signup-fine">We&rsquo;ll email occasional scale and moving tips. Unsubscribe anytime. <a href="/privacy.html#email">Privacy</a></p>
+    </form>
+  </div>
+</section>
 
 <footer class="site">
   <div class="wrap">

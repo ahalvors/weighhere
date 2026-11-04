@@ -162,8 +162,28 @@ def header(current, rel, title, description, extra_head=""):
 """
 
 
+SIGNUP_BOX = """
+<section class="signup" aria-labelledby="signup-h">
+  <div class="wrap">
+    <form name="newsletter" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hp" hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <h2 id="signup-h">Free PPM weigh-day checklist</h2>
+      <p class="signup-sub">Get the one-page empty/full weight-ticket checklist for a military PPM or U-Haul move.</p>
+      <div class="signup-row">
+        <label for="signup-email" class="sr-only">Email address</label>
+        <input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit">Send me the checklist</button>
+      </div>
+      <p class="signup-fine">We&rsquo;ll email occasional scale and moving tips. Unsubscribe anytime. <a href="/privacy.html#email">Privacy</a></p>
+    </form>
+  </div>
+</section>
+"""
+
+
 def footer(rel="."):
-    return f"""
+    return SIGNUP_BOX + f"""
 <footer class="site">
   <div class="wrap">
     <nav aria-label="Footer">
@@ -5786,6 +5806,84 @@ def page_about():
 """
 
 
+def page_checklist():
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Free printable · Military move · U-Haul</p>
+    <h1>PPM weigh-day checklist</h1>
+    <p class="lede">One page to print and keep on the dash: how to get the empty and full weight tickets for a military PPM (formerly DITY) move in a U-Haul or other rental. Every step comes from the official sources listed at the bottom.</p>
+    <p class="noprint"><button type="button" onclick="window.print()">Print this page</button> or <a href="/ppm-weigh-checklist/weighhere-ppm-weigh-checklist.pdf">download the PDF</a></p>
+  </div>
+</section>
+<div class="wrap prose checklist">
+  <div class="box"><p><strong>Your Transportation Office (TO) owns the rules.</strong> Branch guidance differs. Call them before weigh day, especially about towing a car and where to weigh. This is a summary, not legal or entitlement advice.</p></div>
+
+  <h2>Before weigh day</h2>
+  <ul class="checks">
+    <li>Confirm with your TO what must be printed on the ticket and whether you can weigh at origin, destination, or both.</li>
+    <li>Find a certified scale near pickup and near home. Military OneSource says privately owned truck scales are an accepted place to get tickets. <a href="/">Find a public scale</a>.</li>
+    <li>Plan one empty + one full ticket for <strong>every vehicle and every trip</strong> that carries household goods (Fort Hood, NAVSUP).</li>
+    <li>Keep every scale receipt. DFAS lists weight-ticket fees as an operating expense.</li>
+  </ul>
+
+  <h2>Empty weigh (tare)</h2>
+  <ul class="checks">
+    <li>Hook up anything the truck will tow on the move. A rental truck and trailer are weighed together, empty and full (Fort Hood).</li>
+    <li>Fuel: follow your TO. Fort Hood shows a full tank for both weighs; Navy says full tanks at each weighing, or no fuel added between weighs if empty comes first.</li>
+    <li>Everybody out. No passengers in the vehicle on the scale (Navy).</li>
+    <li>Weigh before a single box goes in. Have the ticket marked <strong>EMPTY</strong> with the vehicle described.</li>
+  </ul>
+
+  <h2>Full weigh (gross)</h2>
+  <ul class="checks">
+    <li>Same truck, same trailer, same fuel rule, nobody aboard.</li>
+    <li>Have the ticket marked <strong>FULL</strong> with the vehicle described.</li>
+    <li>Towing your car? Guidance disagrees (Fort Hood: weighed together; Navy: detach first). Ask your TO, then do it the same way both times.</li>
+  </ul>
+
+  <h2>At a CAT Scale</h2>
+  <ul class="checks">
+    <li>No appointment needed. Split the vehicle across platform 1 and 2 (1 is nearest the intercom sign), press the intercom, give your info, pull off, go inside.</li>
+    <li>CAT&rsquo;s common military answers: Truck/Tractor # = license plate; Company name = branch; Trailer # = rank; Commodity = name and last four of SSN. Verify with your branch.</li>
+    <li>Give the same answers at both weighs.</li>
+  </ul>
+
+  <h2>Before you leave the lot</h2>
+  <ul class="checks">
+    <li>Weighmaster signature is on the ticket (CAT: it should print automatically, but double-check).</li>
+    <li>Ticket is legible, unaltered, and identifies the vehicle (NAVSUP). CAT tickets cannot be edited after printing.</li>
+    <li>Your name, rank, and last four of SSN are on it (Fort Hood turn-in handout).</li>
+    <li>Snap a photo of each ticket and keep the originals with your rental agreement.</li>
+  </ul>
+
+  <h2>Turn-in packet (DFAS list)</h2>
+  <ul class="checks">
+    <li>Orders · DD 1351-2 travel voucher · DD 2278 from the TO · paid rental agreement · registration if you used your own vehicle or trailer · certified empty and full weight tickets.</li>
+  </ul>
+
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.dfas.mil/MilitaryMembers/travelpay/armypcs/dityppmmoves/">DFAS, PPM moves</a> · <a href="https://www.militaryonesource.mil/moving-pcs/plan-to-move/military-pcs-moving-faqs/">Military OneSource, PCS FAQs</a> · <a href="https://home.army.mil/hood/9217/7513/9573/how_to_weigh.pdf">Fort Hood, how to weigh (PDF)</a> · <a href="https://home.army.mil/hood/5817/5494/7369/PPM_PACKET_TURN-IN_HANDOUT_AUG_2025.pdf">Fort Hood PPM turn-in handout (PDF)</a> · <a href="https://www.navsup.navy.mil/Portals/65/HHG/Documents/PPM-Handout-V.10.pdf">NAVSUP PPM handout (PDF)</a> · <a href="https://www.navsup.navy.mil/Portals/65/HHG/Documents/PPM/PPM_Checklist_24_Jul_18.pdf">NAVSUP PPM checklist (PDF)</a> · <a href="https://catscale.com/contact-us/dity-move-tips/">CAT Scale, DITY Move Tips</a>. Full explainer: <a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a>. weighhere.com</p>
+</div>
+</main>
+"""
+
+
+def page_thanks():
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">You&rsquo;re on the list</p>
+    <h1>Thanks! Here&rsquo;s your checklist</h1>
+    <p class="lede"><a href="/ppm-weigh-checklist/"><strong>Open the PPM weigh-day checklist &rarr;</strong></a> Or grab the <a href="/ppm-weigh-checklist/weighhere-ppm-weigh-checklist.pdf">one-page PDF</a>.</p>
+    <p>We&rsquo;ll send occasional scale and moving tips. Unsubscribe anytime. Next: <a href="/">find a public scale near you</a>.</p>
+  </div>
+</section>
+</main>
+"""
+
+
 def page_privacy():
     return f"""
 <main id="main">
@@ -5798,7 +5896,10 @@ def page_privacy():
 </section>
 <div class="wrap prose">
   <h2>Overview</h2>
-  <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names, email addresses, or payment information.</p>
+  <p>WeighHere is an independent directory of public scales. This site does not require accounts, logins, or personal data submission. We do not collect names or payment information. The only personal data we collect is an email address if you choose to join our mailing list (see below).</p>
+
+  <h2 id="email">Email list</h2>
+  <p>If you sign up for the free PPM weigh-day checklist, we store the email address you enter using our host&rsquo;s form service (Netlify Forms). We use it only to send occasional scale and moving tips from WeighHere. We do not sell or share it. Every email will include a way to unsubscribe, or you can ask to be removed at any time through our <a href="/contact.html">contact page</a>, and we will delete your address.</p>
 
   <h2>Analytics</h2>
   <p>WeighHere uses Cloudflare Web Analytics, which is cookieless and collects only aggregate page views and performance data. It does not track individual visitors across sites or sell visitor data. If you block JavaScript or use privacy extensions, the site works fine.</p>
@@ -6651,6 +6752,18 @@ def main():
         "about",
         "",
         page_about(),
+    )
+    write(
+        ROOT / "ppm-weigh-checklist" / "index.html",
+        "Free PPM weigh-day checklist (printable) | WeighHere",
+        "One-page printable checklist for empty and full weight tickets on a military PPM / DITY or U-Haul move, from DFAS, Military OneSource, Army, Navy and CAT Scale guidance.",
+        "ppm", "../", page_checklist(),
+    )
+    write(
+        ROOT / "thanks" / "index.html",
+        "Thanks for signing up | WeighHere",
+        "Your free PPM weigh-day checklist.",
+        "about", "../", page_thanks(), extra_head='<meta name="robots" content="noindex">',
     )
     write(
         ROOT / "privacy.html",

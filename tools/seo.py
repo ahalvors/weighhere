@@ -282,7 +282,7 @@ def main():
 </div>
 </main>
 """
-    text = re.sub(r'<main id="main">.*?(?=<footer)', lambda m: hub, text, count=1, flags=re.S)
+    text = re.sub(r'<main id="main">.*?(?=<section class="signup"|<footer)', lambda m: hub, text, count=1, flags=re.S)
     text = re.sub(r"<title>.*?</title>", "<title>CAT Scales &amp; Public Truck Scales Near You | WeighHere</title>", text, count=1, flags=re.S)
     text = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="Find a CAT scale or public truck scale near you in California, Arizona, Nevada, Utah, Idaho, Washington and Oregon. {total} listings for RVs, U-Haul moves, trailers and PPM weigh tickets.">', text, count=1)
     text = text.replace('<li><a href="/los-angeles/" aria-current="page">', '<li><a href="/los-angeles/">')
@@ -299,7 +299,7 @@ def main():
     order = re.findall(r"<loc>([^<]+)</loc>", open(sm).read()) if os.path.exists(sm) else []
     found = []
     for d in sorted(os.listdir(ROOT)):
-        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules"):
+        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules", "thanks"):
             continue
         if os.path.isfile(os.path.join(ROOT, d, "index.html")):
             found.append(f"{BASE}/{d}/")

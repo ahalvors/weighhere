@@ -150,3 +150,18 @@ footer.site p{margin:0;max-width:75ch}
 }
 
 @media (max-width:600px){.brand-logo{height:36px}.brand span{font-size:.74rem}}
+/* mailing-list signup */
+.signup{background:var(--accent-soft);border-top:1px solid #c6dfcd;padding:1.4rem 0;margin-top:2rem}
+.signup h2{margin:0 0 .25rem;font-size:1.15rem}
+.signup-sub,.signup-fine{margin:.2rem 0;font-size:.92rem;color:var(--muted)}
+.signup-fine{font-size:.8rem}
+.signup-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.signup-row input{flex:1 1 14rem;min-width:0;font:inherit;padding:.55rem .75rem;border:1px solid #b9c7bd;border-radius:8px;background:#fff}
+.signup-row button,.noprint button{font:inherit;font-weight:600;color:#fff;background:var(--accent);border:0;border-radius:8px;padding:.55rem 1rem;cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hp{display:none}
+.checklist ul.checks{list-style:none;padding-left:0}
+.checklist ul.checks li{padding-left:1.6rem;position:relative;margin:.35rem 0}
+.checklist ul.checks li::before{content:"\2610";position:absolute;left:0;font-size:1.1rem;line-height:1.4}
+.checklist .sources{font-size:.8rem}
+@page{margin:10mm}@media print{.wrap,.prose,.checklist,.lede,.checklist *{max-width:none!important}.checklist .box{margin:.3rem 0}.page-head{margin:0;border:0}header,.stripe,footer.site,.signup,.noprint,.skip,.kicker{display:none!important}body{background:#fff;font-size:8.8pt;line-height:1.3}.checklist .sources{margin:.3rem 0}.page-head{padding:0!important}.page-head h1{font-size:16pt;margin:0}.lede{font-size:9.5pt;margin:.2rem 0}.box{padding:.3rem .6rem}.page-head{padding:0}.checklist h2{margin:.5rem 0 .2rem;font-size:12pt}.checklist ul.checks li{margin:.1rem 0}}
