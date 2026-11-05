@@ -1,13 +1,14 @@
-# WeighHere status — 3 Nov 2026
+# WeighHere status — 4 Nov 2026
 
-Compiled evening PT 3 Nov 2026 (nightly ship).
+Compiled evening PT 4 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **263** | +6 Far West Texas CAT (Pilot #209 Van Horn, Flying J #553 + Love’s #542 Fort Stockton, Pilot #1146 + Flying J #736 + Love’s #492 Pecos) |
-| Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | new 3 Nov — third Texas page |
+| **Total rows in `data/stations.json`** | **274** | +11 Permian Basin I-20 CAT (Pilot #1205 Monahans; Pilot #1161, Love’s #339, Flying J #580 Odessa; Pilot #257, Pilot #1145, Love’s #623, Flying J #1033 Midland; Love’s #976, TA, Pilot #559 Big Spring) |
+| Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | new 4 Nov — fourth Texas page |
+| Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | 3 Nov |
 | Amarillo / I-40 (TX) | 6 | 2 Nov |
 | El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | 1 Nov — first Texas page |
 | Clovis / Hobbs / Eunice (eastern NM) | 3 | 31 Oct |
@@ -74,10 +75,33 @@ Compiled evening PT 3 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 199 | +6 Far West Texas |
+| CAT / truck-stop cards | 210 | +11 Permian Basin |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Monahans / Odessa / Midland / Big Spring** (`/odessa-midland-big-spring/`, title "Truck Scales near Odessa, Midland & Big Spring, TX | WeighHere"): fourth Texas page (Ward, Ector, Midland and Howard Counties; all eleven confirmed via the Census geocoder). All eleven verified tonight (4 Nov) on operators’ own pages. Pilot pages: CAT = offeringCode 318 in the primary line of business’s own offerings; every Pilot store status Open / Regular Business Operation, is24Hours true.
+
+- **Pilot #1205 Monahans** — 4840 E I-20, Monahans TX 79756, I-20 Exit 86 — CAT 318; Open; 24h; (432) 223-5839; geo 31.61505, -102.811192. County slug `ward`.
+- **Pilot #1161 Odessa** — 3145 Meteor Crater Rd, Odessa TX 79763, I-20 Exit 108 — CAT 318; Open; 24h; (432) 381-5248; geo 31.784738, -102.476793. County slug `ector`.
+- **Love’s #339 Odessa** — 1901 W I-20, Odessa TX 79766, I-20 Exit 115 — CAT Scales in amenities; Store Open 24-hours; RV dump; (432) 335-7062; geo 31.817324, -102.380801.
+- **Flying J #580 Odessa** — 5900 E I-20, Odessa TX 79766, I-20 Exit 121 — CAT 318; Open; 24h; (432) 366-0812; geo 31.864866, -102.301872.
+- **Pilot #257 Midland** — 4015 S FM 1788, Midland TX 79706, I-20 Exit 126 (Pilot: "Exit 128 E/126 W") — CAT 318; Open; 24h; (432) 563-1683; geo 31.915264, -102.215107. County slug `midland`.
+- **Pilot #1145 Midland** — 11501 TX-191 E, Midland TX 79706, TX-191 & TX-349 (not on I-20) — CAT 318; Open; 24h; (432) 561-8927; geo 31.967603, -102.252333.
+- **Love’s #623 Midland** — 5200 Cholla Rd, Midland TX 79706, I-20 Exit 131 — CAT Scales in amenities; Store Open 24-hours; RV dump; (432) 699-2374; geo 31.947692, -102.14146.
+- **Flying J #1033 Midland** — 3302 Garden City Hwy, Midland TX 79706, I-20 Exit 137B — CAT 318; Open; 24h; (432) 685-1296; geo 31.980962, -102.033375.
+- **Love’s #976 Big Spring** — 1801 W I-20, Big Spring TX 79720, I-20 Exit 176 — CAT Scales in amenities; Store Open 24-hours; RV hookup + dump; (432) 606-6003; geo 32.258997, -101.503421. County slug `howard`.
+- **TA Big Spring** — 704 W Interstate 20, Big Spring TX 79720, I-20 & US-87 Exit 177 — CAT Scale under Other Amenities; fuel 24/7 only, no store-hours statement; (432) 264-4444; geo 32.2648, -101.49. TA page shows no store number (third-party lists say #0230 — not used).
+- **Pilot #559 Big Spring** — 706 E I-20 Frontage Rd, Big Spring TX 79720, I-20 Exit 178 — CAT 318; Open; 24h; (432) 223-5832; geo 32.266019, -101.476428.
+- Checked on own pages, no CAT (the 318 codes on those pages belong to nearby stores): Pilot #1227 Pyote (I-20 Exit 66), Pilot #1207 Monahans (BL I-20 & TX-464), Pilot #1209 Midland (I-20 Exit 136, Rankin Hwy), Pilot #1354 Odessa (US-385 & TX-338), Pilot #1143 Odessa (TX-338 & TX-302).
+- A third-party I-20 list shows an eastbound weigh station near Odessa (MM 103) — enforcement, not listed; page keeps the generic Texas DPS do-not-go box.
+- Discovery note: Pilot city indexes (locations.pilotflyingj.com/us/tx/<city>) now 404 (redirect to pilotcompany.com); store URLs were found via each store page’s nearby-store links and by guessing pilotcompany.com/locations/us/tx/<city>/<address-slug>. Parser kept at /workspace/wh-nightly/pilot_check.py.
+
+Wiring: new `odessa_midland_big_spring_body()` + `write()` in `build.py`, NAV (`omb`), footer, 404 lede hub list, PPM guide Texas line, Van Horn + Amarillo Related, Van Horn "still need to verify" text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 4 Nov 2026.
+
+Previous ship (3 Nov): `/van-horn-fort-stockton-pecos/` — Pilot #209, Flying J #553, Love’s #542, Pilot #1146, Flying J #736, Love’s #492.
+
+## Previous ship detail (3 Nov)
 
 **Van Horn / Fort Stockton / Pecos** (`/van-horn-fort-stockton-pecos/`): third Texas page (Culberson, Pecos and Reeves Counties; all six confirmed via the Census geocoder). All six verified tonight (3 Nov) on operators’ own pages; every one says the store is open 24 hours.
 
@@ -91,8 +115,6 @@ Compiled evening PT 3 Nov 2026 (nightly ship).
 - Seen in a third-party fuel-stop list (not a source for listings), not yet own-page checked: Pilot #1134 Orla (US-285 & RM 652), Pilot #1227 Pyote (I-20 Exit 66), Pilot #1205 / #1207 Monahans — candidates for a Monahans / Odessa page with Love’s #339 Odessa (I-20 Exit 115) and TA Big Spring.
 
 Wiring: new `van_horn_fort_stockton_pecos_body()` + `write()` in `build.py`, NAV (`vfp`), footer, 404 lede hub list, PPM guide Texas line, El Paso + Amarillo + other Related lists, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 3 Nov 2026.
-
-Previous ship (2 Nov): `/amarillo/` — Love’s #250, Love’s #200, TA #0055, Petro #0307, Pilot #436, Flying J #723.
 
 ## Previous ship detail (2 Nov)
 
@@ -140,6 +162,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · no CAT: pyote/164-fm-1927, monahans/101-s-loop-464-rd, midland/2810-rankin-hwy, odessa/6001-us-385, odessa/4200-tx-302 · county check: geocoding.geo.census.gov
 - Far West Texas stops (3 Nov): https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr · https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st · https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542 · https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave · https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st · https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492 · no CAT: loves-travel-stop-van-horn-256 · county check: geocoding.geo.census.gov · Love’s TX state index returns HTTP 500 (store pages OK); Pilot city indexes at locations.pilotflyingj.com/us/tx/<city> work
 - Amarillo stops (2 Nov): https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-250 · https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-200 · https://www.ta-petro.com/location/tx/ta-amarillo/ · https://www.ta-petro.com/location/tx/petro-amarillo/ · https://pilotcompany.com/locations/us/tx/amarillo/715-s-lakeside-dr · https://pilotcompany.com/locations/us/tx/amarillo/9601-e-i-40 · no CAT: loves-travel-stop-amarillo-261, loves-travel-stop-claude-229 · county check: geocoding.geo.census.gov
 - El Paso stops (1 Nov): https://www.loves.com/locations/nm/santa-teresa/loves-travel-stop-santa-teresa-817 · https://www.loves.com/locations/tx/anthony/loves-travel-stop-anthony-447 · https://pilotcompany.com/locations/us/tx/anthony/2015-antonio-st · https://pilotcompany.com/locations/us/tx/el-paso/1301-horizon-blvd · https://www.ta-petro.com/location/tx/petro-el-paso/ · held: https://pilotcompany.com/locations/us/tx/anthony/3001-mountain-pass-blvd
@@ -151,7 +174,8 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
-- Van Horn / Fort Stockton / Pecos: shipped 3 Nov; no dedicated house; CAT staffing hours unpublished; livestock unknown; Sierra Blanca, Fort Hancock, Balmorhea, Monahans, Pyote, Orla, Kermit unchecked. Next Texas: Monahans / Odessa / Midland / Big Spring on I-20 (Pilot #1205/#1207/#1227, Love’s #339, TA Big Spring own-page checks), Pilot Vega + Dumas/Dalhart for the Panhandle, Flying J #724 Anthony if it reopens
+- Monahans / Odessa / Midland / Big Spring: shipped 4 Nov; no dedicated house; CAT staffing hours unpublished; TA Big Spring store hours unpublished; livestock unknown; Kermit (Pilot 127 TX-302 / 700 TX-302), Andrews (Love’s #539, Pilot #1211), Stanton, Snyder (Pilot #887), Sweetwater (TA #0426, Love’s #475) unchecked. Next Texas: Sweetwater / Abilene / Tye / Cisco on I-20 (TA Sweetwater, Love’s #475, Pilot #738 Tye, Pilot #551 Cisco, Love’s #610 Baird, Love’s #270 Ranger own-page checks), Pilot Vega + Dumas/Dalhart for the Panhandle, Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
+- Van Horn / Fort Stockton / Pecos: shipped 3 Nov; no dedicated house; CAT staffing hours unpublished; livestock unknown; Sierra Blanca, Fort Hancock, Balmorhea, Orla, Kermit unchecked; Monahans / Pyote checked 4 Nov (Pyote #1227 no CAT; Monahans #1205 shipped on `/odessa-midland-big-spring/`)
 - Amarillo: shipped 2 Nov; no dedicated house; CAT staffing hours unpublished; TA #0055 / Petro #0307 store hours unpublished; Canyon, Vega (Pilot 6555 US-385 candidate), Hereford, Dumas (Love’s #626), Vega, Dalhart (Love’s #836) unchecked. Still pending: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`; Van Horn / Pecos / Fort Stockton (Love’s #542) for more I-10 Texas
 - El Paso / Anthony / Santa Teresa: shipped 1 Nov; no dedicated house; CAT staffing hours unpublished; Petro El Paso store hours unpublished; Flying J #724 Anthony temporarily closed (held); Clint / Fabens / Van Horn / Fort Hancock east on I-10 unchecked. Next: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`, then Van Horn / Pecos or Amarillo for more Texas pages
 - Clovis / Hobbs / Eunice: shipped 31 Oct; no dedicated house; CAT staffing hours unpublished; Roswell, Artesia, Carlsbad, Portales, Lovington own-page CAT not verified (no TA in eastern NM; Pilot Roswell/Carlsbad not searched). Next NM: add Love’s #614 + #963 to Albuquerque, Love’s #257 to Gallup / Milan, Love’s #817 Santa Teresa to Las Cruces

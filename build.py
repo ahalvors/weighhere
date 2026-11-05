@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "3 Nov 2026"
+CHECKED_HUMAN = "4 Nov 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -40,6 +40,7 @@ NAV = [
     ("/el-paso-santa-teresa/", "El Paso / Anthony / Santa Teresa / I-10 (TX · NM)", "eps"),
     ("/amarillo/", "Amarillo / I-40 (TX)", "ama"),
     ("/van-horn-fort-stockton-pecos/", "Van Horn / Fort Stockton / Pecos (TX)", "vfp"),
+    ("/odessa-midland-big-spring/", "Monahans / Odessa / Midland / Big Spring (TX)", "omb"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -211,11 +212,12 @@ def footer(rel="."):
         <li><a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a></li>
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
         <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
-    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a></li>
+    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a></li>
         <li><a href="/amarillo/">Amarillo / I-40 (TX)</a></li>
         <li><a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos (TX)</a></li>
+        <li><a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring (TX)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -4587,16 +4589,93 @@ def van_horn_fort_stockton_pecos_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Culberson, Pecos or Reeves County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all six stops. Sierra Blanca, Fort Hancock, Balmorhea, Monahans, Pyote, Orla and Kermit are unchecked. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Culberson, Pecos or Reeves County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all six stops. Sierra Blanca, Fort Hancock, Balmorhea, Orla and Kermit are unchecked. East on I-20, Monahans, Odessa, Midland and Big Spring are on <a href="/odessa-midland-big-spring/">their own page</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr">Pilot #209 Van Horn</a> · <a href="https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st">Flying J #553 Fort Stockton</a> · <a href="https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542">Love’s #542 Fort Stockton</a> · <a href="https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave">Pilot #1146 Pecos</a> · <a href="https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st">Flying J #736 Pecos</a> · <a href="https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492">Love’s #492 Pecos</a> · <a href="https://www.loves.com/locations/tx/van-horn/loves-travel-stop-van-horn-256">Love’s #256 Van Horn</a> (no CAT) · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20 public scales</a></li>
       <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 public scales</a></li>
       <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM) public scales</a></li>
       <li><a href="/amarillo/">Amarillo / I-40 public scales</a></li>
       <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(cat)
+
+
+def odessa_midland_big_spring_body():
+    order_cat = [
+        "pilot-1205-monahans-tx",
+        "pilot-1161-odessa-tx",
+        "loves-339-odessa-tx",
+        "flyingj-580-odessa-tx",
+        "pilot-257-midland-tx",
+        "pilot-1145-midland-tx",
+        "loves-623-midland-tx",
+        "flyingj-1033-midland-tx",
+        "loves-976-big-spring-tx",
+        "ta-big-spring-tx",
+        "pilot-559-big-spring-tx",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(cat)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house in the Permian Basin yet</h2>
+    <p>We have not found a walk-up public scale house in Monahans, Odessa, Midland or Big Spring with an operator page we can cite. We are not inventing one from oilfield service yards, frac-sand or aggregate plants, cotton gins, scrap yards, or third-party trucker directories. All eleven stops below are CAT Scales at truck stops, verified on Love’s, Pilot Flying J’s and TA Petro’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Monahans · Odessa · Midland · Big Spring · I-20 · Ward, Ector, Midland and Howard Counties TX · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales on I-20 in the Permian Basin: Monahans, Odessa, Midland and Big Spring</h1>
+    <p class="lede">Eleven CAT Scales verified on the operators’ <em>own</em> location pages along about 100 miles of I-20: Pilot #1205 at Monahans (Exit 86); Pilot #1161 (Exit 108), Love’s #339 (Exit 115) and Flying J #580 (Exit 121) at Odessa; Pilot #257 (Exit 126), Love’s #623 (Exit 131), Flying J #1033 (Exit 137B) and Pilot #1145 (TX-191) at Midland; and Love’s #976 (Exit 176), TA (Exit 177) and Pilot #559 (Exit 178) at Big Spring. Useful for U-Haul and PPM moves in and out of Midland–Odessa, RVs and fifth-wheels crossing West Texas, and horse and stock trailers.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Ward, Ector, Midland and Howard Counties TX</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales in Monahans, Odessa, Midland and Big Spring</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page. All three Love’s pages and all seven Pilot Flying J pages list a CAT Scale and say the store is open 24 hours; TA Big Spring lists a CAT Scale and 24/7 fuel but no 24-hour store statement. None publishes a CAT-staffing schedule. Pilot #1145 sits on TX-191 between the two cities rather than on I-20. Not every Pilot here has a scale: Pilot #1227 Pyote (Exit 66), Pilot #1207 Monahans (Business I-20 &amp; TX-464), Pilot #1209 Midland (Exit 136, Rankin Hwy), and Pilot #1354 and #1143 in Odessa (US-385 and TX-302) list no CAT on their own pages, so they are not here. West on I-20 toward Pecos, see <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos</a>. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Texas DPS commercial vehicle enforcement sites and roadside inspection pull-offs on I-20 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Ward, Ector, Midland or Howard County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all eleven stops, and TA Big Spring’s store hours. Kermit, Andrews, Stanton, Snyder and Sweetwater are unchecked. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20">Pilot #1205 Monahans</a> · <a href="https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd">Pilot #1161 Odessa</a> · <a href="https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339">Love’s #339 Odessa</a> · <a href="https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20">Flying J #580 Odessa</a> · <a href="https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788">Pilot #257 Midland</a> · <a href="https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e">Pilot #1145 Midland</a> · <a href="https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623">Love’s #623 Midland</a> · <a href="https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy">Flying J #1033 Midland</a> · <a href="https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976">Love’s #976 Big Spring</a> · <a href="https://www.ta-petro.com/location/tx/ta-big-spring/">TA Big Spring</a> · <a href="https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd">Pilot #559 Big Spring</a> · no CAT: <a href="https://pilotcompany.com/locations/us/tx/pyote/164-fm-1927">Pilot #1227</a>, <a href="https://pilotcompany.com/locations/us/tx/monahans/101-s-loop-464-rd">Pilot #1207</a>, <a href="https://pilotcompany.com/locations/us/tx/midland/2810-rankin-hwy">Pilot #1209</a>, <a href="https://pilotcompany.com/locations/us/tx/odessa/6001-us-385">Pilot #1354</a>, <a href="https://pilotcompany.com/locations/us/tx/odessa/4200-tx-302">Pilot #1143</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos public scales</a></li>
+      <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM) public scales</a></li>
+      <li><a href="/amarillo/">Amarillo / I-40 public scales</a></li>
+      <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
@@ -4668,6 +4747,7 @@ def amarillo_body():
       <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM) public scales</a></li>
       <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 public scales</a></li>
       <li><a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos public scales</a></li>
+      <li><a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
@@ -6618,6 +6698,15 @@ def main():
         leaflet,
     )
     write(
+        ROOT / "odessa-midland-big-spring" / "index.html",
+        "Odessa / Midland / Big Spring public scales — CAT on I-20 | WeighHere",
+        "Eleven CAT Scales verified on operators’ own pages on I-20 in the Permian Basin: Pilot #1205 Monahans (Exit 86), Pilot #1161, Love’s #339 and Flying J #580 Odessa, Pilot #257, Love’s #623, Flying J #1033 and Pilot #1145 Midland, Love’s #976, TA and Pilot #559 Big Spring. For U-Haul, PPM, RV and horse trailers.",
+        "omb",
+        "../",
+        odessa_midland_big_spring_body(),
+        leaflet,
+    )
+    write(
         ROOT / "amarillo" / "index.html",
         "Amarillo public scales — CAT on I-40 | WeighHere",
         "Six CAT Scales verified on operators’ own pages on I-40 in Amarillo: Love’s #250 (Exit 60), Love’s #200 and TA #0055 (Exit 74), Petro #0307 and Pilot #436 (Exit 75), Flying J #723 (Exit 76). For U-Haul, PPM, RV and horse trailers.",
@@ -6943,7 +7032,7 @@ def main():
         header("about", "", "Not found | WeighHere", "Page not found.")
         + """<main id="main"><section class="page-head"><div class="wrap">
         <h1>No page at this address</h1>
-        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 (NM)</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a>, <a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a>, <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a>, <a href="/amarillo/">Amarillo / I-40 (TX)</a>, <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos (TX)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
+        <p class="lede">Start with <a href="/">Los Angeles County public scales</a>, <a href="/san-diego/">San Diego County</a>, <a href="/phoenix/">Phoenix metro</a>, <a href="/casa-grande-eloy/">Casa Grande / Eloy / I-10</a>, <a href="/gila-bend-yuma/">Gila Bend / Yuma / I-8</a>, <a href="/quartzsite-ehrenberg/">Quartzsite / Ehrenberg / I-10</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/tucson-benson/">Tucson / Benson / I-10</a>, <a href="/flagstaff-winslow/">Flagstaff / Winslow / I-40</a>, <a href="/gallup-milan/">Gallup / Jamestown / Milan / I-40 (NM)</a>, <a href="/albuquerque/">Albuquerque / I-40 · I-25 (NM)</a>, <a href="/moriarty-santa-rosa/">Moriarty / Santa Rosa / I-40 (NM)</a>, <a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a>, <a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a>, <a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a>, <a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a>, <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a>, <a href="/amarillo/">Amarillo / I-40 (TX)</a>, <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos (TX)</a>, <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring (TX)</a>, <a href="/mayer/">Mayer / Cordes Lakes / I-17</a>, <a href="/white-hills/">White Hills / Henderson / US-93</a>, <a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a>, <a href="/las-vegas/">Las Vegas / I-15</a>, <a href="/reno-sparks/">Reno / Sparks / Fernley / I-80</a>, <a href="/elko-winnemucca/">Winnemucca / Elko / Wells / I-80</a>, <a href="/st-george-cedar-city/">St. George / Cedar City / I-15</a>, <a href="/fillmore-nephi/">Fillmore / Nephi / I-15</a>, <a href="/springville-salt-lake/">Springville / Salt Lake / I-15</a>, <a href="/brigham-ogden/">Brigham / Ogden / I-15</a>, <a href="/mccammon-idaho-falls/">McCammon / Idaho Falls / I-15</a>, <a href="/boise-treasure-valley/">Boise / Treasure Valley / I-84</a>, <a href="/twin-falls-burley/">Twin Falls / Burley / I-84</a>, <a href="/spokane-post-falls/">Spokane / Post Falls / I-90</a>, <a href="/north-bend-ellensburg/">North Bend / Ellensburg / I-90</a>, <a href="/moses-lake-ritzville/">Moses Lake / Ritzville / I-90</a>, <a href="/pasco-prosser/">Pasco / Prosser / Tri-Cities</a>, <a href="/portland-troutdale/">Portland / Troutdale / Aurora</a>, <a href="/eugene-albany-roseburg/">Albany / Eugene / Roseburg / I-5</a>, <a href="/ontario-baker-city/">Ontario / Baker City / I-84</a>, <a href="/madras-klamath-falls/">Madras / Klamath Falls / US-97</a>, <a href="/biggs-boardman-stanfield/">Biggs / Boardman / Stanfield / I-84</a>, <a href="/medford-central-point/">Medford / Central Point / Phoenix / I-5</a>, <a href="/sacramento/">Sacramento approaches</a>, <a href="/grapevine/">Grapevine / I-5 mid-CA</a>, <a href="/highway-99/">Hwy 99 / Stockton</a>, <a href="/madera/">Madera / Hwy 99</a>, <a href="/tulare/">Tulare / Hwy 99</a>, <a href="/bakersfield/">Bakersfield / Hwy 99</a>, <a href="/fresno/">Fresno / Hwy 99 · I-5</a>, <a href="/merced/">Merced / Hwy 99</a>, <a href="/salinas/">Salinas / US-101</a>, <a href="/weed-yreka/">Weed / Yreka / I-5</a>, <a href="/corning-orland/">Corning / Orland / I-5</a>, <a href="/buttonwillow-lost-hills/">Buttonwillow / Lost Hills / I-5</a>, <a href="/wheeler-ridge/">Wheeler Ridge / I-5</a>, <a href="/santa-nella/">Santa Nella / I-5</a>, <a href="/central-valley/">Central Valley</a>, <a href="/dump-trailer/">Dump trailer</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/i-15/">I-15 / High Desert</a>, <a href="/coachella/">Coachella Valley / I-10</a>, <a href="/ontario/">Ontario / I-10 West</a>, <a href="/imperial/">Imperial / Hwy 86</a>, <a href="/antelope-valley/">Antelope Valley</a>, <a href="/mojave/">Mojave / Hwy 58</a>, or <a href="/about.html">About</a>.</p>
         </div></section></main>"""
         + footer(""),
         encoding="utf-8",
