@@ -1,13 +1,14 @@
-# WeighHere status — 4 Nov 2026
+# WeighHere status — 5 Nov 2026
 
-Compiled evening PT 4 Nov 2026 (nightly ship).
+Compiled evening PT 5 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **274** | +11 Permian Basin I-20 CAT (Pilot #1205 Monahans; Pilot #1161, Love’s #339, Flying J #580 Odessa; Pilot #257, Pilot #1145, Love’s #623, Flying J #1033 Midland; Love’s #976, TA, Pilot #559 Big Spring) |
-| Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | new 4 Nov — fourth Texas page |
+| **Total rows in `data/stations.json`** | **280** | +6 Sweetwater–Ranger I-20 CAT (Love’s #475 + TA #0426 Sweetwater; Flying J #738 Tye; Love’s #610 Baird; Flying J Dealer #551 Cisco; Love’s #270 Ranger) |
+| Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | new 5 Nov — fifth Texas page |
+| Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | 4 Nov |
 | Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | 3 Nov |
 | Amarillo / I-40 (TX) | 6 | 2 Nov |
 | El Paso / Anthony / Santa Teresa / I-10 (TX · NM) | 5 | 1 Nov — first Texas page |
@@ -74,11 +75,24 @@ Compiled evening PT 4 Nov 2026 (nightly ship).
 | Albuquerque / I-40 · I-25 (NM) | 3 | page 26 Oct — Flying J #689 (I-40 Exit 153), TA Albuquerque #0081 (I-40 Exit 159A/D), Pilot #1106 (I-25 Exit 215) |
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
-| **Tucumcari / Glenrio / I-40 (NM)** | **2** | **new page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 210 | +11 Permian Basin |
+| **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
+| CAT / truck-stop cards | 216 | +6 Sweetwater–Ranger |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Sweetwater / Abilene / Cisco / Ranger** (`/sweetwater-abilene-cisco/`, title "Truck Scales near Sweetwater, Abilene & Cisco, TX | WeighHere"): fifth Texas page (Nolan, Taylor, Callahan and Eastland Counties; all six confirmed via the Census geocoder on operator coordinates). All six verified tonight (5 Nov) on operators’ own pages.
+
+- **Love’s #475 Sweetwater** — 9418 North Interstate 20, Sweetwater TX 79556, I-20 Exit 242 — CAT Scales in amenities; Store Open 24-hours; RV dump; (325) 235-1240; geo 32.450422, -100.441752. County slug `nolan`.
+- **TA Sweetwater #0426** — 100 South Hopkins Rd, Sweetwater TX 79556, I-20 Exit 242 — CAT Scale under Other Amenities; fuel 24/7 only, no store-hours statement; (325) 235-8488; geo 32.44859, -100.44327. County slug `nolan`.
+- **Flying J #738 Tye** — 101 N FM 707, Tye TX 79563, I-20 Exit 277 (Pilot files under Abilene) — CAT 318; Open; 24h; (325) 439-7699; geo 32.461697, -99.872525. County slug `taylor`.
+- **Love’s #610 Baird** — 1333 US Highway 283 N, Baird TX 79504, I-20 Exit 307 — CAT Scales in amenities; Store Open 24-hours; RV dump; (325) 854-0099; geo 32.402493, -99.384692. County slug `callahan`.
+- **Flying J Dealer #551 Cisco** — 16851 I-20 Frontage Rd, Cisco TX 76437, I-20 / TX-206 Exit 330 — CAT 318; Open; 24h; (254) 442-1040; geo 32.373728, -99.007684. County slug `eastland`.
+- **Love’s #270 Ranger** — 6950 I-20, Ranger TX 76470, I-20 Exit 349 — CAT Scales in amenities; Store Open 24-Hours; RV hookup + dump; (254) 647-3700; geo 32.441748, -98.694499. County slug `eastland`.
+
+Wiring: new `sweetwater_abilene_cisco_body()` + `write()` in `build.py`, NAV (`sac`), footer, 404 lede hub list, PPM guide Texas line, Odessa Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 5 Nov 2026.
+
+## Previous ship detail (4 Nov)
 
 **Monahans / Odessa / Midland / Big Spring** (`/odessa-midland-big-spring/`, title "Truck Scales near Odessa, Midland & Big Spring, TX | WeighHere"): fourth Texas page (Ward, Ector, Midland and Howard Counties; all eleven confirmed via the Census geocoder). All eleven verified tonight (4 Nov) on operators’ own pages. Pilot pages: CAT = offeringCode 318 in the primary line of business’s own offerings; every Pilot store status Open / Regular Business Operation, is24Hours true.
 
@@ -162,19 +176,15 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
-- Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · no CAT: pyote/164-fm-1927, monahans/101-s-loop-464-rd, midland/2810-rankin-hwy, odessa/6001-us-385, odessa/4200-tx-302 · county check: geocoding.geo.census.gov
-- Far West Texas stops (3 Nov): https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr · https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st · https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542 · https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave · https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st · https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492 · no CAT: loves-travel-stop-van-horn-256 · county check: geocoding.geo.census.gov · Love’s TX state index returns HTTP 500 (store pages OK); Pilot city indexes at locations.pilotflyingj.com/us/tx/<city> work
-- Amarillo stops (2 Nov): https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-250 · https://www.loves.com/locations/tx/amarillo/loves-travel-stop-amarillo-200 · https://www.ta-petro.com/location/tx/ta-amarillo/ · https://www.ta-petro.com/location/tx/petro-amarillo/ · https://pilotcompany.com/locations/us/tx/amarillo/715-s-lakeside-dr · https://pilotcompany.com/locations/us/tx/amarillo/9601-e-i-40 · no CAT: loves-travel-stop-amarillo-261, loves-travel-stop-claude-229 · county check: geocoding.geo.census.gov
-- El Paso stops (1 Nov): https://www.loves.com/locations/nm/santa-teresa/loves-travel-stop-santa-teresa-817 · https://www.loves.com/locations/tx/anthony/loves-travel-stop-anthony-447 · https://pilotcompany.com/locations/us/tx/anthony/2015-antonio-st · https://pilotcompany.com/locations/us/tx/el-paso/1301-horizon-blvd · https://www.ta-petro.com/location/tx/petro-el-paso/ · held: https://pilotcompany.com/locations/us/tx/anthony/3001-mountain-pass-blvd
-- Love’s #329 Clovis: https://www.loves.com/locations/nm/clovis/loves-travel-stop-clovis-329
-- Pilot #557 Hobbs: https://locations.pilotflyingj.com/us/nm/hobbs/3710-w-carlsbad-hwy (redirects to pilotcompany.com/locations/us/nm/hobbs/3710-w-carlsbad-hwy)
-- Love’s #760 Eunice: https://www.loves.com/locations/nm/eunice/loves-travel-stop-eunice-760
-- Love’s #614 / #963 Albuquerque, #257 Milan, #817 Santa Teresa (CAT, held for extensions); #210 Albuquerque (no CAT): loves.com/locations/nm/... store pages
-- TA NM index (no eastern NM TA): https://www.ta-petro.com/location/nm/
+- Sweetwater–Ranger I-20 stops (5 Nov): https://www.loves.com/locations/tx/sweetwater/loves-travel-stop-sweetwater-475 · https://www.ta-petro.com/location/tx/ta-sweetwater/ · https://pilotcompany.com/locations/us/tx/abilene/i-20-exit-277-101-n-fm-707 · https://www.loves.com/locations/tx/baird/loves-travel-stop-baird-610 · https://pilotcompany.com/locations/us/tx/cisco/16851-i-20-frontage-rd · https://www.loves.com/locations/tx/ranger/loves-travel-stop-ranger-270 · county check: geocoding.geo.census.gov (coordinates)
+- Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · county check: geocoding.geo.census.gov
+- Far West Texas stops (3 Nov): https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr · https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st · https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542 · https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave · https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st · https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492
+- Amarillo / El Paso / Clovis sources: see prior STATUS compile notes
 
 ## Gaps / deferred
 
-- Monahans / Odessa / Midland / Big Spring: shipped 4 Nov; no dedicated house; CAT staffing hours unpublished; TA Big Spring store hours unpublished; livestock unknown; Kermit (Pilot 127 TX-302 / 700 TX-302), Andrews (Love’s #539, Pilot #1211), Stanton, Snyder (Pilot #887), Sweetwater (TA #0426, Love’s #475) unchecked. Next Texas: Sweetwater / Abilene / Tye / Cisco on I-20 (TA Sweetwater, Love’s #475, Pilot #738 Tye, Pilot #551 Cisco, Love’s #610 Baird, Love’s #270 Ranger own-page checks), Pilot Vega + Dumas/Dalhart for the Panhandle, Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
+- Sweetwater / Abilene / Cisco / Ranger: shipped 5 Nov; no dedicated house; CAT staffing hours unpublished; TA Sweetwater store hours unpublished; livestock unknown; Snyder, Merkel, Clyde, Eastland, Weatherford (Love’s #273, Pilot #206, Petro Weatherford) unchecked. Next Texas: Weatherford / Fort Worth west I-20, or Panhandle (Pilot Vega + Dumas/Dalhart); Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
+- Monahans / Odessa / Midland / Big Spring: shipped 4 Nov; no dedicated house; CAT staffing hours unpublished; TA Big Spring store hours unpublished; livestock unknown; Kermit, Andrews, Stanton, Snyder unchecked; Sweetwater corridor shipped 5 Nov on `/sweetwater-abilene-cisco/`
 - Van Horn / Fort Stockton / Pecos: shipped 3 Nov; no dedicated house; CAT staffing hours unpublished; livestock unknown; Sierra Blanca, Fort Hancock, Balmorhea, Orla, Kermit unchecked; Monahans / Pyote checked 4 Nov (Pyote #1227 no CAT; Monahans #1205 shipped on `/odessa-midland-big-spring/`)
 - Amarillo: shipped 2 Nov; no dedicated house; CAT staffing hours unpublished; TA #0055 / Petro #0307 store hours unpublished; Canyon, Vega (Pilot 6555 US-385 candidate), Hereford, Dumas (Love’s #626), Vega, Dalhart (Love’s #836) unchecked. Still pending: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`; Van Horn / Pecos / Fort Stockton (Love’s #542) for more I-10 Texas
 - El Paso / Anthony / Santa Teresa: shipped 1 Nov; no dedicated house; CAT staffing hours unpublished; Petro El Paso store hours unpublished; Flying J #724 Anthony temporarily closed (held); Clint / Fabens / Van Horn / Fort Hancock east on I-10 unchecked. Next: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`, then Van Horn / Pecos or Amarillo for more Texas pages
@@ -213,6 +223,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 - Hours / fees / livestock unknown beyond store-listed fuel 24/7 vs CAT staffing
 - Ventura / Santa Barbara remain thin
 - CDFA Merced / Kern / Shasta / Tehama / Glenn / Fresno / Ventura / Santa Barbara / Sacramento facility grids still often WAF-blocked
+
 
 ## Weekly guides (`/guides/<slug>/`)
 
