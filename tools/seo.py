@@ -90,6 +90,7 @@ PLACES = {
     "van-horn-fort-stockton-pecos": ("Van Horn, Fort Stockton & Pecos, TX", "Texas"),
     "odessa-midland-big-spring": ("Odessa, Midland & Big Spring, TX", "Texas"),
     "sweetwater-abilene-cisco": ("Sweetwater, Abilene & Cisco, TX", "Texas"),
+    "weatherford-fort-worth": ("Weatherford & Fort Worth, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

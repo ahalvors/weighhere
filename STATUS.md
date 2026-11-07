@@ -1,13 +1,14 @@
-# WeighHere status — 5 Nov 2026
+# WeighHere status — 6 Nov 2026
 
-Compiled evening PT 5 Nov 2026 (nightly ship).
+Compiled evening PT 6 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **280** | +6 Sweetwater–Ranger I-20 CAT (Love’s #475 + TA #0426 Sweetwater; Flying J #738 Tye; Love’s #610 Baird; Flying J Dealer #551 Cisco; Love’s #270 Ranger) |
-| Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | new 5 Nov — fifth Texas page |
+| **Total rows in `data/stations.json`** | **283** | +3 Weatherford I-20 CAT (Pilot #206 + Petro #0302 + Love’s #273) |
+| Weatherford / Fort Worth west / I-20 (TX) | 3 | new 6 Nov — sixth Texas page |
+| Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | 5 Nov |
 | Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | 4 Nov |
 | Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | 3 Nov |
 | Amarillo / I-40 (TX) | 6 | 2 Nov |
@@ -76,10 +77,21 @@ Compiled evening PT 5 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 216 | +6 Sweetwater–Ranger |
+| CAT / truck-stop cards | 219 | +3 Weatherford (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Weatherford / Fort Worth west** (`/weatherford-fort-worth/`, title "Truck Scales near Weatherford & Fort Worth, TX | WeighHere"): sixth Texas page (Parker County; all three confirmed via the Census geocoder on operator coordinates). All three verified tonight (6 Nov) on operators’ own pages.
+
+- **Pilot #206 Weatherford** — 1201 W I-20, Weatherford TX 76087, I-20 Exit 406 — CAT 318 in own offerings; Open; 24h; (817) 341-4600; geo 32.727247, -97.825168. County slug `parker`.
+- **Petro Weatherford #0302** — 2001 Santa Fe Dr, Weatherford TX 76086, I-20 Exit 409 at Clear Lake Road — CAT Scale under Other Amenities; fuel 24/7 only, no store-hours statement; (817) 599-9411; geo 32.7389, -97.7654. County slug `parker`.
+- **Love’s #273 Weatherford** — 2605 E Bankhead Hwy, Weatherford TX 76087, I-20 Exit 410 — CAT Scales in amenities; Store Open 24-hours; (817) 594-2755; geo 32.742896, -97.742837. County slug `parker`.
+- Checked on own pages, no CAT: ONE9 Dealer #1285 Santo (I-20 Exit 386 / 87125 I-20), ONE9 Dealer #1344 Fort Worth (1301 Markum Ranch Rd E / I-20), ONE9 Dealer #1304 Fort Worth (1000 NE Loop 820 / I-820). No Love’s pages for Eastland, Aledo, Willow Park or Brock. TA Weatherford URL 404 (Petro only). Love’s #281 Fort Worth is I-35W Exit 40 — not this I-20 corridor.
+
+Wiring: new `weatherford_fort_worth_body()` + `write()` in `build.py`, NAV (`wfw`), footer, 404 lede hub list, PPM guide Texas line, Sweetwater Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 6 Nov 2026.
+
+## Previous ship detail (5 Nov)
 
 **Sweetwater / Abilene / Cisco / Ranger** (`/sweetwater-abilene-cisco/`, title "Truck Scales near Sweetwater, Abilene & Cisco, TX | WeighHere"): fifth Texas page (Nolan, Taylor, Callahan and Eastland Counties; all six confirmed via the Census geocoder on operator coordinates). All six verified tonight (5 Nov) on operators’ own pages.
 
@@ -176,6 +188,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Weatherford I-20 stops (6 Nov): https://pilotcompany.com/locations/us/tx/weatherford/1201-w-i-20 · https://www.ta-petro.com/location/tx/petro-weatherford/ · https://www.loves.com/locations/tx/weatherford/loves-travel-stop-weatherford-273 · county check: geocoding.geo.census.gov (coordinates)
 - Sweetwater–Ranger I-20 stops (5 Nov): https://www.loves.com/locations/tx/sweetwater/loves-travel-stop-sweetwater-475 · https://www.ta-petro.com/location/tx/ta-sweetwater/ · https://pilotcompany.com/locations/us/tx/abilene/i-20-exit-277-101-n-fm-707 · https://www.loves.com/locations/tx/baird/loves-travel-stop-baird-610 · https://pilotcompany.com/locations/us/tx/cisco/16851-i-20-frontage-rd · https://www.loves.com/locations/tx/ranger/loves-travel-stop-ranger-270 · county check: geocoding.geo.census.gov (coordinates)
 - Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · county check: geocoding.geo.census.gov
 - Far West Texas stops (3 Nov): https://pilotcompany.com/locations/us/tx/van-horn/501-van-horn-dr · https://pilotcompany.com/locations/us/tx/fort-stockton/2571-n-front-st · https://www.loves.com/locations/tx/fort-stockton/loves-travel-stop-fort-stockton-542 · https://pilotcompany.com/locations/us/tx/pecos/2500-s-bickley-ave · https://pilotcompany.com/locations/us/tx/pecos/100-e-pinehurst-st · https://www.loves.com/locations/tx/pecos/loves-travel-stop-pecos-492
@@ -183,7 +196,8 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
-- Sweetwater / Abilene / Cisco / Ranger: shipped 5 Nov; no dedicated house; CAT staffing hours unpublished; TA Sweetwater store hours unpublished; livestock unknown; Snyder, Merkel, Clyde, Eastland, Weatherford (Love’s #273, Pilot #206, Petro Weatherford) unchecked. Next Texas: Weatherford / Fort Worth west I-20, or Panhandle (Pilot Vega + Dumas/Dalhart); Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
+- Weatherford / Fort Worth west: shipped 6 Nov; no dedicated house; CAT staffing hours unpublished; Petro Weatherford store hours unpublished; livestock unknown; Eastland, Brock, Willow Park, Aledo, Santo (ONE9 #1285 no CAT), Fort Worth I-20 Markum Ranch (ONE9 #1344 no CAT) unchecked for more. Next Texas: Panhandle (Pilot Vega 6555 US-385 / I-40, Love’s #626 Dumas, Love’s #836 Dalhart), or Fort Worth / Dallas I-20 east; Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
+- Sweetwater / Abilene / Cisco / Ranger: shipped 5 Nov; no dedicated house; CAT staffing hours unpublished; TA Sweetwater store hours unpublished; livestock unknown; Snyder, Merkel, Clyde, Eastland unchecked. Weatherford corridor shipped 6 Nov on `/weatherford-fort-worth/`
 - Monahans / Odessa / Midland / Big Spring: shipped 4 Nov; no dedicated house; CAT staffing hours unpublished; TA Big Spring store hours unpublished; livestock unknown; Kermit, Andrews, Stanton, Snyder unchecked; Sweetwater corridor shipped 5 Nov on `/sweetwater-abilene-cisco/`
 - Van Horn / Fort Stockton / Pecos: shipped 3 Nov; no dedicated house; CAT staffing hours unpublished; livestock unknown; Sierra Blanca, Fort Hancock, Balmorhea, Orla, Kermit unchecked; Monahans / Pyote checked 4 Nov (Pyote #1227 no CAT; Monahans #1205 shipped on `/odessa-midland-big-spring/`)
 - Amarillo: shipped 2 Nov; no dedicated house; CAT staffing hours unpublished; TA #0055 / Petro #0307 store hours unpublished; Canyon, Vega (Pilot 6555 US-385 candidate), Hereford, Dumas (Love’s #626), Vega, Dalhart (Love’s #836) unchecked. Still pending: Love’s #614 + #963 extend `/albuquerque/`, Love’s #257 extends `/gallup-milan/`; Van Horn / Pecos / Fort Stockton (Love’s #542) for more I-10 Texas
