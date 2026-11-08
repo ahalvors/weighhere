@@ -1,13 +1,14 @@
-# WeighHere status — 6 Nov 2026
+# WeighHere status — 7 Nov 2026
 
-Compiled evening PT 6 Nov 2026 (nightly ship).
+Compiled evening PT 7 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **283** | +3 Weatherford I-20 CAT (Pilot #206 + Petro #0302 + Love’s #273) |
-| Weatherford / Fort Worth west / I-20 (TX) | 3 | new 6 Nov — sixth Texas page |
+| **Total rows in `data/stations.json`** | **286** | +3 Panhandle CAT (Pilot #1027 Vega + Love’s #626 Dumas + Love’s #836 Dalhart) |
+| Vega / Dumas / Dalhart (TX Panhandle) | 3 | new 7 Nov — seventh Texas page |
+| Weatherford / Fort Worth west / I-20 (TX) | 3 | 6 Nov |
 | Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | 5 Nov |
 | Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | 4 Nov |
 | Van Horn / Fort Stockton / Pecos / I-10 · I-20 (TX) | 6 | 3 Nov |
@@ -188,6 +189,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Texas Panhandle stops (7 Nov): https://pilotcompany.com/locations/us/tx/vega/6555-us-385 · https://www.loves.com/locations/tx/dumas/loves-travel-stop-dumas-626 · https://www.loves.com/locations/tx/dalhart/loves-travel-stop-dalhart-836 · county check: geocoding.geo.census.gov (coordinates: Oldham, Moore, Dallam)
 - Weatherford I-20 stops (6 Nov): https://pilotcompany.com/locations/us/tx/weatherford/1201-w-i-20 · https://www.ta-petro.com/location/tx/petro-weatherford/ · https://www.loves.com/locations/tx/weatherford/loves-travel-stop-weatherford-273 · county check: geocoding.geo.census.gov (coordinates)
 - Sweetwater–Ranger I-20 stops (5 Nov): https://www.loves.com/locations/tx/sweetwater/loves-travel-stop-sweetwater-475 · https://www.ta-petro.com/location/tx/ta-sweetwater/ · https://pilotcompany.com/locations/us/tx/abilene/i-20-exit-277-101-n-fm-707 · https://www.loves.com/locations/tx/baird/loves-travel-stop-baird-610 · https://pilotcompany.com/locations/us/tx/cisco/16851-i-20-frontage-rd · https://www.loves.com/locations/tx/ranger/loves-travel-stop-ranger-270 · county check: geocoding.geo.census.gov (coordinates)
 - Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · county check: geocoding.geo.census.gov
@@ -196,6 +198,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Vega / Dumas / Dalhart (Panhandle): shipped 7 Nov on `/vega-dumas-dalhart/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; Hereford (two CAT listings seen only in a third-party directory, not chain-owned pages), Canyon, Stratford, Channing, Shamrock unchecked. Next Texas: Fort Worth / Dallas I-20 east, Wichita Falls / Childress US-287, or Shamrock / McLean I-40 east; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
 - Weatherford / Fort Worth west: shipped 6 Nov; no dedicated house; CAT staffing hours unpublished; Petro Weatherford store hours unpublished; livestock unknown; Eastland, Brock, Willow Park, Aledo, Santo (ONE9 #1285 no CAT), Fort Worth I-20 Markum Ranch (ONE9 #1344 no CAT) unchecked for more. Next Texas: Panhandle (Pilot Vega 6555 US-385 / I-40, Love’s #626 Dumas, Love’s #836 Dalhart), or Fort Worth / Dallas I-20 east; Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
 - Sweetwater / Abilene / Cisco / Ranger: shipped 5 Nov; no dedicated house; CAT staffing hours unpublished; TA Sweetwater store hours unpublished; livestock unknown; Snyder, Merkel, Clyde, Eastland unchecked. Weatherford corridor shipped 6 Nov on `/weatherford-fort-worth/`
 - Monahans / Odessa / Midland / Big Spring: shipped 4 Nov; no dedicated house; CAT staffing hours unpublished; TA Big Spring store hours unpublished; livestock unknown; Kermit, Andrews, Stanton, Snyder unchecked; Sweetwater corridor shipped 5 Nov on `/sweetwater-abilene-cisco/`

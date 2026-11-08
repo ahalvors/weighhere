@@ -91,6 +91,7 @@ PLACES = {
     "odessa-midland-big-spring": ("Odessa, Midland & Big Spring, TX", "Texas"),
     "sweetwater-abilene-cisco": ("Sweetwater, Abilene & Cisco, TX", "Texas"),
     "weatherford-fort-worth": ("Weatherford & Fort Worth, TX", "Texas"),
+    "vega-dumas-dalhart": ("Vega, Dumas & Dalhart, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
