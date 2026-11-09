@@ -1,13 +1,14 @@
-# WeighHere status — 7 Nov 2026
+# WeighHere status — 8 Nov 2026
 
-Compiled evening PT 7 Nov 2026 (nightly ship).
+Compiled evening PT 8 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **286** | +3 Panhandle CAT (Pilot #1027 Vega + Love’s #626 Dumas + Love’s #836 Dalhart) |
-| Vega / Dumas / Dalhart (TX Panhandle) | 3 | new 7 Nov — seventh Texas page |
+| **Total rows in `data/stations.json`** | **290** | +4 US-287 CAT (Pilot #1003 Childress + Love’s #662 Quanah + TA #0945 Vernon + Love’s #269 Wichita Falls) |
+| Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | new 8 Nov — eighth Texas page |
+| Vega / Dumas / Dalhart (TX Panhandle) | 3 | 7 Nov |
 | Weatherford / Fort Worth west / I-20 (TX) | 3 | 6 Nov |
 | Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | 5 Nov |
 | Monahans / Odessa / Midland / Big Spring / I-20 (TX) | 11 | 4 Nov |
@@ -189,6 +190,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- US-287 stops (8 Nov): https://pilotcompany.com/locations/us/tx/childress/2301-avenue-f-nw · https://www.loves.com/locations/tx/quanah/loves-travel-stop-quanah-662 · https://www.ta-petro.com/location/tx/ta-vernon-tx/ · https://www.loves.com/locations/tx/wichita-falls/loves-travel-stop-wichita-falls-269 · county check: geocoding.geo.census.gov (coordinates: Childress, Hardeman, Wilbarger, Wichita)
 - Texas Panhandle stops (7 Nov): https://pilotcompany.com/locations/us/tx/vega/6555-us-385 · https://www.loves.com/locations/tx/dumas/loves-travel-stop-dumas-626 · https://www.loves.com/locations/tx/dalhart/loves-travel-stop-dalhart-836 · county check: geocoding.geo.census.gov (coordinates: Oldham, Moore, Dallam)
 - Weatherford I-20 stops (6 Nov): https://pilotcompany.com/locations/us/tx/weatherford/1201-w-i-20 · https://www.ta-petro.com/location/tx/petro-weatherford/ · https://www.loves.com/locations/tx/weatherford/loves-travel-stop-weatherford-273 · county check: geocoding.geo.census.gov (coordinates)
 - Sweetwater–Ranger I-20 stops (5 Nov): https://www.loves.com/locations/tx/sweetwater/loves-travel-stop-sweetwater-475 · https://www.ta-petro.com/location/tx/ta-sweetwater/ · https://pilotcompany.com/locations/us/tx/abilene/i-20-exit-277-101-n-fm-707 · https://www.loves.com/locations/tx/baird/loves-travel-stop-baird-610 · https://pilotcompany.com/locations/us/tx/cisco/16851-i-20-frontage-rd · https://www.loves.com/locations/tx/ranger/loves-travel-stop-ranger-270 · county check: geocoding.geo.census.gov (coordinates)
@@ -198,6 +200,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Childress / Quanah / Vernon / Wichita Falls (US-287): shipped 8 Nov on `/childress-wichita-falls/`; no dedicated house; CAT staffing hours unpublished; TA Vernon store hours unpublished (fuel 24/7 only); Love’s #662 Quanah page flagged a city boil order with limited services on 8 Nov; Love’s #247 Memphis own page lists no CAT; livestock unknown; Electra, Henrietta, Bowie, Decatur unchecked. Pilot’s city index pages (pilotcompany.com/locations/us/tx/<city>) now 404 — find store URLs via search or nearby-store links. Next Texas: Fort Worth / Dallas I-20 east, Bowie / Decatur US-287 south, or Shamrock / McLean I-40 east (no Pilot or Love’s CAT found there yet)
 - Vega / Dumas / Dalhart (Panhandle): shipped 7 Nov on `/vega-dumas-dalhart/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; Hereford (two CAT listings seen only in a third-party directory, not chain-owned pages), Canyon, Stratford, Channing, Shamrock unchecked. Next Texas: Fort Worth / Dallas I-20 east, Wichita Falls / Childress US-287, or Shamrock / McLean I-40 east; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
 - Weatherford / Fort Worth west: shipped 6 Nov; no dedicated house; CAT staffing hours unpublished; Petro Weatherford store hours unpublished; livestock unknown; Eastland, Brock, Willow Park, Aledo, Santo (ONE9 #1285 no CAT), Fort Worth I-20 Markum Ranch (ONE9 #1344 no CAT) unchecked for more. Next Texas: Panhandle (Pilot Vega 6555 US-385 / I-40, Love’s #626 Dumas, Love’s #836 Dalhart), or Fort Worth / Dallas I-20 east; Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
 - Sweetwater / Abilene / Cisco / Ranger: shipped 5 Nov; no dedicated house; CAT staffing hours unpublished; TA Sweetwater store hours unpublished; livestock unknown; Snyder, Merkel, Clyde, Eastland unchecked. Weatherford corridor shipped 6 Nov on `/weatherford-fort-worth/`
