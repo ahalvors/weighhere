@@ -1,13 +1,14 @@
-# WeighHere status — 8 Nov 2026
+# WeighHere status — 9 Nov 2026
 
-Compiled evening PT 8 Nov 2026 (nightly ship).
+Compiled evening PT 9 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **290** | +4 US-287 CAT (Pilot #1003 Childress + Love’s #662 Quanah + TA #0945 Vernon + Love’s #269 Wichita Falls) |
-| Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | new 8 Nov — eighth Texas page |
+| **Total rows in `data/stations.json`** | **294** | +4 Wise County CAT (Love’s #380 + Pilot #1140 Rhome + TA Express #0456 Decatur + Love’s #713 Bridgeport) |
+| Decatur / Rhome / Bridgeport / US-287 · US-380 (TX) | 4 | new 9 Nov — ninth Texas page |
+| Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | 8 Nov |
 | Vega / Dumas / Dalhart (TX Panhandle) | 3 | 7 Nov |
 | Weatherford / Fort Worth west / I-20 (TX) | 3 | 6 Nov |
 | Sweetwater / Tye / Baird / Cisco / Ranger / I-20 (TX) | 6 | 5 Nov |
@@ -192,6 +193,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 - US-287 stops (8 Nov): https://pilotcompany.com/locations/us/tx/childress/2301-avenue-f-nw · https://www.loves.com/locations/tx/quanah/loves-travel-stop-quanah-662 · https://www.ta-petro.com/location/tx/ta-vernon-tx/ · https://www.loves.com/locations/tx/wichita-falls/loves-travel-stop-wichita-falls-269 · county check: geocoding.geo.census.gov (coordinates: Childress, Hardeman, Wilbarger, Wichita)
 - Texas Panhandle stops (7 Nov): https://pilotcompany.com/locations/us/tx/vega/6555-us-385 · https://www.loves.com/locations/tx/dumas/loves-travel-stop-dumas-626 · https://www.loves.com/locations/tx/dalhart/loves-travel-stop-dalhart-836 · county check: geocoding.geo.census.gov (coordinates: Oldham, Moore, Dallam)
+- Wise County stops (9 Nov): https://www.loves.com/locations/tx/rhome/loves-travel-stop-rhome-380 · https://pilotcompany.com/locations/us/tx/rhome/8221-us-287 · https://www.ta-petro.com/location/tx/ta-express-decatur/ · https://www.loves.com/locations/tx/bridgeport/loves-travel-stop-bridgeport-713 · county check: geocoding.geo.census.gov (coordinates)
 - Weatherford I-20 stops (6 Nov): https://pilotcompany.com/locations/us/tx/weatherford/1201-w-i-20 · https://www.ta-petro.com/location/tx/petro-weatherford/ · https://www.loves.com/locations/tx/weatherford/loves-travel-stop-weatherford-273 · county check: geocoding.geo.census.gov (coordinates)
 - Sweetwater–Ranger I-20 stops (5 Nov): https://www.loves.com/locations/tx/sweetwater/loves-travel-stop-sweetwater-475 · https://www.ta-petro.com/location/tx/ta-sweetwater/ · https://pilotcompany.com/locations/us/tx/abilene/i-20-exit-277-101-n-fm-707 · https://www.loves.com/locations/tx/baird/loves-travel-stop-baird-610 · https://pilotcompany.com/locations/us/tx/cisco/16851-i-20-frontage-rd · https://www.loves.com/locations/tx/ranger/loves-travel-stop-ranger-270 · county check: geocoding.geo.census.gov (coordinates)
 - Permian Basin I-20 stops (4 Nov): https://pilotcompany.com/locations/us/tx/monahans/4840-e-i-20 · https://pilotcompany.com/locations/us/tx/odessa/3145-meteor-crater-rd · https://www.loves.com/locations/tx/odessa/loves-travel-stop-odessa-339 · https://pilotcompany.com/locations/us/tx/odessa/5900-e-i-20 · https://pilotcompany.com/locations/us/tx/midland/4015-s-fm-1788 · https://pilotcompany.com/locations/us/tx/midland/11501-tx-191-e · https://www.loves.com/locations/tx/midland/loves-travel-stop-midland-623 · https://pilotcompany.com/locations/us/tx/midland/3302-garden-city-hwy · https://www.loves.com/locations/tx/big-spring/loves-travel-stop-big-spring-976 · https://www.ta-petro.com/location/tx/ta-big-spring/ · https://pilotcompany.com/locations/us/tx/big-spring/706-e-i-20-frontage-rd · county check: geocoding.geo.census.gov
@@ -200,6 +202,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Decatur / Rhome / Bridgeport (Wise County): shipped 9 Nov on `/decatur-rhome-bridgeport/`; no dedicated house; CAT staffing hours unpublished; TA Express Decatur #0456 publishes only restaurant hours (no 24-hour store statement); livestock unknown; ONE9 #1291 Bowie (Montague County) own page lists no CAT; Electra / Henrietta / Nocona unchecked. Next Texas: Fort Worth north I-35W (Pilot #434 Alliance, Exit 65; Love’s #609 Denton I-35 Exit 471 seen only in third-party listing, needs own-page check), Fort Worth / Dallas I-20 east, or Shamrock / McLean I-40 east
 - Childress / Quanah / Vernon / Wichita Falls (US-287): shipped 8 Nov on `/childress-wichita-falls/`; no dedicated house; CAT staffing hours unpublished; TA Vernon store hours unpublished (fuel 24/7 only); Love’s #662 Quanah page flagged a city boil order with limited services on 8 Nov; Love’s #247 Memphis own page lists no CAT; livestock unknown; Electra, Henrietta, Bowie, Decatur unchecked. Pilot’s city index pages (pilotcompany.com/locations/us/tx/<city>) now 404 — find store URLs via search or nearby-store links. Next Texas: Fort Worth / Dallas I-20 east, Bowie / Decatur US-287 south, or Shamrock / McLean I-40 east (no Pilot or Love’s CAT found there yet)
 - Vega / Dumas / Dalhart (Panhandle): shipped 7 Nov on `/vega-dumas-dalhart/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; Hereford (two CAT listings seen only in a third-party directory, not chain-owned pages), Canyon, Stratford, Channing, Shamrock unchecked. Next Texas: Fort Worth / Dallas I-20 east, Wichita Falls / Childress US-287, or Shamrock / McLean I-40 east; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
 - Weatherford / Fort Worth west: shipped 6 Nov; no dedicated house; CAT staffing hours unpublished; Petro Weatherford store hours unpublished; livestock unknown; Eastland, Brock, Willow Park, Aledo, Santo (ONE9 #1285 no CAT), Fort Worth I-20 Markum Ranch (ONE9 #1344 no CAT) unchecked for more. Next Texas: Panhandle (Pilot Vega 6555 US-385 / I-40, Love’s #626 Dumas, Love’s #836 Dalhart), or Fort Worth / Dallas I-20 east; Flying J #724 Anthony if it reopens; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
