@@ -273,6 +273,7 @@ def footer(rel="."):
         <li><a href="/guides/cat-scale-cost/">CAT Scale cost</a></li>
         <li><a href="/guides/tongue-weight/">Trailer &amp; tongue weight</a></li>
         <li><a href="/guides/uhaul-truck-weight/">U-Haul truck weights</a></li>
+        <li><a href="/guides/uhaul-weigh-stations/">U-Haul &amp; weigh stations</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3426,6 +3427,7 @@ def spokane_post_falls_i90_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3499,6 +3501,7 @@ def north_bend_ellensburg_i90_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3568,6 +3571,7 @@ def moses_lake_ritzville_i90_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3637,6 +3641,7 @@ def pasco_prosser_tri_cities_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3708,6 +3713,7 @@ def portland_troutdale_aurora_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3779,6 +3785,7 @@ def eugene_albany_roseburg_i5_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3849,6 +3856,7 @@ def ontario_baker_city_i84_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3919,6 +3927,7 @@ def madras_klamath_falls_us97_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3988,6 +3997,7 @@ def biggs_boardman_stanfield_i84_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4056,6 +4066,7 @@ def medford_central_point_i5_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4125,6 +4136,7 @@ def gallup_milan_i40_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4195,6 +4207,7 @@ def albuquerque_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4270,6 +4283,7 @@ def las_cruces_deming_lordsburg_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4338,6 +4352,7 @@ def moriarty_santa_rosa_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4407,6 +4422,7 @@ def tucumcari_glenrio_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4544,6 +4560,7 @@ def el_paso_santa_teresa_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4616,6 +4633,7 @@ def van_horn_fort_stockton_pecos_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4693,6 +4711,7 @@ def odessa_midland_big_spring_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4765,6 +4784,7 @@ def sweetwater_abilene_cisco_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4835,6 +4855,7 @@ def fort_worth_denton_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4904,6 +4925,7 @@ def decatur_rhome_bridgeport_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4974,6 +4996,7 @@ def childress_wichita_falls_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5043,6 +5066,7 @@ def vega_dumas_dalhart_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5114,6 +5138,7 @@ def weatherford_fort_worth_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5187,6 +5212,7 @@ def amarillo_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5255,6 +5281,7 @@ def clovis_hobbs_eunice_body():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5731,6 +5758,7 @@ def page_guide_ppm_tickets():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
     </ul>
@@ -5975,7 +6003,137 @@ def page_guide_uhaul_weight():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/ppm-weigh-checklist/">Free PPM weigh-day checklist</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+GUIDE_WS_FAQ = [
+    ("Do U-Haul trucks have to stop at weigh stations?",
+     "It depends on the state. U-Haul says customers moving their own household goods are typically not required to stop because it is not a commercial move, but some states require all trucks to stop. U-Haul's advice is: if in doubt, stop at the weigh station."),
+    ("Do U-Haul trucks have to stop at weigh stations in California?",
+     "Yes, when the station is open and signed. Caltrans says a rental truck (U-Haul, Ryder, Budget, Enterprise and similar) is a motor truck under California Vehicle Code 410 and must stop, and most scale facilities post signs reading “All Daily Rental/Moving Trucks Must Stop At Scales When Open.” A rental pickup that meets the CVC 471 pickup definition does not necessarily have to stop."),
+    ("Does a U-Haul cargo van have to stop at a California weigh station?",
+     "Caltrans says it depends on the load and the use, but that a cargo van is technically a motor truck under CVC 410 and therefore required to stop at the scales. If you are unsure, call the CHP Commercial Vehicle Section at (916) 843-3400."),
+    ("Do U-Haul trailers have to stop at weigh stations?",
+     "U-Haul's trailer FAQ gives the same answer as for trucks: laws vary by state and throughout Canada, customers moving their own household goods normally are not required to stop, some states require all types of trucks to stop, and if in doubt, stop."),
+    ("What happens if I drive past a weigh station I was supposed to enter?",
+     "In California, Vehicle Code 2813 makes failing or refusing to stop when signs require it a misdemeanor for drivers of commercial vehicles. U-Haul's citations FAQ says the renter is responsible for any citation during the rental, and U-Haul adds a $30 administrative fee to tickets ($15 if paid within seven days)."),
+    ("Can I get a PPM weight ticket at a weigh station?",
+     "No. Highway weigh stations are enforcement sites run by state police, not ticket counters. For certified empty and full tickets, use a CAT Scale at a truck stop or a public scale house. CAT lists $15.25 for a first weigh and $5.25 for a reweigh in the U.S. (checked 11 Nov 2026)."),
+    ("How do I find out the rule for each state on my route?",
+     "Check each state's department of transportation or highway patrol site before you go, then follow the signs at each station, which say which vehicles must enter and whether the station is open. Rules can depend on vehicle type, weight rating, and whether the trip is commercial."),
+]
+
+
+def guide_ws_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_WS_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_uhaul_weigh_stations():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_WS_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · U-Haul · Weigh stations</p>
+    <h1>Do U-Haul trucks have to stop at weigh stations?</h1>
+    <p class="lede">Usually not for a personal move, according to U-Haul, but it depends on the state, and in California the answer is yes. Here is what U-Haul and Caltrans actually say, how to read the signs, and why a weigh station is the wrong place to get a weight ticket.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>This is a plain-language summary of official pages, read on 11 Nov 2026. It is not legal advice. Signs at the station and officers’ instructions always win. WeighHere is independent and not affiliated with U-Haul, CAT Scale, Caltrans, or any highway patrol.</p>
+  </div>
+
+  <h2>The short answer</h2>
+  <ul>
+    <li><strong>U-Haul’s answer:</strong> laws vary from state to state and throughout Canada. Customers moving their own household goods are typically not required to stop, because it is not a commercial move. Some states require all trucks to stop. <strong>If in doubt, stop.</strong></li>
+    <li><strong>California’s answer:</strong> yes. Caltrans says a rental truck is a “motor truck” and must stop at weigh stations, and most California scales post signs that read “All Daily Rental/Moving Trucks Must Stop At Scales When Open.”</li>
+    <li><strong>Everywhere:</strong> read the signs before the exit. They tell you which vehicles must enter and whether the station is open.</li>
+  </ul>
+  <p class="cite">Sources: <a href="https://www.uhaul.com/FrequentlyAskedQuestions/">U-Haul, General Questions</a> · <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans, Weigh-Stations (Enforcement Facilities)</a></p>
+
+  <h2>Why a U-Haul can be treated like a truck</h2>
+  <p>U-Haul’s citations FAQ explains the gray area. In general, it says, its trucks are not commercial vehicles when an individual uses them now and then to move personal property, not for pay and not for a business. But it also warns that “some jurisdictions may define vehicles as commercial based solely on the weight or type of vehicle, not just its use.” The renter is responsible for any citation during the rental and for watching truck signs: weigh station stops, truck lane and bridge restrictions, and overhead clearance.</p>
+  <p>So the same move can be “not commercial” in one state and “a truck that must stop” in the next. The truck’s size matters too. U-Haul’s published gross ratings run from 6,800 lb for the pickup to 25,999 lb for the 26-foot truck; see <a href="/guides/uhaul-truck-weight/">every U-Haul truck’s empty weight and GVWR</a>.</p>
+  <p class="cite">Source: <a href="https://www.uhaul.com/FrequentlyAskedQuestions/Tolls-And-Citations/">U-Haul, Tolls and Citations FAQ</a></p>
+
+  <h2>California: what Caltrans says, vehicle by vehicle</h2>
+  <p>California’s weigh stations are officially Commercial Vehicle Enforcement Facilities, run by the California Highway Patrol (CHP), not Caltrans. Caltrans still publishes a page on who must stop, because so many people ask. It rests on three parts of the California Vehicle Code (CVC):</p>
+  <ul>
+    <li><strong>CVC 2813:</strong> every driver of a commercial vehicle must stop where CHP is inspecting and signs require it. Failing or refusing to stop is a misdemeanor.</li>
+    <li><strong>CVC 410:</strong> a “motor truck” is a vehicle designed, used, or maintained mainly to carry property. A box truck fits.</li>
+    <li><strong>CVC 471:</strong> a “pickup truck” has a GVWR under 11,500 lb, an unladen weight under 8,001 lb, and an open box-type bed no longer than 9 feet.</li>
+  </ul>
+  <table>
+    <thead><tr><th>Vehicle</th><th>Caltrans: must it stop?</th></tr></thead>
+    <tbody>
+      <tr><td>Rental box truck (U-Haul, Ryder, Budget, Enterprise…)</td><td><strong>Yes.</strong> A rental truck is a motor truck under CVC 410.</td></tr>
+      <tr><td>Rental flatbed or utility-bed truck</td><td><strong>Yes.</strong></td></tr>
+      <tr><td>Pickup that meets CVC 471</td><td><strong>No.</strong> All California weigh stations post “No Pickups.”</td></tr>
+      <tr><td>Pickup that misses any CVC 471 test (GVWR, unladen weight, or bed)</td><td><strong>Yes.</strong> It counts as a motor truck.</td></tr>
+      <tr><td>Pickup with a camper shell</td><td>No, but it may have to stop under certain conditions; Caltrans says to check with CHP.</td></tr>
+      <tr><td>Cargo van</td><td>Depends on the load and use, but Caltrans says it is technically a motor truck and required to stop.</td></tr>
+    </tbody>
+  </table>
+  <p>For a U-Haul move in California that means the 10-, 15-, 20- and 26-foot trucks should expect to pull in when a scale is open. The cargo van is a judgment call that Caltrans leans toward “stop.” U-Haul lists its pickup at a 6,800 lb GVWR and 4,474 lb empty, under the first two CVC 471 limits; the bed has to qualify too. If you are not sure, Caltrans points you to the CHP Commercial Vehicle Section at (916) 843-3400, or to the weigh station itself.</p>
+  <p>Caltrans also quotes CVC 260(b): passenger vehicles not used for hire, and housecars (motorhomes), are not commercial vehicles.</p>
+  <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans, Weigh-Stations (Enforcement Facilities)</a>. U-Haul pickup figures: <a href="https://www.uhaul.com/Truck-Rentals/Pickup-Truck/">U-Haul pickup truck</a>.</p>
+
+  <h2>Towing a U-Haul trailer</h2>
+  <p>U-Haul’s trailer FAQ gives the same rule for its trailers: laws vary by state and throughout Canada, a household move normally does not have to stop, some states require all types of trucks to stop, and if in doubt, stop. Refer to the laws of each state you drive through.</p>
+  <p class="cite">Source: <a href="https://www.uhaul.com/FrequentlyAskedQuestions/Trailer-Towing-Rentals/">U-Haul, Trailer Rentals FAQ</a></p>
+
+  <h2>Crossing state lines</h2>
+  <p>There is no single national rule. Before a one-way move, look up each state on your route on its department of transportation or highway patrol site. Rules can turn on the vehicle type, its weight rating, its actual weight, and whether the trip is commercial. Then, on the road:</p>
+  <ol>
+    <li><strong>Watch for the advance sign.</strong> It says whether the station is open and which vehicles must enter.</li>
+    <li><strong>If the sign covers your truck, take the exit</strong> and follow the lane markings, lights, and any officer’s directions.</li>
+    <li><strong>If you can’t tell, stop.</strong> That is U-Haul’s own advice, and it costs you a few minutes, not a citation.</li>
+  </ol>
+
+  <h2>A weigh station won’t give you a weight ticket</h2>
+  <p>This is the mix-up we see most. A weigh station checks you; it does not sell you a certified ticket. If you need to know your weight, or you need tickets for a military PPM move, use a public scale:</p>
+  <ul>
+    <li><strong>CAT Scales at truck stops</strong> take walk-ups with no appointment. CAT lists $15.25 for a first weigh and $5.25 for a reweigh of the same vehicle on the same scale within 24 hours (checked 11 Nov 2026). A California Weighmaster Certificate is $30.50 and $10.50. See <a href="/guides/cat-scale-cost/">how much a CAT Scale costs</a>.</li>
+    <li><strong>Dedicated public scale houses</strong> are often the better pick for a light load; CAT’s scales are set to a 2,000 lb threshold (<a href="/cat-2000-lb-minimum/">more on the minimum</a>).</li>
+  </ul>
+  <p>Weighing before a long drive is also the easiest way to know you are under the truck’s GVWR. Load up, weigh, and if you are over, take something out and reweigh. For a PPM, you need both an empty and a full ticket: our <a href="/guides/ppm-weight-tickets/">PPM weight ticket guide</a> and free <a href="/ppm-weigh-checklist/">weigh-day checklist</a> cover what to print. For the difference in plain terms, read <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>.</p>
+  <p class="cite">Source: <a href="https://catscale.com/faq/">CAT Scale FAQ</a></p>
+
+  <h2>Find a public scale on your route</h2>
+  <ul>
+    <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/grapevine/">Grapevine / I-5</a>, <a href="/sacramento/">Sacramento</a></li>
+    <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
+    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a></li>
+    <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
+  </ul>
+  <p>See <a href="/">all WeighHere areas</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+      <li><a href="/ppm-weigh-checklist/">Free PPM weigh-day checklist</a></li>
     </ul>
   </div>
 </div>
@@ -6102,6 +6260,7 @@ def page_guide_cat_cost():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -6331,6 +6490,7 @@ def page_vs():
   <h2>The U-Haul GVWR mix-up</h2>
   <p>Rental box trucks are often in a weight class people do not expect from the word “U-Haul.” Caltrans’ public FAQ says a rental truck (U-Haul, Ryder, Budget, Enterprise, and similar) is a motor truck under CVC 410 and must stop at weigh stations when signs require it, unless it is actually a pickup as defined in CVC 471. Caltrans also notes that most scale facilities post signs like “All Daily Rental/Moving Trucks Must Stop At Scales When Open.”</p>
   <p>That is about <em>enforcement stops when a CHP scale is open</em>. It is not a way to purchase a certified ticket for your PPM or to check whether the load is legal before you see an officer. If you want a ticket, go to a public scale or CAT. If you are approaching an open CHP station, follow the signs and CHP’s instructions — do not treat this directory as a bypass guide.</p>
+  <p>Driving a U-Haul across several states? See <a href="/guides/uhaul-weigh-stations/">do U-Haul trucks have to stop at weigh stations</a> for what U-Haul and Caltrans say, vehicle by vehicle.</p>
   <p class="cite">Source: <a href="https://dot.ca.gov/programs/traffic-operations/cvef/weigh-stations">Caltrans, Weigh-Stations (Enforcement Facilities)</a> — CVC 2813, 260, 410, 471 discussion; rental-truck paragraph.</p>
 
   <h2>When you need a paid ticket</h2>
@@ -7428,6 +7588,16 @@ def main():
         "../../",
         page_guide_uhaul_weight(),
         guide_uhaul_faq_jsonld(),
+        gear=False,
+    )
+    write(
+        ROOT / "guides" / "uhaul-weigh-stations" / "index.html",
+        "Do U-Haul Trucks Have to Stop at Weigh Stations? | WeighHere",
+        "U-Haul says household moves usually don't have to stop, but rules vary by state. In California rental trucks must stop when open. What U-Haul and Caltrans say.",
+        "uhaulws",
+        "../../",
+        page_guide_uhaul_weigh_stations(),
+        guide_ws_faq_jsonld(),
         gear=False,
     )
     write(

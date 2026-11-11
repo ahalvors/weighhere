@@ -279,6 +279,7 @@ def main():
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost? Prices and how it works</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh? Empty weight, max load and GVWR</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
