@@ -1,13 +1,14 @@
-# WeighHere status — 9 Nov 2026
+# WeighHere status — 10 Nov 2026
 
-Compiled evening PT 9 Nov 2026 (nightly ship).
+Compiled evening PT 10 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **294** | +4 Wise County CAT (Love’s #380 + Pilot #1140 Rhome + TA Express #0456 Decatur + Love’s #713 Bridgeport) |
-| Decatur / Rhome / Bridgeport / US-287 · US-380 (TX) | 4 | new 9 Nov — ninth Texas page |
+| **Total rows in `data/stations.json`** | **298** | +4 I-35W CAT (Love’s #281 Fort Worth + Pilot #434 Alliance + TA #0266 + Love’s #609 Denton) |
+| Fort Worth / Alliance / Denton / I-35W · I-35 (TX) | 4 | new 10 Nov — tenth Texas page |
+| Decatur / Rhome / Bridgeport / US-287 · US-380 (TX) | 4 | 9 Nov |
 | Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | 8 Nov |
 | Vega / Dumas / Dalhart (TX Panhandle) | 3 | 7 Nov |
 | Weatherford / Fort Worth west / I-20 (TX) | 3 | 6 Nov |
@@ -80,10 +81,22 @@ Compiled evening PT 9 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 219 | +3 Weatherford (display_group cat) |
+| CAT / truck-stop cards | 234 | +4 Fort Worth / Denton (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Fort Worth / Denton** (`/fort-worth-denton/`, title "CAT & Truck Scales near Fort Worth & Denton, TX | WeighHere"): tenth Texas page (Tarrant and Denton Counties; all four confirmed via the Census geocoder on operator coordinates). All four verified tonight (10 Nov) on operators’ own pages.
+
+- **Love’s #281 Fort Worth** — 200 Garden Acres Dr., Fort Worth TX 76140, I-35W Exit 40 — CAT Scales + RV Dump Service in amenities; Store Open 24-hours (Truck Care 6 a.m.–11 p.m.); (817) 293-5118; geo 32.598737, -97.317578. County slug `tarrant`.
+- **Pilot #434 Fort Worth (Alliance)** — 2400 Alliance Gateway Fwy, Fort Worth TX 76177, I-35W Exit 65 — CAT 318 in own offerings; Open / Regular Business Operation; is24Hours true; (817) 337-5324; geo 32.957734, -97.306777. County slug `tarrant`.
+- **TA Denton #0266** — 6420 North I-35, Denton TX 76207, I-35 & US-77 Exit 471 — CAT Scale under Other Amenities; fuel 24/7 only, restaurant 10 AM–9 PM, no store-hours statement; (940) 383-1458; geo 33.2622, -97.1767. County slug `denton`.
+- **Love’s #609 Denton** — 6421 N I-35, Denton TX 76207, I-35 Exit 471 / US-77 — CAT Scales in amenities; Store + Truck Care Open 24-hours; RV-friendly parking; (940) 320-1457; geo 33.263072, -97.179456. County slug `denton`.
+- Not listed: Fuel City Haltom City / Saginaw (its site mentions "certified CAT scales" only in general fleet-program copy, no per-store statement; CAT presence seen only on third-party lists). The older 1985 Love’s in Denton not identified.
+
+Wiring: new `fort_worth_denton_body()` + `write()` in `build.py`, NAV (`fwd`), footer, 404 lede hub list, PPM guide Texas line, Decatur Related + “still need to verify” text, other Texas Related lists, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 10 Nov 2026.
+
+## Previous ship detail (6 Nov)
 
 **Weatherford / Fort Worth west** (`/weatherford-fort-worth/`, title "Truck Scales near Weatherford & Fort Worth, TX | WeighHere"): sixth Texas page (Parker County; all three confirmed via the Census geocoder on operator coordinates). All three verified tonight (6 Nov) on operators’ own pages.
 
@@ -191,6 +204,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- I-35W stops (10 Nov): https://www.loves.com/locations/tx/fort-worth/loves-travel-stop-fort-worth-281 · https://pilotcompany.com/locations/us/tx/fort-worth/2400-alliance-gateway-fwy · https://www.ta-petro.com/location/tx/ta-denton/ · https://www.loves.com/locations/tx/denton/loves-travel-stop-denton-609 · county check: geocoding.geo.census.gov (coordinates: Tarrant, Denton)
 - US-287 stops (8 Nov): https://pilotcompany.com/locations/us/tx/childress/2301-avenue-f-nw · https://www.loves.com/locations/tx/quanah/loves-travel-stop-quanah-662 · https://www.ta-petro.com/location/tx/ta-vernon-tx/ · https://www.loves.com/locations/tx/wichita-falls/loves-travel-stop-wichita-falls-269 · county check: geocoding.geo.census.gov (coordinates: Childress, Hardeman, Wilbarger, Wichita)
 - Texas Panhandle stops (7 Nov): https://pilotcompany.com/locations/us/tx/vega/6555-us-385 · https://www.loves.com/locations/tx/dumas/loves-travel-stop-dumas-626 · https://www.loves.com/locations/tx/dalhart/loves-travel-stop-dalhart-836 · county check: geocoding.geo.census.gov (coordinates: Oldham, Moore, Dallam)
 - Wise County stops (9 Nov): https://www.loves.com/locations/tx/rhome/loves-travel-stop-rhome-380 · https://pilotcompany.com/locations/us/tx/rhome/8221-us-287 · https://www.ta-petro.com/location/tx/ta-express-decatur/ · https://www.loves.com/locations/tx/bridgeport/loves-travel-stop-bridgeport-713 · county check: geocoding.geo.census.gov (coordinates)
@@ -202,6 +216,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Fort Worth / Denton (I-35W): shipped 10 Nov on `/fort-worth-denton/`; no dedicated house; CAT staffing hours unpublished; TA Denton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; Fuel City Haltom City / Saginaw not listed (no per-store CAT statement on own site); Dallas / I-35E (Love’s #294 Dallas seen only on a third-party list), Hillsboro / Italy I-35 south, and Fort Worth / Dallas I-20 east unchecked. Next Texas: Dallas I-35E / I-20 east, Hillsboro / Waco I-35, or Shamrock / McLean I-40 east
 - Decatur / Rhome / Bridgeport (Wise County): shipped 9 Nov on `/decatur-rhome-bridgeport/`; no dedicated house; CAT staffing hours unpublished; TA Express Decatur #0456 publishes only restaurant hours (no 24-hour store statement); livestock unknown; ONE9 #1291 Bowie (Montague County) own page lists no CAT; Electra / Henrietta / Nocona unchecked. Next Texas: Fort Worth north I-35W (Pilot #434 Alliance, Exit 65; Love’s #609 Denton I-35 Exit 471 seen only in third-party listing, needs own-page check), Fort Worth / Dallas I-20 east, or Shamrock / McLean I-40 east
 - Childress / Quanah / Vernon / Wichita Falls (US-287): shipped 8 Nov on `/childress-wichita-falls/`; no dedicated house; CAT staffing hours unpublished; TA Vernon store hours unpublished (fuel 24/7 only); Love’s #662 Quanah page flagged a city boil order with limited services on 8 Nov; Love’s #247 Memphis own page lists no CAT; livestock unknown; Electra, Henrietta, Bowie, Decatur unchecked. Pilot’s city index pages (pilotcompany.com/locations/us/tx/<city>) now 404 — find store URLs via search or nearby-store links. Next Texas: Fort Worth / Dallas I-20 east, Bowie / Decatur US-287 south, or Shamrock / McLean I-40 east (no Pilot or Love’s CAT found there yet)
 - Vega / Dumas / Dalhart (Panhandle): shipped 7 Nov on `/vega-dumas-dalhart/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; Hereford (two CAT listings seen only in a third-party directory, not chain-owned pages), Canyon, Stratford, Channing, Shamrock unchecked. Next Texas: Fort Worth / Dallas I-20 east, Wichita Falls / Childress US-287, or Shamrock / McLean I-40 east; NM extensions Love’s #614/#963 Albuquerque, #257 Milan still pending
