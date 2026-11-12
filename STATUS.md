@@ -1,13 +1,14 @@
-# WeighHere status — 10 Nov 2026
+# WeighHere status — 11 Nov 2026
 
-Compiled evening PT 10 Nov 2026 (nightly ship).
+Compiled evening PT 11 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **298** | +4 I-35W CAT (Love’s #281 Fort Worth + Pilot #434 Alliance + TA #0266 + Love’s #609 Denton) |
-| Fort Worth / Alliance / Denton / I-35W · I-35 (TX) | 4 | new 10 Nov — tenth Texas page |
+| **Total rows in `data/stations.json`** | **304** | +6 I-35 CAT (Petro #0533 Carl’s Corner + TA #0333 + Love’s #231 Hillsboro + Pilot #739 + Pilot #432 Waco + Love’s #719 Troy) |
+| Hillsboro / Waco / Troy / I-35 · I-35E (TX) | 6 | new 11 Nov — eleventh Texas page |
+| Fort Worth / Alliance / Denton / I-35W · I-35 (TX) | 4 | 10 Nov |
 | Decatur / Rhome / Bridgeport / US-287 · US-380 (TX) | 4 | 9 Nov |
 | Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | 8 Nov |
 | Vega / Dumas / Dalhart (TX Panhandle) | 3 | 7 Nov |
@@ -81,10 +82,24 @@ Compiled evening PT 10 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 234 | +4 Fort Worth / Denton (display_group cat) |
+| CAT / truck-stop cards | 240 | +6 Hillsboro / Waco / Troy (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Hillsboro / Waco / Troy** (`/hillsboro-waco/`, title "CAT & Truck Scales near Hillsboro & Waco, TX | WeighHere"): eleventh Texas page (Hill, McLennan and Bell Counties; all six confirmed via the Census geocoder on operator coordinates). All six verified tonight (11 Nov) on operators’ own pages.
+
+- **Petro North Hillsboro #0533** (Carl’s Corner) — 101 Cornelius Road, Hillsboro TX 76645, I-35E Exit 374 — CAT Scale under Other Amenities; page says Open 24 Hours (truck service 6 AM–11 PM); (254) 707-3287; geo 32.0794, -97.0552. County slug `hill`. TA URL slug is `petro-carls-corner`.
+- **TA Hillsboro #0333** — 160 State Hwy 77, Hillsboro TX 76645, I-35 Exit 370 — CAT Scale under Other Amenities; restaurant hours + 24h truck service only, no store-hours statement; (254) 283-6556; geo 32.0455, -97.092. County slug `hill`.
+- **Love’s #231 Hillsboro** — 1501 Corsicana Hwy, Hillsboro TX 76645, I-35 Exit 368A — CAT Scales + RV Dump Service; Store Open 24-hours; page banner "This location has limited services" with limited Truck Care hours (noted in hours_notes); (254) 582-2101; geo 32.00952, -97.093528. County slug `hill`.
+- **Pilot #739 Waco** — 2409 S New Rd, Waco TX 76711, I-35 Exit 331 — CAT 318 in primary LOB offerings; Open; is24Hours true; (254) 714-0313; geo 31.508006, -97.145688. County slug `mclennan`.
+- **Pilot #432 Waco** — 8055 South I-35, Waco TX 76706, I-35 Exit 328 (Robinson) — CAT 318 in primary LOB offerings; Open; is24Hours true; (254) 673-0171; geo 31.455849, -97.171948. County slug `mclennan`.
+- **Love’s #719 Troy** — 1610 Cotton Gin Rd, Troy TX 76579, I-35 Exit 308 NB / 306 SB — CAT Scales + RV Dump + RV-friendly parking; Store + Truck Care Open 24-hours; (254) 938-2579; geo 31.191227, -97.312105. County slug `bell`.
+- Not listed: ONE9 Dealer #1417 Lorena (I-35 Exit 323) — own page has no CAT offering. Love’s planned West, TX stop (Waco Tribune-Herald, 4 Nov 2026) — not open. Love’s #628 Italy and Pilot #1297 Italy (I-35E Exit 386, Ellis County) not checked tonight.
+
+Wiring: new `hillsboro_waco_body()` + `write()` in `build.py`, NAV (`hwt`), footer, 404 lede hub list, PPM guide Texas line, homepage Texas line, Fort Worth / Denton Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 11 Nov 2026.
+
+## Previous ship detail (10 Nov)
 
 **Fort Worth / Denton** (`/fort-worth-denton/`, title "CAT & Truck Scales near Fort Worth & Denton, TX | WeighHere"): tenth Texas page (Tarrant and Denton Counties; all four confirmed via the Census geocoder on operator coordinates). All four verified tonight (10 Nov) on operators’ own pages.
 
@@ -216,6 +231,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Hillsboro / Waco / Troy (I-35): shipped 11 Nov on `/hillsboro-waco/`; no dedicated house; CAT staffing hours unpublished; TA Hillsboro store hours unpublished; Love’s #231 flagged limited services on 11 Nov; livestock unknown; ONE9 #1417 Lorena own page lists no CAT; Italy I-35E (Love’s #628, Pilot #1297), Temple / Belton, Jarrell unchecked. Next Texas: Dallas I-35E / I-20 east, Italy / Waxahachie I-35E, Temple–Jarrell I-35 south, or Shamrock / McLean I-40 east
 - Fort Worth / Denton (I-35W): shipped 10 Nov on `/fort-worth-denton/`; no dedicated house; CAT staffing hours unpublished; TA Denton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; Fuel City Haltom City / Saginaw not listed (no per-store CAT statement on own site); Dallas / I-35E (Love’s #294 Dallas seen only on a third-party list), Hillsboro / Italy I-35 south, and Fort Worth / Dallas I-20 east unchecked. Next Texas: Dallas I-35E / I-20 east, Hillsboro / Waco I-35, or Shamrock / McLean I-40 east
 - Decatur / Rhome / Bridgeport (Wise County): shipped 9 Nov on `/decatur-rhome-bridgeport/`; no dedicated house; CAT staffing hours unpublished; TA Express Decatur #0456 publishes only restaurant hours (no 24-hour store statement); livestock unknown; ONE9 #1291 Bowie (Montague County) own page lists no CAT; Electra / Henrietta / Nocona unchecked. Next Texas: Fort Worth north I-35W (Pilot #434 Alliance, Exit 65; Love’s #609 Denton I-35 Exit 471 seen only in third-party listing, needs own-page check), Fort Worth / Dallas I-20 east, or Shamrock / McLean I-40 east
 - Childress / Quanah / Vernon / Wichita Falls (US-287): shipped 8 Nov on `/childress-wichita-falls/`; no dedicated house; CAT staffing hours unpublished; TA Vernon store hours unpublished (fuel 24/7 only); Love’s #662 Quanah page flagged a city boil order with limited services on 8 Nov; Love’s #247 Memphis own page lists no CAT; livestock unknown; Electra, Henrietta, Bowie, Decatur unchecked. Pilot’s city index pages (pilotcompany.com/locations/us/tx/<city>) now 404 — find store URLs via search or nearby-store links. Next Texas: Fort Worth / Dallas I-20 east, Bowie / Decatur US-287 south, or Shamrock / McLean I-40 east (no Pilot or Love’s CAT found there yet)
