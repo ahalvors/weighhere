@@ -96,6 +96,7 @@ PLACES = {
     "decatur-rhome-bridgeport": ("Decatur, Rhome & Bridgeport, TX", "Texas"),
     "fort-worth-denton": ("Fort Worth & Denton, TX", "Texas"),
     "hillsboro-waco": ("Hillsboro & Waco, TX", "Texas"),
+    "south-dallas-ellis-county": ("South Dallas & Ellis County, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

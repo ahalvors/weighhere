@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "11 Nov 2026"
+CHECKED_HUMAN = "12 Nov 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -48,6 +48,7 @@ NAV = [
     ("/decatur-rhome-bridgeport/", "Decatur / Rhome / Bridgeport (TX)", "drb"),
     ("/fort-worth-denton/", "Fort Worth / Denton / I-35W (TX)", "fwd"),
     ("/hillsboro-waco/", "Hillsboro / Waco / Troy / I-35 (TX)", "hwt"),
+    ("/south-dallas-ellis-county/", "South Dallas / Red Oak / Italy (TX)", "sde"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -219,7 +220,7 @@ def footer(rel="."):
         <li><a href="/tucumcari-glenrio/">Tucumcari / Glenrio / I-40 (NM)</a></li>
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
         <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
-    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a> · <a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20</a> · <a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20</a> · <a href="/vega-dumas-dalhart/">Vega / Dumas / Dalhart (Panhandle)</a> · <a href="/childress-wichita-falls/">Childress / Vernon / Wichita Falls / US-287</a> · <a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287</a> · <a href="/fort-worth-denton/">Fort Worth / Denton / I-35W</a> · <a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35</a></li>
+    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a> · <a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20</a> · <a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20</a> · <a href="/vega-dumas-dalhart/">Vega / Dumas / Dalhart (Panhandle)</a> · <a href="/childress-wichita-falls/">Childress / Vernon / Wichita Falls / US-287</a> · <a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287</a> · <a href="/fort-worth-denton/">Fort Worth / Denton / I-35W</a> · <a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35</a> · <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a></li>
         <li><a href="/amarillo/">Amarillo / I-40 (TX)</a></li>
@@ -232,6 +233,7 @@ def footer(rel="."):
         <li><a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport (TX)</a></li>
         <li><a href="/fort-worth-denton/">Fort Worth / Denton / I-35W (TX)</a></li>
         <li><a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35 (TX)</a></li>
+        <li><a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy (TX)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -4843,17 +4845,91 @@ def fort_worth_denton_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Tarrant or Denton County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all four stops. TA Denton store hours. Independent truck stops in Haltom City and Saginaw (Fuel City mentions CAT scales in general terms on its site, but not per location) are not listed until a store page names a CAT Scale. Dallas and I-35E stops are not on this page yet; I-35 south of the split is on <a href="/hillsboro-waco/">Hillsboro / Waco / Troy</a>. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Tarrant or Denton County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all four stops. TA Denton store hours. Independent truck stops in Haltom City and Saginaw (Fuel City mentions CAT scales in general terms on its site, but not per location) are not listed until a store page names a CAT Scale. South Dallas and I-35E stops are on <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy</a>; I-35 south of the split is on <a href="/hillsboro-waco/">Hillsboro / Waco / Troy</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/tx/fort-worth/loves-travel-stop-fort-worth-281">Love’s #281 Fort Worth</a> · <a href="https://pilotcompany.com/locations/us/tx/fort-worth/2400-alliance-gateway-fwy">Pilot #434 Fort Worth</a> · <a href="https://www.ta-petro.com/location/tx/ta-denton/">TA Denton #0266</a> · <a href="https://www.loves.com/locations/tx/denton/loves-travel-stop-denton-609">Love’s #609 Denton</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
       <li><a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35 public scales</a></li>
+      <li><a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45 public scales</a></li>
       <li><a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287 public scales</a></li>
       <li><a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20 public scales</a></li>
       <li><a href="/childress-wichita-falls/">Childress / Quanah / Vernon / Wichita Falls / US-287 public scales</a></li>
       <li><a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20 public scales</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(cat)
+
+def south_dallas_ellis_body():
+    order_cat = [
+        "loves-294-dallas-tx",
+        "pilot-433-dallas-tx",
+        "pilot-726-dallas-tx",
+        "loves-331-hutchins-tx",
+        "pilot-1290-red-oak-tx",
+        "loves-216-midlothian-tx",
+        "loves-721-alma-tx",
+        "loves-628-italy-tx",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(cat)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house here yet</h2>
+    <p>We have not found a walk-up public scale house in south Dallas or Ellis County with an operator page we can cite. We are not inventing one from aggregate yards, cement plants, scrap yards, or third-party trucker directories. All eight stops below are CAT Scales at truck stops, verified on Love’s and Pilot’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">South Dallas · Hutchins · Red Oak · Midlothian · Ennis · Italy · I-20 · I-35E · I-45 · US-287 · Dallas and Ellis Counties TX · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales in south Dallas and Ellis County, Texas</h1>
+    <p class="lede">Eight CAT Scales verified on the operators’ <em>own</em> location pages: Love’s #294 (I-20 Exit 466), Pilot #433 (Exit 470) and Pilot #726 (Exit 472) along I-20 in south Dallas, Love’s #331 in Hutchins (I-45 Exit 272), Pilot #1290 in Red Oak (I-35E Exit 410), Love’s #216 in Midlothian (US-287 at US-67), Love’s #721 south of Ennis (I-45 Exit 246), and Love’s #628 in Italy (I-35E Exit 386). Useful for U-Haul and PPM moves in and out of Dallas, RVs and fifth-wheels heading for Houston or Austin, and horse and stock trailers.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Dallas and Ellis Counties TX</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales in south Dallas and Ellis County</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page, I-20 first, then south. Every Love’s page says the store is open 24 hours; all three Pilot pages say open 24 hours. Pilot #433 also says “store enhancements underway – some amenities temporarily unavailable,” so call before you drive there for the scale. None publishes a CAT-staffing schedule. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Texas DPS commercial vehicle enforcement sites and roadside inspection pull-offs on I-20, I-35E, I-45 and US-287 are for commercial vehicles — not a place to buy a civilian weighmaster ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Dallas or Ellis County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all eight stops. Whether the scale at Pilot #433 is affected by its remodel. Not listed because their own Pilot pages name no CAT Scale: Pilot Dealer #1297 Italy (I-35E Exit 386), ONE9 Dealer #1320 Waxahachie (US-287 & FM 664), ONE9 Dealer #1300 Ennis (US-287 & TX-34), ONE9 Dealer #1248 Wilmer (I-45) and ONE9 Dealer #1416 Dallas (I-20, Mountain Creek Pkwy). North and east Dallas are not on this page yet. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/tx/dallas/loves-travel-stop-dallas-294">Love’s #294 Dallas</a> · <a href="https://pilotcompany.com/locations/us/tx/dallas/8787-s-lancaster-rd">Pilot #433 Dallas</a> · <a href="https://pilotcompany.com/locations/us/tx/dallas/7425-bonnie-view-rd">Pilot #726 Dallas</a> · <a href="https://www.loves.com/locations/tx/hutchins/loves-travel-stop-hutchins-331">Love’s #331 Hutchins</a> · <a href="https://pilotcompany.com/locations/us/tx/red-oak/200-s-i-35-service-rd">Pilot #1290 Red Oak</a> · <a href="https://www.loves.com/locations/tx/midlothian/loves-travel-stop-midlothian-216">Love’s #216 Midlothian</a> · <a href="https://www.loves.com/locations/tx/alma/loves-travel-stop-alma-721">Love’s #721 Alma</a> · <a href="https://www.loves.com/locations/tx/italy/loves-travel-stop-italy-628">Love’s #628 Italy</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35 public scales</a></li>
+      <li><a href="/fort-worth-denton/">Fort Worth / Denton / I-35W public scales</a></li>
+      <li><a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20 public scales</a></li>
+      <li><a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287 public scales</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
       <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
@@ -4915,12 +4991,13 @@ def hillsboro_waco_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Hill, McLennan or Bell County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all six stops. TA Hillsboro store hours. ONE9 Dealer #1417 Lorena (I-35 Exit 323) is not listed because its own Pilot page names no CAT Scale. Love’s has announced a planned stop in West, TX — not open, not listed. Italy / I-35E and Temple / Belton stops are not on this page yet. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Hill, McLennan or Bell County with an operator page that sells walk-up weighmaster certificates. CAT-scale staffing hours at all six stops. TA Hillsboro store hours. ONE9 Dealer #1417 Lorena (I-35 Exit 323) is not listed because its own Pilot page names no CAT Scale. Love’s has announced a planned stop in West, TX — not open, not listed. Italy / I-35E north of Carl’s Corner is on <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy</a>; Temple / Belton stops are not listed yet. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.ta-petro.com/location/tx/petro-carls-corner/">Petro North Hillsboro #0533</a> · <a href="https://www.ta-petro.com/location/tx/ta-hillsboro/">TA Hillsboro #0333</a> · <a href="https://www.loves.com/locations/tx/hillsboro/loves-travel-stop-hillsboro-231">Love’s #231 Hillsboro</a> · <a href="https://pilotcompany.com/locations/us/tx/waco/2409-s-new-rd">Pilot #739 Waco</a> · <a href="https://pilotcompany.com/locations/us/tx/waco/8055-south-i-35">Pilot #432 Waco</a> · <a href="https://www.loves.com/locations/tx/troy/loves-travel-stop-troy-719">Love’s #719 Troy</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45 public scales</a></li>
       <li><a href="/fort-worth-denton/">Fort Worth / Denton / I-35W public scales</a></li>
       <li><a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20 public scales</a></li>
       <li><a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287 public scales</a></li>
@@ -6192,7 +6269,7 @@ def page_guide_uhaul_weigh_stations():
   <ul>
     <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/grapevine/">Grapevine / I-5</a>, <a href="/sacramento/">Sacramento</a></li>
     <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
-    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a>, <a href="/hillsboro-waco/">Waco</a></li>
+    <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a>, <a href="/south-dallas-ellis-county/">South Dallas</a>, <a href="/hillsboro-waco/">Waco</a></li>
     <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
   </ul>
   <p>See <a href="/">all WeighHere areas</a>.</p>
@@ -7400,6 +7477,15 @@ def main():
         "fwd",
         "../",
         fort_worth_denton_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "south-dallas-ellis-county" / "index.html",
+        "South Dallas / Ellis County public scales — CAT on I-20, I-35E, I-45 | WeighHere",
+        "Eight CAT Scales verified on operators’ own pages: Love’s #294, Pilot #433 and #726 on I-20 in Dallas, Love’s #331 Hutchins, Pilot #1290 Red Oak, Love’s #216 Midlothian, #721 Alma and #628 Italy.",
+        "sde",
+        "../",
+        south_dallas_ellis_body(),
         leaflet,
     )
     write(

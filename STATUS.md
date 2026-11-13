@@ -1,13 +1,14 @@
-# WeighHere status — 11 Nov 2026
+# WeighHere status — 12 Nov 2026
 
-Compiled evening PT 11 Nov 2026 (nightly ship).
+Compiled evening PT 12 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **304** | +6 I-35 CAT (Petro #0533 Carl’s Corner + TA #0333 + Love’s #231 Hillsboro + Pilot #739 + Pilot #432 Waco + Love’s #719 Troy) |
-| Hillsboro / Waco / Troy / I-35 · I-35E (TX) | 6 | new 11 Nov — eleventh Texas page |
+| **Total rows in `data/stations.json`** | **312** | +8 CAT (Love’s #294 + Pilot #433 + Pilot #726 Dallas, Love’s #331 Hutchins, Pilot #1290 Red Oak, Love’s #216 Midlothian, Love’s #721 Alma, Love’s #628 Italy) |
+| South Dallas / Red Oak / Italy / I-20 · I-35E · I-45 (TX) | 8 | new 12 Nov — twelfth Texas page |
+| Hillsboro / Waco / Troy / I-35 · I-35E (TX) | 6 | 11 Nov |
 | Fort Worth / Alliance / Denton / I-35W · I-35 (TX) | 4 | 10 Nov |
 | Decatur / Rhome / Bridgeport / US-287 · US-380 (TX) | 4 | 9 Nov |
 | Childress / Quanah / Vernon / Wichita Falls / US-287 (TX) | 4 | 8 Nov |
@@ -82,10 +83,26 @@ Compiled evening PT 11 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 240 | +6 Hillsboro / Waco / Troy (display_group cat) |
+| CAT / truck-stop cards | 248 | +8 South Dallas / Ellis County (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**South Dallas / Red Oak / Italy** (`/south-dallas-ellis-county/`, title "Truck Scales near South Dallas & Ellis County, TX | WeighHere"): twelfth Texas page (Dallas and Ellis Counties; all eight confirmed via the Census geocoder on operator coordinates). All eight verified tonight (12 Nov) on operators’ own pages (Love’s: `CAT Scales` fieldValue true; Pilot: offering 318 in primary LOB).
+
+- **Love’s #294 Dallas** — 8800 S. Polk Street, Dallas TX 75232, I-20 Exit 466 — CAT + RV dump; Store Open 24-Hours; (972) 224-5970; geo 32.640809, -96.839275. County `dallas`.
+- **Pilot #433 Dallas** — 8787 S Lancaster Rd, Dallas TX 75241, I-20 Exit 470 — CAT 318; Open 24h but status “Store enhancements underway – Some amenities temporarily unavailable” (flagged call-ahead in notes); (972) 228-2467; geo 32.642029, -96.780882.
+- **Pilot #726 Dallas** — 7425 Bonnie View Rd, Dallas TX 75241, I-20 Exit 472 — CAT 318; Open; 24h; (972) 225-3566; geo 32.657082, -96.751453.
+- **Love’s #331 Hutchins** — 2500 S. I-45, Hutchins TX 75141, I-45 Exit 272 @ Fulghum Rd — CAT + RV dump; Store Open 24-hours (Truck Care 6–11); (972) 225-3560; geo 32.623952, -96.69378.
+- **Pilot Dealer #1290 Red Oak** — 200 S I-35 Service Rd, Red Oak TX 75154, I-35E Exit 410 — CAT 318; Open; 24h; (972) 617-7477; geo 32.5162713, -96.8209853. County `ellis`.
+- **Love’s #216 Midlothian** — 1501 W Highway 287, Midlothian TX 76065, US-287 at US-67 N / Bus-287 — CAT; Store Open 24-hours (Truck Care 6–11); (972) 775-2820; geo 32.482947, -97.011128.
+- **Love’s #721 Alma** — 6550 S Interstate 45 Service Rd, Alma TX 75119, I-45 Exit 246 / FM-1183 — CAT + RV dump; Store Open 24-hours (Truck Care 6–11); (972) 875-8103; geo 32.287637, -96.543987.
+- **Love’s #628 Italy** — 1021 Dale Evans Dr, Italy TX 76651, I-35E Exit 386 — CAT + RV dump + RV parking; Store + Truck Care Open 24-hours; (972) 483-1686; geo 32.193688, -96.898726.
+- Checked on own Pilot pages, no CAT (not listed): Pilot Dealer #1297 Italy (I-35E Exit 386), ONE9 #1320 Waxahachie (US-287 & FM 664), ONE9 #1300 Ennis (US-287 & TX-34, not 24h), ONE9 #1248 Wilmer (I-45), ONE9 #1416 Dallas (I-20, 4880 Mountain Creek Pkwy). Pilot city directory pages `pilotcompany.com/locations/directory/us/tx/<city>` work for finding store URLs.
+
+Wiring: new `south_dallas_ellis_body()` + `write()` in `build.py`, NAV (`sde`), footer, 404 lede hub list, PPM guide Texas line, Hillsboro / Fort Worth Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 12 Nov 2026. Script: /workspace/wh-nightly/patch_1112.py.
+
+## Previous ship detail (11 Nov)
 
 **Hillsboro / Waco / Troy** (`/hillsboro-waco/`, title "CAT & Truck Scales near Hillsboro & Waco, TX | WeighHere"): eleventh Texas page (Hill, McLennan and Bell Counties; all six confirmed via the Census geocoder on operator coordinates). All six verified tonight (11 Nov) on operators’ own pages.
 
@@ -230,6 +247,8 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 - Amarillo / El Paso / Clovis sources: see prior STATUS compile notes
 
 ## Gaps / deferred
+
+- South Dallas / Ellis County: shipped 12 Nov on `/south-dallas-ellis-county/`; no dedicated house; CAT staffing hours unpublished; Pilot #433 remodel (“some amenities temporarily unavailable”) — scale status unconfirmed; livestock unknown; Pilot #1297 Italy and ONE9 #1320 / #1300 / #1248 / #1416 own pages list no CAT. North / east Dallas (I-30, I-635, I-35E north), Corsicana I-45, Temple–Jarrell I-35 south, Shamrock / McLean I-40 east unchecked. Next Texas: Temple / Belton / Jarrell I-35, Corsicana / I-45 south, or Dallas I-30 east (Terrell / Mesquite)
 
 - Hillsboro / Waco / Troy (I-35): shipped 11 Nov on `/hillsboro-waco/`; no dedicated house; CAT staffing hours unpublished; TA Hillsboro store hours unpublished; Love’s #231 flagged limited services on 11 Nov; livestock unknown; ONE9 #1417 Lorena own page lists no CAT; Italy I-35E (Love’s #628, Pilot #1297), Temple / Belton, Jarrell unchecked. Next Texas: Dallas I-35E / I-20 east, Italy / Waxahachie I-35E, Temple–Jarrell I-35 south, or Shamrock / McLean I-40 east
 - Fort Worth / Denton (I-35W): shipped 10 Nov on `/fort-worth-denton/`; no dedicated house; CAT staffing hours unpublished; TA Denton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; Fuel City Haltom City / Saginaw not listed (no per-store CAT statement on own site); Dallas / I-35E (Love’s #294 Dallas seen only on a third-party list), Hillsboro / Italy I-35 south, and Fort Worth / Dallas I-20 east unchecked. Next Texas: Dallas I-35E / I-20 east, Hillsboro / Waco I-35, or Shamrock / McLean I-40 east
