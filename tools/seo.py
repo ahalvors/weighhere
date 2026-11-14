@@ -97,6 +97,7 @@ PLACES = {
     "fort-worth-denton": ("Fort Worth & Denton, TX", "Texas"),
     "hillsboro-waco": ("Hillsboro & Waco, TX", "Texas"),
     "south-dallas-ellis-county": ("South Dallas & Ellis County, TX", "Texas"),
+    "rockwall-terrell-van": ("Rockwall, Terrell & Van, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
