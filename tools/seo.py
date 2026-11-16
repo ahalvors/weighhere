@@ -99,6 +99,7 @@ PLACES = {
     "south-dallas-ellis-county": ("South Dallas & Ellis County, TX", "Texas"),
     "rockwall-terrell-van": ("Rockwall, Terrell & Van, TX", "Texas"),
     "corsicana-buffalo-huntsville": ("Corsicana, Buffalo & Huntsville, TX", "Texas"),
+    "temple-belton-jarrell": ("Temple, Belton & Jarrell, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

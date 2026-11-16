@@ -1,13 +1,14 @@
-# WeighHere status — 14 Nov 2026
+# WeighHere status — 15 Nov 2026
 
-Compiled evening PT 14 Nov 2026 (nightly ship).
+Compiled evening PT 15 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **325** | +6 CAT (Pilot #1283 Corsicana, TA Express #0290 Fairfield, Pilot #1028 Buffalo, Pilot #234 Huntsville, Love’s #468 Willis; TA Dallas South #0150 added to South Dallas) |
-| Corsicana / Fairfield / Buffalo / Huntsville / Willis / I-45 (TX) | 5 | new 14 Nov — fourteenth Texas page |
+| **Total rows in `data/stations.json`** | **327** | +2 CAT (TA Express Belton #0449, Flying J Dealer #507 Jarrell); Love’s #719 Troy re-verified and shared with Hillsboro / Waco |
+| Temple / Belton / Jarrell / I-35 (TX) | 3 | new 15 Nov — fifteenth Texas page (Love’s #719 Troy also on Hillsboro / Waco) |
+| Corsicana / Fairfield / Buffalo / Huntsville / Willis / I-45 (TX) | 5 | 14 Nov |
 | Rockwall / Terrell / Canton / Van / I-30 · I-20 (TX) | 7 | 13 Nov |
 | South Dallas / Red Oak / Italy / I-20 · I-35E · I-45 (TX) | 9 | 12 Nov; +TA Dallas South #0150 on 14 Nov |
 | Hillsboro / Waco / Troy / I-35 · I-35E (TX) | 6 | 11 Nov |
@@ -85,10 +86,21 @@ Compiled evening PT 14 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 261 | +5 Corsicana / Huntsville I-45, +1 TA Dallas South #0150 (display_group cat) |
+| CAT / truck-stop cards | 263 | +2 Temple / Belton / Jarrell I-35 (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Temple / Belton / Jarrell** (`/temple-belton-jarrell/`, title "Truck Scales near Temple, Belton & Jarrell, TX | WeighHere"): fifteenth Texas page, I-35 between Waco and Georgetown (Bell and Williamson Counties; all three confirmed via the Census geocoder on operator coordinates). All verified tonight (15 Nov) on operators’ own pages (TA: CAT Scale under Other Amenities; Pilot: offering 318 in primary LOB; Love’s: `CAT Scales` amenity / fieldValue true).
+
+- **Love’s #719 Troy** (existing row, re-verified, shared with `/hillsboro-waco/`) — 1610 Cotton Gin Rd, Troy TX 76579, I-35 Exit 308 NB / 306 SB — CAT; Store + Truck Care Open 24-hours; (254) 938-2579. `last_checked` → 2026-11-15.
+- **TA Express Belton #0449** — 8101 South Interstate Hwy 35 Service Rd., Belton TX 76513, I-35 Exit 289 — CAT Scale; fuel 24/7 only, restaurant hours only, no store-hours statement; (737) 333-5305; geo 30.98543, -97.503002. County `bell`.
+- **Flying J Dealer #507 Jarrell** — 11710 N I-35, Jarrell TX 76537, I-35 Exit 275 (Pilot `interstate` field) — CAT 318; Open / Regular Business Operation; 24h; (512) 746-4341; geo 30.811297, -97.610854. County `williamson`.
+- Checked, not listed: ONE9 Dealer #1338 Jarrell (13745 N I-35) — own page no CAT 318. Love’s #251 Temple — own URL redirects to Love’s search page again (unverifiable; not in Love’s all-locations list). Pilot directory pages for Temple, Belton, Salado, Killeen, Georgetown, Round Rock list no stores. TA Texas index has no Temple / Georgetown / Round Rock store.
+
+Wiring: new `temple_belton_jarrell_body()` + `write()` in `build.py`, NAV (`tbj`), footer, 404 lede hub list, PPM guide Texas line, homepage/404 Texas hub line, Hillsboro Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 15 Nov 2026. Script: /workspace/wh-nightly/patch_1115.py; cache /workspace/wh-nightly/c1115.
+
+## Previous ship detail (14 Nov)
 
 **Corsicana / Fairfield / Buffalo / Huntsville / Willis** (`/corsicana-buffalo-huntsville/`, title "CAT & Truck Scales near Corsicana, Buffalo & Huntsville, TX"): fourteenth Texas page, I-45 between Dallas and Houston (Navarro, Freestone, Leon, Walker and Montgomery Counties; all five confirmed via the Census geocoder on operator coordinates). All verified tonight (14 Nov) on operators’ own pages (Pilot: offering 318 in primary LOB; TA: CAT Scale under Other Amenities; Love’s: `CAT Scales` fieldValue true).
 
@@ -268,6 +280,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- I-35 Temple / Belton / Jarrell stops (15 Nov): https://www.loves.com/locations/tx/troy/loves-travel-stop-troy-719 · https://www.ta-petro.com/location/tx/ta-express-belton/ · https://pilotcompany.com/locations/us/tx/jarrell/11710-n-i-35 · https://pilotcompany.com/locations/us/tx/jarrell/13745-n-i-35 (no CAT) · county check: geocoding.geo.census.gov (coordinates: Bell, Williamson)
 - I-30 / I-20 east stops (13 Nov): https://www.ta-petro.com/location/tx/ta-rockwall/ · https://www.loves.com/locations/tx/rockwall/loves-travel-stop-rockwall-283 · https://www.ta-petro.com/location/tx/ta-terrell/ · https://pilotcompany.com/locations/us/tx/canton/9800-i-20-frontage-rd · https://www.loves.com/locations/tx/van/loves-travel-stop-van-287 · https://www.loves.com/locations/tx/van/loves-travel-stop-van-651 · https://pilotcompany.com/locations/us/tx/van/133-fm-314 · county check: geocoding.geo.census.gov (coordinates: Rockwall, Kaufman, Van Zandt)
 - I-35W stops (10 Nov): https://www.loves.com/locations/tx/fort-worth/loves-travel-stop-fort-worth-281 · https://pilotcompany.com/locations/us/tx/fort-worth/2400-alliance-gateway-fwy · https://www.ta-petro.com/location/tx/ta-denton/ · https://www.loves.com/locations/tx/denton/loves-travel-stop-denton-609 · county check: geocoding.geo.census.gov (coordinates: Tarrant, Denton)
 - US-287 stops (8 Nov): https://pilotcompany.com/locations/us/tx/childress/2301-avenue-f-nw · https://www.loves.com/locations/tx/quanah/loves-travel-stop-quanah-662 · https://www.ta-petro.com/location/tx/ta-vernon-tx/ · https://www.loves.com/locations/tx/wichita-falls/loves-travel-stop-wichita-falls-269 · county check: geocoding.geo.census.gov (coordinates: Childress, Hardeman, Wilbarger, Wichita)
@@ -281,6 +294,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Temple / Belton / Jarrell (I-35): shipped 15 Nov on `/temple-belton-jarrell/`; no dedicated house; CAT staffing hours unpublished; TA Express Belton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; ONE9 #1338 Jarrell lists no CAT; Love’s #251 Temple unverifiable (own URL redirects to search); no Pilot / TA / Love’s stores found in Temple, Salado, Killeen, Georgetown or Round Rock; Austin / Kyle / San Marcos / New Braunfels (TA New Braunfels on TA index) unchecked. Next Texas: Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20 (TA Express Kilgore on TA index), north Houston I-45 / Conroe (TA Express North Houston on TA index), or New Braunfels / San Marcos I-35
 - Corsicana / Fairfield / Buffalo / Huntsville / Willis (I-45): shipped 14 Nov on `/corsicana-buffalo-huntsville/`; no dedicated house; CAT staffing hours unpublished; TA Express Fairfield store hours unpublished; Pilot #1283 exit number unpublished; Huntsville #234 not RV-friendly per Pilot; livestock unknown; Love’s #288 Fairfield and TA Express Huntsville #0442 list no CAT; Conroe / The Woodlands / north Houston unchecked. TA Dallas South #0150 now on South Dallas. Next Texas: Temple / Belton / Jarrell I-35 (TA Express #0449 + Flying J #507 verified 13 Nov — re-check; Love’s #251 Temple unverifiable), Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20, or north Houston I-45
 - Rockwall / Terrell / Canton / Van (I-30 · I-20 east): shipped 13 Nov on `/rockwall-terrell-van/`; no dedicated house; CAT staffing hours unpublished; TA Rockwall / TA Terrell store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; ONE9 #1282 Terrell and ONE9 #1379 Greenville own pages list no CAT; Sulphur Springs (Love’s #738), Mount Vernon (Love’s #279, TA Express #0286), Lindale / Tyler (Pilot nearby data shows I-20 Exits 562 / 571A) unchecked. Next Texas: Corsicana / Fairfield / Buffalo I-45 south (Pilot #1283, TA Express #0290, Pilot #1028 verified 13 Nov — re-check on ship night), Temple / Belton / Jarrell I-35 (TA Express #0449 + Flying J #507 verified 13 Nov; Love’s #251 Temple unverifiable), TA Dallas South #0150 to extend South Dallas, or Shamrock / McLean I-40 east (Pilot directories for both list no stores)
 - South Dallas / Ellis County: shipped 12 Nov on `/south-dallas-ellis-county/`; no dedicated house; CAT staffing hours unpublished; Pilot #433 remodel (“some amenities temporarily unavailable”) — scale status unconfirmed; livestock unknown; Pilot #1297 Italy and ONE9 #1320 / #1300 / #1248 / #1416 own pages list no CAT. North / east Dallas (I-30, I-635, I-35E north), Corsicana I-45, Temple–Jarrell I-35 south, Shamrock / McLean I-40 east unchecked. Next Texas: Temple / Belton / Jarrell I-35, Corsicana / I-45 south, or Dallas I-30 east (Terrell / Mesquite)

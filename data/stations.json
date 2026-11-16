@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14",
+  "generated": "2026-11-15",
   "disclaimer": "Compiled from public CDFA county tables, operator pages, CAT Scale public pages, ScaleRegistry, Caltrans, ADOT, Pilot Flying J location pages, Love's location pages, and TA Petro location pages. Missing hours/fees/livestock left blank on purpose. Not a complete state facility list.",
   "stations": [
     {
@@ -10611,7 +10611,7 @@
         "car",
         "ppm"
       ],
-      "last_checked": "2026-11-11",
+      "last_checked": "2026-11-15",
       "county": "bell",
       "id": "loves-719-troy-tx",
       "name": "Love’s Travel Stop #719 Troy — CAT Scales",
@@ -11383,6 +11383,78 @@
       "lat": 32.6534,
       "lng": -96.7517,
       "operator_url": "https://www.ta-petro.com/location/tx/ta-dallas-south/"
+    },
+    {
+      "state": "TX",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "last_checked": "2026-11-15",
+      "county": "bell",
+      "id": "ta-express-0449-belton-tx",
+      "name": "TA Express Belton #0449 — CAT Scale",
+      "address": "8101 South Interstate Hwy 35 Service Rd.",
+      "city": "Belton",
+      "zip": "76513",
+      "phone": "(737) 333-5305",
+      "hours_24h": "unknown",
+      "hours_notes": "TA’s own page says fuel is available 24/7 and lists only restaurant hours; no 24-hour store statement and no CAT-staffing hours.",
+      "notes": "TA’s own Belton #0449 page lists a CAT Scale under Other Amenities; I-35 Exit 289 on the south side of Belton, near Temple and Fort Cavazos / Killeen (Bell County). CAT 2,000 lb floor; no corner weights. Texas weighmaster rules differ from California — confirm ticket needs with your TO or licensing office. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "TA location page — TA Express Belton TX #0449",
+      "source_url": "https://www.ta-petro.com/location/tx/ta-express-belton/",
+      "lat": 30.98543,
+      "lng": -97.503002,
+      "operator_url": "https://www.ta-petro.com/location/tx/ta-express-belton/"
+    },
+    {
+      "state": "TX",
+      "type": "cat",
+      "certified_ticket_likely": "yes",
+      "livestock": "unknown",
+      "walkup": "likely",
+      "call_first": false,
+      "do_not_go": false,
+      "featured": true,
+      "display_group": "cat",
+      "rig": [
+        "uhaul",
+        "rv",
+        "horse",
+        "dump",
+        "boat",
+        "car",
+        "ppm"
+      ],
+      "last_checked": "2026-11-15",
+      "county": "williamson",
+      "id": "flying-j-507-jarrell-tx",
+      "name": "Flying J Dealer #507 Jarrell — CAT Scale",
+      "address": "11710 N I-35",
+      "city": "Jarrell",
+      "zip": "76537",
+      "phone": "(512) 746-4341",
+      "hours_24h": "yes",
+      "hours_notes": "Pilot’s own page says Open 24 Hours. CAT-staffing hours are not published separately.",
+      "notes": "Pilot’s own Jarrell #507 page (Flying J dealer) lists a CAT Scale; I-35 Exit 275 in Jarrell, north of Georgetown (Williamson County). ONE9 Dealer #1338 Jarrell (13745 N I-35) lists no CAT Scale on its own page. CAT 2,000 lb floor; no corner weights. Texas weighmaster rules differ from California — confirm ticket needs with your TO or licensing office. Do not unload horses in the lot. Confirm on CAT’s locator. Not a DOT station.",
+      "source_name": "Pilot location page — Jarrell TX #507",
+      "source_url": "https://pilotcompany.com/locations/us/tx/jarrell/11710-n-i-35",
+      "lat": 30.811297,
+      "lng": -97.610854,
+      "operator_url": "https://pilotcompany.com/locations/us/tx/jarrell/11710-n-i-35"
     }
   ]
 }
