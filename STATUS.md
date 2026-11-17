@@ -1,13 +1,14 @@
-# WeighHere status — 15 Nov 2026
+# WeighHere status — 16 Nov 2026
 
-Compiled evening PT 15 Nov 2026 (nightly ship).
+Compiled evening PT 16 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **327** | +2 CAT (TA Express Belton #0449, Flying J Dealer #507 Jarrell); Love’s #719 Troy re-verified and shared with Hillsboro / Waco |
-| Temple / Belton / Jarrell / I-35 (TX) | 3 | new 15 Nov — fifteenth Texas page (Love’s #719 Troy also on Hillsboro / Waco) |
+| **Total rows in `data/stations.json`** | **333** | +6 CAT (Pilot #367 Caddo Mills, Pilot #157 + Love’s #738 Sulphur Springs, Love’s #279 Mount Vernon, Love’s #852 New Boston, Pilot Dealer #1284 Nash) |
+| Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana / I-30 (TX) | 6 | new 16 Nov — sixteenth Texas page |
+| Temple / Belton / Jarrell / I-35 (TX) | 3 | 15 Nov (Love’s #719 Troy also on Hillsboro / Waco) |
 | Corsicana / Fairfield / Buffalo / Huntsville / Willis / I-45 (TX) | 5 | 14 Nov |
 | Rockwall / Terrell / Canton / Van / I-30 · I-20 (TX) | 7 | 13 Nov |
 | South Dallas / Red Oak / Italy / I-20 · I-35E · I-45 (TX) | 9 | 12 Nov; +TA Dallas South #0150 on 14 Nov |
@@ -86,10 +87,24 @@ Compiled evening PT 15 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 263 | +2 Temple / Belton / Jarrell I-35 (display_group cat) |
+| CAT / truck-stop cards | 269 | +6 Caddo Mills / Sulphur Springs / Texarkana I-30 (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana** (`/sulphur-springs-texarkana/`, title "Truck Scales near Sulphur Springs & Texarkana, TX | WeighHere"): sixteenth Texas page, I-30 from east of Dallas to the Arkansas line (Hunt, Hopkins, Franklin and Bowie Counties; all six confirmed via the Census geocoder on operator coordinates). All verified tonight (16 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` fieldValue true).
+
+- **Pilot Travel Center #367 Caddo Mills** — 2226 FM 1903, Caddo Mills TX 75135, I-30 Exit 87 W / 85 E — CAT 318; Open; 24h; not RV-flagged; (903) 527-2150; geo 33.043772, -96.177451. County `hunt`.
+- **Pilot Travel Center #157 Sulphur Springs** — 1200 Hillcrest Dr S, Sulphur Springs TX 75482, I-30 Exit 122 — CAT 318; Open; 24h; not RV-flagged; (903) 885-0020; geo 33.116472, -95.633873. County `hopkins`.
+- **Love’s #738 Sulphur Springs** — 1201 S. Hillcrest Dr., Sulphur Springs TX 75482, I-30 Exit 122 — CAT + RV dump + RV-friendly; Store and Truck Care Open 24-hours; (903) 438-1801; geo 33.117433, -95.636795. County `hopkins`.
+- **Love’s #279 Mount Vernon** — 215 E. I-30 N. Service Rd., Mount Vernon TX 75457, I-30 Exit 147 — CAT; Store Open 24-hours (Truck Care 6 a.m.–11 p.m.); (903) 537-7696; geo 33.163946, -95.218039. County `franklin`.
+- **Love’s #852 New Boston** — 2486 US Hwy-82 W, New Boston TX 75570, I-30 Exit 199 — CAT + RV dump + RV-friendly; Store Open 24-hours; (903) 417-6056; geo 33.472121, -94.461214. County `bowie`.
+- **Pilot Dealer #1284 Nash** — 1955 N Kings Hwy, Nash TX 75569, I-30 Exit 218 — CAT 318; Open; 24h; RV-friendly flag; (903) 255-7167; geo 33.453, -94.1326. County `bowie`.
+- Checked, not listed: TA Express Mount Vernon #0286 (300 SE Access Rd, Exit 147) — own page lists no CAT Scale under Other Amenities. ONE9 Dealer #1518 Mount Pleasant (2428 W Ferguson Rd, opened 21 Oct 2026) — primary LOB offerings lack 318. Pilot Dealer #1247 New Boston (1888 US-82, Exit 199) — primary LOB offerings lack 318. Pilot directory pages for Mount Vernon, Texarkana, Cumby, Commerce and Naples list no stores. Love’s all-locations list has no Greenville, Mount Pleasant or Texarkana store. TA Texas index has no I-30 store east of Rockwall other than TA Express Mount Vernon.
+
+Wiring: new `sulphur_springs_texarkana_body()` + `write()` in `build.py`, NAV (`sst`), footer, 404 lede hub list, PPM guide Texas line, homepage/404 Texas hub line, Rockwall / Terrell / Van Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 16 Nov 2026. Script: /workspace/wh-nightly/patch_1116.py; cache /workspace/wh-nightly/c1116.
+
+## Previous ship detail (15 Nov)
 
 **Temple / Belton / Jarrell** (`/temple-belton-jarrell/`, title "Truck Scales near Temple, Belton & Jarrell, TX | WeighHere"): fifteenth Texas page, I-35 between Waco and Georgetown (Bell and Williamson Counties; all three confirmed via the Census geocoder on operator coordinates). All verified tonight (15 Nov) on operators’ own pages (TA: CAT Scale under Other Amenities; Pilot: offering 318 in primary LOB; Love’s: `CAT Scales` amenity / fieldValue true).
 
@@ -294,6 +309,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Nash (I-30): shipped 16 Nov on `/sulphur-springs-texarkana/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; TA Express Mount Vernon #0286, ONE9 #1518 Mount Pleasant and Pilot Dealer #1247 New Boston list no CAT on own pages; Greenville ONE9 #1379 no CAT (13 Nov). Next Texas: Lindale / Tyler / Kilgore I-20 (TA Express Kilgore on TA index; Pilot nearby data showed I-20 Exits 562 / 571A), north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), or Carthage / Nacogdoches US-59 (TA Express Carthage, TA Express Nacogdoches)
 - Temple / Belton / Jarrell (I-35): shipped 15 Nov on `/temple-belton-jarrell/`; no dedicated house; CAT staffing hours unpublished; TA Express Belton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; ONE9 #1338 Jarrell lists no CAT; Love’s #251 Temple unverifiable (own URL redirects to search); no Pilot / TA / Love’s stores found in Temple, Salado, Killeen, Georgetown or Round Rock; Austin / Kyle / San Marcos / New Braunfels (TA New Braunfels on TA index) unchecked. Next Texas: Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20 (TA Express Kilgore on TA index), north Houston I-45 / Conroe (TA Express North Houston on TA index), or New Braunfels / San Marcos I-35
 - Corsicana / Fairfield / Buffalo / Huntsville / Willis (I-45): shipped 14 Nov on `/corsicana-buffalo-huntsville/`; no dedicated house; CAT staffing hours unpublished; TA Express Fairfield store hours unpublished; Pilot #1283 exit number unpublished; Huntsville #234 not RV-friendly per Pilot; livestock unknown; Love’s #288 Fairfield and TA Express Huntsville #0442 list no CAT; Conroe / The Woodlands / north Houston unchecked. TA Dallas South #0150 now on South Dallas. Next Texas: Temple / Belton / Jarrell I-35 (TA Express #0449 + Flying J #507 verified 13 Nov — re-check; Love’s #251 Temple unverifiable), Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20, or north Houston I-45
 - Rockwall / Terrell / Canton / Van (I-30 · I-20 east): shipped 13 Nov on `/rockwall-terrell-van/`; no dedicated house; CAT staffing hours unpublished; TA Rockwall / TA Terrell store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; ONE9 #1282 Terrell and ONE9 #1379 Greenville own pages list no CAT; Sulphur Springs (Love’s #738), Mount Vernon (Love’s #279, TA Express #0286), Lindale / Tyler (Pilot nearby data shows I-20 Exits 562 / 571A) unchecked. Next Texas: Corsicana / Fairfield / Buffalo I-45 south (Pilot #1283, TA Express #0290, Pilot #1028 verified 13 Nov — re-check on ship night), Temple / Belton / Jarrell I-35 (TA Express #0449 + Flying J #507 verified 13 Nov; Love’s #251 Temple unverifiable), TA Dallas South #0150 to extend South Dallas, or Shamrock / McLean I-40 east (Pilot directories for both list no stores)
