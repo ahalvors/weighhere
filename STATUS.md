@@ -1,13 +1,14 @@
-# WeighHere status — 16 Nov 2026
+# WeighHere status — 17 Nov 2026
 
-Compiled evening PT 16 Nov 2026 (nightly ship).
+Compiled evening PT 17 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **333** | +6 CAT (Pilot #367 Caddo Mills, Pilot #157 + Love’s #738 Sulphur Springs, Love’s #279 Mount Vernon, Love’s #852 New Boston, Pilot Dealer #1284 Nash) |
-| Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana / I-30 (TX) | 6 | new 16 Nov — sixteenth Texas page |
+| **Total rows in `data/stations.json`** | **336** | +3 CAT (Pilot #486 Tyler, ONE9 Dealer #1295 Tyler, Love’s #815 Winona) |
+| Lindale / Tyler / Winona / I-20 (TX) | 3 | new 17 Nov — seventeenth Texas page |
+| Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana / I-30 (TX) | 6 | 16 Nov |
 | Temple / Belton / Jarrell / I-35 (TX) | 3 | 15 Nov (Love’s #719 Troy also on Hillsboro / Waco) |
 | Corsicana / Fairfield / Buffalo / Huntsville / Willis / I-45 (TX) | 5 | 14 Nov |
 | Rockwall / Terrell / Canton / Van / I-30 · I-20 (TX) | 7 | 13 Nov |
@@ -87,10 +88,21 @@ Compiled evening PT 16 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 269 | +6 Caddo Mills / Sulphur Springs / Texarkana I-30 (display_group cat) |
+| CAT / truck-stop cards | 272 | +3 Lindale / Tyler / Winona I-20 (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Lindale / Tyler / Winona** (`/tyler-winona/`, title "Truck Scales near Tyler, Lindale & Winona, TX | WeighHere"): seventeenth Texas page, I-20 north of Tyler (Smith County; all three confirmed via the Census geocoder on operator coordinates). All verified tonight (17 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` amenity).
+
+- **Pilot Travel Center #486 Tyler** — 12881 FM 14, Tyler TX 75706, I-20 Exit 562 — CAT 318; Open; 24h; RV-friendly flag; (903) 593-5466; geo 32.450417, -95.283802. County `smith`.
+- **ONE9 Dealer #1295 Tyler** — 16243 US-271, Tyler TX 75708, I-20 Exit 571A — CAT 318 (primary LOB; Pilot’s nearby-card services also list CAT Scale; CAT serial attribute on Pilot’s data reads "1", so the CAT locator link is the cross-check); Open; 24h; RV-friendly flag; (903) 877-0800; geo 32.441, -95.137. County `smith`.
+- **Love’s #815 Winona** — 12577 CR 3101, Winona TX 75792, I-20 Exit 575 (Barber Rd) — CAT + RV dump + RV-friendly parking + RV hookup; Store and Truck Care Open 24-hours; (903) 618-4002; geo 32.443228, -95.061947. County `smith`.
+- Checked, not listed: TA Express Kilgore #0281 (4403 TX-42, I-20 Exit 587, Gregg County) — own page lists no CAT Scale under amenities. ONE9 Dealer #1512 Longview (3302 S Eastman Rd, I-20/Eastman) — primary LOB offerings lack 318. Pilot Dealer #1470 Carthage (2360 US-59, off-corridor) — lacks 318. Love’s all-locations list has no Lindale, Tyler, Kilgore, Longview or Marshall store (nearest other: Love’s #615 Carthage, US-59, unchecked). Lindale Exit 556 (QuikTrip) and Willco Travel Plaza Exit 567 / Oasis Super Stop Exit 548 are independents with no own-page CAT statement — not listed.
+
+Wiring: new `tyler_winona_body()` + `write()` in `build.py`, NAV (`tyw`), footer, 404 lede hub list, PPM guide Texas line, homepage/404 Texas hub line, Rockwall / Terrell / Van Related + “still need to verify” text, `tools/seo.py` PLACES (region "Texas"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 17 Nov 2026. Script: /workspace/wh-nightly/patch_1117.py; cache /workspace/wh-nightly/c1117.
+
+## Previous ship detail (16 Nov)
 
 **Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana** (`/sulphur-springs-texarkana/`, title "Truck Scales near Sulphur Springs & Texarkana, TX | WeighHere"): sixteenth Texas page, I-30 from east of Dallas to the Arkansas line (Hunt, Hopkins, Franklin and Bowie Counties; all six confirmed via the Census geocoder on operator coordinates). All verified tonight (16 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` fieldValue true).
 
@@ -309,6 +321,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Gaps / deferred
 
+- Lindale / Tyler / Winona (I-20): shipped 17 Nov on `/tyler-winona/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; ONE9 #1295 CAT serial attribute odd ("1") — confirm on CAT locator if a reader reports otherwise; TA Express Kilgore #0281 and ONE9 #1512 Longview list no CAT on own pages; Marshall / Waskom (I-20 to Louisiana) have no Pilot / Love’s / TA store on chain indexes. Next Texas: north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), Carthage / Nacogdoches US-59 (Love’s #615 Carthage, TA Express Carthage, TA Express Nacogdoches), or Louisiana I-20 Greenwood / Shreveport (Flying J #665, TA #0237, Petro #0308 — first LA page)
 - Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Nash (I-30): shipped 16 Nov on `/sulphur-springs-texarkana/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; TA Express Mount Vernon #0286, ONE9 #1518 Mount Pleasant and Pilot Dealer #1247 New Boston list no CAT on own pages; Greenville ONE9 #1379 no CAT (13 Nov). Next Texas: Lindale / Tyler / Kilgore I-20 (TA Express Kilgore on TA index; Pilot nearby data showed I-20 Exits 562 / 571A), north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), or Carthage / Nacogdoches US-59 (TA Express Carthage, TA Express Nacogdoches)
 - Temple / Belton / Jarrell (I-35): shipped 15 Nov on `/temple-belton-jarrell/`; no dedicated house; CAT staffing hours unpublished; TA Express Belton store hours unpublished (fuel 24/7 + restaurant hours only); livestock unknown; ONE9 #1338 Jarrell lists no CAT; Love’s #251 Temple unverifiable (own URL redirects to search); no Pilot / TA / Love’s stores found in Temple, Salado, Killeen, Georgetown or Round Rock; Austin / Kyle / San Marcos / New Braunfels (TA New Braunfels on TA index) unchecked. Next Texas: Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20 (TA Express Kilgore on TA index), north Houston I-45 / Conroe (TA Express North Houston on TA index), or New Braunfels / San Marcos I-35
 - Corsicana / Fairfield / Buffalo / Huntsville / Willis (I-45): shipped 14 Nov on `/corsicana-buffalo-huntsville/`; no dedicated house; CAT staffing hours unpublished; TA Express Fairfield store hours unpublished; Pilot #1283 exit number unpublished; Huntsville #234 not RV-friendly per Pilot; livestock unknown; Love’s #288 Fairfield and TA Express Huntsville #0442 list no CAT; Conroe / The Woodlands / north Houston unchecked. TA Dallas South #0150 now on South Dallas. Next Texas: Temple / Belton / Jarrell I-35 (TA Express #0449 + Flying J #507 verified 13 Nov — re-check; Love’s #251 Temple unverifiable), Sulphur Springs / Mount Vernon I-30 (Love’s #738, Love’s #279, TA Express #0286), Lindale / Tyler I-20, or north Houston I-45

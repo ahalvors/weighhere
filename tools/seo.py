@@ -101,6 +101,7 @@ PLACES = {
     "corsicana-buffalo-huntsville": ("Corsicana, Buffalo & Huntsville, TX", "Texas"),
     "temple-belton-jarrell": ("Temple, Belton & Jarrell, TX", "Texas"),
     "sulphur-springs-texarkana": ("Sulphur Springs & Texarkana, TX", "Texas"),
+    "tyler-winona": ("Tyler, Lindale & Winona, TX", "Texas"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
