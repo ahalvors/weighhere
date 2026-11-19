@@ -102,6 +102,7 @@ PLACES = {
     "temple-belton-jarrell": ("Temple, Belton & Jarrell, TX", "Texas"),
     "sulphur-springs-texarkana": ("Sulphur Springs & Texarkana, TX", "Texas"),
     "tyler-winona": ("Tyler, Lindale & Winona, TX", "Texas"),
+    "shreveport-bossier-minden": ("Shreveport, Bossier City & Minden, LA", "Louisiana"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

@@ -1,13 +1,14 @@
-# WeighHere status — 17 Nov 2026
+# WeighHere status — 18 Nov 2026
 
-Compiled evening PT 17 Nov 2026 (nightly ship).
+Compiled evening PT 18 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **336** | +3 CAT (Pilot #486 Tyler, ONE9 Dealer #1295 Tyler, Love’s #815 Winona) |
-| Lindale / Tyler / Winona / I-20 (TX) | 3 | new 17 Nov — seventeenth Texas page |
+| **Total rows in `data/stations.json`** | **344** | +8 CAT (Love’s #209, Flying J #665, TA #0237 Greenwood; Petro #0308, Love’s #854 Shreveport; Pilot #199 Haughton; Love’s #289 Minden; Love’s #858 Mansfield) |
+| Greenwood / Shreveport / Haughton / Minden / Mansfield / I-20 · I-49 (LA) | 8 | new 18 Nov — first Louisiana page |
+| Lindale / Tyler / Winona / I-20 (TX) | 3 | 17 Nov |
 | Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana / I-30 (TX) | 6 | 16 Nov |
 | Temple / Belton / Jarrell / I-35 (TX) | 3 | 15 Nov (Love’s #719 Troy also on Hillsboro / Waco) |
 | Corsicana / Fairfield / Buffalo / Huntsville / Willis / I-45 (TX) | 5 | 14 Nov |
@@ -88,10 +89,26 @@ Compiled evening PT 17 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 272 | +3 Lindale / Tyler / Winona I-20 (display_group cat) |
+| CAT / truck-stop cards | 280 | +8 Shreveport / Bossier / Minden I-20 · I-49 (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Greenwood / Shreveport / Haughton / Minden** (`/shreveport-bossier-minden/`, title "CAT & Truck Scales near Shreveport, Bossier City & Minden, LA"): first Louisiana page — I-20 from the Texas line to Minden plus I-49 north Shreveport and Mansfield. All eight verified tonight (18 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` in amenities; TA/Petro: `CAT Scale` under Other Amenities). Parishes confirmed via the Census geocoder on operator coordinates.
+
+- **Love’s #209 Greenwood** — 9600 Highway 80 W, Greenwood LA 71033, I-20 Exit 3 — CAT + RV dump; Store Open 24-hours; (318) 938-8986; geo 32.444532, -93.983016. Parish `caddo`.
+- **Flying J #665 Greenwood** — 9510 Greenwood Rd, Greenwood LA 71033, I-20 Exit 3 — CAT 318; Open; 24h; RV-friendly flag; (318) 938-7744; geo 32.444404, -93.978872. Parish `caddo`.
+- **TA Greenwood #0237** — 8560 Greenwood Rd, Greenwood LA 71033, I-20 Exit 5 — CAT Scale + RV dump; Open 24 Hours; (318) 938-5411; geo 32.4461, -93.9493. Parish `caddo`.
+- **Petro Shreveport #0308** — 6910 W Bert Kouns Industrial Loop, Shreveport LA 71129, I-20 Exit 8 — CAT Scale; fuel 24/7, no store-hours statement (hours_24h unknown); (318) 686-6111; geo 32.4446, -93.901. Parish `caddo`.
+- **Love’s #854 Shreveport** — 5430 N Market St, Shreveport LA 71107, I-49 Exit 215 / LA-1 — CAT + RV dump + RV-friendly parking; Store Open 24-Hours; (318) 761-7861; geo 32.595937, -93.829384. Parish `caddo`.
+- **Pilot #199 Haughton** — 490 N Elm St, Haughton LA 71037, I-20 Exit 33 / LA-157 — CAT 318; Open; 24h; RV-friendly flag; (318) 390-9709; geo 32.544996, -93.516474. Parish `bossier`.
+- **Love’s #289 Minden** — 13510 Industrial Drive, Minden LA 71055, I-20 Exit 49 — CAT + RV dump + RV-friendly parking; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (318) 371-3790; geo 32.581978, -93.248804. Parish `webster`.
+- **Love’s #858 Mansfield** — 1940 Hwy 84, Mansfield LA 71052, I-49 Exit 172 / US-84 — CAT + RV dump; Store Open 24-Hours; (318) 575-5123; geo 32.063591, -93.567675. Parish `de-soto`.
+- Not listed: Love’s Speedco #922 Greenwood (Speedco service shop on Love’s index; not checked tonight). Pilot directory pages for Shreveport, Bossier City, Minden and Doyline list no stores; TA/Petro URL probes for Shreveport (TA / TA Express), Bossier City, Haughton, Minden returned 404. No dedicated public scale house with an operator page found.
+
+Wiring: new `shreveport_bossier_minden_body()` + `write()` in `build.py`, NAV (`sbm`), footer list, 404/home "Louisiana:" hub line, PPM guide Louisiana line, Tyler / Winona Related + “East on I-20 into Louisiana” text, `tools/seo.py` PLACES (region "Louisiana" — new hub section), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 18 Nov 2026. Script: /workspace/wh-nightly/patch_1118.py; cache /workspace/wh-nightly/c1118.
+
+## Previous ship detail (17 Nov)
 
 **Lindale / Tyler / Winona** (`/tyler-winona/`, title "Truck Scales near Tyler, Lindale & Winona, TX | WeighHere"): seventeenth Texas page, I-20 north of Tyler (Smith County; all three confirmed via the Census geocoder on operator coordinates). All verified tonight (17 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` amenity).
 
@@ -307,6 +324,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Shreveport / I-20 · I-49 LA stops (18 Nov): https://www.loves.com/locations/la/greenwood/loves-travel-stop-greenwood-209 · https://pilotcompany.com/locations/us/la/greenwood/9510-greenwood-rd · https://www.ta-petro.com/location/la/ta-greenwood/ · https://www.ta-petro.com/location/la/petro-shreveport/ · https://www.loves.com/locations/la/shreveport/loves-travel-stop-shreveport-854 · https://pilotcompany.com/locations/us/la/haughton/490-n-elm-st · https://www.loves.com/locations/la/minden/loves-travel-stop-minden-289 · https://www.loves.com/locations/la/mansfield/loves-travel-stop-mansfield-858 · county check: geocoding.geo.census.gov (coordinates: Caddo, Bossier, Webster, De Soto Parishes)
 - I-35 Temple / Belton / Jarrell stops (15 Nov): https://www.loves.com/locations/tx/troy/loves-travel-stop-troy-719 · https://www.ta-petro.com/location/tx/ta-express-belton/ · https://pilotcompany.com/locations/us/tx/jarrell/11710-n-i-35 · https://pilotcompany.com/locations/us/tx/jarrell/13745-n-i-35 (no CAT) · county check: geocoding.geo.census.gov (coordinates: Bell, Williamson)
 - I-30 / I-20 east stops (13 Nov): https://www.ta-petro.com/location/tx/ta-rockwall/ · https://www.loves.com/locations/tx/rockwall/loves-travel-stop-rockwall-283 · https://www.ta-petro.com/location/tx/ta-terrell/ · https://pilotcompany.com/locations/us/tx/canton/9800-i-20-frontage-rd · https://www.loves.com/locations/tx/van/loves-travel-stop-van-287 · https://www.loves.com/locations/tx/van/loves-travel-stop-van-651 · https://pilotcompany.com/locations/us/tx/van/133-fm-314 · county check: geocoding.geo.census.gov (coordinates: Rockwall, Kaufman, Van Zandt)
 - I-35W stops (10 Nov): https://www.loves.com/locations/tx/fort-worth/loves-travel-stop-fort-worth-281 · https://pilotcompany.com/locations/us/tx/fort-worth/2400-alliance-gateway-fwy · https://www.ta-petro.com/location/tx/ta-denton/ · https://www.loves.com/locations/tx/denton/loves-travel-stop-denton-609 · county check: geocoding.geo.census.gov (coordinates: Tarrant, Denton)
@@ -320,6 +338,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 - Amarillo / El Paso / Clovis sources: see prior STATUS compile notes
 
 ## Gaps / deferred
+- Greenwood / Shreveport / Haughton / Minden / Mansfield (I-20 · I-49, LA): shipped 18 Nov on `/shreveport-bossier-minden/`; no dedicated house; CAT staffing hours unpublished; Petro Shreveport store hours unpublished (fuel 24/7 only); livestock unknown; no Pilot/Love’s/TA in Bossier City proper. Next: Louisiana I-20 east (Love’s #806 Monroe, Love’s #237 Tallulah, Ruston / West Monroe Pilot-TA checks), I-49 south (Love’s #720 Boyce / Alexandria), north Houston I-45 (Flying J #729 Exit 64 and Pilot #375 I-610 Exit 24A verified CAT 18 Nov; ONE9 #1529 Humble no CAT), New Braunfels I-35 (Pilot #330 Exit 184 verified CAT 18 Nov), or Carthage / Nacogdoches / Lufkin US-59 (Love’s #615, #290, #709; Pilot #1470 no CAT)
 
 - Lindale / Tyler / Winona (I-20): shipped 17 Nov on `/tyler-winona/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; ONE9 #1295 CAT serial attribute odd ("1") — confirm on CAT locator if a reader reports otherwise; TA Express Kilgore #0281 and ONE9 #1512 Longview list no CAT on own pages; Marshall / Waskom (I-20 to Louisiana) have no Pilot / Love’s / TA store on chain indexes. Next Texas: north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), Carthage / Nacogdoches US-59 (Love’s #615 Carthage, TA Express Carthage, TA Express Nacogdoches), or Louisiana I-20 Greenwood / Shreveport (Flying J #665, TA #0237, Petro #0308 — first LA page)
 - Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Nash (I-30): shipped 16 Nov on `/sulphur-springs-texarkana/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; TA Express Mount Vernon #0286, ONE9 #1518 Mount Pleasant and Pilot Dealer #1247 New Boston list no CAT on own pages; Greenville ONE9 #1379 no CAT (13 Nov). Next Texas: Lindale / Tyler / Kilgore I-20 (TA Express Kilgore on TA index; Pilot nearby data showed I-20 Exits 562 / 571A), north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), or Carthage / Nacogdoches US-59 (TA Express Carthage, TA Express Nacogdoches)
