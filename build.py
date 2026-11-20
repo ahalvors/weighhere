@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "18 Nov 2026"
+CHECKED_HUMAN = "19 Nov 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -55,6 +55,7 @@ NAV = [
     ("/sulphur-springs-texarkana/", "Caddo Mills / Sulphur Springs / Texarkana (TX)", "sst"),
     ("/tyler-winona/", "Lindale / Tyler / Winona (TX)", "tyw"),
     ("/shreveport-bossier-minden/", "Shreveport / Bossier / Minden (LA)", "sbm"),
+    ("/monroe-rayville-tallulah/", "West Monroe / Monroe / Tallulah (LA)", "mrt"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -227,7 +228,7 @@ def footer(rel="."):
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
         <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a> · <a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20</a> · <a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20</a> · <a href="/vega-dumas-dalhart/">Vega / Dumas / Dalhart (Panhandle)</a> · <a href="/childress-wichita-falls/">Childress / Vernon / Wichita Falls / US-287</a> · <a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287</a> · <a href="/fort-worth-denton/">Fort Worth / Denton / I-35W</a> · <a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35</a> · <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45</a> · <a href="/rockwall-terrell-van/">Rockwall / Terrell / Canton / Van / I-30 · I-20</a> · <a href="/corsicana-buffalo-huntsville/">Corsicana / Fairfield / Buffalo / Huntsville / I-45</a> · <a href="/temple-belton-jarrell/">Temple / Belton / Jarrell / I-35</a> · <a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana / I-30</a> · <a href="/tyler-winona/">Lindale / Tyler / Winona / I-20</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a> · <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a></li>
         <li><a href="/amarillo/">Amarillo / I-40 (TX)</a></li>
@@ -247,6 +248,7 @@ def footer(rel="."):
         <li><a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana (TX)</a></li>
         <li><a href="/tyler-winona/">Lindale / Tyler / Winona (TX)</a></li>
         <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden (LA)</a></li>
+        <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Tallulah (LA)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -5049,6 +5051,75 @@ def sulphur_springs_texarkana_body():
 </main>
 """ + map_script(cat)
 
+def monroe_rayville_tallulah_body():
+    order_cat = [
+        "pilot-428-west-monroe-la",
+        "loves-806-monroe-la",
+        "pilot-335-rayville-la",
+        "loves-237-tallulah-la",
+        "ta-0046-tallulah-la",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(cat)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house here yet</h2>
+    <p>We have not found a walk-up public scale house in Ouachita, Richland or Madison Parish with an operator page we can cite. We are not inventing one from gravel pits, grain elevators, cotton gins, timber or scrap yards, or third-party trucker directories. All five stops below are CAT Scales at truck stops, verified on Pilot’s, Love’s and TA’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">West Monroe · Monroe · Rayville · Tallulah · I-20 · Louisiana · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales near West Monroe, Monroe and Tallulah, Louisiana</h1>
+    <p class="lede">Five CAT Scales verified on the operators’ <em>own</em> location pages along I-20 in northeast Louisiana: Pilot #428 in West Monroe (Exit 112), Love’s #806 in east Monroe (Exit 124), Pilot #335 in Rayville (Exit 138), and a pair at Tallulah Exit 171 — Love’s #237 and TA #0046 — the last CAT stops before the Mississippi River bridge to Vicksburg. Useful for U-Haul and PPM moves around Monroe and the University of Louisiana Monroe, RVs and boat trailers on I-20 between Shreveport and Jackson, and horse or livestock trailers headed to the Delta.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Ouachita, Richland and Madison Parishes LA</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-20 from West Monroe to Tallulah</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page, west to east on I-20. Both Pilot pages and both Love’s pages say the store is open 24 hours; TA Tallulah publishes fuel 24/7 but no store-hours statement. None publishes a CAT-staffing schedule. Pilot flags #428 and #335 as RV-friendly; both Love’s pages list an RV dump, and Love’s #237 lists RV-friendly parking. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Louisiana commercial vehicle enforcement weigh stations and inspection pull-offs on I-20 are for commercial vehicles — not a place to buy a civilian weight ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in Ouachita, Richland or Madison Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all five stops. TA Tallulah store hours. Ruston and Lincoln Parish: Pilot’s directory lists no Pilot, Flying J or ONE9 store in Ruston, Arcadia, Calhoun or Delhi, Love’s has no store between Minden and Monroe, and TA has no Ruston, Monroe or West Monroe page — so there is no CAT stop we can cite on I-20 between Minden (Exit 49) and West Monroe (Exit 112). Independent truck stops are not listed because they publish no CAT Scale on a page of their own. West on I-20, see <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden</a>. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://pilotcompany.com/locations/us/la/west-monroe/300-well-rd">Pilot #428 West Monroe</a> · <a href="https://www.loves.com/locations/la/monroe/loves-travel-stop-monroe-806">Love’s #806 Monroe</a> · <a href="https://pilotcompany.com/locations/us/la/rayville/103-grimshaw-st">Pilot #335 Rayville</a> · <a href="https://www.loves.com/locations/la/tallulah/loves-travel-stop-tallulah-237">Love’s #237 Tallulah</a> · <a href="https://www.ta-petro.com/location/la/ta-tallulah/">TA Tallulah #0046</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
+      <li><a href="/tyler-winona/">Lindale / Tyler / Winona / I-20 public scales (TX)</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
+      <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(cat)
+
 def shreveport_bossier_minden_body():
     order_cat = [
         "loves-209-greenwood-la",
@@ -5097,12 +5168,13 @@ def shreveport_bossier_minden_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Caddo, Bossier or Webster Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. Petro Shreveport store hours. Pilot’s directory lists no Pilot, Flying J or ONE9 store in Shreveport, Bossier City or Minden itself. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. West on I-20 into Texas, see <a href="/tyler-winona/">Lindale / Tyler / Winona</a>. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Caddo, Bossier or Webster Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. Petro Shreveport store hours. Pilot’s directory lists no Pilot, Flying J or ONE9 store in Shreveport, Bossier City or Minden itself. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. West on I-20 into Texas, see <a href="/tyler-winona/">Lindale / Tyler / Winona</a>. East on I-20, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/la/greenwood/loves-travel-stop-greenwood-209">Love’s #209 Greenwood</a> · <a href="https://pilotcompany.com/locations/us/la/greenwood/9510-greenwood-rd">Flying J #665 Greenwood</a> · <a href="https://www.ta-petro.com/location/la/ta-greenwood/">TA Greenwood #0237</a> · <a href="https://www.ta-petro.com/location/la/petro-shreveport/">Petro Shreveport #0308</a> · <a href="https://www.loves.com/locations/la/shreveport/loves-travel-stop-shreveport-854">Love’s #854 Shreveport</a> · <a href="https://pilotcompany.com/locations/us/la/haughton/490-n-elm-st">Pilot #199 Haughton</a> · <a href="https://www.loves.com/locations/la/minden/loves-travel-stop-minden-289">Love’s #289 Minden</a> · <a href="https://www.loves.com/locations/la/mansfield/loves-travel-stop-mansfield-858">Love’s #858 Mansfield</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
       <li><a href="/tyler-winona/">Lindale / Tyler / Winona / I-20 public scales (TX)</a></li>
       <li><a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana / I-30 public scales (TX)</a></li>
       <li><a href="/rockwall-terrell-van/">Rockwall / Terrell / Canton / Van / I-30 · I-20 public scales (TX)</a></li>
@@ -6750,7 +6822,7 @@ def page_guide_uhaul_weigh_stations():
     <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/grapevine/">Grapevine / I-5</a>, <a href="/sacramento/">Sacramento</a></li>
     <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a>, <a href="/south-dallas-ellis-county/">South Dallas</a>, <a href="/rockwall-terrell-van/">Rockwall / Terrell</a>, <a href="/hillsboro-waco/">Waco</a>, <a href="/corsicana-buffalo-huntsville/">Corsicana / Huntsville</a>, <a href="/temple-belton-jarrell/">Temple / Belton</a>, <a href="/sulphur-springs-texarkana/">Sulphur Springs / Texarkana</a>, <a href="/tyler-winona/">Tyler</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a> · <a href="/monroe-rayville-tallulah/">Monroe / Tallulah</a></li>
     <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
   </ul>
   <p>See <a href="/">all WeighHere areas</a>.</p>
@@ -8095,6 +8167,15 @@ def main():
         "fwd",
         "../",
         fort_worth_denton_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "monroe-rayville-tallulah" / "index.html",
+        "West Monroe / Monroe / Tallulah public scales — CAT on I-20 | WeighHere",
+        "Five CAT Scales verified on operators’ own pages on I-20 in northeast Louisiana: Pilot #428 West Monroe (Exit 112), Love’s #806 Monroe (Exit 124), Pilot #335 Rayville (Exit 138), Love’s #237 and TA #0046 Tallulah (Exit 171).",
+        "mrt",
+        "../",
+        monroe_rayville_tallulah_body(),
         leaflet,
     )
     write(

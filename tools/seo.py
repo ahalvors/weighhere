@@ -103,6 +103,7 @@ PLACES = {
     "sulphur-springs-texarkana": ("Sulphur Springs & Texarkana, TX", "Texas"),
     "tyler-winona": ("Tyler, Lindale & Winona, TX", "Texas"),
     "shreveport-bossier-minden": ("Shreveport, Bossier City & Minden, LA", "Louisiana"),
+    "monroe-rayville-tallulah": ("Monroe, West Monroe & Tallulah, LA", "Louisiana"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

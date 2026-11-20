@@ -1,13 +1,14 @@
-# WeighHere status — 18 Nov 2026
+# WeighHere status — 19 Nov 2026
 
-Compiled evening PT 18 Nov 2026 (nightly ship).
+Compiled evening PT 19 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **344** | +8 CAT (Love’s #209, Flying J #665, TA #0237 Greenwood; Petro #0308, Love’s #854 Shreveport; Pilot #199 Haughton; Love’s #289 Minden; Love’s #858 Mansfield) |
-| Greenwood / Shreveport / Haughton / Minden / Mansfield / I-20 · I-49 (LA) | 8 | new 18 Nov — first Louisiana page |
+| **Total rows in `data/stations.json`** | **349** | +5 CAT (Pilot #428 West Monroe; Love’s #806 Monroe; Pilot #335 Rayville; Love’s #237 + TA #0046 Tallulah) |
+| West Monroe / Monroe / Rayville / Tallulah / I-20 (LA) | 5 | new 19 Nov — second Louisiana page |
+| Greenwood / Shreveport / Haughton / Minden / Mansfield / I-20 · I-49 (LA) | 8 | 18 Nov — first Louisiana page |
 | Lindale / Tyler / Winona / I-20 (TX) | 3 | 17 Nov |
 | Caddo Mills / Sulphur Springs / Mount Vernon / New Boston / Texarkana / I-30 (TX) | 6 | 16 Nov |
 | Temple / Belton / Jarrell / I-35 (TX) | 3 | 15 Nov (Love’s #719 Troy also on Hillsboro / Waco) |
@@ -89,10 +90,23 @@ Compiled evening PT 18 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 280 | +8 Shreveport / Bossier / Minden I-20 · I-49 (display_group cat) |
+| CAT / truck-stop cards | 285 | +5 West Monroe / Monroe / Rayville / Tallulah I-20 (display_group cat) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**West Monroe / Monroe / Rayville / Tallulah** (`/monroe-rayville-tallulah/`, title "CAT & Truck Scales near Monroe, West Monroe & Tallulah, LA"): second Louisiana page — I-20 east from West Monroe to Tallulah, the last exit before the Mississippi River bridge to Vicksburg. All five verified tonight (19 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` amenity — cross-checked that Love’s #288 Fairfield TX, a known no-CAT store, lacks it; TA: `CAT Scale` under Other Amenities). Parishes confirmed via the Census geocoder on operator coordinates.
+
+- **Pilot Travel Center #428 West Monroe** — 300 Well Rd, West Monroe LA 71292, I-20 Exit 112 — CAT 318; Open; 24h; RV-friendly flag; (318) 329-3590; geo 32.50802, -92.19348. Parish `ouachita`.
+- **Love’s #806 Monroe** — 335 Hwy 594, Monroe LA 71203, I-20 Exit 124 / LA-594 — CAT + RV dump; Store and Truck Care Open 24-hours; (318) 816-7101; geo 32.493193, -91.991387. Parish `ouachita`.
+- **Pilot Travel Center #335 Rayville** — 103 Grimshaw St, Rayville LA 71269, I-20 Exit 138 / US-425 — CAT 318; Open; 24h; RV-friendly flag; (318) 728-4100; geo 32.45905, -91.759428. Parish `richland`.
+- **Love’s #237 Tallulah** — 227 Highway 65 S, Tallulah LA 71282, I-20 Exit 171 / US-65 — CAT + RV dump + RV-friendly parking; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (318) 574-6413; geo 32.387821, -91.197692. Parish `madison`.
+- **TA Tallulah #0046** — 224 Highway 65 South, Tallulah LA 71282, I-20 Exit 171 — CAT Scale; fuel 24/7, no store-hours statement (hours_24h unknown); (318) 574-5900; geo 32.3886, -91.2006. Parish `madison`.
+- Checked, nothing to list: Pilot directory pages for Ruston, Monroe, Delhi, Tallulah, Arcadia, Calhoun and Grand Cane list no stores; Love’s all-locations list has no LA store between Minden #289 and Monroe #806; TA/Petro URL probes for Ruston, Monroe, West Monroe, Delhi, Rayville returned 404. So no citable CAT stop on I-20 between Minden (Exit 49) and West Monroe (Exit 112). No dedicated public scale house with an operator page found.
+
+Wiring: new `monroe_rayville_tallulah_body()` + `write()` in `build.py`, NAV (`mrt`), footer list, 404/home "Louisiana:" hub lines, PPM guide Louisiana line, Shreveport / Bossier / Minden Related + “East on I-20” text, `tools/seo.py` PLACES (region "Louisiana"), ADDING_A_PAGE county table. `CHECKED_HUMAN` → 19 Nov 2026. Script: /workspace/wh-nightly/patch_1119.py; cache /workspace/wh-nightly/c1119.
+
+## Previous ship detail (18 Nov)
 
 **Greenwood / Shreveport / Haughton / Minden** (`/shreveport-bossier-minden/`, title "CAT & Truck Scales near Shreveport, Bossier City & Minden, LA"): first Louisiana page — I-20 from the Texas line to Minden plus I-49 north Shreveport and Mansfield. All eight verified tonight (18 Nov) on operators’ own pages (Pilot: offering 318 in the primary line of business; Love’s: `CAT Scales` in amenities; TA/Petro: `CAT Scale` under Other Amenities). Parishes confirmed via the Census geocoder on operator coordinates.
 
@@ -338,6 +352,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 - Amarillo / El Paso / Clovis sources: see prior STATUS compile notes
 
 ## Gaps / deferred
+- West Monroe / Monroe / Rayville / Tallulah (I-20, LA): shipped 19 Nov on `/monroe-rayville-tallulah/`; no dedicated house; CAT staffing hours unpublished; TA Tallulah store hours unpublished (fuel 24/7 only); livestock unknown; no chain CAT stop in Ruston / Lincoln Parish. Next: I-49 south (Love’s #720 Boyce / Alexandria — on Love’s list, unchecked), north Houston I-45 (Flying J #729 Exit 64 and Pilot #375 I-610 Exit 24A verified CAT 18 Nov — re-check), New Braunfels I-35 (Pilot #330 Exit 184 verified CAT 18 Nov), Carthage / Nacogdoches / Lufkin US-59 (Love’s #615, #290, #709), Louisiana I-10 (Love’s #362 Vinton, #243 Lake Charles, #523 Duson, #240 Port Allen), or Vicksburg / Jackson MS on I-20 east
 - Greenwood / Shreveport / Haughton / Minden / Mansfield (I-20 · I-49, LA): shipped 18 Nov on `/shreveport-bossier-minden/`; no dedicated house; CAT staffing hours unpublished; Petro Shreveport store hours unpublished (fuel 24/7 only); livestock unknown; no Pilot/Love’s/TA in Bossier City proper. Next: Louisiana I-20 east (Love’s #806 Monroe, Love’s #237 Tallulah, Ruston / West Monroe Pilot-TA checks), I-49 south (Love’s #720 Boyce / Alexandria), north Houston I-45 (Flying J #729 Exit 64 and Pilot #375 I-610 Exit 24A verified CAT 18 Nov; ONE9 #1529 Humble no CAT), New Braunfels I-35 (Pilot #330 Exit 184 verified CAT 18 Nov), or Carthage / Nacogdoches / Lufkin US-59 (Love’s #615, #290, #709; Pilot #1470 no CAT)
 
 - Lindale / Tyler / Winona (I-20): shipped 17 Nov on `/tyler-winona/`; no dedicated house; CAT staffing hours unpublished; livestock unknown; ONE9 #1295 CAT serial attribute odd ("1") — confirm on CAT locator if a reader reports otherwise; TA Express Kilgore #0281 and ONE9 #1512 Longview list no CAT on own pages; Marshall / Waskom (I-20 to Louisiana) have no Pilot / Love’s / TA store on chain indexes. Next Texas: north Houston I-45 / Conroe (TA Express North Houston), New Braunfels / San Marcos I-35 (TA New Braunfels), Carthage / Nacogdoches US-59 (Love’s #615 Carthage, TA Express Carthage, TA Express Nacogdoches), or Louisiana I-20 Greenwood / Shreveport (Flying J #665, TA #0237, Petro #0308 — first LA page)
