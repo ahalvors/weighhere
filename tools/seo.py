@@ -104,6 +104,7 @@ PLACES = {
     "tyler-winona": ("Tyler, Lindale & Winona, TX", "Texas"),
     "shreveport-bossier-minden": ("Shreveport, Bossier City & Minden, LA", "Louisiana"),
     "monroe-rayville-tallulah": ("Monroe, West Monroe & Tallulah, LA", "Louisiana"),
+    "boyce-opelousas-lafayette": ("Opelousas, Lafayette & Boyce, LA", "Louisiana"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

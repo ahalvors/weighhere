@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "19 Nov 2026"
+CHECKED_HUMAN = "20 Nov 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -56,6 +56,7 @@ NAV = [
     ("/tyler-winona/", "Lindale / Tyler / Winona (TX)", "tyw"),
     ("/shreveport-bossier-minden/", "Shreveport / Bossier / Minden (LA)", "sbm"),
     ("/monroe-rayville-tallulah/", "West Monroe / Monroe / Tallulah (LA)", "mrt"),
+    ("/boyce-opelousas-lafayette/", "Boyce / Bunkie / Opelousas / Lafayette (LA)", "bol"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -228,7 +229,7 @@ def footer(rel="."):
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
         <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a> · <a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20</a> · <a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20</a> · <a href="/vega-dumas-dalhart/">Vega / Dumas / Dalhart (Panhandle)</a> · <a href="/childress-wichita-falls/">Childress / Vernon / Wichita Falls / US-287</a> · <a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287</a> · <a href="/fort-worth-denton/">Fort Worth / Denton / I-35W</a> · <a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35</a> · <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45</a> · <a href="/rockwall-terrell-van/">Rockwall / Terrell / Canton / Van / I-30 · I-20</a> · <a href="/corsicana-buffalo-huntsville/">Corsicana / Fairfield / Buffalo / Huntsville / I-45</a> · <a href="/temple-belton-jarrell/">Temple / Belton / Jarrell / I-35</a> · <a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana / I-30</a> · <a href="/tyler-winona/">Lindale / Tyler / Winona / I-20</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a> · <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a> · <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a></li>
         <li><a href="/amarillo/">Amarillo / I-40 (TX)</a></li>
@@ -249,6 +250,7 @@ def footer(rel="."):
         <li><a href="/tyler-winona/">Lindale / Tyler / Winona (TX)</a></li>
         <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden (LA)</a></li>
         <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Tallulah (LA)</a></li>
+        <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette (LA)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -5051,6 +5053,79 @@ def sulphur_springs_texarkana_body():
 </main>
 """ + map_script(cat)
 
+def boyce_opelousas_lafayette_body():
+    order_cat = [
+        "loves-720-boyce-la",
+        "pilot-1105-bunkie-la",
+        "loves-875-opelousas-la",
+        "loves-663-port-barre-la",
+        "pilot-274-breaux-bridge-la",
+        "loves-523-duson-la",
+        "ta-0161-lafayette-la",
+        "loves-897-new-iberia-la",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(cat)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house here yet</h2>
+    <p>We have not found a walk-up public scale house in Rapides, St. Landry, St. Martin, Acadia, Lafayette or Iberia Parish with an operator page we can cite. We are not inventing one from sugar mills, grain elevators, cotton gins, timber or scrap yards, or third-party trucker directories. All eight stops below are CAT Scales at truck stops, verified on Pilot’s, Love’s and TA’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Boyce · Bunkie · Opelousas · Lafayette · I-49 · I-10 · Louisiana · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales near Opelousas, Lafayette and central Louisiana</h1>
+    <p class="lede">Eight CAT Scales verified on the operators’ <em>own</em> location pages in central and Acadiana Louisiana: down I-49 from Love’s #720 in Boyce (Exit 94) and Pilot #1105 in Bunkie (Exit 40) to Love’s #875 in Opelousas (Exit 15), plus Love’s #663 in Port Barre on US-190, then along I-10 at Pilot #274 in Breaux Bridge (Exit 109), Love’s #523 in Duson (Exit 92) and TA #0161 in north Lafayette, and Love’s #897 in New Iberia on US-90. Useful for U-Haul and PPM moves around Lafayette, RVs and boat trailers heading to the Gulf coast or Texas, and horse or stock trailers on I-49 and I-10.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · Rapides, St. Landry, St. Martin, Acadia, Lafayette and Iberia Parishes LA</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales on I-49 and I-10 around Lafayette</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page, north to south on I-49, then I-10 and US-90. Both Pilot pages and all five Love’s pages say the store is open 24 hours; TA Lafayette publishes no store-hours statement. None publishes a CAT-staffing schedule. Pilot flags #1105 as RV-friendly; the Boyce, Opelousas and Duson Love’s pages list an RV dump and RV-friendly parking, and New Iberia lists an RV dump and RV hookups. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Louisiana commercial vehicle enforcement weigh stations and inspection pull-offs on I-49 and I-10 are for commercial vehicles — not a place to buy a civilian weight ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in these parishes with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. TA Lafayette store hours. Alexandria and Pineville: the Pilot store on North MacArthur Drive (I-49 Exit 86) and Love’s #392 in Pineville could not be confirmed on an operator page tonight, so they are left off. Pilot’s Iowa and Welsh stores, Love’s Vinton, Lake Charles and Port Allen, and TA Express stops on I-10 and I-12 are not on this page yet. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. North on I-49, see <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden</a>. Northeast Louisiana, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/la/boyce/loves-travel-stop-boyce-720">Love’s #720 Boyce</a> · <a href="https://pilotcompany.com/locations/us/la/bunkie/7349-la-29">Pilot #1105 Bunkie</a> · <a href="https://www.loves.com/locations/la/opelousas/loves-travel-stop-opelousas-875">Love’s #875 Opelousas</a> · <a href="https://www.loves.com/locations/la/port-barre/loves-travel-stop-port-barre-663">Love’s #663 Port Barre</a> · <a href="https://pilotcompany.com/locations/us/la/breaux-bridge/2112-rees-st">Pilot #274 Breaux Bridge</a> · <a href="https://www.loves.com/locations/la/duson/loves-travel-stop-duson-523">Love’s #523 Duson</a> · <a href="https://www.ta-petro.com/location/la/ta-lafayette/">TA Lafayette #0161</a> · <a href="https://www.loves.com/locations/la/new-iberia/loves-travel-stop-new-iberia-897">Love’s #897 New Iberia</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
+      <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
+      <li><a href="/tyler-winona/">Lindale / Tyler / Winona / I-20 public scales (TX)</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
+      <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(cat)
+
 def monroe_rayville_tallulah_body():
     order_cat = [
         "pilot-428-west-monroe-la",
@@ -5102,6 +5177,7 @@ def monroe_rayville_tallulah_body():
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10 public scales (LA)</a></li>
       <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
       <li><a href="/tyler-winona/">Lindale / Tyler / Winona / I-20 public scales (TX)</a></li>
       <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
@@ -5168,12 +5244,13 @@ def shreveport_bossier_minden_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Caddo, Bossier or Webster Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. Petro Shreveport store hours. Pilot’s directory lists no Pilot, Flying J or ONE9 store in Shreveport, Bossier City or Minden itself. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. West on I-20 into Texas, see <a href="/tyler-winona/">Lindale / Tyler / Winona</a>. East on I-20, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Caddo, Bossier or Webster Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. Petro Shreveport store hours. Pilot’s directory lists no Pilot, Flying J or ONE9 store in Shreveport, Bossier City or Minden itself. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. West on I-20 into Texas, see <a href="/tyler-winona/">Lindale / Tyler / Winona</a>. East on I-20, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. South on I-49 from Mansfield, see <a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/la/greenwood/loves-travel-stop-greenwood-209">Love’s #209 Greenwood</a> · <a href="https://pilotcompany.com/locations/us/la/greenwood/9510-greenwood-rd">Flying J #665 Greenwood</a> · <a href="https://www.ta-petro.com/location/la/ta-greenwood/">TA Greenwood #0237</a> · <a href="https://www.ta-petro.com/location/la/petro-shreveport/">Petro Shreveport #0308</a> · <a href="https://www.loves.com/locations/la/shreveport/loves-travel-stop-shreveport-854">Love’s #854 Shreveport</a> · <a href="https://pilotcompany.com/locations/us/la/haughton/490-n-elm-st">Pilot #199 Haughton</a> · <a href="https://www.loves.com/locations/la/minden/loves-travel-stop-minden-289">Love’s #289 Minden</a> · <a href="https://www.loves.com/locations/la/mansfield/loves-travel-stop-mansfield-858">Love’s #858 Mansfield</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10 public scales (LA)</a></li>
       <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
       <li><a href="/tyler-winona/">Lindale / Tyler / Winona / I-20 public scales (TX)</a></li>
       <li><a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana / I-30 public scales (TX)</a></li>
@@ -6822,7 +6899,7 @@ def page_guide_uhaul_weigh_stations():
     <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/grapevine/">Grapevine / I-5</a>, <a href="/sacramento/">Sacramento</a></li>
     <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a>, <a href="/south-dallas-ellis-county/">South Dallas</a>, <a href="/rockwall-terrell-van/">Rockwall / Terrell</a>, <a href="/hillsboro-waco/">Waco</a>, <a href="/corsicana-buffalo-huntsville/">Corsicana / Huntsville</a>, <a href="/temple-belton-jarrell/">Temple / Belton</a>, <a href="/sulphur-springs-texarkana/">Sulphur Springs / Texarkana</a>, <a href="/tyler-winona/">Tyler</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a> · <a href="/monroe-rayville-tallulah/">Monroe / Tallulah</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a> · <a href="/monroe-rayville-tallulah/">Monroe / Tallulah</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Opelousas / Lafayette</a></li>
     <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
   </ul>
   <p>See <a href="/">all WeighHere areas</a>.</p>
@@ -8167,6 +8244,15 @@ def main():
         "fwd",
         "../",
         fort_worth_denton_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "boyce-opelousas-lafayette" / "index.html",
+        "Boyce / Opelousas / Lafayette public scales — CAT on I-49 and I-10 | WeighHere",
+        "Eight CAT Scales verified on operators’ own pages in central Louisiana: Love’s #720 Boyce, Pilot #1105 Bunkie, Love’s #875 Opelousas, Love’s #663 Port Barre, Pilot #274 Breaux Bridge, Love’s #523 Duson, TA #0161 Lafayette, Love’s #897 New Iberia.",
+        "bol",
+        "../",
+        boyce_opelousas_lafayette_body(),
         leaflet,
     )
     write(
