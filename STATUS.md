@@ -1,13 +1,14 @@
-# WeighHere status — 20 Nov 2026
+# WeighHere status — 21 Nov 2026
 
-Compiled evening PT 20 Nov 2026 (nightly ship).
+Compiled evening PT 21 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **357** | +8 CAT (Love’s #720 Boyce; Pilot #1105 Bunkie; Love’s #875 Opelousas; Love’s #663 Port Barre; Pilot #274 Breaux Bridge; Love’s #523 Duson; TA #0161 Lafayette; Love’s #897 New Iberia) |
-| Boyce / Bunkie / Opelousas / Lafayette / New Iberia / I-49 · I-10 (LA) | 8 | new 20 Nov — third Louisiana page |
+| **Total rows in `data/stations.json`** | **361** | +4 CAT (Love’s #362 Vinton; Love’s #243 Lake Charles; Pilot #1051 Iowa; Petro #0534 Egan). 294 rows typed `cat`. |
+| Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | new 21 Nov — fourth Louisiana page |
+| Boyce / Bunkie / Opelousas / Lafayette / New Iberia / I-49 · I-10 (LA) | 8 | 20 Nov — third Louisiana page |
 | West Monroe / Monroe / Rayville / Tallulah / I-20 (LA) | 5 | 19 Nov — second Louisiana page |
 | Greenwood / Shreveport / Haughton / Minden / Mansfield / I-20 · I-49 (LA) | 8 | 18 Nov — first Louisiana page |
 | Lindale / Tyler / Winona / I-20 (TX) | 3 | 17 Nov |
@@ -95,6 +96,18 @@ Compiled evening PT 20 Nov 2026 (nightly ship).
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Vinton / Lake Charles / Iowa / Egan** (`/lake-charles-vinton-egan/`, title "Truck Scales near Lake Charles, Vinton & Egan, LA"): fourth Louisiana page — I-10 west from the Texas line through the Lake Charles area to Acadia Parish. All four verified tonight (21 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities; Pilot: offering 318 / CAT Scale in the primary line of business; Petro: `CAT Scale` under Other Amenities). Parishes from the Census geocoder on operator coordinates.
+
+- **Love’s #362 Vinton** — 2024A West St, Vinton LA 70668, I-10 Exit 7 — CAT + RV dump + RV-friendly parking; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (337) 589-9858; geo 30.17292, -93.58812. Parish `calcasieu`.
+- **Love’s #243 Lake Charles** — 1118 Lowe Grout, Lake Charles LA 70647, I-10 Exit 43 @ Hwy 383 (Iowa exit) — CAT + RV dump; Store Open 24-hours; page flags "limited services" (Truck Care 7–11 a.m. Mon–Fri, closed Sat/Sun); (337) 582-4528; geo 30.253127, -93.013108. Parish `calcasieu`.
+- **Pilot Travel Center #1051 Iowa** — 1119 Lowe-Grout Rd, Iowa LA 70647, I-10 Exit 43 — CAT; Open 24 Hours; RV-friendly flag; (337) 582-5464; geo 30.2537, -93.014736. Parish `calcasieu`.
+- **Petro Egan #0534** — 114 Jasmin, Egan LA 70531, I-10 Exit 76 — CAT Scale; page says Open 24 Hours; (337) 783-0424; geo 30.2314, -92.4624 (Petro’s map embed). Parish `acadia`.
+- Not listed: ONE9 Dealer (Pilot location 1463) 18889 S Frontage Rd, Welsh LA 70591, I-10 Exit 48 per Pilot — primary LOB lacks offering 318 (no CAT). Pilot directory shows no store in Lake Charles, Sulphur, Vinton, Jennings, Crowley or Rayne. TA/Petro sitemap LA list has no Lake Charles / Sulphur / Jennings / Iowa page. Love’s LA list has no other store between Vinton and Duson. No dedicated public scale house with an operator page found.
+
+Wiring: new `lake_charles_vinton_egan_body()` + `write()` in `build.py`, NAV (`lce`), footer list, 404/home "Louisiana:" hub lines, PPM guide Louisiana line, Boyce / Lafayette page Related + "West on I-10" text, `tools/seo.py` PLACES, ADDING_A_PAGE county text. `CHECKED_HUMAN` → 21 Nov 2026. Script: /workspace/wh-nightly/patch_1121.py; cache /workspace/wh-nightly/c1121.
+
+## Previous ship detail (20 Nov)
 
 **Boyce / Bunkie / Opelousas / Lafayette** (`/boyce-opelousas-lafayette/`, title "Truck Scales near Opelousas, Lafayette & Boyce, LA"): third Louisiana page — I-49 south from Boyce to Opelousas, then I-10 / US-90 through Acadiana. All eight verified tonight (20 Nov) on operators’ own pages (Pilot: `CAT Scale` in amenities on pilotcompany.com; Love’s: `CAT Scales` in amenities; TA: `CAT Scale` under Other Amenities). Parishes from the Census geocoder on operator coordinates (Bunkie’s Pilot lands in St. Landry; Duson’s Love’s in Acadia).
 
@@ -355,6 +368,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 
 ## Sources used (this compile)
 
+- Southwest Louisiana I-10 stops (21 Nov): https://www.loves.com/locations/la/vinton/loves-travel-stop-vinton-362 · https://www.loves.com/locations/la/lake-charles/loves-travel-stop-lake-charles-243 · https://pilotcompany.com/locations/us/la/iowa/1119-lowe-grout-rd · https://www.ta-petro.com/location/la/petro-egan/ · https://pilotcompany.com/locations/us/la/welsh/18889-s-frontage-rd (no CAT) · https://www.ta-petro.com/sitemap.xml (LA list)
 - Central Louisiana / Acadiana stops (20 Nov): https://www.loves.com/locations/la/boyce/loves-travel-stop-boyce-720 · https://pilotcompany.com/locations/us/la/bunkie/7349-la-29 · https://www.loves.com/locations/la/opelousas/loves-travel-stop-opelousas-875 · https://www.loves.com/locations/la/port-barre/loves-travel-stop-port-barre-663 · https://pilotcompany.com/locations/us/la/breaux-bridge/2112-rees-st · https://www.loves.com/locations/la/duson/loves-travel-stop-duson-523 · https://www.ta-petro.com/location/la/ta-lafayette/ · https://www.loves.com/locations/la/new-iberia/loves-travel-stop-new-iberia-897 · county check: geocoding.geo.census.gov
 - Shreveport / I-20 · I-49 LA stops (18 Nov): https://www.loves.com/locations/la/greenwood/loves-travel-stop-greenwood-209 · https://pilotcompany.com/locations/us/la/greenwood/9510-greenwood-rd · https://www.ta-petro.com/location/la/ta-greenwood/ · https://www.ta-petro.com/location/la/petro-shreveport/ · https://www.loves.com/locations/la/shreveport/loves-travel-stop-shreveport-854 · https://pilotcompany.com/locations/us/la/haughton/490-n-elm-st · https://www.loves.com/locations/la/minden/loves-travel-stop-minden-289 · https://www.loves.com/locations/la/mansfield/loves-travel-stop-mansfield-858 · county check: geocoding.geo.census.gov (coordinates: Caddo, Bossier, Webster, De Soto Parishes)
 - I-35 Temple / Belton / Jarrell stops (15 Nov): https://www.loves.com/locations/tx/troy/loves-travel-stop-troy-719 · https://www.ta-petro.com/location/tx/ta-express-belton/ · https://pilotcompany.com/locations/us/tx/jarrell/11710-n-i-35 · https://pilotcompany.com/locations/us/tx/jarrell/13745-n-i-35 (no CAT) · county check: geocoding.geo.census.gov (coordinates: Bell, Williamson)
@@ -370,6 +384,7 @@ Previous ship (30 Oct): `/belen-truth-or-consequences/` — Love’s #726 Belen,
 - Amarillo / El Paso / Clovis sources: see prior STATUS compile notes
 
 ## Gaps / deferred
+- Vinton / Lake Charles / Iowa / Egan (I-10, LA): shipped 21 Nov on `/lake-charles-vinton-egan/`; no dedicated house; CAT staffing hours unpublished; Love’s #243 flagged "limited services" (truck care only, per page); livestock unknown; no chain CAT stop inside Lake Charles / Sulphur / Westlake; ONE9 Welsh no CAT; no Jennings / Crowley chain store. Next: I-10 · I-12 east (Love’s #240 Port Allen verified CAT 21 Nov — Exit 151, re-check; Love’s #856 Mandeville verified CAT 21 Nov — I-12 Exit 68; Petro Hammond, TA Slidell, TA Express LaPlace / St. Rose on TA sitemap, unchecked), north Houston I-45, New Braunfels / San Marcos I-35, US-59 Carthage / Nacogdoches / Lufkin.
 - Boyce / Bunkie / Opelousas / Lafayette / New Iberia (I-49 · I-10, LA): shipped 20 Nov on `/boyce-opelousas-lafayette/`; no dedicated house; CAT staffing hours unpublished; TA Lafayette store hours unpublished; livestock unknown; Pilot #426 Alexandria (I-49 Exit 86) and Love’s #392 Pineville unverified on operator pages. Next: Love’s #243 Lake Charles / #362 Vinton / Pilot Iowa & Welsh (I-10 west), Love’s #240 Port Allen / Pilot Port Allen / Denham Springs / Hammond (I-10 · I-12 east), north Houston I-45, New Braunfels / San Marcos I-35.
 - West Monroe / Monroe / Rayville / Tallulah (I-20, LA): shipped 19 Nov on `/monroe-rayville-tallulah/`; no dedicated house; CAT staffing hours unpublished; TA Tallulah store hours unpublished (fuel 24/7 only); livestock unknown; no chain CAT stop in Ruston / Lincoln Parish. Next: I-49 south (Love’s #720 Boyce / Alexandria — on Love’s list, unchecked), north Houston I-45 (Flying J #729 Exit 64 and Pilot #375 I-610 Exit 24A verified CAT 18 Nov — re-check), New Braunfels I-35 (Pilot #330 Exit 184 verified CAT 18 Nov), Carthage / Nacogdoches / Lufkin US-59 (Love’s #615, #290, #709), Louisiana I-10 (Love’s #362 Vinton, #243 Lake Charles, #523 Duson, #240 Port Allen), or Vicksburg / Jackson MS on I-20 east
 - Greenwood / Shreveport / Haughton / Minden / Mansfield (I-20 · I-49, LA): shipped 18 Nov on `/shreveport-bossier-minden/`; no dedicated house; CAT staffing hours unpublished; Petro Shreveport store hours unpublished (fuel 24/7 only); livestock unknown; no Pilot/Love’s/TA in Bossier City proper. Next: Louisiana I-20 east (Love’s #806 Monroe, Love’s #237 Tallulah, Ruston / West Monroe Pilot-TA checks), I-49 south (Love’s #720 Boyce / Alexandria), north Houston I-45 (Flying J #729 Exit 64 and Pilot #375 I-610 Exit 24A verified CAT 18 Nov; ONE9 #1529 Humble no CAT), New Braunfels I-35 (Pilot #330 Exit 184 verified CAT 18 Nov), or Carthage / Nacogdoches / Lufkin US-59 (Love’s #615, #290, #709; Pilot #1470 no CAT)
