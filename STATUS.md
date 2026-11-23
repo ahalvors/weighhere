@@ -1,13 +1,14 @@
-# WeighHere status — 21 Nov 2026
+# WeighHere status — 22 Nov 2026
 
-Compiled evening PT 21 Nov 2026 (nightly ship).
+Compiled evening PT 22 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **361** | +4 CAT (Love’s #362 Vinton; Love’s #243 Lake Charles; Pilot #1051 Iowa; Petro #0534 Egan). 294 rows typed `cat`. |
-| Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | new 21 Nov — fourth Louisiana page |
+| **Total rows in `data/stations.json`** | **371** | +10 CAT (Love’s #240 + Pilot #1439 Port Allen; ONE9 #79 Denham Springs; Pilot #300 + Petro #0310 Hammond; Pilot Dealer #1336 Kentwood; TA Express #0479 Laplace; Love’s #856 Mandeville; TA #0180 Slidell; Pilot Dealer #1347 Pearl River). 304 rows typed `cat`. |
+| Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | new 22 Nov — fifth Louisiana page |
+| Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | 21 Nov — fourth Louisiana page |
 | Boyce / Bunkie / Opelousas / Lafayette / New Iberia / I-49 · I-10 (LA) | 8 | 20 Nov — third Louisiana page |
 | West Monroe / Monroe / Rayville / Tallulah / I-20 (LA) | 5 | 19 Nov — second Louisiana page |
 | Greenwood / Shreveport / Haughton / Minden / Mansfield / I-20 · I-49 (LA) | 8 | 18 Nov — first Louisiana page |
@@ -92,10 +93,30 @@ Compiled evening PT 21 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 285 | +5 West Monroe / Monroe / Rayville / Tallulah I-20 (display_group cat) |
+| CAT / truck-stop cards | 307 | display_group cat, recounted 22 Nov (+10 Port Allen / Baton Rouge / Hammond / Slidell) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Port Allen / Baton Rouge / Hammond / Slidell** (`/baton-rouge-hammond-slidell/`, title "CAT & Truck Scales near Baton Rouge, Hammond & Slidell, LA"): fifth Louisiana page — I-10 from Port Allen (Baton Rouge west bank) and I-12 across the Florida Parishes to Slidell, plus I-55 north to Kentwood, LaPlace on the river, and I-59 at Pearl River. All ten verified tonight (22 Nov) on operators’ own pages (Pilot: offering 318 / "CAT Scale" in the primary line of business on pilotcompany.com; Love’s: `CAT Scales` in amenities; TA/Petro: `CAT Scale` under Other Amenities). Parishes from the Census geocoder on operator coordinates.
+
+- **Love’s #240 Port Allen** — 751 Lobdell Hwy S., Port Allen LA 70767, I-10 Exit 151 @ LA-415 — CAT + RV dump + RV-friendly parking; Store Open 24-Hours; (225) 389-9111; geo 30.445527, -91.242686. Parish `west-baton-rouge`.
+- **Pilot Travel Center #1439 Port Allen** — 420 N Lobdell Hwy, Port Allen LA 70767, I-10 Exit 151 — CAT; Open 24 Hours; not RV-flagged; (225) 263-1366; geo 30.45451, -91.24745. Parish `west-baton-rouge`.
+- **ONE9 Travel Center #79 Denham Springs** — 2601 S Range Ave, Denham Springs LA 70726, I-12 Exit 10 — CAT (Pilot page); Open 24 Hours; RV-friendly flag; (225) 665-4151; geo 30.451957, -90.957431. Parish `livingston`.
+- **Pilot Travel Center #300 Hammond** — 2111 SW Railroad Ave, Hammond LA 70403, I-12/I-55 Exit 40 — CAT; Open 24 Hours; RV-friendly flag; (985) 323-5739; geo 30.477546, -90.455976. Parish `tangipahoa`.
+- **Petro Hammond #0310** — 2100 S.W. Railroad Ave., Hammond LA 70403, I-12 Exit 40 at Hwy 51 — CAT Scale; fuel 24/7, no store-hours statement (hours_24h unknown); (985) 542-4981; geo 30.477, -90.4579. Parish `tangipahoa`.
+- **Pilot Dealer #1336 Kentwood** — 802 Ave G, Kentwood LA 70444, I-55 Exit 61 — CAT; Open 24 Hours; not RV-flagged; (985) 614-5020; geo 30.93657, -90.52266. Parish `tangipahoa`.
+- **TA Express Laplace #0479** — 4301 Main St., Laplace LA 70068 — CAT Scale; Open 24 Hours; no highway/exit on TA’s page; (985) 315-8194; geo 30.086244, -90.444959. Parish `st-john-the-baptist`.
+- **Love’s #856 Mandeville** — 66595 Wadsworth Pkwy, Mandeville LA 70448, I-12 Exit 68 — CAT + RV dump + RV hookups + RV parking; Store Open 24-hours; (985) 317-6215; geo 30.395171, -89.999839. Parish `st-tammany`.
+- **TA Slidell #0180** — 1682 Gause Blvd, Slidell LA 70458, I-10 Exit 266 — CAT Scale; fuel 24/7, no store-hours statement (hours_24h unknown); (985) 643-9974; geo 30.2864, -89.7511. Parish `st-tammany`.
+- **Pilot Dealer #1347 Pearl River** — 65583 Pump Slough Rd, Pearl River LA 70452, I-59 Exit 5A — CAT; Open 24 Hours; not RV-flagged; (985) 262-2820; geo 30.376454, -89.739903. Parish `st-tammany`.
+- Not listed: TA Express St. Rose #0480 (10405 E. Airline Hwy, I-310 Exit 2) — own page has no CAT Scale under Other Amenities. Love’s Hammond #923 is a Speedco shop. Pilot LA directory has no store in Baton Rouge (east bank), Gonzales, Sorrento, Slidell, New Orleans, Kenner or LaPlace (Pilot LA cities: Breaux Bridge, Bunkie, Denham Springs, Greenwood, Hammond, Haughton, Iowa, Kentwood, Pearl River, Port Allen, Rayville, Welsh, West Monroe). Love’s all-locations list has no other LA store east of Port Allen besides Mandeville. TA/Petro sitemap LA list has no other southeast LA page. No dedicated public scale house with an operator page found.
+
+Wiring: new `baton_rouge_hammond_slidell_body()` + `write()` in `build.py`, NAV (`bhs`), footer list, 404/home "Louisiana:" hub lines, PPM guide Louisiana line, Lafayette page + Lake Charles page Related + "East on I-10" text, `tools/seo.py` PLACES, ADDING_A_PAGE county text. `CHECKED_HUMAN` → 22 Nov 2026. Script: /workspace/wh-nightly/patch_1122.py; cache /workspace/wh-nightly/c1122.
+
+Louisiana gaps / next: Alexandria/Pineville I-49 (Pilot #426, Love’s #392 still unverified); Jennings/Welsh I-10 has no CAT; Mississippi Gulf Coast I-10 (Flying J #676 shows on Pilot pages nearby) would be the natural next state.
+
+## Previous ship detail (21 Nov)
 
 **Vinton / Lake Charles / Iowa / Egan** (`/lake-charles-vinton-egan/`, title "Truck Scales near Lake Charles, Vinton & Egan, LA"): fourth Louisiana page — I-10 west from the Texas line through the Lake Charles area to Acadia Parish. All four verified tonight (21 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities; Pilot: offering 318 / CAT Scale in the primary line of business; Petro: `CAT Scale` under Other Amenities). Parishes from the Census geocoder on operator coordinates.
 

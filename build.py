@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / "data/stations.json").read_text())
 STATIONS = DATA["stations"]
 CHECKED = DATA["generated"]  # 2026-10-11
-CHECKED_HUMAN = "21 Nov 2026"
+CHECKED_HUMAN = "22 Nov 2026"
 
 NAV = [
     ("/los-angeles/", "LA County", "la"),
@@ -58,6 +58,7 @@ NAV = [
     ("/monroe-rayville-tallulah/", "West Monroe / Monroe / Tallulah (LA)", "mrt"),
     ("/boyce-opelousas-lafayette/", "Boyce / Bunkie / Opelousas / Lafayette (LA)", "bol"),
     ("/lake-charles-vinton-egan/", "Vinton / Lake Charles / Iowa / Egan (LA)", "lce"),
+    ("/baton-rouge-hammond-slidell/", "Port Allen / Baton Rouge / Hammond / Slidell (LA)", "bhs"),
     ("/mayer/", "Mayer / Cordes Lakes / I-17", "myr"),
     ("/white-hills/", "White Hills / Henderson / US-93", "wh"),
     ("/lake-havasu/", "Lake Havasu / I-40 Exit 9", "lh"),
@@ -230,7 +231,7 @@ def footer(rel="."):
         <li><a href="/belen-truth-or-consequences/">Belen / Truth or Consequences / I-25 (NM)</a></li>
         <li><a href="/clovis-hobbs-eunice/">Clovis / Hobbs / Eunice (eastern NM)</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10</a> · <a href="/amarillo/">Amarillo / I-40</a> · <a href="/van-horn-fort-stockton-pecos/">Van Horn / Fort Stockton / Pecos / I-10 · I-20</a> · <a href="/odessa-midland-big-spring/">Monahans / Odessa / Midland / Big Spring / I-20</a> · <a href="/sweetwater-abilene-cisco/">Sweetwater / Abilene / Cisco / I-20</a> · <a href="/weatherford-fort-worth/">Weatherford / Fort Worth west / I-20</a> · <a href="/vega-dumas-dalhart/">Vega / Dumas / Dalhart (Panhandle)</a> · <a href="/childress-wichita-falls/">Childress / Vernon / Wichita Falls / US-287</a> · <a href="/decatur-rhome-bridgeport/">Decatur / Rhome / Bridgeport / US-287</a> · <a href="/fort-worth-denton/">Fort Worth / Denton / I-35W</a> · <a href="/hillsboro-waco/">Hillsboro / Waco / Troy / I-35</a> · <a href="/south-dallas-ellis-county/">South Dallas / Red Oak / Italy / I-35E · I-45</a> · <a href="/rockwall-terrell-van/">Rockwall / Terrell / Canton / Van / I-30 · I-20</a> · <a href="/corsicana-buffalo-huntsville/">Corsicana / Fairfield / Buffalo / Huntsville / I-45</a> · <a href="/temple-belton-jarrell/">Temple / Belton / Jarrell / I-35</a> · <a href="/sulphur-springs-texarkana/">Caddo Mills / Sulphur Springs / Texarkana / I-30</a> · <a href="/tyler-winona/">Lindale / Tyler / Winona / I-20</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a> · <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10</a> · <a href="/lake-charles-vinton-egan/">Vinton / Lake Charles / Iowa / Egan / I-10</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden / I-20 · I-49</a> · <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10</a> · <a href="/lake-charles-vinton-egan/">Vinton / Lake Charles / Iowa / Egan / I-10</a> · <a href="/baton-rouge-hammond-slidell/">Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12</a></li>
         <li><a href="/las-cruces-deming-lordsburg/">Las Cruces / Deming / Lordsburg / I-10 (NM)</a></li>
         <li><a href="/el-paso-santa-teresa/">El Paso / Anthony / Santa Teresa / I-10 (TX · NM)</a></li>
         <li><a href="/amarillo/">Amarillo / I-40 (TX)</a></li>
@@ -253,6 +254,7 @@ def footer(rel="."):
         <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Tallulah (LA)</a></li>
         <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette (LA)</a></li>
         <li><a href="/lake-charles-vinton-egan/">Vinton / Lake Charles / Iowa / Egan (LA)</a></li>
+        <li><a href="/baton-rouge-hammond-slidell/">Port Allen / Baton Rouge / Hammond / Slidell (LA)</a></li>
         <li><a href="/mayer/">Mayer / Cordes Lakes / I-17</a></li>
         <li><a href="/white-hills/">White Hills / Henderson / US-93</a></li>
         <li><a href="/lake-havasu/">Lake Havasu / I-40 Exit 9</a></li>
@@ -5055,6 +5057,82 @@ def sulphur_springs_texarkana_body():
 </main>
 """ + map_script(cat)
 
+def baton_rouge_hammond_slidell_body():
+    order_cat = [
+        "loves-240-port-allen-la",
+        "pilot-1439-port-allen-la",
+        "one9-79-denham-springs-la",
+        "pilot-300-hammond-la",
+        "petro-0310-hammond-la",
+        "pilot-1336-kentwood-la",
+        "ta-express-0479-laplace-la",
+        "loves-856-mandeville-la",
+        "ta-0180-slidell-la",
+        "pilot-1347-pearl-river-la",
+    ]
+    by_id = {s["id"]: s for s in STATIONS}
+    cat = [by_id[i] for i in order_cat if i in by_id]
+    cards_c = "\n".join(card(s) for s in cat)
+    n = len(cat)
+    dedicated_block = """
+  <div class="box box-call" id="dedicated">
+    <h2>No verified dedicated public scale house here yet</h2>
+    <p>We have not found a walk-up public scale house in the Baton Rouge, Florida Parishes or North Shore area with an operator page we can cite. We are not inventing one from refineries, chemical plants, port and barge terminals, sugar mills, grain elevators, scrap yards, or third-party trucker directories. All ten stops below are CAT Scales at truck stops, verified on Love’s, Pilot’s and TA / Petro’s own location pages.</p>
+  </div>
+"""
+    return f"""
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Port Allen · Baton Rouge · Denham Springs · Hammond · LaPlace · Mandeville · Slidell · I-10 · I-12 · I-55 · I-59 · Louisiana · listings checked {CHECKED_HUMAN}</p>
+    <h1>Public scales near Baton Rouge, Hammond and Slidell</h1>
+    <p class="lede">Ten CAT Scales verified on the operators’ <em>own</em> location pages across southeast Louisiana: a pair at I-10 Exit 151 in Port Allen on Baton Rouge’s west bank (Love’s #240 and Pilot #1439); ONE9 #79 at I-12 Exit 10 in Denham Springs; a pair at the I-12 / I-55 crossroads in Hammond (Pilot #300 and Petro #0310), plus Pilot Dealer #1336 up I-55 in Kentwood; TA Express #0479 in LaPlace between Baton Rouge and New Orleans; Love’s #856 on I-12 at Mandeville; TA #0180 at I-10 Exit 266 in Slidell; and Pilot Dealer #1347 on I-59 at Pearl River. Useful for U-Haul and PPM moves around Baton Rouge, LSU, Southeastern and the North Shore, RVs and boat trailers on I-10 and I-12, and horse trailers headed to and from Mississippi.</p>
+    <p class="meta-line">{n} verified listings · 0 dedicated houses · {len(cat)} CAT stops · West Baton Rouge, Livingston, Tangipahoa, St. John the Baptist and St. Tammany Parishes LA</p>
+  </div>
+</section>
+<div class="wrap prose">
+  {filters()}
+  {dedicated_block}
+
+  <div data-filter-section>
+  <h2 class="section-h" id="cat">CAT Scales from Port Allen to Slidell</h2>
+  <p class="section-note">We list only stops verified on the operator’s own location page, roughly west to east. Both Love’s pages, all four Pilot / ONE9 pages and TA Express Laplace say the store is open 24 hours; Petro Hammond and TA Slidell sell fuel 24/7 but give no store-hours statement. None publishes a CAT-staffing schedule. Pilot flags Hammond #300 and ONE9 Denham Springs as RV-friendly; both Love’s pages list an RV dump, Love’s #240 lists RV-friendly parking and Love’s #856 lists RV hookups. Pilot Dealer stores at Kentwood and Pearl River are dealer-operated. TA’s Laplace page gives no exit number. 2,000 lb floor. No corner weights. Weigh the whole rig, then drop the trailer and weigh again if you need a trailer-only number.</p>
+  <div class="cards">{cards_c}</div>
+  </div>
+  <hr class="hazard">
+  <div class="box box-warn" id="do-not-go">
+    <h2>Do not go here for a ticket</h2>
+    <p>Louisiana commercial vehicle enforcement weigh stations and inspection pull-offs on I-10, I-12, I-55 and I-59 are for commercial vehicles — not a place to buy a civilian weight ticket for a U-Haul, RV, boat, horse trailer, or PPM load. Follow posted signs; do not treat this directory as a bypass guide.</p>
+  </div>
+
+  <div class="box box-call">
+    <h3>What we still need to verify</h3>
+    <p>Any dedicated public scale house in these parishes with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all ten stops. Store hours at Petro Hammond and TA Slidell. Baton Rouge proper (east bank), Gonzales and Sorrento: Pilot’s Louisiana directory lists no Pilot, Flying J or ONE9 store there, Love’s has no store there, and TA / Petro has no page there. TA Express St. Rose #0480 (I-310 Exit 2) lists no CAT Scale on its own page, so it is left off. Love’s Hammond #923 is a Speedco truck-service shop, not a travel stop. New Orleans proper: no chain CAT stop we can cite. Independent truck stops and casino truck plazas are not listed because they publish no CAT Scale on a page of their own. West on I-10, see <a href="/boyce-opelousas-lafayette/">Breaux Bridge / Lafayette / Duson</a> and <a href="/lake-charles-vinton-egan/">Egan / Lake Charles / Vinton</a>. Livestock policy everywhere.</p>
+  </div>
+  <p class="cite">Sources: <a href="https://www.loves.com/locations/la/port-allen/loves-travel-stop-port-allen-240">Love’s #240 Port Allen</a> · <a href="https://pilotcompany.com/locations/us/la/port-allen/420-n-lobdell-hwy">Pilot #1439 Port Allen</a> · <a href="https://pilotcompany.com/locations/us/la/denham-springs/2601-s-range-ave">ONE9 #79 Denham Springs</a> · <a href="https://pilotcompany.com/locations/us/la/hammond/2111-sw-railroad-ave">Pilot #300 Hammond</a> · <a href="https://www.ta-petro.com/location/la/petro-hammond/">Petro Hammond #0310</a> · <a href="https://pilotcompany.com/locations/us/la/kentwood/802-ave-g">Pilot Dealer #1336 Kentwood</a> · <a href="https://www.ta-petro.com/location/la/ta-express-laplace/">TA Express Laplace #0479</a> · <a href="https://www.loves.com/locations/la/mandeville/loves-travel-stop-mandeville-856">Love’s #856 Mandeville</a> · <a href="https://www.ta-petro.com/location/la/ta-slidell/">TA Slidell #0180</a> · <a href="https://pilotcompany.com/locations/us/la/pearl-river/65583-pump-slough-rd">Pilot Dealer #1347 Pearl River</a> · no CAT: <a href="https://www.ta-petro.com/location/la/ta-express-st-rose/">TA Express St. Rose #0480</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10 public scales (LA)</a></li>
+      <li><a href="/lake-charles-vinton-egan/">Vinton / Lake Charles / Iowa / Egan / I-10 public scales (LA)</a></li>
+      <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
+      <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
+      <li><a href="/guides/ppm-weight-tickets/">How to get PPM weight tickets for a U-Haul move</a></li>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
+      <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
+      <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
+      <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
+      <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+""" + map_script(cat)
+
 def lake_charles_vinton_egan_body():
     order_cat = [
         "loves-362-vinton-la",
@@ -5099,12 +5177,13 @@ def lake_charles_vinton_egan_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in Calcasieu, Jefferson Davis or Acadia Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all four stops. Lake Charles city, Sulphur and Westlake: Pilot’s directory lists no Pilot, Flying J or ONE9 store there, Love’s has no store there, and TA / Petro has no page there — so there is no chain CAT stop we can cite inside Lake Charles itself. The ONE9 Dealer on the South Frontage Road at Welsh (I-10 Exit 48 per Pilot) lists no CAT Scale on its own page, so it is left off. Pilot’s directory shows no store in Jennings or Crowley. Independent truck stops and casino truck plazas are not listed because they publish no CAT Scale on a page of their own. East on I-10, see <a href="/boyce-opelousas-lafayette/">Duson / Lafayette / Breaux Bridge</a>. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in Calcasieu, Jefferson Davis or Acadia Parish with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all four stops. Lake Charles city, Sulphur and Westlake: Pilot’s directory lists no Pilot, Flying J or ONE9 store there, Love’s has no store there, and TA / Petro has no page there — so there is no chain CAT stop we can cite inside Lake Charles itself. The ONE9 Dealer on the South Frontage Road at Welsh (I-10 Exit 48 per Pilot) lists no CAT Scale on its own page, so it is left off. Pilot’s directory shows no store in Jennings or Crowley. Independent truck stops and casino truck plazas are not listed because they publish no CAT Scale on a page of their own. East on I-10, see <a href="/boyce-opelousas-lafayette/">Duson / Lafayette / Breaux Bridge</a>, then <a href="/baton-rouge-hammond-slidell/">Port Allen / Baton Rouge / Hammond / Slidell</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/la/vinton/loves-travel-stop-vinton-362">Love’s #362 Vinton</a> · <a href="https://www.loves.com/locations/la/lake-charles/loves-travel-stop-lake-charles-243">Love’s #243 Lake Charles</a> · <a href="https://pilotcompany.com/locations/us/la/iowa/1119-lowe-grout-rd">Pilot #1051 Iowa</a> · <a href="https://www.ta-petro.com/location/la/petro-egan/">Petro Egan #0534</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/baton-rouge-hammond-slidell/">Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 public scales (LA)</a></li>
       <li><a href="/boyce-opelousas-lafayette/">Boyce / Bunkie / Opelousas / Lafayette / I-49 · I-10 public scales (LA)</a></li>
       <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
       <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
@@ -5172,12 +5251,13 @@ def boyce_opelousas_lafayette_body():
 
   <div class="box box-call">
     <h3>What we still need to verify</h3>
-    <p>Any dedicated public scale house in these parishes with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. TA Lafayette store hours. Alexandria and Pineville: the Pilot store on North MacArthur Drive (I-49 Exit 86) and Love’s #392 in Pineville could not be confirmed on an operator page tonight, so they are left off. West on I-10 toward Lake Charles and Texas, see <a href="/lake-charles-vinton-egan/">Egan / Iowa / Lake Charles / Vinton</a>. Love’s Port Allen and the TA / Petro stops on I-10 and I-12 east of Lafayette are not on a page yet. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. North on I-49, see <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden</a>. Northeast Louisiana, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. Livestock policy everywhere.</p>
+    <p>Any dedicated public scale house in these parishes with an operator page that sells walk-up weight certificates. CAT-scale staffing hours at all eight stops. TA Lafayette store hours. Alexandria and Pineville: the Pilot store on North MacArthur Drive (I-49 Exit 86) and Love’s #392 in Pineville could not be confirmed on an operator page tonight, so they are left off. West on I-10 toward Lake Charles and Texas, see <a href="/lake-charles-vinton-egan/">Egan / Iowa / Lake Charles / Vinton</a>. East on I-10 and I-12 toward Baton Rouge, Hammond and Slidell, see <a href="/baton-rouge-hammond-slidell/">Port Allen / Denham Springs / Hammond / Mandeville / Slidell</a>. Independent truck stops are not listed because they publish no CAT Scale on a page of their own. North on I-49, see <a href="/shreveport-bossier-minden/">Greenwood / Shreveport / Haughton / Minden</a>. Northeast Louisiana, see <a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah</a>. Livestock policy everywhere.</p>
   </div>
   <p class="cite">Sources: <a href="https://www.loves.com/locations/la/boyce/loves-travel-stop-boyce-720">Love’s #720 Boyce</a> · <a href="https://pilotcompany.com/locations/us/la/bunkie/7349-la-29">Pilot #1105 Bunkie</a> · <a href="https://www.loves.com/locations/la/opelousas/loves-travel-stop-opelousas-875">Love’s #875 Opelousas</a> · <a href="https://www.loves.com/locations/la/port-barre/loves-travel-stop-port-barre-663">Love’s #663 Port Barre</a> · <a href="https://pilotcompany.com/locations/us/la/breaux-bridge/2112-rees-st">Pilot #274 Breaux Bridge</a> · <a href="https://www.loves.com/locations/la/duson/loves-travel-stop-duson-523">Love’s #523 Duson</a> · <a href="https://www.ta-petro.com/location/la/ta-lafayette/">TA Lafayette #0161</a> · <a href="https://www.loves.com/locations/la/new-iberia/loves-travel-stop-new-iberia-897">Love’s #897 New Iberia</a> · <a href="https://catscale.com/cat-scale-locator/">CAT Scale locator</a>. Checked {CHECKED_HUMAN}.</p>
   <div class="related">
     <h2>Related</h2>
     <ul>
+      <li><a href="/baton-rouge-hammond-slidell/">Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 public scales (LA)</a></li>
       <li><a href="/lake-charles-vinton-egan/">Vinton / Lake Charles / Iowa / Egan / I-10 public scales (LA)</a></li>
       <li><a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden / I-20 · I-49 public scales (LA)</a></li>
       <li><a href="/monroe-rayville-tallulah/">West Monroe / Monroe / Rayville / Tallulah / I-20 public scales (LA)</a></li>
@@ -6971,7 +7051,7 @@ def page_guide_uhaul_weigh_stations():
     <li>California: <a href="/los-angeles/">Los Angeles County</a>, <a href="/orange-county/">Orange County</a>, <a href="/san-diego/">San Diego</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/grapevine/">Grapevine / I-5</a>, <a href="/sacramento/">Sacramento</a></li>
     <li>Arizona, Nevada and New Mexico: <a href="/phoenix/">Phoenix</a>, <a href="/kingman/">Kingman / I-40</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a></li>
     <li>Texas: <a href="/el-paso-santa-teresa/">El Paso</a>, <a href="/amarillo/">Amarillo</a>, <a href="/fort-worth-denton/">Fort Worth / Denton</a>, <a href="/south-dallas-ellis-county/">South Dallas</a>, <a href="/rockwall-terrell-van/">Rockwall / Terrell</a>, <a href="/hillsboro-waco/">Waco</a>, <a href="/corsicana-buffalo-huntsville/">Corsicana / Huntsville</a>, <a href="/temple-belton-jarrell/">Temple / Belton</a>, <a href="/sulphur-springs-texarkana/">Sulphur Springs / Texarkana</a>, <a href="/tyler-winona/">Tyler</a></li>
-    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a> · <a href="/monroe-rayville-tallulah/">Monroe / Tallulah</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Opelousas / Lafayette</a> · <a href="/lake-charles-vinton-egan/">Lake Charles / Vinton</a></li>
+    <li>Louisiana: <a href="/shreveport-bossier-minden/">Shreveport / Bossier / Minden</a> · <a href="/monroe-rayville-tallulah/">Monroe / Tallulah</a> · <a href="/boyce-opelousas-lafayette/">Boyce / Opelousas / Lafayette</a> · <a href="/lake-charles-vinton-egan/">Lake Charles / Vinton</a> · <a href="/baton-rouge-hammond-slidell/">Baton Rouge / Hammond / Slidell</a></li>
     <li>Utah, Idaho and the Northwest: <a href="/springville-salt-lake/">Salt Lake City</a>, <a href="/boise-treasure-valley/">Boise</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/spokane-post-falls/">Spokane</a></li>
   </ul>
   <p>See <a href="/">all WeighHere areas</a>.</p>
@@ -8316,6 +8396,15 @@ def main():
         "fwd",
         "../",
         fort_worth_denton_body(),
+        leaflet,
+    )
+    write(
+        ROOT / "baton-rouge-hammond-slidell" / "index.html",
+        "Baton Rouge / Hammond / Slidell public scales — CAT on I-10 & I-12 | WeighHere",
+        "Ten CAT Scales verified on operators’ own pages in southeast Louisiana: Love’s #240 and Pilot #1439 Port Allen (I-10 Exit 151), ONE9 #79 Denham Springs, Pilot #300 and Petro #0310 Hammond (I-12/I-55), Pilot Kentwood, TA Express Laplace, Love’s #856 Mandeville, TA #0180 Slidell, Pilot Pearl River.",
+        "bhs",
+        "../",
+        baton_rouge_hammond_slidell_body(),
         leaflet,
     )
     write(
