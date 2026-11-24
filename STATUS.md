@@ -1,13 +1,14 @@
-# WeighHere status — 22 Nov 2026
+# WeighHere status — 23 Nov 2026
 
-Compiled evening PT 22 Nov 2026 (nightly ship).
+Compiled evening PT 23 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **371** | +10 CAT (Love’s #240 + Pilot #1439 Port Allen; ONE9 #79 Denham Springs; Pilot #300 + Petro #0310 Hammond; Pilot Dealer #1336 Kentwood; TA Express #0479 Laplace; Love’s #856 Mandeville; TA #0180 Slidell; Pilot Dealer #1347 Pearl River). 304 rows typed `cat`. |
-| Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | new 22 Nov — fifth Louisiana page |
+| **Total rows in `data/stations.json`** | **377** | +6 CAT (Love’s #619 Poplarville; Love’s #860 Picayune; Love’s #595 + Flying J #676 Gulfport; Love’s #402 Biloxi; Pilot #586 Moss Point). 310 rows typed `cat`. |
+| Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | new 23 Nov — first Mississippi page |
+| Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | 22 Nov — fifth Louisiana page |
 | Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | 21 Nov — fourth Louisiana page |
 | Boyce / Bunkie / Opelousas / Lafayette / New Iberia / I-49 · I-10 (LA) | 8 | 20 Nov — third Louisiana page |
 | West Monroe / Monroe / Rayville / Tallulah / I-20 (LA) | 5 | 19 Nov — second Louisiana page |
@@ -93,10 +94,26 @@ Compiled evening PT 22 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 307 | display_group cat, recounted 22 Nov (+10 Port Allen / Baton Rouge / Hammond / Slidell) |
+| CAT / truck-stop cards | 313 | display_group cat, recounted 23 Nov (+6 Poplarville / Picayune / Gulfport / Biloxi / Moss Point) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Poplarville / Picayune / Gulfport / Biloxi / Moss Point** (`/gulfport-biloxi-moss-point/`, title "CAT & Truck Scales near Gulfport, Biloxi & Moss Point, MS"): first Mississippi page — I-59 from the Louisiana line (Picayune) north to Poplarville, and I-10 across the Gulf Coast from Gulfport to Moss Point near Alabama. All six verified tonight (23 Nov) on operators’ own pages (Love’s: `catscales` true / `CAT Scales` in amenities; Pilot: offering 318 "CAT Scale" in the primary line of business on pilotcompany.com). Counties from the Census geocoder on operator coordinates.
+
+- **Love’s #619 Poplarville** — 720 Highway 26 E, Poplarville MS 39470, I-59 Exit 29 — CAT + RV dump + RV parking; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (601) 403-9850; geo 30.846383, -89.497939. County `pearl-river`.
+- **Love’s #860 Picayune (store name Nicholson)** — 20 Hwy 607, Picayune MS 39466, I-59 Exit 1 / MS-607 S — CAT + RV parking (no dump listed); Store and Truck Care Open 24-hours; (769) 717-5068; geo 30.467383, -89.687171. County `pearl-river`.
+- **Love’s #595 Gulfport** — 9240 County Farm Rd, Gulfport MS 39503, I-10 Exit 28 — CAT + RV dump + RV hookups + RV parking + RV fuel lane; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (228) 832-0199; geo 30.419116, -89.190218. County `harrison`.
+- **Flying J Travel Center #676 Gulfport** — 9351 Canal Rd, Gulfport MS 39503, I-10 Exit 31 — CAT (Pilot page); Open 24 Hours; RV-friendly flag; (228) 868-2711; geo 30.420777, -89.137685. County `harrison`.
+- **Love’s #402 Biloxi** — 11332 Cedar Lake Rd., Biloxi MS 39532, I-10 Exit 44 — CAT (no RV amenities listed); Store Open 24-Hours; (228) 396-5646; geo 30.452073, -88.93331. County `harrison`.
+- **Pilot Travel Center #586 Moss Point** — 6705 MS-63, Moss Point MS 39563, I-10 Exit 69 — CAT; Open 24 Hours; RV-friendly flag; (228) 474-6511; geo 30.438282, -88.529199. County `jackson`.
+- Not listed: Pilot MS directory has Gulf Coast stores only in Gulfport and Moss Point (MS cities: Gulfport, Jackson, Meridian, Moss Point, New Albany, Olive Branch, Pearl, Winona). TA/Petro sitemap MS list is only Petro Jackson, TA Express Mooreville, TA McComb, TA Meridian — nothing on the coast. Love’s Hattiesburg #565 (US-98 at Elks Lake Rd, CAT, page flags limited services) and Lucedale #864 (US-98, CAT, limited services) verified as CAT on Love’s pages but held for a future Hattiesburg / Laurel / Lucedale page. No dedicated public scale house with an operator page found. Hancock County (Bay St. Louis / Diamondhead) and Pascagoula / Ocean Springs: no chain CAT stop.
+
+Wiring: new `gulfport_biloxi_moss_point_body()` + `write()` in `build.py`, NAV (`gbm`), footer list, new "Mississippi:" hub lines on home/404 and PPM guide, Baton Rouge / Hammond / Slidell page Related + "East into Mississippi" text, `tools/seo.py` PLACES (region "Mississippi" — new homepage hub section), ADDING_A_PAGE county text. `CHECKED_HUMAN` → 23 Nov 2026. Script: /workspace/wh-nightly/patch_1123.py; cache /workspace/wh-nightly/c1123.
+
+Mississippi gaps / next: Hattiesburg / Laurel / Lucedale (Love’s #565 Hattiesburg, #848 Sandersville, #699 Magee, #864 Lucedale — check Sandersville/Magee pages); Jackson metro I-20 / I-55 (Pilot Jackson + Pearl, Petro Jackson, Love’s #420 Flowood, #208 Canton); Vicksburg I-20 (Love’s #776) continuing east from Tallulah LA; McComb I-55 (Love’s #393, TA McComb); Meridian / Toomsuba I-20 (Pilot Meridian, TA Meridian, Love’s #343). Louisiana leftover: Alexandria/Pineville I-49 (Pilot #426, Love’s #392 still unverified).
+
+## Previous ship detail (22 Nov)
 
 **Port Allen / Baton Rouge / Hammond / Slidell** (`/baton-rouge-hammond-slidell/`, title "CAT & Truck Scales near Baton Rouge, Hammond & Slidell, LA"): fifth Louisiana page — I-10 from Port Allen (Baton Rouge west bank) and I-12 across the Florida Parishes to Slidell, plus I-55 north to Kentwood, LaPlace on the river, and I-59 at Pearl River. All ten verified tonight (22 Nov) on operators’ own pages (Pilot: offering 318 / "CAT Scale" in the primary line of business on pilotcompany.com; Love’s: `CAT Scales` in amenities; TA/Petro: `CAT Scale` under Other Amenities). Parishes from the Census geocoder on operator coordinates.
 
