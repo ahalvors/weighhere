@@ -324,7 +324,7 @@ def main():
     found = []
     for d in sorted(os.listdir(ROOT)):
         # ppm-kit is a noindex preview / paid sales page; do not list it until launch.
-        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules", "thanks", "ppm-kit"):
+        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules", "thanks", "ppm-kit", "netlify"):
             continue
         if os.path.isfile(os.path.join(ROOT, d, "index.html")):
             found.append(f"{BASE}/{d}/")

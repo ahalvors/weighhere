@@ -29,3 +29,12 @@
   for = "/ppm-kit/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/ppm-kit/download"
+  to = "/ppm-kit/download/"
+  status = 301
