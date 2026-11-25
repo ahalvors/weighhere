@@ -108,6 +108,7 @@ PLACES = {
     "lake-charles-vinton-egan": ("Lake Charles, Vinton & Egan, LA", "Louisiana"),
     "baton-rouge-hammond-slidell": ("Baton Rouge, Hammond & Slidell, LA", "Louisiana"),
     "gulfport-biloxi-moss-point": ("Gulfport, Biloxi & Moss Point, MS", "Mississippi"),
+    "vicksburg-jackson-canton": ("Vicksburg, Jackson & Canton, MS", "Mississippi"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 

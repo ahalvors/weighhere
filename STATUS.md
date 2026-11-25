@@ -1,13 +1,14 @@
-# WeighHere status — 23 Nov 2026
+# WeighHere status — 24 Nov 2026
 
-Compiled evening PT 23 Nov 2026 (nightly ship).
+Compiled evening PT 24 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **377** | +6 CAT (Love’s #619 Poplarville; Love’s #860 Picayune; Love’s #595 + Flying J #676 Gulfport; Love’s #402 Biloxi; Pilot #586 Moss Point). 310 rows typed `cat`. |
-| Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | new 23 Nov — first Mississippi page |
+| **Total rows in `data/stations.json`** | **383** | +6 CAT (Love’s #776 Vicksburg; Petro #0506 + Pilot #77 Jackson; Flying J #678 Pearl; Love’s #420 Flowood; Love’s #208 Canton). 316 rows typed `cat`. |
+| **Vicksburg / Jackson / Pearl / Flowood / Canton / I-20 · I-55 (MS)** | **6** | **new 24 Nov — second Mississippi page** |
+| Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | 23 Nov — first Mississippi page |
 | Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | 22 Nov — fifth Louisiana page |
 | Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | 21 Nov — fourth Louisiana page |
 | Boyce / Bunkie / Opelousas / Lafayette / New Iberia / I-49 · I-10 (LA) | 8 | 20 Nov — third Louisiana page |
@@ -94,11 +95,26 @@ Compiled evening PT 23 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 313 | display_group cat, recounted 23 Nov (+6 Poplarville / Picayune / Gulfport / Biloxi / Moss Point) |
+| CAT / truck-stop cards | 319 | display_group cat, recounted 24 Nov (+6 Vicksburg / Jackson / Pearl / Flowood / Canton) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
 
+**Vicksburg / Jackson / Pearl / Flowood / Canton** (`/vicksburg-jackson-canton/`, title "CAT & Truck Scales near Jackson and Vicksburg, Mississippi" — H1 "Public scales near Jackson and Vicksburg, Mississippi"): second Mississippi page — I-20 east of the Mississippi River bridge from Tallulah, the Jackson metro, and I-55 north to Canton. All six verified tonight (24 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities; Pilot: offering 318 "CAT Scale" in the primary line of business; Petro: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates.
+
+- **Love’s #776 Vicksburg (store name Flowers)** — 700 Ceres Blvd, Vicksburg MS 39183, I-20 Exit 15 — CAT + RV dump + RV oil change / mechanical / tires + dog park; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (601) 636-6088; geo 32.362558, -90.667057. County `warren`.
+- **Petro Jackson #0506** — 970 W Frontage Road, Jackson MS 39201, I-20 (page gives no exit number) — CAT Scale; Open 24 Hours; (601) 292-0950; geo 32.2787, -90.1977. County `hinds`.
+- **Pilot Travel Center #77 Jackson** — 2520 S Gallatin St, Jackson MS 39204, I-55/20 Exit 45 — CAT; Open 24 Hours; not RV-flagged; (601) 968-9491; geo 32.272694, -90.193042. County `hinds`.
+- **Flying J Travel Center #678 Pearl** — 685 US-80, Pearl MS 39208, I-20/55 Exit 47 — CAT; Open 24 Hours; RV-friendly flag; (601) 936-0190; geo 32.278394, -90.161078. County `rankin`.
+- **Love’s #420 Flowood** — 730 Highway 80 E, Flowood MS 39232, I-20 Exit 47 — CAT + RV dump, 100 truck spaces; Store Open 24-Hours; (601) 420-8324; geo 32.279214, -90.155359. County `rankin`.
+- **Love’s #208 Canton** — 1545 Peace St., Canton MS 39046, I-55 Exit 119 — CAT + RV dump + RV motorhome mechanical/tires; Store and Truck Care Open 24-hours; (601) 859-9370; geo 32.604052, -90.072554. County `madison`.
+- Not listed: Meridian / Toomsuba I-20 (Pilot x2, TA Meridian, Love’s #343), McComb I-55 (Love’s #393, TA McComb), Hattiesburg / Laurel — future pages. Pilot MS directory has only one store each in Jackson and Pearl. Other Love’s stores in the Jackson area were not checked (only #420, #208, #776 verified). No dedicated public scale house with an operator page found.
+
+Wiring: new `vicksburg_jackson_canton_body()` + `write()` in `build.py`, NAV (`vjc`), footer list, "Mississippi:" hub lines on home/404 and PPM guide, Gulfport and Monroe/Tallulah page Related + cross-links, `tools/seo.py` PLACES (region "Mississippi"), ADDING_A_PAGE county text. `CHECKED_HUMAN` → 24 Nov 2026. Script: /workspace/wh-nightly/patch_1124.py; cache /workspace/wh-nightly/c1124.
+
+Mississippi gaps / next: Meridian / Toomsuba I-20 (Pilot x2 at 10580 Old Hwy 80 W and 1555 Tommy Webb Dr, TA Meridian, Love’s #343); McComb I-55 (Love’s #393, TA McComb); Hattiesburg / Laurel / Lucedale (Love’s #565, #848, #699, #864); Petro Jackson exit number; other Jackson-area Love’s unchecked.
+
+## Previous ship detail (23 Nov)
 **Poplarville / Picayune / Gulfport / Biloxi / Moss Point** (`/gulfport-biloxi-moss-point/`, title "CAT & Truck Scales near Gulfport, Biloxi & Moss Point, MS"): first Mississippi page — I-59 from the Louisiana line (Picayune) north to Poplarville, and I-10 across the Gulf Coast from Gulfport to Moss Point near Alabama. All six verified tonight (23 Nov) on operators’ own pages (Love’s: `catscales` true / `CAT Scales` in amenities; Pilot: offering 318 "CAT Scale" in the primary line of business on pilotcompany.com). Counties from the Census geocoder on operator coordinates.
 
 - **Love’s #619 Poplarville** — 720 Highway 26 E, Poplarville MS 39470, I-59 Exit 29 — CAT + RV dump + RV parking; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (601) 403-9850; geo 30.846383, -89.497939. County `pearl-river`.
