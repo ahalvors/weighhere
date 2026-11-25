@@ -295,6 +295,7 @@ def main():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh? Empty weight, max load and GVWR</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">Car weight scales near me: how to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>

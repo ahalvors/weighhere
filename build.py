@@ -305,6 +305,7 @@ def footer(rel="."):
         <li><a href="/guides/uhaul-truck-weight/">U-Haul truck weights</a></li>
         <li><a href="/guides/uhaul-weigh-stations/">U-Haul &amp; weigh stations</a></li>
         <li><a href="/guides/weight-certificate/">Weight certificates</a></li>
+        <li><a href="/guides/car-weight-scales/">Weigh a car or pickup</a></li>
         <li><a href="/ppm-dity-southern-california/">PPM / DITY</a></li>
         <li><a href="/horse-trailer/">Horse trailer</a></li>
         <li><a href="/dump-trailer/">Dump trailer / landfill</a></li>
@@ -3460,6 +3461,7 @@ def spokane_post_falls_i90_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3535,6 +3537,7 @@ def north_bend_ellensburg_i90_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3606,6 +3609,7 @@ def moses_lake_ritzville_i90_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3677,6 +3681,7 @@ def pasco_prosser_tri_cities_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3750,6 +3755,7 @@ def portland_troutdale_aurora_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3823,6 +3829,7 @@ def eugene_albany_roseburg_i5_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3895,6 +3902,7 @@ def ontario_baker_city_i84_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -3967,6 +3975,7 @@ def madras_klamath_falls_us97_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4038,6 +4047,7 @@ def biggs_boardman_stanfield_i84_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4108,6 +4118,7 @@ def medford_central_point_i5_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4179,6 +4190,7 @@ def gallup_milan_i40_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4251,6 +4263,7 @@ def albuquerque_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4328,6 +4341,7 @@ def las_cruces_deming_lordsburg_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4398,6 +4412,7 @@ def moriarty_santa_rosa_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4469,6 +4484,7 @@ def tucumcari_glenrio_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4608,6 +4624,7 @@ def el_paso_santa_teresa_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4682,6 +4699,7 @@ def van_horn_fort_stockton_pecos_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4761,6 +4779,7 @@ def odessa_midland_big_spring_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4835,6 +4854,7 @@ def sweetwater_abilene_cisco_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4909,6 +4929,7 @@ def fort_worth_denton_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -4980,6 +5001,7 @@ def corsicana_buffalo_huntsville_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5052,6 +5074,7 @@ def sulphur_springs_texarkana_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5123,6 +5146,7 @@ def vicksburg_jackson_canton_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5195,6 +5219,7 @@ def gulfport_biloxi_moss_point_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5272,6 +5297,7 @@ def baton_rouge_hammond_slidell_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5342,6 +5368,7 @@ def lake_charles_vinton_egan_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5417,6 +5444,7 @@ def boyce_opelousas_lafayette_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5488,6 +5516,7 @@ def monroe_rayville_tallulah_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5563,6 +5592,7 @@ def shreveport_bossier_minden_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5633,6 +5663,7 @@ def tyler_winona_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5708,6 +5739,7 @@ def rockwall_terrell_van_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5785,6 +5817,7 @@ def south_dallas_ellis_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5854,6 +5887,7 @@ def temple_belton_jarrell_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -5929,6 +5963,7 @@ def hillsboro_waco_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6000,6 +6035,7 @@ def decatur_rhome_bridgeport_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6072,6 +6108,7 @@ def childress_wichita_falls_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6143,6 +6180,7 @@ def vega_dumas_dalhart_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6216,6 +6254,7 @@ def weatherford_fort_worth_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6291,6 +6330,7 @@ def amarillo_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6361,6 +6401,7 @@ def clovis_hobbs_eunice_body():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/horse-trailer/">Weighing a horse trailer</a></li>
       <li><a href="/cat-2000-lb-minimum/">Why CAT has a 2,000 lb minimum</a></li>
@@ -6840,6 +6881,7 @@ def page_guide_ppm_tickets():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
     </ul>
@@ -7086,6 +7128,7 @@ def page_guide_uhaul_weight():
       <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
     </ul>
   </div>
@@ -7346,6 +7389,7 @@ def page_guide_cat_cost():
       <li><a href="/guides/uhaul-truck-weight/">How much does a U-Haul truck weigh?</a></li>
       <li><a href="/guides/uhaul-weigh-stations/">Do U-Haul trucks have to stop at weigh stations?</a></li>
       <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
       <li><a href="/how-to-weigh-an-rv/">How to weigh an RV or fifth-wheel at a CAT Scale</a></li>
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
@@ -7547,6 +7591,7 @@ def page_catmin():
   </ul>
   <p>Do not drive to the I-405 Carson CHP weigh station with a Honda and a hope. That is enforcement, not a $25 ticket.</p>
   <p>Above the floor? See <a href="/guides/cat-scale-cost/">how much a CAT Scale costs and how a weigh works</a>.</p>
+  <p>Weighing a car or pickup? See <a href="/guides/car-weight-scales/">how to weigh your car or pickup truck</a>, including what the door labels already tell you.</p>
   <p class="cite"><a href="https://catscale.com/how-to-weigh/">catscale.com/how-to-weigh</a> · <a href="https://catscale.com/contact-us/faq/">CAT FAQ Q22 (weight threshold)</a> · <a href="https://amove.com/resource-center/public-scales/">Allstate public scales</a></p>
 </div>
 </main>
@@ -7681,6 +7726,142 @@ def page_guide_weight_certificate():
       <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
       <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
       <li><a href="/ppm-dity-southern-california/">PPM / DITY weight tickets in Southern California</a></li>
+      <li><a href="/guides/car-weight-scales/">How to weigh your car or pickup truck</a></li>
+    </ul>
+  </div>
+</div>
+</main>
+"""
+
+
+GUIDE_CAR_FAQ = [
+    ("Where can I weigh my car near me?",
+     "Two walk-up options take most cars and pickups: a dedicated public scale house (the kind on California's CDFA Public Scales Listing) or a CAT Scale at a truck stop. Highway weigh stations are enforcement sites, not places to buy a weight. Landfills, quarries, and recycling yards have scales too, but they weigh material for their own customers and may turn away a walk-up."),
+    ("Is there a free truck scale near me?",
+     "We could not find an official list of free certified scales, and every scale price we could verify is a paid ticket. The free part of the job is reading your vehicle's labels: the certification label by the driver's door gives GVWR and axle ratings, and the tire placard on the driver's side B-pillar says how much occupants plus cargo may weigh."),
+    ("How much does it cost to weigh a car?",
+     "It depends on the scale. CAT Scale lists $15.25 for a full-price weigh and $5.25 for a reweigh within 24 hours at the same scale; in California a Weighmaster Certificate is $30.50 and $10.50. Public scale houses set their own fees: Allstate Logistics lists $25 for a certified weight and Eckert's in San Marcos lists $10 for an empty and heavy weight on one ticket (both checked 25 Nov 2026). Call first."),
+    ("Can a CAT Scale weigh a car?",
+     "CAT says its scales weigh vehicles between 2,000 lb and 200,000 lb and are set to a 2,000 lb threshold. If your vehicle or combination is estimated to be lighter than that, CAT asks you to call its 24-hour Help Desk at 1-877-228-7225, ext. 6, before you weigh. CAT gives axle and gross weights, not individual wheel (corner) weights."),
+    ("Where do I find my car's weight without a scale?",
+     "Federal rules require a certification label next to the driver's seat (hinge pillar, door-latch post, or door edge) showing the Gross Vehicle Weight Rating and Gross Axle Weight Rating for each axle, and a tire and loading placard on the driver's side B-pillar with the maximum combined weight of occupants and cargo. Curb weight, the empty weight with full fuel, oil and coolant, is usually in the owner's manual or the manufacturer's specs."),
+    ("How do I work out my pickup's payload?",
+     "Weigh the truck loaded the way you drive it, then compare the scale's gross weight with the GVWR on the door label and each axle weight with its GAWR. For people and cargo, federal owner's-manual rules give the method: take the placard's occupants-and-cargo figure and subtract the weight of the driver and passengers; what is left is what you can carry. Tongue weight from a trailer also counts against it."),
+]
+
+
+def guide_car_faq_jsonld():
+    data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in GUIDE_CAR_FAQ
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def page_guide_car_weight():
+    faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>" for q, a in GUIDE_CAR_FAQ)
+    return """
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Guide · Cars &amp; pickups · Public scales</p>
+    <h1>Car weight scales near me: how to weigh your car or pickup truck</h1>
+    <p class="lede">Want to know what your car or pickup really weighs, or how much payload you have left before a move or a tow? Here is what the labels on your door already tell you for free, which scales near you will take a passenger vehicle, what a weigh costs, and how to do it, from federal vehicle rules, CAT Scale, and scale operators’ own pages.</p>
+  </div>
+</section>
+<div class="wrap prose">
+  <div class="box box-call">
+    <p>This is a plain-language summary of official pages, read on 25 Nov 2026. Prices change, so call the scale before you drive. WeighHere is independent and not affiliated with CAT Scale, CDFA, the DMV, NHTSA, or any scale operator.</p>
+  </div>
+
+  <h2>The short answer</h2>
+  <ul>
+    <li><strong>Free first step:</strong> read the two labels by the driver’s door. One gives your <strong>GVWR</strong> (the most the loaded vehicle may weigh) and axle ratings; the other says how much people plus cargo you may carry. That tells you the limits. Only a scale tells you where you are against them.</li>
+    <li><strong>Cheapest real weigh:</strong> a dedicated <strong>public scale house</strong>. They set their own prices; two in San Diego County publish $10 and $25.</li>
+    <li><strong>Walk-up, no appointment:</strong> a <strong>CAT Scale</strong> at a truck stop, $15.25 for a full weigh and $5.25 for a reweigh within 24 hours. CAT’s floor is 2,000 lb.</li>
+    <li><strong>Not here:</strong> highway weigh stations are for enforcement and do not sell you a weight. Landfills and recycling yards weigh their own customers’ loads and may refuse a walk-up.</li>
+  </ul>
+  <p class="cite">Sources: <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ, Q12, Q13, Q22</a> (prices checked 25 Nov 2026) · <a href="https://amove.com/resource-center/public-scales/">Allstate Logistics public scales</a> · <a href="https://eckertsmoving.com/services/public-scale/">Eckert’s public scale</a></p>
+
+  <h2>What the labels on your door already tell you</h2>
+  <p>You do not need a scale to find your vehicle’s limits. Federal rules put them on the vehicle:</p>
+  <ul>
+    <li><strong>The certification label</strong> (49 CFR 567.4) is fixed to the hinge pillar, the door-latch post, or the door edge next to the driver’s seat. It lists the <strong>Gross Vehicle Weight Rating (GVWR)</strong> in pounds and a <strong>Gross Axle Weight Rating (GAWR)</strong> for each axle, front to rear. The rule says GVWR can’t be less than the unloaded vehicle weight plus its rated cargo load plus 150 lb for each seating position.</li>
+    <li><strong>The tire and loading placard</strong> (49 CFR 571.110) sits on the driver’s side B-pillar. It reads “The combined weight of occupants and cargo should never exceed XXX kilograms or XXX pounds,” along with seating capacity and the recommended cold tire pressures.</li>
+    <li><strong>Curb weight</strong> is the weight of the vehicle with standard equipment and a full load of fuel, oil, and coolant (the definition in 49 CFR 571.110). Look for it in your owner’s manual or the manufacturer’s spec sheet.</li>
+  </ul>
+  <p>The owner’s manual has to show you how to use the placard (49 CFR 575.6): take the occupants-and-cargo number, subtract the weight of the driver and passengers, and what is left is your cargo and luggage capacity. The rule’s own example: with a 1,400 lb figure and five 150 lb passengers, 650 lb is left for cargo. If you tow, some of the trailer’s weight moves onto your vehicle and cuts that number.</p>
+  <p>The labels can’t tell you what your car or truck weighs <em>today</em>: with a toolbox, a camper shell, a roof box, a lift kit, a full bed, or the family on board. That is what a scale is for.</p>
+  <p class="cite">Sources: <a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-567/section-567.4">49 CFR 567.4 (certification label)</a> · <a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-571/section-571.110">49 CFR 571.110 (tire placard, curb weight)</a> · <a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-575/subpart-A/section-575.6">49 CFR 575.6 (load-limit steps)</a></p>
+
+  <h2>Is there a free truck scale near me?</h2>
+  <p>Probably not one you can count on. We could not find an official list of free certified scales, and every price we could verify for a walk-up weigh was a paid ticket. California’s Division of Measurement Standards describes its Public Scales Listing as privately owned facilities that offer truck-weighing services; each sets its own fee. (The listing was offline for maintenance when we checked on 25 Nov 2026; try again later.)</p>
+  <p>Places with scales that are not free ticket shops:</p>
+  <ul>
+    <li><strong>Highway weigh stations</strong> enforce commercial-vehicle rules. You can’t walk in and buy a weight for your car. See <a href="/public-scale-vs-weigh-station/">public scale vs highway weigh station</a>.</li>
+    <li><strong>Landfills, transfer stations, quarries, and scrap yards</strong> weigh loads so they can charge for material. Many won’t weigh a walk-up who is not a customer. See <a href="/dump-trailer/">dump trailer &amp; landfill scales</a>.</li>
+  </ul>
+  <p>So the cheapest honest route is: read the labels for free, then pay for one weigh at the lowest-cost certified scale near you.</p>
+  <p class="cite">Sources: <a href="https://apps1.cdfa.ca.gov/publicscales/">CDFA Public Scales Listing</a> · <a href="https://www.cdfa.ca.gov/dms/programs/wm/wm.html">CDFA Weighmaster Enforcement Program</a></p>
+
+  <h2>Where to weigh a car or pickup</h2>
+  <table>
+    <thead><tr><th>Scale</th><th>Takes cars?</th><th>What it costs</th></tr></thead>
+    <tbody>
+      <tr><td>Dedicated public scale house</td><td>Usually; some say so outright. Allstate Logistics says its scales take personal vehicles, RVs, trailers, and 18-wheelers.</td><td>Set by each operator. Allstate: $25 certified weight. Eckert’s, San Marcos: $10 for an empty and heavy weight on one ticket.</td></tr>
+      <tr><td>CAT Scale at a truck stop</td><td>Yes, from 2,000 lb up. Under that, call CAT’s Help Desk first.</td><td>$15.25 full weigh, $5.25 reweigh (same vehicle, same scale, within 24 hours). California Weighmaster Certificate: $30.50 / $10.50.</td></tr>
+      <tr><td>Landfill, quarry, recycling yard</td><td>Their own customers; call first</td><td>Not published as a walk-up ticket</td></tr>
+      <tr><td>Highway weigh station</td><td>No ticket for you</td><td>n/a</td></tr>
+    </tbody>
+  </table>
+  <p class="cite">Sources: <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ, Q12, Q21, Q22</a> · <a href="https://catscale.com/how-to-weigh/">CAT Scale, How To Weigh</a> · <a href="https://amove.com/resource-center/public-scales/">Allstate Logistics public scales</a> · <a href="https://eckertsmoving.com/services/public-scale/">Eckert’s public scale</a> (all read 25 Nov 2026)</p>
+
+  <h2>Weighing a car or pickup at a CAT Scale</h2>
+  <p>CAT says its scales are set to a 2,000 lb threshold. If your vehicle or combination is estimated to be lighter, it asks you to call the 24-hour Help Desk at 1-877-CAT-SCALE (228-7225), ext. 6, before you pull on. More on that in <a href="/cat-2000-lb-minimum/">CAT’s 2,000 lb minimum</a>.</p>
+  <p>CAT’s scale has three platforms. For a truck and trailer, it says to put the steer axle (front wheels) on platform 1 and the drive or rear axle on platform 2, with the trailer on platform 3. The whole vehicle must be on the scale. You get axle weights and a gross weight. CAT does not weigh individual wheels or corners and does not allow that kind of weighing.</p>
+  <p>No appointment is needed. Pull on, press the intercom button on the sign by platform 1, give the cashier your details, then pull off and go inside for the ticket. Check it before you leave: CAT says tickets are legal documents and can’t be changed after they print.</p>
+  <p class="cite">Sources: <a href="https://catscale.com/how-to-weigh/">CAT Scale, How To Weigh</a> · <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ, Q1, Q20, Q22</a></p>
+
+  <h2>How to weigh your car or pickup, step by step</h2>
+  <ol>
+    <li><strong>Decide what you need.</strong> Just a number for your own peace of mind? Any certified scale will do. A signed certificate for the DMV, a military move, or a buyer? Ask them what must be printed first (see <a href="/guides/weight-certificate/">weight certificates</a> and <a href="/guides/ppm-weight-tickets/">PPM weight tickets</a>).</li>
+    <li><strong>Load it the way you drive it.</strong> Passengers, tools, gear, and the trailer if you tow. To compare with the published curb weight, weigh empty with a full tank, since curb weight includes full fuel.</li>
+    <li><strong>Weigh.</strong> At a public scale house, follow the attendant. At a CAT Scale, front axle on platform 1, rear axle on platform 2.</li>
+    <li><strong>Do the math.</strong> GVWR minus the gross on your ticket is the payload you have left. Compare each axle weight with its GAWR on the door label. If you tow, weigh hooked up and unhooked to find tongue weight; see <a href="/guides/tongue-weight/">how to check tongue weight</a>.</li>
+    <li><strong>Keep the ticket.</strong> CAT keeps an electronic record of its tickets for seven years and takes copy requests online.</li>
+  </ol>
+  <p class="cite">Sources: <a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-567/section-567.4">49 CFR 567.4</a> · <a href="https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-571/section-571.110">49 CFR 571.110</a> · <a href="https://catscale.com/contact-us/faq/">CAT Scale FAQ, Q8</a></p>
+
+  <h2>Pickup owners in California: weight and registration</h2>
+  <p>California DMV says pickup trucks can be registered as passenger or commercial vehicles depending on how they are used. For commercial registration, DMV defines a pickup as a commercially used motor truck with a manufacturer’s GVWR under 11,500 lb, an unladen weight under 8,001 lb, and an open box-type bed under nine feet long. Pickups are left out of the REG 4008 declaration that other commercial vehicles of 6,001 to 10,000 lb unladen must file. DMV may ask for a weighmaster certificate for a commercial vehicle with an unladen weight of 10,000 lb or less. Our <a href="/guides/weight-certificate/">weight certificate guide</a> covers when, the exceptions, and what must be on it.</p>
+  <p class="cite">Sources: <a href="https://www.dmv.ca.gov/portal/vehicle-registration/new-registration/commercial-vehicle-registration/">California DMV, Commercial Vehicle Registration</a> · <a href="https://www.dmv.ca.gov/portal/handbook/vehicle-industry-registration-procedures-manual-2/commercial-vehicles/weight-certificate/">DMV 13.145 Weight Certificate</a></p>
+
+  <h2>Car-friendly scales on WeighHere</h2>
+  <p>Dedicated public scale houses we list (call to confirm hours and price):</p>
+  <ul>
+    <li><a href="/los-angeles/#allstate-logistics-noho">Allstate Logistics, North Hollywood</a>, <a href="/los-angeles/#rawlins-public-scales">Rawlins Public Scales</a>, and <a href="/los-angeles/#santa-fe-springs-public-scale">Santa Fe Springs Public Scale</a> in Los Angeles County</li>
+    <li><a href="/san-diego/#allstate-logistics-poway">Allstate Logistics, Poway</a> and <a href="/san-diego/#eckerts-public-scale-san-marcos">Eckert’s public scale, San Marcos</a> in San Diego County</li>
+    <li><a href="/fresno/#selma-certified-public-scale">Selma Certified Public Scale</a> and <a href="/merced/#highway-59-scales-merced">Highway 59 Scales, Merced</a> in the Central Valley</li>
+  </ul>
+  <p>CAT Scales by area: <a href="/orange-county/">Orange County</a>, <a href="/inland-empire/">Inland Empire</a>, <a href="/sacramento/">Sacramento</a>, <a href="/phoenix/">Phoenix</a>, <a href="/las-vegas/">Las Vegas</a>, <a href="/albuquerque/">Albuquerque</a>, <a href="/south-dallas-ellis-county/">South Dallas</a>, <a href="/fort-worth-denton/">Fort Worth</a>, <a href="/portland-troutdale/">Portland</a>, <a href="/baton-rouge-hammond-slidell/">Baton Rouge</a>, and <a href="/">every WeighHere area</a>. Or use <a href="https://catscale.com/cat-scale-locator/">CAT’s locator</a>.</p>
+  <p>Weighing a rental truck instead? See <a href="/guides/uhaul-truck-weight/">how much a U-Haul truck weighs</a> and <a href="/guides/cat-scale-cost/">how much a CAT Scale costs</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+""" + faq + """
+
+  <div class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/guides/cat-scale-cost/">How much does a CAT Scale cost?</a></li>
+      <li><a href="/guides/weight-certificate/">Where to get a certified weight certificate near you</a></li>
+      <li><a href="/guides/tongue-weight/">How to weigh a travel trailer and check tongue weight</a></li>
+      <li><a href="/cat-2000-lb-minimum/">CAT Scale 2,000 lb minimum</a></li>
+      <li><a href="/public-scale-vs-weigh-station/">Public scale vs highway weigh station</a></li>
+      <li><a href="/dump-trailer/">Dump trailer &amp; landfill scales</a></li>
     </ul>
   </div>
 </div>
@@ -8935,6 +9116,16 @@ def main():
         "../../",
         page_guide_uhaul_weight(),
         guide_uhaul_faq_jsonld(),
+        gear=False,
+    )
+    write(
+        ROOT / "guides" / "car-weight-scales" / "index.html",
+        "Car Weight Scales Near Me: How to Weigh Your Car or Pickup | WeighHere",
+        "Where to weigh a car or pickup truck: public scale houses and CAT Scales, what a weigh costs, and how to read your door-label GVWR to work out payload for free.",
+        "carweight",
+        "../../",
+        page_guide_car_weight(),
+        guide_car_faq_jsonld(),
         gear=False,
     )
     write(
