@@ -323,7 +323,8 @@ def main():
     order = re.findall(r"<loc>([^<]+)</loc>", open(sm).read()) if os.path.exists(sm) else []
     found = []
     for d in sorted(os.listdir(ROOT)):
-        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules", "thanks"):
+        # ppm-kit is a noindex preview / paid sales page; do not list it until launch.
+        if d.startswith((".", "_")) or d in ("css", "js", "data", "tools", "node_modules", "thanks", "ppm-kit"):
             continue
         if os.path.isfile(os.path.join(ROOT, d, "index.html")):
             found.append(f"{BASE}/{d}/")
