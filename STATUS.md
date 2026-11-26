@@ -1,13 +1,14 @@
-# WeighHere status — 24 Nov 2026
+# WeighHere status — 25 Nov 2026
 
-Compiled evening PT 24 Nov 2026 (nightly ship).
+Compiled evening PT 25 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **383** | +6 CAT (Love’s #776 Vicksburg; Petro #0506 + Pilot #77 Jackson; Flying J #678 Pearl; Love’s #420 Flowood; Love’s #208 Canton). 316 rows typed `cat`. |
-| **Vicksburg / Jackson / Pearl / Flowood / Canton / I-20 · I-55 (MS)** | **6** | **new 24 Nov — second Mississippi page** |
+| **Total rows in `data/stations.json`** | **388** | +5 CAT (Love’s #848 Sandersville; Mr. Fuel #1203 + Pilot #388 + TA #0047 Meridian; Love’s #343 Toomsuba). 321 rows typed `cat`. |
+| **Meridian / Toomsuba / Sandersville / I-20 · I-59 (MS)** | **5** | **new 25 Nov — third Mississippi page** |
+| Vicksburg / Jackson / Pearl / Flowood / Canton / I-20 · I-55 (MS) | 6 | 24 Nov — second Mississippi page |
 | Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | 23 Nov — first Mississippi page |
 | Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | 22 Nov — fifth Louisiana page |
 | Vinton / Lake Charles / Iowa / Egan / I-10 (LA) | 4 | 21 Nov — fourth Louisiana page |
@@ -95,10 +96,25 @@ Compiled evening PT 24 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 319 | display_group cat, recounted 24 Nov (+6 Vicksburg / Jackson / Pearl / Flowood / Canton) |
+| CAT / truck-stop cards | 324 | display_group cat, recounted 25 Nov (+5 Meridian / Toomsuba / Sandersville) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Meridian / Toomsuba / Sandersville** (`/meridian-toomsuba-sandersville/`, title "CAT & Truck Scales near Meridian, Toomsuba & Sandersville, MS" — H1 "Public scales near Meridian, Mississippi"): third Mississippi page — I-59 north of Laurel (Sandersville) and the shared I-20 / I-59 run through Meridian to Toomsuba near the Alabama line. All five verified tonight (25 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities, no limited-services banner; Pilot Company: offering 318 "CAT Scale" in the primary line of business, neither store a dealer; TA: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates.
+
+- **Love’s #848 Sandersville** — 182 Claiborne Road, Sandersville MS 39477, I-59 Exit 104 — CAT + Speedco + RV friendly parking / RV oil change / RV mechanical / tires + dog park, 106 truck spaces; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (601) 778-6087; geo 31.783351, -89.057151. County `jones`.
+- **Mr. Fuel Travel Center #1203 Meridian (Pilot Company)** — 10580 Old Hwy 80 W, Meridian MS 39307, I-20 Exit 129 — CAT; Open 24 Hours; not RV-flagged; (601) 693-5104; geo 32.342786, -88.79745. County `lauderdale`.
+- **Pilot Travel Center #388 Meridian** — 1555 Tommy Webb Dr, Meridian MS 39307, I-20/59 Exit 151 — CAT + Southern Tire Mart; Open 24 Hours; RV-friendly flag; (601) 484-5106; geo 32.347242, -88.727686. County `lauderdale`.
+- **TA Meridian #0047** — 2150 Russell Mt. Gilead Road, Meridian MS 39301, I-20 & I-59 Exit 160 — CAT Scale; Open 24 Hours; (601) 483-7611; geo 32.3962, -88.5826. County `lauderdale`.
+- **Love’s #343 Toomsuba** — 113 Will Garrett Rd, Toomsuba MS 39364, I-20 Exit 165 — CAT + RV mechanical / tires + dog park, 71 truck spaces; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (601) 632-4006; geo 32.41107, -88.505495. County `lauderdale`.
+- Not listed: TA McComb #0925 (own page lists no CAT Scale); Love’s #393 McComb (CAT listed but page shows "limited services" banner — held for a McComb page); Love’s #565 Hattiesburg and #864 Lucedale (CAT listed, "limited services" banner — held); Love’s #699 Magee US-49 (CAT, full service — future Hattiesburg/US-49 page). No dedicated public scale house with an operator page found in Lauderdale or Jones County.
+
+Wiring: new `meridian_toomsuba_sandersville_body()` + `write()` in `build.py`, NAV (`mts`), footer list, "Mississippi:" hub lines on home/404 and PPM guide, Vicksburg and Gulfport page Related + cross-links (gap text updated), `tools/seo.py` PLACES (region "Mississippi"), ADDING_A_PAGE county text. `CHECKED_HUMAN` → 25 Nov 2026. Script: /workspace/wh-nightly/patch_1125.py; cache /workspace/wh-nightly/c1125.
+
+Mississippi gaps / next: McComb I-55 (Love’s #393 limited services; TA McComb no CAT) — maybe fold into a Magee / Hattiesburg / McComb page; Hattiesburg / Magee / Lucedale (Love’s #565, #699, #864); north Mississippi (TA Express Mooreville, I-55 Grenada/Batesville, I-22 Tupelo) unchecked; first Alabama page (I-20/59 Cuba / York / Tuscaloosa) next door.
+
+## Previous ship detail (24 Nov)
 
 **Vicksburg / Jackson / Pearl / Flowood / Canton** (`/vicksburg-jackson-canton/`, title "CAT & Truck Scales near Jackson and Vicksburg, Mississippi" — H1 "Public scales near Jackson and Vicksburg, Mississippi"): second Mississippi page — I-20 east of the Mississippi River bridge from Tallulah, the Jackson metro, and I-55 north to Canton. All six verified tonight (24 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities; Pilot: offering 318 "CAT Scale" in the primary line of business; Petro: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates.
 
