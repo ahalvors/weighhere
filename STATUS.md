@@ -1,13 +1,14 @@
-# WeighHere status — 25 Nov 2026
+# WeighHere status — 26 Nov 2026
 
-Compiled evening PT 25 Nov 2026 (nightly ship).
+Compiled evening PT 26 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **388** | +5 CAT (Love’s #848 Sandersville; Mr. Fuel #1203 + Pilot #388 + TA #0047 Meridian; Love’s #343 Toomsuba). 321 rows typed `cat`. |
-| **Meridian / Toomsuba / Sandersville / I-20 · I-59 (MS)** | **5** | **new 25 Nov — third Mississippi page** |
+| **Total rows in `data/stations.json`** | **392** | +4 CAT (Flying J #677 Olive Branch; Pilot #174 New Albany; Love’s #398 Tupelo; TA Express #0926 Mooreville). 325 rows typed `cat`. |
+| **Olive Branch / New Albany / Tupelo / Mooreville / US-78 · I-22 (MS)** | **4** | **new 26 Nov — fourth Mississippi page** |
+| Meridian / Toomsuba / Sandersville / I-20 · I-59 (MS) | 5 | 25 Nov — third Mississippi page |
 | Vicksburg / Jackson / Pearl / Flowood / Canton / I-20 · I-55 (MS) | 6 | 24 Nov — second Mississippi page |
 | Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | 23 Nov — first Mississippi page |
 | Port Allen / Baton Rouge / Hammond / Slidell / I-10 · I-12 · I-55 · I-59 (LA) | 10 | 22 Nov — fifth Louisiana page |
@@ -96,10 +97,24 @@ Compiled evening PT 25 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 324 | display_group cat, recounted 25 Nov (+5 Meridian / Toomsuba / Sandersville) |
+| CAT / truck-stop cards | 328 | display_group cat, recounted 26 Nov (+4 Olive Branch / New Albany / Tupelo) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Olive Branch / New Albany / Tupelo / Mooreville** (`/olive-branch-new-albany-tupelo/`, title "CAT & Truck Scales near Olive Branch, New Albany & Tupelo, MS" — H1 "Public scales near Tupelo and Olive Branch, Mississippi"): fourth Mississippi page, first in north Mississippi — the US-78 / I-22 route from the Memphis suburbs through New Albany and Tupelo toward Alabama. All four verified tonight (26 Nov) on operators’ own pages (Pilot Company: offering 318 "CAT Scale" in the primary line of business, neither store a dealer; Love’s: `CAT Scales` in amenities, no limited-services banner — cross-checked that Love’s #285 Santa Rosa NM, a known no-CAT store, lacks it; TA: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates. Store list from Love’s sitemap (`loves.com/sitemap.xml`, 22 MS stores) and Pilot’s MS directory (`pilotcompany.com/locations/directory/us/ms`).
+
+- **Flying J Travel Center #677 Olive Branch** — 4740 Bethel Rd, Olive Branch MS 38654, US-78 Exit 6 — CAT + RV parking / RV fuel lanes / RV dump station + service center; Open 24 Hours; RV-friendly flag; (662) 895-1001; geo 34.928741, -89.793092. County `desoto`.
+- **Pilot Travel Center #174 New Albany** — 500 MS-15, New Albany MS 38652, I-22 Exit 64 — CAT + service center; Open 24 Hours; RV-friendly flag; (662) 539-0211 (contact block; the primary travel-center line in the page data is (662) 539-0222); geo 34.467802, -89.006085. County `union`.
+- **Love’s #398 Tupelo** — 4601 McCullough Blvd., Tupelo MS 38804, I-22 Exit 81 — CAT + RV friendly parking / RV mechanical / tires + dog park, 80 truck spaces; Store Open 24-hours, Truck Care Open 24-hours; (662) 840-5343; geo 34.316321, -88.791441. County `lee`.
+- **TA Express Mooreville #0926** — 590 MS 371, Mooreville MS 38857, I-22 Exit 94 — CAT Scale; page publishes only restaurant hours (no store hours) → `hours_24h` unknown; (662) 205-6298; geo 34.279082, -88.568724. County `lee`.
+- Not listed: Love’s #889 Holly Springs (I-22 Exit 30, CAT listed but page shows "limited services" banner — held, same rule as Hattiesburg/McComb). No dedicated public scale house with an operator page found in DeSoto, Union or Lee County.
+
+Wiring: new `olive_branch_new_albany_tupelo_body()` + `write()` in `build.py`, NAV (`obt`), footer list, "Mississippi:" hub lines on home/404 and PPM guide, Meridian and Vicksburg page Related + cross-links (gap text updated), `tools/seo.py` PLACES (region "Mississippi"), ADDING_A_PAGE county text. `CHECKED_HUMAN` → 26 Nov 2026. Script: /workspace/wh-nightly/patch_1126.py; cache /workspace/wh-nightly/c1126.
+
+Mississippi gaps / next (all verified CAT on Love’s/Pilot own pages tonight unless noted): **I-55 north** — Love’s #388 Batesville (I-55 Exit 246, CAT, full service, Store 24h) + Pilot Winona (403 SW Frontage Rd, I-55/US-82 Exit 185, CAT 318, 24h) → ready for a Batesville / Grenada / Winona page (Southaven / Hernando unchecked); **Golden Triangle / US-45 / US-82** — Love’s #677 West Point (Hwy 45A, CAT, full) + Love’s #564 Columbus (CAT, limited services — held); **US-72** — Love’s #799 Walnut (CAT, full); **I-20 gap** — Love’s #639 Lake (I-20 Exit 96, CAT, full) sits between the Jackson and Meridian pages and is on neither; Delta — Love’s #559 Indianola (US-82, CAT, full); south — Love’s #699 Magee (US-49, CAT, full), #565 Hattiesburg / #864 Lucedale / #393 McComb (limited services — held), TA McComb (no CAT). First Alabama page (I-20/59 Cuba / York / Tuscaloosa, or I-22 Winfield — Pilot #1452 at I-22 Exit 30 Winfield AL shows CAT Scale in Pilot’s nearby list, unverified on its own page) still open.
+
+## Previous ship detail (25 Nov)
 
 **Meridian / Toomsuba / Sandersville** (`/meridian-toomsuba-sandersville/`, title "CAT & Truck Scales near Meridian, Toomsuba & Sandersville, MS" — H1 "Public scales near Meridian, Mississippi"): third Mississippi page — I-59 north of Laurel (Sandersville) and the shared I-20 / I-59 run through Meridian to Toomsuba near the Alabama line. All five verified tonight (25 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities, no limited-services banner; Pilot Company: offering 318 "CAT Scale" in the primary line of business, neither store a dealer; TA: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates.
 

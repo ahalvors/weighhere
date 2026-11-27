@@ -110,6 +110,7 @@ PLACES = {
     "gulfport-biloxi-moss-point": ("Gulfport, Biloxi & Moss Point, MS", "Mississippi"),
     "vicksburg-jackson-canton": ("Vicksburg, Jackson & Canton, MS", "Mississippi"),
     "meridian-toomsuba-sandersville": ("Meridian, Toomsuba & Sandersville, MS", "Mississippi"),
+    "olive-branch-new-albany-tupelo": ("Olive Branch, New Albany & Tupelo, MS", "Mississippi"),
 }
 STATE_NAMES = {"CA": "California", "AZ": "Arizona", "NV": "Nevada", "UT": "Utah", "ID": "Idaho", "WA": "Washington", "OR": "Oregon"}
 
