@@ -1,13 +1,14 @@
-# WeighHere status — 26 Nov 2026
+# WeighHere status — 27 Nov 2026
 
-Compiled evening PT 26 Nov 2026 (nightly ship).
+Compiled evening PT 27 Nov 2026 (nightly ship).
 
 ## Listing counts
 
 | Bucket | Count | Notes |
 |---|---|---|
-| **Total rows in `data/stations.json`** | **392** | +4 CAT (Flying J #677 Olive Branch; Pilot #174 New Albany; Love’s #398 Tupelo; TA Express #0926 Mooreville). 325 rows typed `cat`. |
-| **Olive Branch / New Albany / Tupelo / Mooreville / US-78 · I-22 (MS)** | **4** | **new 26 Nov — fourth Mississippi page** |
+| **Total rows in `data/stations.json`** | **395** | +3 CAT (Love’s #388 Batesville; Pilot #261 Winona; Love’s #559 Indianola). 328 rows typed `cat`. |
+| **Batesville / Winona / Indianola / I-55 · US-82 (MS)** | **3** | **new 27 Nov — fifth Mississippi page** |
+| Olive Branch / New Albany / Tupelo / Mooreville / US-78 · I-22 (MS) | 4 | 26 Nov — fourth Mississippi page |
 | Meridian / Toomsuba / Sandersville / I-20 · I-59 (MS) | 5 | 25 Nov — third Mississippi page |
 | Vicksburg / Jackson / Pearl / Flowood / Canton / I-20 · I-55 (MS) | 6 | 24 Nov — second Mississippi page |
 | Poplarville / Picayune / Gulfport / Biloxi / Moss Point / I-59 · I-10 (MS) | 6 | 23 Nov — first Mississippi page |
@@ -97,10 +98,23 @@ Compiled evening PT 26 Nov 2026 (nightly ship).
 | Moriarty / Santa Rosa / I-40 (NM) | 3 | shipped 27 Oct |
 | Las Cruces / Deming / Lordsburg / I-10 (NM) | 7 | shipped 28 Oct |
 | **Tucumcari / Glenrio / I-40 (NM)** | **2** | **page 29 Oct** — Love’s #262 Tucumcari (I-40 Exit 333), TA Glenrio #0471 (Exit 369) |
-| CAT / truck-stop cards | 328 | display_group cat, recounted 26 Nov (+4 Olive Branch / New Albany / Tupelo) |
+| CAT / truck-stop cards | 331 | display_group cat, recounted 27 Nov (+3 Batesville / Winona / Indianola) |
 | Enforcement do-not-go | 2 | unchanged |
 
 ## What shipped tonight
+
+**Batesville / Winona / Indianola** (`/batesville-winona-indianola/`, title "CAT & Truck Scales near Batesville, Winona & Indianola, MS" — H1 "Public scales near Batesville, Winona and Indianola, Mississippi"): fifth Mississippi page — I-55 north between Canton and the Tennessee line, plus US-82 west from Winona into the Delta. All three re-verified tonight (27 Nov) on operators’ own pages (Love’s: `CAT Scales` in amenities, no limited-services banner; Pilot Company: offering 318 "CAT Scale" in the primary Pilot Travel Center line of business, status Open, not a dealer). Counties from the Census geocoder on operator coordinates. Pilot MS directory re-pulled tonight (cities unchanged: Gulfport, Jackson, Meridian, Moss Point, New Albany, Olive Branch, Pearl, Winona); Love’s MS store list from the 26 Nov pull (only Batesville and Canton on I-55 north of Jackson); TA/Petro MS pages have nothing on I-55 north.
+
+- **Love’s #388 Batesville** — 725 Highway 35 N, Batesville MS 38606, I-55 Exit 246 — CAT + RV friendly parking / RV motorhome mechanical / tires + propane + dog park, 78 truck spaces; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (662) 563-1852; geo 34.35134, -89.91601. County `panola`.
+- **Pilot Travel Center #261 Winona** — 403 SW Frontage Rd, Winona MS 38967, I-55/US-82 Exit 185 — CAT + service center; Open 24 Hours; RV-friendly flag; (662) 283-5985 (travel-center line in page data; contact block shows (662) 283-5765, which is the Taco Bell line); geo 33.486, -89.771497. County `montgomery`. (Last night’s notes called it "Pilot Winona"; store # is 261.)
+- **Love’s #559 Indianola** — 1212 Highway 82 E, Indianola MS 38751, US-82 at US-49W — CAT + RV dump / RV friendly parking / RV oil change / RV mechanical / tires + dog park, 62 truck spaces; Store Open 24-hours, Truck Care 6 a.m.–11 p.m.; (662) 887-7885; geo 33.457669, -90.630626. County `sunflower`.
+- Not listed: no Love’s / Pilot / Flying J / TA / Petro store of their own in Southaven, Hernando, Senatobia, Grenada or Durant. Love’s #889 Holly Springs still held (limited services). No dedicated public scale house with an operator page found in Panola, Montgomery or Sunflower County. CAT-staffing hours unpublished at all three; livestock unknown.
+
+Wiring: new `batesville_winona_indianola_body()` + `write()` in `build.py`, NAV (`bwi`), footer list, "Mississippi:" hub lines on home/404 and PPM guide, Olive Branch and Vicksburg page Related + cross-links (Olive Branch gap text no longer lists I-55 north), `tools/seo.py` PLACES (region "Mississippi"), ADDING_A_PAGE county text. `CHECKED_HUMAN` → 27 Nov 2026. Script: /workspace/wh-nightly/patch_1127.py; cache /workspace/wh-nightly/c1127.
+
+Mississippi gaps / next: **I-20 gap** — Love’s #639 Lake (6138 Lake Norris Rd, I-20 Exit 96, CAT, full service, Store 24h — re-verified 27 Nov) sits between the Jackson and Meridian pages; add it to one of them or pair it with Magee. **Golden Triangle / US-45 / US-82** — Love’s #677 West Point (CAT, full) + Love’s #564 Columbus (CAT, limited services — held). **US-72** — Love’s #799 Walnut (CAT, full). South — Love’s #699 Magee (US-49, CAT, full), #565 Hattiesburg / #864 Lucedale / #393 McComb (limited services — held). First Alabama page (I-22 Winfield — Pilot #1452 Exit 30, unverified on own page; I-20/59 Cuba / York / Tuscaloosa) still open.
+
+## Previous ship detail (26 Nov)
 
 **Olive Branch / New Albany / Tupelo / Mooreville** (`/olive-branch-new-albany-tupelo/`, title "CAT & Truck Scales near Olive Branch, New Albany & Tupelo, MS" — H1 "Public scales near Tupelo and Olive Branch, Mississippi"): fourth Mississippi page, first in north Mississippi — the US-78 / I-22 route from the Memphis suburbs through New Albany and Tupelo toward Alabama. All four verified tonight (26 Nov) on operators’ own pages (Pilot Company: offering 318 "CAT Scale" in the primary line of business, neither store a dealer; Love’s: `CAT Scales` in amenities, no limited-services banner — cross-checked that Love’s #285 Santa Rosa NM, a known no-CAT store, lacks it; TA: `CAT Scale` under Other Amenities). Counties from the Census geocoder on operator coordinates. Store list from Love’s sitemap (`loves.com/sitemap.xml`, 22 MS stores) and Pilot’s MS directory (`pilotcompany.com/locations/directory/us/ms`).
 
